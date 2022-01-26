@@ -1,0 +1,147 @@
+[Root]
+Most Recent Package=測試1
+
+
+[Package|測試1|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=E:\文件\資料\UnlightVBE\UnlightVBE-The OB Edition\Package
+
+[Package|測試1|Configure DAO ISAMs]
+Applicable=Yes
+Jet 2.x=Yes
+
+[Package|測試1|Configure DAO ODBC]
+JetWorkspace=Yes
+ODBCDirect=Yes
+
+[Package|測試1|Files Found]
+
+[Package|測試1|Files Released]
+
+[Package|測試1|Missing Dependency Information]
+G:\Windows\System32\FM20.DLL=
+G:\Windows\System32\Macromed\Flash\Flash32_11_2_202_235.ocx=
+G:\Windows\System32\wmp.dll=
+
+[Package|測試1|Out-of-Date Dependency Information]
+G:\Windows\System32\MSCOMCTL.OCX=
+
+[Package|測試1|Files Added]
+
+[Package|測試1|Files Removed]
+
+[Package|測試1|Files In Project]
+E:\文件\資料\UnlightVBE\UnlightVBE-The OB Edition\UnlightVBE-OBT0679.exe=Yes
+G:\Windows\System32\msvbvm60.dll=Yes
+G:\Windows\System32\oleaut32.dll=Yes
+G:\Windows\System32\olepro32.dll=Yes
+G:\Windows\System32\asycfilt.dll=Yes
+G:\Windows\System32\stdole2.tlb=Yes
+G:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+G:\Windows\System32\VB6CHT.DLL=Yes
+G:\Program Files\Common Files\microsoft shared\DAO\DAO350.DLL=Yes
+G:\Windows\System32\MSJET35.DLL=Yes
+G:\Windows\System32\MSJTER35.DLL=Yes
+G:\Windows\System32\MSJINT35.DLL=Yes
+G:\Windows\System32\vbajet32.dll=Yes
+G:\Windows\System32\expsrv.dll=Yes
+G:\Windows\System32\MSRD2X35.DLL=Yes
+G:\Windows\System32\MSREPL35.DLL=Yes
+G:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MSVCRT40.DLL=Yes
+G:\Windows\System32\VB5DB.DLL=Yes
+G:\Windows\System32\MCI32.OCX=Yes
+G:\Windows\System32\MCICHT.DLL=Yes
+G:\Windows\System32\wmp.dll=Yes
+G:\Windows\System32\Macromed\Flash\Flash32_11_2_202_235.ocx=Yes
+G:\Windows\System32\FM20.DLL=Yes
+G:\Program Files\Common Files\DESIGNER\MSCDRUN.DLL=Yes
+G:\Windows\System32\MSRDO20.DLL=Yes
+G:\Windows\System32\RDOCURS.DLL=Yes
+G:\Windows\System32\RDO20CHT.DLL=Yes
+G:\Program Files\Common Files\DESIGNER\CONNDCHT.DLL=Yes
+G:\Windows\System32\COMDLG32.OCX=Yes
+G:\Windows\System32\CMDLGCHT.DLL=Yes
+G:\Windows\System32\MSCOMCTL.OCX=Yes
+G:\Windows\System32\MSCMCCHT.DLL=Yes
+G:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=Yes
+G:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+G:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+G:\Windows\System32\VB6STKIT.DLL=Yes
+G:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+
+[Package|測試1|Configure Registry Files]
+Applicable=No
+
+[Package|測試1|Configure Remote Servers]
+Applicable=No
+
+[Package|測試1|Install Locations]
+E:\文件\資料\UnlightVBE\UnlightVBE-The OB Edition\UnlightVBE-OBT0679.exe=$(AppPath)
+G:\Windows\System32\msvbvm60.dll=$(WinSysPathSysFile)
+G:\Windows\System32\oleaut32.dll=$(WinSysPathSysFile)
+G:\Windows\System32\olepro32.dll=$(WinSysPathSysFile)
+G:\Windows\System32\asycfilt.dll=$(WinSysPathSysFile)
+G:\Windows\System32\stdole2.tlb=$(WinSysPathSysFile)
+G:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+G:\Windows\System32\VB6CHT.DLL=$(WinSysPath)
+G:\Program Files\Common Files\microsoft shared\DAO\DAO350.DLL=$(MSDAOPath)
+G:\Windows\System32\MSJET35.DLL=$(WinSysPathSysFile)
+G:\Windows\System32\MSJTER35.DLL=$(WinSysPathSysFile)
+G:\Windows\System32\MSJINT35.DLL=$(WinSysPathSysFile)
+G:\Windows\System32\vbajet32.dll=$(WinSysPathSysFile)
+G:\Windows\System32\expsrv.dll=$(WinSysPathSysFile)
+G:\Windows\System32\MSRD2X35.DLL=$(WinSysPathSysFile)
+G:\Windows\System32\MSREPL35.DLL=$(WinSysPathSysFile)
+G:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MSVCRT40.DLL=$(WinSysPathSysFile)
+G:\Windows\System32\VB5DB.DLL=$(WinSysPath)
+G:\Windows\System32\MCI32.OCX=$(WinSysPath)
+G:\Windows\System32\MCICHT.DLL=$(WinSysPath)
+G:\Windows\System32\wmp.dll=$(AppPath)
+G:\Windows\System32\Macromed\Flash\Flash32_11_2_202_235.ocx=$(WinSysPath)
+G:\Windows\System32\FM20.DLL=$(WinSysPath)
+G:\Program Files\Common Files\DESIGNER\MSCDRUN.DLL=$(CommonFiles)\Designer
+G:\Windows\System32\MSRDO20.DLL=$(WinSysPath)
+G:\Windows\System32\RDOCURS.DLL=$(WinSysPath)
+G:\Windows\System32\RDO20CHT.DLL=$(WinSysPath)
+G:\Program Files\Common Files\DESIGNER\CONNDCHT.DLL=$(WinSysPath)
+G:\Windows\System32\COMDLG32.OCX=$(WinSysPath)
+G:\Windows\System32\CMDLGCHT.DLL=$(WinSysPath)
+G:\Windows\System32\MSCOMCTL.OCX=$(WinSysPath)
+G:\Windows\System32\MSCMCCHT.DLL=$(WinSysPath)
+G:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=$(AppPath)
+G:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+G:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+G:\Windows\System32\VB6STKIT.DLL=$(WinSysPathSysFile)
+G:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+
+[Package|測試1|Configure Shared Files]
+Applicable=Yes
+E:\文件\資料\UnlightVBE\UnlightVBE-The OB Edition\UnlightVBE-OBT0679.exe=No
+G:\Windows\System32\wmp.dll=Yes
+G:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=No
+
+[Package|測試1|Distribution]
+Type=single
+Size=
+Title=UnlightVBE
+
+[Package|測試1|IconGroups]
+Group0=UnlightVBE
+PrivateGroup0=True
+Parent0=$(Programs)
+
+[Package|測試1|UnlightVBE]
+Icon1=UnlightVBE-OBT0679.exe
+Title1=UnlightVBE Test
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|測試1|Package]
+PackageFolder=E:\文件\資料\UnlightVBE\UnlightVBE-The OB Edition\Package
+ProjectFolder=E:\文件\資料\UnlightVBE\UnlightVBE-The OB Edition
+ServerSideCab=
+File1=E:\文件\資料\UnlightVBE\UnlightVBE-The OB Edition\Package\setup.exe
+File2=E:\文件\資料\UnlightVBE\UnlightVBE-The OB Edition\Package\Setup.Lst
+File3=E:\文件\資料\UnlightVBE\UnlightVBE-The OB Edition\Package\UnlightVBE-OBT0679.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
