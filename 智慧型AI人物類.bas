@@ -92,7 +92,7 @@ Select Case turn
                      End If
                End If
         Next
-    Case 3 '==移動階段類
+    Case 3 '==移動階段類 
         For i = 1 To 2 ^ cardAInumuscom
                 '=================智略
                 If Pn4 = 0 Then
@@ -312,7 +312,7 @@ End If
 Select Case turn
     Case 1 '==攻擊階段類
           For i = 1 To 2 ^ cardAInumuscom
-                 '=================十三隻眼
+                 '=================十三隻眼
                  If Pn4 = 0 Then
                         If movecpre < 3 Then
                                If cardAInumcasepersonTER(i, 1, 3) >= 1 And cardAInumcasepersonTER(i, 5, 3) >= 1 Then
