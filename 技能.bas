@@ -5306,6 +5306,7 @@ If FormMainMode.personatk(2).Caption = "冬之夢" And (執行動作_檢查是否有指定異常
                   pageeventnum(1, i, 2) = pageeventnum(1, i - 2, 2)
              Next
              For i = (turn + 1) To (turn + 2)
+                  If i > UBound(pageeventnum, 2) Then Exit For
                   pageeventnum(1, i, 1) = "劍5/槍5"
                   pageeventnum(1, i, 2) = 一般系統類.事件卡資料庫("劍5/槍5", 2)
              Next
@@ -5429,6 +5430,7 @@ If FormMainMode.personatk(3).Caption = "夜未央" And (執行動作_檢查是否有指定異常
                   pageeventnum(1, i, 2) = pageeventnum(1, i - 2, 2)
              Next
              For i = (turn + 1) To (turn + 2)
+                  If i > UBound(pageeventnum, 2) Then Exit For
                   pageeventnum(1, i, 1) = "HP回復3"
                   pageeventnum(1, i, 2) = 一般系統類.事件卡資料庫("HP回復3", 2)
              Next
@@ -8649,9 +8651,11 @@ If FormMainMode.personatk(1).Caption = "夢幻魔杖" And (執行動作_檢查是否有指定異
             m = Int(Rnd() * 100) + 1
             If liveus(角色人物對戰人數(1, 2)) <= liveus41(角色人物對戰人數(1, 2)) Then
                 Randomize
-                bd = Int(Rnd() * 2) + 1
+                bd = Int(Rnd() * 3) + 1
+            Else
+                bd = 3
             End If
-            If m Mod (2 - bd) = 0 Then '===相當於50~100%機率
+            If m Mod bd = 0 Then '===相當於33~100%機率
                  Randomize
                  n = Int(Rnd() * 100) + 1
                  If liveus(角色人物對戰人數(1, 2)) <= liveusmax(角色人物對戰人數(1, 2)) Then

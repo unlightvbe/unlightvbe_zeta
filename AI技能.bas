@@ -3464,6 +3464,7 @@ If FormMainMode.comaiatk(2).Caption = "¥V¤§¹Ú" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª
                   pageeventnum(2, i, 2) = pageeventnum(2, i - 2, 2)
              Next
              For i = (turn + 1) To (turn + 2)
+                  If i > UBound(pageeventnum, 2) Then Exit For
                   pageeventnum(2, i, 1) = "¼C5/ºj5"
                   pageeventnum(2, i, 2) = ¤@¯ë¨t²ÎÃþ.¨Æ¥ó¥d¸ê®Æ®w("¼C5/ºj5", 2)
              Next
@@ -6261,9 +6262,11 @@ If FormMainMode.comaiatk(1).Caption = "¹Ú¤ÛÅ]§ú" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±
             m = Int(Rnd() * 100) + 1
             If livecom(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(2, 2)) <= livecom41(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(2, 2)) Then
                 Randomize
-                bd = Int(Rnd() * 2) + 1
+                bd = Int(Rnd() * 3) + 1
+            Else
+                bd = 3
             End If
-            If m Mod (2 - bd) = 0 Then '===¬Û·í©ó50~100%¾÷²v
+            If m Mod bd = 0 Then '===¬Û·í©ó33~100%¾÷²v
                  Randomize
                  n = Int(Rnd() * 100) + 1
                  If livecom(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(2, 2)) <= livecommax(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(2, 2)) Then
@@ -7723,6 +7726,7 @@ If FormMainMode.comaiatk(3).Caption = "©]¥¼¥¡" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª
                   pageeventnum(2, i, 2) = pageeventnum(2, i - 2, 2)
              Next
              For i = (turn + 1) To (turn + 2)
+                  If i > UBound(pageeventnum, 2) Then Exit For
                   pageeventnum(2, i, 1) = "HP¦^´_3"
                   pageeventnum(2, i, 2) = ¤@¯ë¨t²ÎÃþ.¨Æ¥ó¥d¸ê®Æ®w("HP¦^´_3", 2)
              Next

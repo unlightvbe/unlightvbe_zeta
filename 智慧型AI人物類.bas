@@ -92,7 +92,7 @@ Select Case turn
                      End If
                End If
         Next
-    Case 3 '==移動階段類 
+    Case 3 '==移動階段類
         For i = 1 To 2 ^ cardAInumuscom
                 '=================智略
                 If Pn4 = 0 Then
@@ -244,8 +244,8 @@ Select Case turn
                         If cardAInumcasepersonTER(i, 4, 3) >= 1 And _
                         ((執行動作_檢查是否有指定異常狀態(uscom, 14) = False And uscom = 1) Or _
                         (執行動作_檢查是否有指定異常狀態(uscom, 18) = False And uscom = 2)) Then
-                              If (攻擊防禦骰子總數(uscom - 1) > (Val(livewer) + cardAInumcaseperson(i, 1, 12)) * 3 And 是否移動階段續估計判斷程序 = False And uscom = 2) Or _
-                                 (攻擊防禦骰子總數(uscom + 1) > (Val(livewer) + cardAInumcaseperson(i, 1, 12)) * 3 And 是否移動階段續估計判斷程序 = False And uscom = 1) Or _
+                              If (uscom = 2 And 攻擊防禦骰子總數(1) > (Val(livewer) + cardAInumcaseperson(i, 1, 12)) * 3 And 是否移動階段續估計判斷程序 = False) Or _
+                                 (uscom = 1 And 攻擊防禦骰子總數(2) > (Val(livewer) + cardAInumcaseperson(i, 1, 12)) * 3 And 是否移動階段續估計判斷程序 = False) Or _
                                  (是否移動階段續估計判斷程序 = True And Val(livewer) <= 3) Then
                                    cardAInumFinal(i, 1) = cardAInumFinal(i, 1) + 10000
                               '=====================
@@ -312,7 +312,7 @@ End If
 Select Case turn
     Case 1 '==攻擊階段類
           For i = 1 To 2 ^ cardAInumuscom
-                 '=================十三隻眼
+                 '=================十三隻眼
                  If Pn4 = 0 Then
                         If movecpre < 3 Then
                                If cardAInumcasepersonTER(i, 1, 3) >= 1 And cardAInumcasepersonTER(i, 5, 3) >= 1 Then
@@ -3161,8 +3161,8 @@ Select Case turn
                         werp = 0
                         Erase weryu
                         If cardAInumcasepersonTER(i, 4, 3) >= 1 Then
-                              If (攻擊防禦骰子總數(uscom - 1) > (Val(livewer) + cardAInumcaseperson(i, 1, 12)) * 3 And 是否移動階段續估計判斷程序 = False And uscom = 2) Or _
-                                 (攻擊防禦骰子總數(uscom + 1) > (Val(livewer) + cardAInumcaseperson(i, 1, 12)) * 3 And 是否移動階段續估計判斷程序 = False And uscom = 1) Or _
+                              If (uscom = 2 And 攻擊防禦骰子總數(1) > (Val(livewer) + cardAInumcaseperson(i, 1, 12)) * 3 And 是否移動階段續估計判斷程序 = False) Or _
+                                 (uscom = 1 And 攻擊防禦骰子總數(2) > (Val(livewer) + cardAInumcaseperson(i, 1, 12)) * 3 And 是否移動階段續估計判斷程序 = False) Or _
                                  (是否移動階段續估計判斷程序 = True And Val(livewer) <= 3) Then
                                    cardAInumFinal(i, 1) = cardAInumFinal(i, 1) + 10000
                               '=====================
