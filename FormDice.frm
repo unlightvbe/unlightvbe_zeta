@@ -125,7 +125,7 @@ Dim showus, showcom, showendus, showendcom, trshowendus, trshowendcom, hideall, 
 Dim 距離單位(1 To 1, 1 To 2, 1 To 2) As Integer  '距離單位暫時儲存資料(1.HP血條,1.使用者/2.電腦,1.Left單位/2.Top單位)
 Dim bigallzero(1 To 2) As Integer
 
-Private Sub Form_Activate()
+Sub FormActivate()
 If Val(擲骰表單溝通暫時變數(4)) = 1 Then
   If Val(擲骰表單溝通暫時變數(1)) = 1 Then
     adfe.Left = 5160
@@ -188,12 +188,6 @@ Private Sub Form_Load()
     jpgus_test.Visible = False
     jpgcom_test.Visible = False
 End Sub
-
-Private Sub jpgusback_Click()
-
-End Sub
-
-
 
 Private Sub Form_QueryUnload(Cancel As Integer, UnloadMode As Integer)
 If UnloadMode = 0 Then

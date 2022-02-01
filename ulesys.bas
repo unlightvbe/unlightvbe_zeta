@@ -1358,7 +1358,9 @@ If 通知表單是否已出現 = False Then
         一般系統類.通知表單顯示 1
     End If
 End If
-
+If Formsetting.chkautocontinuemode.Value = 1 Then
+    FormMainMode.PEGFbnstart_Click
+End If
 End Sub
 Sub 主選單_PEAttackingForm顯示()
 FormMainMode.PEAttackingForm.Left = 0
@@ -1432,7 +1434,6 @@ Formsetting.t1.Tab = 0
 Formsetting.chkusenewai.Value = 1
 Formsetting.chkusenewpage.Value = 1
 If FormMainMode.personsettingus(1).Caption = "人物資訊" Then
-    Formsetting.其他設定.Visible = False
     Formsetting.chkpersonvsmode.Value = 1
     Formsetting.persontgruoncom(4).Value = True
     Formsetting.persontgruoncom(5).Visible = False
@@ -1594,4 +1595,18 @@ Select Case num
         FormMessage.Text1.Visible = False
         FormMessage.Show 1
 End Select
+End Sub
+Sub 技能動畫表單顯示(ByVal uscom As Integer)
+Select Case uscom
+    Case 1
+        Formatkingus.t1.Enabled = True
+        Formatkingus.Show 1
+    Case 2
+        Formatkingcom.t1.Enabled = True
+        Formatkingcom.Show 1
+End Select
+End Sub
+Sub 擲骰動畫表單顯示()
+FormDice.FormActivate
+FormDice.Show 1
 End Sub

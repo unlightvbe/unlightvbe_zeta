@@ -1,7 +1,7 @@
 VERSION 5.00
 Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "COMDLG32.OCX"
 Object = "{BDC217C8-ED16-11CD-956C-0000C04E4C0A}#1.1#0"; "TABCTL32.OCX"
-Object = "{6B7E6392-850A-101B-AFC0-4210102A8DA7}#1.4#0"; "COMCTL32.OCX"
+Object = "{6B7E6392-850A-101B-AFC0-4210102A8DA7}#1.5#0"; "COMCTL32.OCX"
 Begin VB.Form Formsetting 
    Appearance      =   0  '平面
    BorderStyle     =   1  '單線固定
@@ -32,6 +32,23 @@ Begin VB.Form Formsetting
       TabIndex        =   136
       Top             =   1680
       Width           =   9015
+      Begin VB.CheckBox chkautocontinuemode 
+         Caption         =   "自動繼續模式"
+         BeginProperty Font 
+            Name            =   "微軟正黑體"
+            Size            =   11.25
+            Charset         =   136
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   300
+         Left            =   240
+         TabIndex        =   146
+         Top             =   2880
+         Width           =   6495
+      End
       Begin VB.CheckBox chkusenewaipersonauto 
          Caption         =   "使用者方使用「智能判斷型人工智慧AI」進行對戰"
          BeginProperty Font 
@@ -121,9 +138,9 @@ Begin VB.Form Formsetting
    Begin VB.Frame 事件卡_電腦 
       Caption         =   "事件卡編輯(電腦方)"
       Height          =   5895
-      Left            =   10560
+      Left            =   10080
       TabIndex        =   51
-      Top             =   960
+      Top             =   1320
       Visible         =   0   'False
       Width           =   9015
       Begin VB.CheckBox persontgrecom 
@@ -2477,12 +2494,11 @@ For i = 1 To 18
     persontgcom(i).Visible = False
 Next
 If FormMainMode.personsettingus(1).Caption = "人物資訊" Then
-    其他設定.Visible = False
+    checktest.Visible = False
     chkpersonvsmode.Value = 1
     persontgruoncom(5).Value = True
     persontgruonus(4).Value = True
     ckendturn.Value = 1
-'    chkusenewaipersonauto.Visible = False
 End If
 End Sub
 

@@ -54,7 +54,7 @@ End If
 End Sub
 
 Private Sub Form_Activate()
-t1.Enabled = True
+'t1.Enabled = True
 End Sub
 
 

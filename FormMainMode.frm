@@ -5,10 +5,10 @@ Object = "{ACD4732E-2B7C-40C1-A56B-078848D41977}#1.0#0"; "Imagex.ocx"
 Begin VB.Form FormMainMode 
    BorderStyle     =   1  '單線固定
    Caption         =   "UnlightVBE-ζ"
-   ClientHeight    =   11100
+   ClientHeight    =   11025
    ClientLeft      =   45
    ClientTop       =   375
-   ClientWidth     =   20400
+   ClientWidth     =   20730
    BeginProperty Font 
       Name            =   "微軟正黑體"
       Size            =   12
@@ -21,1139 +21,9 @@ Begin VB.Form FormMainMode
    Icon            =   "FormMainMode.frx":0000
    LinkTopic       =   "Form3"
    MaxButton       =   0   'False
-   ScaleHeight     =   11100
-   ScaleWidth      =   20400
+   ScaleHeight     =   11025
+   ScaleWidth      =   20730
    StartUpPosition =   2  '螢幕中央
-   Begin VB.PictureBox PEGameFreeModeSettingForm 
-      Appearance      =   0  '平面
-      BackColor       =   &H80000000&
-      BorderStyle     =   0  '沒有框線
-      ForeColor       =   &H80000008&
-      Height          =   9915
-      Left            =   10920
-      ScaleHeight     =   9915
-      ScaleWidth      =   11340
-      TabIndex        =   310
-      Top             =   1800
-      Visible         =   0   'False
-      Width           =   11340
-      Begin VB.PictureBox Picture3 
-         Appearance      =   0  '平面
-         BackColor       =   &H80000005&
-         ForeColor       =   &H80000008&
-         Height          =   1815
-         Left            =   0
-         ScaleHeight     =   1785
-         ScaleWidth      =   11385
-         TabIndex        =   335
-         Top             =   4320
-         Width           =   11415
-         Begin VB.ComboBox personlevelus 
-            BeginProperty Font 
-               Name            =   "微軟正黑體"
-               Size            =   9.75
-               Charset         =   136
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Height          =   375
-            Index           =   1
-            Left            =   120
-            TabIndex        =   350
-            Top             =   0
-            Width           =   855
-         End
-         Begin VB.ComboBox personlevelus 
-            BeginProperty Font 
-               Name            =   "微軟正黑體"
-               Size            =   9.75
-               Charset         =   136
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Height          =   375
-            Index           =   2
-            Left            =   2760
-            TabIndex        =   349
-            Top             =   0
-            Width           =   855
-         End
-         Begin VB.ComboBox personlevelus 
-            BeginProperty Font 
-               Name            =   "微軟正黑體"
-               Size            =   9.75
-               Charset         =   136
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Height          =   375
-            Index           =   3
-            Left            =   5400
-            TabIndex        =   348
-            Top             =   0
-            Width           =   855
-         End
-         Begin VB.ComboBox personnameus 
-            BeginProperty Font 
-               Name            =   "微軟正黑體"
-               Size            =   9.75
-               Charset         =   136
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Height          =   375
-            Index           =   1
-            Left            =   1080
-            TabIndex        =   347
-            Top             =   0
-            Width           =   1575
-         End
-         Begin VB.ComboBox personnameus 
-            BeginProperty Font 
-               Name            =   "微軟正黑體"
-               Size            =   9.75
-               Charset         =   136
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Height          =   375
-            Index           =   2
-            Left            =   3720
-            TabIndex        =   346
-            Top             =   0
-            Width           =   1575
-         End
-         Begin VB.ComboBox personnameus 
-            BeginProperty Font 
-               Name            =   "微軟正黑體"
-               Size            =   9.75
-               Charset         =   136
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Height          =   375
-            Index           =   3
-            Left            =   6360
-            TabIndex        =   345
-            Top             =   0
-            Width           =   1575
-         End
-         Begin VB.ComboBox personlevelcom 
-            BeginProperty Font 
-               Name            =   "微軟正黑體"
-               Size            =   9.75
-               Charset         =   136
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Height          =   375
-            Index           =   1
-            Left            =   3360
-            TabIndex        =   344
-            Top             =   1440
-            Width           =   855
-         End
-         Begin VB.ComboBox personlevelcom 
-            BeginProperty Font 
-               Name            =   "微軟正黑體"
-               Size            =   9.75
-               Charset         =   136
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Height          =   375
-            Index           =   2
-            Left            =   6000
-            TabIndex        =   343
-            Top             =   1440
-            Width           =   855
-         End
-         Begin VB.ComboBox personlevelcom 
-            BeginProperty Font 
-               Name            =   "微軟正黑體"
-               Size            =   9.75
-               Charset         =   136
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Height          =   375
-            Index           =   3
-            Left            =   8640
-            TabIndex        =   342
-            Top             =   1440
-            Width           =   855
-         End
-         Begin VB.ComboBox personnamecom 
-            BeginProperty Font 
-               Name            =   "微軟正黑體"
-               Size            =   9.75
-               Charset         =   136
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Height          =   375
-            Index           =   1
-            Left            =   4320
-            TabIndex        =   341
-            Top             =   1440
-            Width           =   1575
-         End
-         Begin VB.ComboBox personnamecom 
-            BeginProperty Font 
-               Name            =   "微軟正黑體"
-               Size            =   9.75
-               Charset         =   136
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Height          =   375
-            Index           =   2
-            Left            =   6960
-            TabIndex        =   340
-            Top             =   1440
-            Width           =   1575
-         End
-         Begin VB.ComboBox personnamecom 
-            BeginProperty Font 
-               Name            =   "微軟正黑體"
-               Size            =   9.75
-               Charset         =   136
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Height          =   375
-            Index           =   3
-            Left            =   9600
-            TabIndex        =   339
-            Top             =   1440
-            Width           =   1575
-         End
-         Begin VB.OptionButton opnpersonvs 
-            BackColor       =   &H00FFFFFF&
-            Caption         =   "3v3"
-            Height          =   375
-            Index           =   2
-            Left            =   120
-            TabIndex        =   337
-            Top             =   1080
-            Width           =   1695
-         End
-         Begin VB.CommandButton personreadifus 
-            Caption         =   "讀入..."
-            Height          =   495
-            Left            =   2040
-            TabIndex        =   336
-            Top             =   720
-            Width           =   975
-         End
-         Begin MSComDlg.CommonDialog cdgpersonus 
-            Left            =   3000
-            Top             =   720
-            _ExtentX        =   847
-            _ExtentY        =   847
-            _Version        =   393216
-            DialogTitle     =   "UnlightVBE-卡片人物資訊-開啟檔案"
-         End
-         Begin VB.OptionButton opnpersonvs 
-            BackColor       =   &H00FFFFFF&
-            Caption         =   "1v1"
-            Height          =   495
-            Index           =   1
-            Left            =   120
-            TabIndex        =   338
-            Top             =   720
-            Value           =   -1  'True
-            Width           =   855
-         End
-         Begin UnlightVBE.大人物形像 personfus 
-            Height          =   1215
-            Left            =   0
-            TabIndex        =   366
-            Top             =   0
-            Width           =   3135
-            _ExtentX        =   5530
-            _ExtentY        =   2143
-         End
-         Begin VB.Image bnstart 
-            Height          =   510
-            Left            =   9600
-            Picture         =   "FormMainMode.frx":0CCA
-            Top             =   600
-            Width           =   1440
-         End
-         Begin VB.Image bnabout 
-            Height          =   390
-            Left            =   8280
-            Picture         =   "FormMainMode.frx":1820
-            Top             =   720
-            Width           =   1320
-         End
-         Begin VB.Image bnconfig 
-            Height          =   390
-            Left            =   7080
-            Picture         =   "FormMainMode.frx":1E8B
-            Top             =   720
-            Width           =   1320
-         End
-         Begin VB.Label Label3 
-            BackColor       =   &H00FFFFFF&
-            Caption         =   "VS"
-            BeginProperty Font 
-               Name            =   "微軟正黑體"
-               Size            =   20.25
-               Charset         =   136
-               Weight          =   700
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            ForeColor       =   &H000000FF&
-            Height          =   495
-            Left            =   5400
-            TabIndex        =   365
-            Top             =   600
-            Width           =   735
-         End
-         Begin VB.Label personresetus 
-            BackColor       =   &H00FFFFFF&
-            Caption         =   "重設"
-            BeginProperty Font 
-               Name            =   "微軟正黑體"
-               Size            =   9.75
-               Charset         =   136
-               Weight          =   400
-               Underline       =   -1  'True
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            ForeColor       =   &H00FF0000&
-            Height          =   255
-            Index           =   1
-            Left            =   1200
-            TabIndex        =   364
-            Top             =   360
-            Width           =   495
-         End
-         Begin VB.Label personresetus 
-            BackColor       =   &H00FFFFFF&
-            Caption         =   "重設"
-            BeginProperty Font 
-               Name            =   "微軟正黑體"
-               Size            =   9.75
-               Charset         =   136
-               Weight          =   400
-               Underline       =   -1  'True
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            ForeColor       =   &H00FF0000&
-            Height          =   255
-            Index           =   2
-            Left            =   3840
-            TabIndex        =   363
-            Top             =   360
-            Width           =   495
-         End
-         Begin VB.Label personresetus 
-            BackColor       =   &H00FFFFFF&
-            Caption         =   "重設"
-            BeginProperty Font 
-               Name            =   "微軟正黑體"
-               Size            =   9.75
-               Charset         =   136
-               Weight          =   400
-               Underline       =   -1  'True
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            ForeColor       =   &H00FF0000&
-            Height          =   255
-            Index           =   3
-            Left            =   6480
-            TabIndex        =   362
-            Top             =   360
-            Width           =   495
-         End
-         Begin VB.Label personresetcom 
-            BackColor       =   &H00FFFFFF&
-            Caption         =   "重設"
-            BeginProperty Font 
-               Name            =   "微軟正黑體"
-               Size            =   9.75
-               Charset         =   136
-               Weight          =   400
-               Underline       =   -1  'True
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            ForeColor       =   &H00FF0000&
-            Height          =   255
-            Index           =   1
-            Left            =   4320
-            TabIndex        =   361
-            Top             =   1200
-            Width           =   495
-         End
-         Begin VB.Label personresetcom 
-            BackColor       =   &H00FFFFFF&
-            Caption         =   "重設"
-            BeginProperty Font 
-               Name            =   "微軟正黑體"
-               Size            =   9.75
-               Charset         =   136
-               Weight          =   400
-               Underline       =   -1  'True
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            ForeColor       =   &H00FF0000&
-            Height          =   255
-            Index           =   2
-            Left            =   6960
-            TabIndex        =   360
-            Top             =   1200
-            Width           =   495
-         End
-         Begin VB.Label personresetcom 
-            BackColor       =   &H00FFFFFF&
-            Caption         =   "重設"
-            BeginProperty Font 
-               Name            =   "微軟正黑體"
-               Size            =   9.75
-               Charset         =   136
-               Weight          =   400
-               Underline       =   -1  'True
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            ForeColor       =   &H00FF0000&
-            Height          =   255
-            Index           =   3
-            Left            =   9600
-            TabIndex        =   359
-            Top             =   1200
-            Width           =   495
-         End
-         Begin VB.Label personsettingus 
-            BackColor       =   &H00FFFFFF&
-            Caption         =   "人物設定"
-            BeginProperty Font 
-               Name            =   "微軟正黑體"
-               Size            =   9.75
-               Charset         =   136
-               Weight          =   400
-               Underline       =   -1  'True
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            ForeColor       =   &H00FF0000&
-            Height          =   255
-            Index           =   1
-            Left            =   120
-            TabIndex        =   358
-            Top             =   360
-            Width           =   855
-         End
-         Begin VB.Label personsettingus 
-            BackColor       =   &H00FFFFFF&
-            Caption         =   "人物設定"
-            BeginProperty Font 
-               Name            =   "微軟正黑體"
-               Size            =   9.75
-               Charset         =   136
-               Weight          =   400
-               Underline       =   -1  'True
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            ForeColor       =   &H00FF0000&
-            Height          =   255
-            Index           =   2
-            Left            =   2760
-            TabIndex        =   357
-            Top             =   360
-            Width           =   855
-         End
-         Begin VB.Label personsettingus 
-            BackColor       =   &H00FFFFFF&
-            Caption         =   "人物設定"
-            BeginProperty Font 
-               Name            =   "微軟正黑體"
-               Size            =   9.75
-               Charset         =   136
-               Weight          =   400
-               Underline       =   -1  'True
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            ForeColor       =   &H00FF0000&
-            Height          =   255
-            Index           =   3
-            Left            =   5400
-            TabIndex        =   356
-            Top             =   360
-            Width           =   855
-         End
-         Begin VB.Label personsettingcom 
-            BackColor       =   &H00FFFFFF&
-            Caption         =   "人物設定"
-            BeginProperty Font 
-               Name            =   "微軟正黑體"
-               Size            =   9.75
-               Charset         =   136
-               Weight          =   400
-               Underline       =   -1  'True
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            ForeColor       =   &H00FF0000&
-            Height          =   255
-            Index           =   1
-            Left            =   3360
-            TabIndex        =   355
-            Top             =   1200
-            Width           =   855
-         End
-         Begin VB.Label personsettingcom 
-            BackColor       =   &H00FFFFFF&
-            Caption         =   "人物設定"
-            BeginProperty Font 
-               Name            =   "微軟正黑體"
-               Size            =   9.75
-               Charset         =   136
-               Weight          =   400
-               Underline       =   -1  'True
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            ForeColor       =   &H00FF0000&
-            Height          =   255
-            Index           =   2
-            Left            =   6000
-            TabIndex        =   354
-            Top             =   1200
-            Width           =   855
-         End
-         Begin VB.Label personsettingcom 
-            BackColor       =   &H00FFFFFF&
-            Caption         =   "人物設定"
-            BeginProperty Font 
-               Name            =   "微軟正黑體"
-               Size            =   9.75
-               Charset         =   136
-               Weight          =   400
-               Underline       =   -1  'True
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            ForeColor       =   &H00FF0000&
-            Height          =   255
-            Index           =   3
-            Left            =   8640
-            TabIndex        =   353
-            Top             =   1200
-            Width           =   855
-         End
-         Begin VB.Label Label4 
-            BackColor       =   &H00FFFFFF&
-            BackStyle       =   0  '透明
-            Caption         =   "1P"
-            BeginProperty Font 
-               Name            =   "微軟正黑體"
-               Size            =   15.75
-               Charset         =   136
-               Weight          =   700
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            ForeColor       =   &H00000000&
-            Height          =   495
-            Left            =   8040
-            TabIndex        =   352
-            Top             =   0
-            Width           =   735
-         End
-         Begin VB.Label Label5 
-            BackColor       =   &H00FFFFFF&
-            BackStyle       =   0  '透明
-            Caption         =   "COM"
-            BeginProperty Font 
-               Name            =   "微軟正黑體"
-               Size            =   15.75
-               Charset         =   136
-               Weight          =   700
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            ForeColor       =   &H00000000&
-            Height          =   615
-            Left            =   2400
-            TabIndex        =   351
-            Top             =   1400
-            Width           =   855
-         End
-      End
-      Begin VB.PictureBox PEGFcardus 
-         Appearance      =   0  '平面
-         BackColor       =   &H00000000&
-         BeginProperty Font 
-            Name            =   "微軟正黑體"
-            Size            =   9.75
-            Charset         =   136
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         ForeColor       =   &H80000008&
-         Height          =   3615
-         Index           =   1
-         Left            =   120
-         Picture         =   "FormMainMode.frx":249B
-         ScaleHeight     =   3585
-         ScaleWidth      =   2505
-         TabIndex        =   331
-         Top             =   600
-         Width           =   2535
-         Begin VB.Label PEGFusbi1 
-            Alignment       =   2  '置中對齊
-            BackStyle       =   0  '透明
-            Caption         =   "?"
-            BeginProperty Font 
-               Name            =   "Bradley Gratis"
-               Size            =   18
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            ForeColor       =   &H00FFFFFF&
-            Height          =   375
-            Index           =   1
-            Left            =   550
-            TabIndex        =   334
-            Top             =   3240
-            Width           =   375
-         End
-         Begin VB.Label PEGFusbi2 
-            Alignment       =   2  '置中對齊
-            BackStyle       =   0  '透明
-            Caption         =   "?"
-            BeginProperty Font 
-               Name            =   "Bradley Gratis"
-               Size            =   18
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            ForeColor       =   &H00FFFFFF&
-            Height          =   375
-            Index           =   1
-            Left            =   1200
-            TabIndex        =   333
-            Top             =   3240
-            Width           =   495
-         End
-         Begin VB.Label PEGFusbi3 
-            Alignment       =   2  '置中對齊
-            BackStyle       =   0  '透明
-            Caption         =   "?"
-            BeginProperty Font 
-               Name            =   "Bradley Gratis"
-               Size            =   18
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            ForeColor       =   &H00FFFFFF&
-            Height          =   375
-            Index           =   1
-            Left            =   1920
-            TabIndex        =   332
-            Top             =   3240
-            Width           =   615
-         End
-      End
-      Begin VB.PictureBox PEGFcardus 
-         Appearance      =   0  '平面
-         BackColor       =   &H00000000&
-         BeginProperty Font 
-            Name            =   "微軟正黑體"
-            Size            =   9.75
-            Charset         =   136
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         ForeColor       =   &H80000008&
-         Height          =   3615
-         Index           =   2
-         Left            =   2760
-         Picture         =   "FormMainMode.frx":633E
-         ScaleHeight     =   3585
-         ScaleWidth      =   2505
-         TabIndex        =   327
-         Top             =   600
-         Width           =   2535
-         Begin VB.Label PEGFusbi1 
-            Alignment       =   2  '置中對齊
-            BackStyle       =   0  '透明
-            Caption         =   "?"
-            BeginProperty Font 
-               Name            =   "Bradley Gratis"
-               Size            =   18
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            ForeColor       =   &H00FFFFFF&
-            Height          =   375
-            Index           =   2
-            Left            =   550
-            TabIndex        =   330
-            Top             =   3240
-            Width           =   375
-         End
-         Begin VB.Label PEGFusbi2 
-            Alignment       =   2  '置中對齊
-            BackStyle       =   0  '透明
-            Caption         =   "?"
-            BeginProperty Font 
-               Name            =   "Bradley Gratis"
-               Size            =   18
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            ForeColor       =   &H00FFFFFF&
-            Height          =   375
-            Index           =   2
-            Left            =   1200
-            TabIndex        =   329
-            Top             =   3240
-            Width           =   495
-         End
-         Begin VB.Label PEGFusbi3 
-            Alignment       =   2  '置中對齊
-            BackStyle       =   0  '透明
-            Caption         =   "?"
-            BeginProperty Font 
-               Name            =   "Bradley Gratis"
-               Size            =   18
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            ForeColor       =   &H00FFFFFF&
-            Height          =   375
-            Index           =   2
-            Left            =   1920
-            TabIndex        =   328
-            Top             =   3240
-            Width           =   615
-         End
-      End
-      Begin VB.PictureBox PEGFcardus 
-         Appearance      =   0  '平面
-         BackColor       =   &H00000000&
-         BeginProperty Font 
-            Name            =   "微軟正黑體"
-            Size            =   9.75
-            Charset         =   136
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         ForeColor       =   &H80000008&
-         Height          =   3615
-         Index           =   3
-         Left            =   5400
-         Picture         =   "FormMainMode.frx":A1E1
-         ScaleHeight     =   3585
-         ScaleWidth      =   2505
-         TabIndex        =   323
-         Top             =   600
-         Width           =   2535
-         Begin VB.Label PEGFusbi1 
-            Alignment       =   2  '置中對齊
-            BackStyle       =   0  '透明
-            Caption         =   "?"
-            BeginProperty Font 
-               Name            =   "Bradley Gratis"
-               Size            =   18
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            ForeColor       =   &H00FFFFFF&
-            Height          =   375
-            Index           =   3
-            Left            =   550
-            TabIndex        =   326
-            Top             =   3240
-            Width           =   375
-         End
-         Begin VB.Label PEGFusbi2 
-            Alignment       =   2  '置中對齊
-            BackStyle       =   0  '透明
-            Caption         =   "?"
-            BeginProperty Font 
-               Name            =   "Bradley Gratis"
-               Size            =   18
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            ForeColor       =   &H00FFFFFF&
-            Height          =   375
-            Index           =   3
-            Left            =   1200
-            TabIndex        =   325
-            Top             =   3240
-            Width           =   495
-         End
-         Begin VB.Label PEGFusbi3 
-            Alignment       =   2  '置中對齊
-            BackStyle       =   0  '透明
-            Caption         =   "?"
-            BeginProperty Font 
-               Name            =   "Bradley Gratis"
-               Size            =   18
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            ForeColor       =   &H00FFFFFF&
-            Height          =   375
-            Index           =   3
-            Left            =   1920
-            TabIndex        =   324
-            Top             =   3240
-            Width           =   615
-         End
-      End
-      Begin VB.PictureBox PEGFcardcom 
-         Appearance      =   0  '平面
-         BackColor       =   &H00000000&
-         ForeColor       =   &H80000008&
-         Height          =   3615
-         Index           =   1
-         Left            =   3360
-         Picture         =   "FormMainMode.frx":E084
-         ScaleHeight     =   3585
-         ScaleWidth      =   2505
-         TabIndex        =   319
-         Top             =   6240
-         Width           =   2535
-         Begin VB.Label PEGFcardcompi1 
-            Alignment       =   2  '置中對齊
-            BackStyle       =   0  '透明
-            Caption         =   "?"
-            BeginProperty Font 
-               Name            =   "Bradley Gratis"
-               Size            =   18
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            ForeColor       =   &H00FFFFFF&
-            Height          =   495
-            Index           =   1
-            Left            =   480
-            TabIndex        =   322
-            Top             =   3240
-            Width           =   495
-         End
-         Begin VB.Label PEGFcardcompi2 
-            Alignment       =   2  '置中對齊
-            BackStyle       =   0  '透明
-            Caption         =   "?"
-            BeginProperty Font 
-               Name            =   "Bradley Gratis"
-               Size            =   18
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            ForeColor       =   &H00FFFFFF&
-            Height          =   375
-            Index           =   1
-            Left            =   1200
-            TabIndex        =   321
-            Top             =   3240
-            Width           =   495
-         End
-         Begin VB.Label PEGFcardcompi3 
-            Alignment       =   2  '置中對齊
-            BackStyle       =   0  '透明
-            Caption         =   "?"
-            BeginProperty Font 
-               Name            =   "Bradley Gratis"
-               Size            =   18
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            ForeColor       =   &H00FFFFFF&
-            Height          =   375
-            Index           =   1
-            Left            =   1920
-            TabIndex        =   320
-            Top             =   3240
-            Width           =   615
-         End
-      End
-      Begin VB.PictureBox PEGFcardcom 
-         Appearance      =   0  '平面
-         BackColor       =   &H00000000&
-         ForeColor       =   &H80000008&
-         Height          =   3615
-         Index           =   2
-         Left            =   6000
-         Picture         =   "FormMainMode.frx":11F27
-         ScaleHeight     =   3585
-         ScaleWidth      =   2505
-         TabIndex        =   315
-         Top             =   6240
-         Width           =   2535
-         Begin VB.Label PEGFcardcompi1 
-            Alignment       =   2  '置中對齊
-            BackStyle       =   0  '透明
-            Caption         =   "?"
-            BeginProperty Font 
-               Name            =   "Bradley Gratis"
-               Size            =   18
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            ForeColor       =   &H00FFFFFF&
-            Height          =   495
-            Index           =   2
-            Left            =   480
-            TabIndex        =   318
-            Top             =   3240
-            Width           =   495
-         End
-         Begin VB.Label PEGFcardcompi2 
-            Alignment       =   2  '置中對齊
-            BackStyle       =   0  '透明
-            Caption         =   "?"
-            BeginProperty Font 
-               Name            =   "Bradley Gratis"
-               Size            =   18
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            ForeColor       =   &H00FFFFFF&
-            Height          =   375
-            Index           =   2
-            Left            =   1200
-            TabIndex        =   317
-            Top             =   3240
-            Width           =   495
-         End
-         Begin VB.Label PEGFcardcompi3 
-            Alignment       =   2  '置中對齊
-            BackStyle       =   0  '透明
-            Caption         =   "?"
-            BeginProperty Font 
-               Name            =   "Bradley Gratis"
-               Size            =   18
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            ForeColor       =   &H00FFFFFF&
-            Height          =   375
-            Index           =   2
-            Left            =   1920
-            TabIndex        =   316
-            Top             =   3240
-            Width           =   615
-         End
-      End
-      Begin VB.PictureBox PEGFcardcom 
-         Appearance      =   0  '平面
-         BackColor       =   &H00000000&
-         ForeColor       =   &H80000008&
-         Height          =   3615
-         Index           =   3
-         Left            =   8640
-         Picture         =   "FormMainMode.frx":15DCA
-         ScaleHeight     =   3585
-         ScaleWidth      =   2505
-         TabIndex        =   311
-         Top             =   6240
-         Width           =   2535
-         Begin VB.Label PEGFcardcompi1 
-            Alignment       =   2  '置中對齊
-            BackStyle       =   0  '透明
-            Caption         =   "?"
-            BeginProperty Font 
-               Name            =   "Bradley Gratis"
-               Size            =   18
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            ForeColor       =   &H00FFFFFF&
-            Height          =   495
-            Index           =   3
-            Left            =   480
-            TabIndex        =   314
-            Top             =   3240
-            Width           =   495
-         End
-         Begin VB.Label PEGFcardcompi2 
-            Alignment       =   2  '置中對齊
-            BackStyle       =   0  '透明
-            Caption         =   "?"
-            BeginProperty Font 
-               Name            =   "Bradley Gratis"
-               Size            =   18
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            ForeColor       =   &H00FFFFFF&
-            Height          =   375
-            Index           =   3
-            Left            =   1200
-            TabIndex        =   313
-            Top             =   3240
-            Width           =   495
-         End
-         Begin VB.Label PEGFcardcompi3 
-            Alignment       =   2  '置中對齊
-            BackStyle       =   0  '透明
-            Caption         =   "?"
-            BeginProperty Font 
-               Name            =   "Bradley Gratis"
-               Size            =   18
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            ForeColor       =   &H00FFFFFF&
-            Height          =   375
-            Index           =   3
-            Left            =   1920
-            TabIndex        =   312
-            Top             =   3240
-            Width           =   615
-         End
-      End
-      Begin VB.Label Label1 
-         BackStyle       =   0  '透明
-         Caption         =   "GameSetting"
-         BeginProperty Font 
-            Name            =   "Bradley Gratis"
-            Size            =   15.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         ForeColor       =   &H00FFFFFF&
-         Height          =   375
-         Left            =   240
-         TabIndex        =   368
-         Top             =   120
-         Width           =   1455
-      End
-      Begin VB.Label Label2 
-         BackStyle       =   0  '透明
-         Caption         =   "自由戰鬥模式遊戲引導設定"
-         BeginProperty Font 
-            Name            =   "微軟正黑體"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   700
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         ForeColor       =   &H00FFFFFF&
-         Height          =   255
-         Left            =   1680
-         TabIndex        =   367
-         Top             =   195
-         Width           =   2535
-      End
-      Begin VB.Image Image4 
-         Height          =   465
-         Left            =   0
-         Picture         =   "FormMainMode.frx":19C6D
-         Top             =   0
-         Width           =   11400
-      End
-   End
    Begin VB.PictureBox PEAttackingForm 
       Appearance      =   0  '平面
       BackColor       =   &H00FFFFFF&
@@ -1161,7 +31,7 @@ Begin VB.Form FormMainMode
       ForeColor       =   &H80000008&
       Height          =   9910
       Left            =   7920
-      Picture         =   "FormMainMode.frx":1C05C
+      Picture         =   "FormMainMode.frx":0CCA
       ScaleHeight     =   9915
       ScaleWidth      =   11340
       TabIndex        =   0
@@ -1187,7 +57,7 @@ Begin VB.Form FormMainMode
          Height          =   3615
          Index           =   1
          Left            =   3720
-         Picture         =   "FormMainMode.frx":3DF3B
+         Picture         =   "FormMainMode.frx":22BA9
          ScaleHeight     =   3585
          ScaleWidth      =   2505
          TabIndex        =   427
@@ -1662,7 +532,7 @@ Begin VB.Form FormMainMode
             Width           =   2370
             _ExtentX        =   4180
             _ExtentY        =   767
-            Image           =   "FormMainMode.frx":43970
+            Image           =   "FormMainMode.frx":285DE
             Props           =   13
          End
          Begin ImageX.aicAlphaImage PEAFcardbackBR 
@@ -1673,7 +543,7 @@ Begin VB.Form FormMainMode
             Width           =   2370
             _ExtentX        =   4180
             _ExtentY        =   767
-            Image           =   "FormMainMode.frx":43A45
+            Image           =   "FormMainMode.frx":286B3
             Props           =   13
          End
          Begin ImageX.aicAlphaImage PEAFcardbackBR 
@@ -1684,7 +554,7 @@ Begin VB.Form FormMainMode
             Width           =   2370
             _ExtentX        =   4180
             _ExtentY        =   767
-            Image           =   "FormMainMode.frx":43B1A
+            Image           =   "FormMainMode.frx":28788
             Props           =   13
          End
          Begin ImageX.aicAlphaImage PEAFcardbackBR 
@@ -1695,7 +565,7 @@ Begin VB.Form FormMainMode
             Width           =   2370
             _ExtentX        =   4180
             _ExtentY        =   767
-            Image           =   "FormMainMode.frx":43BEF
+            Image           =   "FormMainMode.frx":2885D
             Props           =   13
          End
       End
@@ -1727,7 +597,7 @@ Begin VB.Form FormMainMode
             Width           =   1560
             _ExtentX        =   2752
             _ExtentY        =   1402
-            Image           =   "FormMainMode.frx":43CC4
+            Image           =   "FormMainMode.frx":28932
             Props           =   13
          End
          Begin VB.Label cardcompi3 
@@ -1966,7 +836,7 @@ Begin VB.Form FormMainMode
             Width           =   1560
             _ExtentX        =   2752
             _ExtentY        =   1402
-            Image           =   "FormMainMode.frx":463F9
+            Image           =   "FormMainMode.frx":2B067
             Props           =   13
          End
          Begin VB.Label cardcompi3 
@@ -2205,7 +1075,7 @@ Begin VB.Form FormMainMode
             Width           =   1560
             _ExtentX        =   2752
             _ExtentY        =   1402
-            Image           =   "FormMainMode.frx":48B2E
+            Image           =   "FormMainMode.frx":2D79C
             Props           =   13
          End
          Begin VB.Label cardcompi1 
@@ -2429,7 +1299,7 @@ Begin VB.Form FormMainMode
          Height          =   3615
          Index           =   2
          Left            =   1680
-         Picture         =   "FormMainMode.frx":4B263
+         Picture         =   "FormMainMode.frx":2FED1
          ScaleHeight     =   3585
          ScaleWidth      =   2505
          TabIndex        =   469
@@ -2904,7 +1774,7 @@ Begin VB.Form FormMainMode
             Width           =   2370
             _ExtentX        =   4180
             _ExtentY        =   767
-            Image           =   "FormMainMode.frx":50C98
+            Image           =   "FormMainMode.frx":35906
             Props           =   13
          End
          Begin ImageX.aicAlphaImage PEAFcardbackBR 
@@ -2915,7 +1785,7 @@ Begin VB.Form FormMainMode
             Width           =   2370
             _ExtentX        =   4180
             _ExtentY        =   767
-            Image           =   "FormMainMode.frx":50D6D
+            Image           =   "FormMainMode.frx":359DB
             Props           =   13
          End
          Begin ImageX.aicAlphaImage PEAFcardbackBR 
@@ -2926,7 +1796,7 @@ Begin VB.Form FormMainMode
             Width           =   2370
             _ExtentX        =   4180
             _ExtentY        =   767
-            Image           =   "FormMainMode.frx":50E42
+            Image           =   "FormMainMode.frx":35AB0
             Props           =   13
          End
          Begin ImageX.aicAlphaImage PEAFcardbackBR 
@@ -2937,7 +1807,7 @@ Begin VB.Form FormMainMode
             Width           =   2370
             _ExtentX        =   4180
             _ExtentY        =   767
-            Image           =   "FormMainMode.frx":50F17
+            Image           =   "FormMainMode.frx":35B85
             Props           =   13
          End
       End
@@ -2972,7 +1842,7 @@ Begin VB.Form FormMainMode
             Width           =   1560
             _ExtentX        =   2752
             _ExtentY        =   1402
-            Image           =   "FormMainMode.frx":50FEC
+            Image           =   "FormMainMode.frx":35C5A
             Props           =   13
          End
          Begin VB.Label usbi3 
@@ -3220,7 +2090,7 @@ Begin VB.Form FormMainMode
             Width           =   1560
             _ExtentX        =   2752
             _ExtentY        =   1402
-            Image           =   "FormMainMode.frx":53721
+            Image           =   "FormMainMode.frx":3838F
             Props           =   13
          End
          Begin VB.Label usbi1 
@@ -3451,7 +2321,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   106
          Left            =   240
-         Picture         =   "FormMainMode.frx":55E56
+         Picture         =   "FormMainMode.frx":3AAC4
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   118
@@ -3461,7 +2331,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   106
             Left            =   240
-            Picture         =   "FormMainMode.frx":5A578
+            Picture         =   "FormMainMode.frx":3F1E6
             Top             =   1020
             Width           =   300
          End
@@ -3469,7 +2339,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   106
             Left            =   240
-            Picture         =   "FormMainMode.frx":5A5E5
+            Picture         =   "FormMainMode.frx":3F253
             Top             =   0
             Width           =   300
          End
@@ -3477,7 +2347,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   106
             Left            =   240
-            Picture         =   "FormMainMode.frx":5A651
+            Picture         =   "FormMainMode.frx":3F2BF
             Top             =   480
             Width           =   330
          End
@@ -3485,7 +2355,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   106
             Left            =   240
-            Picture         =   "FormMainMode.frx":5AA79
+            Picture         =   "FormMainMode.frx":3F6E7
             Top             =   480
             Width           =   330
          End
@@ -3493,7 +2363,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   106
             Left            =   240
-            Picture         =   "FormMainMode.frx":5AD11
+            Picture         =   "FormMainMode.frx":3F97F
             Top             =   480
             Width           =   330
          End
@@ -3501,7 +2371,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   106
             Left            =   240
-            Picture         =   "FormMainMode.frx":5AFAB
+            Picture         =   "FormMainMode.frx":3FC19
             Top             =   480
             Width           =   330
          End
@@ -3827,7 +2697,7 @@ Begin VB.Form FormMainMode
             Width           =   1560
             _ExtentX        =   2752
             _ExtentY        =   1402
-            Image           =   "FormMainMode.frx":5B3CC
+            Image           =   "FormMainMode.frx":4003A
             Props           =   13
          End
          Begin VB.Label usbi1 
@@ -4060,9 +2930,9 @@ Begin VB.Form FormMainMode
          ForeColor       =   &H00FFFFFF&
          Height          =   1295
          IntegralHeight  =   0   'False
-         ItemData        =   "FormMainMode.frx":5DB01
+         ItemData        =   "FormMainMode.frx":4276F
          Left            =   2640
-         List            =   "FormMainMode.frx":5DB03
+         List            =   "FormMainMode.frx":42771
          TabIndex        =   256
          TabStop         =   0   'False
          Top             =   8040
@@ -4113,7 +2983,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   11
          Left            =   240
-         Picture         =   "FormMainMode.frx":5DB05
+         Picture         =   "FormMainMode.frx":42773
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   234
@@ -4123,7 +2993,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   11
             Left            =   240
-            Picture         =   "FormMainMode.frx":62227
+            Picture         =   "FormMainMode.frx":46E95
             Top             =   480
             Width           =   330
          End
@@ -4131,7 +3001,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   11
             Left            =   240
-            Picture         =   "FormMainMode.frx":62648
+            Picture         =   "FormMainMode.frx":472B6
             Top             =   480
             Width           =   330
          End
@@ -4139,7 +3009,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   11
             Left            =   240
-            Picture         =   "FormMainMode.frx":628E2
+            Picture         =   "FormMainMode.frx":47550
             Top             =   480
             Width           =   330
          End
@@ -4147,7 +3017,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   11
             Left            =   240
-            Picture         =   "FormMainMode.frx":62B7A
+            Picture         =   "FormMainMode.frx":477E8
             Top             =   480
             Width           =   330
          End
@@ -4155,7 +3025,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   11
             Left            =   240
-            Picture         =   "FormMainMode.frx":62FA2
+            Picture         =   "FormMainMode.frx":47C10
             Top             =   0
             Width           =   300
          End
@@ -4163,7 +3033,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   11
             Left            =   240
-            Picture         =   "FormMainMode.frx":6300E
+            Picture         =   "FormMainMode.frx":47C7C
             Top             =   1020
             Width           =   300
          End
@@ -4176,7 +3046,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   12
          Left            =   240
-         Picture         =   "FormMainMode.frx":6307B
+         Picture         =   "FormMainMode.frx":47CE9
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   233
@@ -4186,7 +3056,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   12
             Left            =   240
-            Picture         =   "FormMainMode.frx":6779D
+            Picture         =   "FormMainMode.frx":4C40B
             Top             =   480
             Width           =   330
          End
@@ -4194,7 +3064,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   12
             Left            =   240
-            Picture         =   "FormMainMode.frx":67BBE
+            Picture         =   "FormMainMode.frx":4C82C
             Top             =   480
             Width           =   330
          End
@@ -4202,7 +3072,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   12
             Left            =   240
-            Picture         =   "FormMainMode.frx":67E58
+            Picture         =   "FormMainMode.frx":4CAC6
             Top             =   480
             Width           =   330
          End
@@ -4210,7 +3080,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   12
             Left            =   240
-            Picture         =   "FormMainMode.frx":680F0
+            Picture         =   "FormMainMode.frx":4CD5E
             Top             =   480
             Width           =   330
          End
@@ -4218,7 +3088,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   12
             Left            =   240
-            Picture         =   "FormMainMode.frx":68518
+            Picture         =   "FormMainMode.frx":4D186
             Top             =   0
             Width           =   300
          End
@@ -4226,7 +3096,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   12
             Left            =   240
-            Picture         =   "FormMainMode.frx":68584
+            Picture         =   "FormMainMode.frx":4D1F2
             Top             =   1020
             Width           =   300
          End
@@ -4239,7 +3109,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   13
          Left            =   240
-         Picture         =   "FormMainMode.frx":685F1
+         Picture         =   "FormMainMode.frx":4D25F
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   232
@@ -4249,7 +3119,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   13
             Left            =   240
-            Picture         =   "FormMainMode.frx":6CD13
+            Picture         =   "FormMainMode.frx":51981
             Top             =   480
             Width           =   330
          End
@@ -4257,7 +3127,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   13
             Left            =   240
-            Picture         =   "FormMainMode.frx":6D134
+            Picture         =   "FormMainMode.frx":51DA2
             Top             =   480
             Width           =   330
          End
@@ -4265,7 +3135,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   13
             Left            =   240
-            Picture         =   "FormMainMode.frx":6D3CE
+            Picture         =   "FormMainMode.frx":5203C
             Top             =   480
             Width           =   330
          End
@@ -4273,7 +3143,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   13
             Left            =   240
-            Picture         =   "FormMainMode.frx":6D666
+            Picture         =   "FormMainMode.frx":522D4
             Top             =   480
             Width           =   330
          End
@@ -4281,7 +3151,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   13
             Left            =   240
-            Picture         =   "FormMainMode.frx":6DA8E
+            Picture         =   "FormMainMode.frx":526FC
             Top             =   0
             Width           =   300
          End
@@ -4289,7 +3159,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   13
             Left            =   240
-            Picture         =   "FormMainMode.frx":6DAFA
+            Picture         =   "FormMainMode.frx":52768
             Top             =   1020
             Width           =   300
          End
@@ -4302,7 +3172,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   14
          Left            =   240
-         Picture         =   "FormMainMode.frx":6DB67
+         Picture         =   "FormMainMode.frx":527D5
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   231
@@ -4312,7 +3182,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   14
             Left            =   240
-            Picture         =   "FormMainMode.frx":72289
+            Picture         =   "FormMainMode.frx":56EF7
             Top             =   480
             Width           =   330
          End
@@ -4320,7 +3190,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   14
             Left            =   240
-            Picture         =   "FormMainMode.frx":726AA
+            Picture         =   "FormMainMode.frx":57318
             Top             =   480
             Width           =   330
          End
@@ -4328,7 +3198,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   14
             Left            =   240
-            Picture         =   "FormMainMode.frx":72944
+            Picture         =   "FormMainMode.frx":575B2
             Top             =   480
             Width           =   330
          End
@@ -4336,7 +3206,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   14
             Left            =   240
-            Picture         =   "FormMainMode.frx":72BDC
+            Picture         =   "FormMainMode.frx":5784A
             Top             =   480
             Width           =   330
          End
@@ -4344,7 +3214,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   14
             Left            =   240
-            Picture         =   "FormMainMode.frx":73004
+            Picture         =   "FormMainMode.frx":57C72
             Top             =   0
             Width           =   300
          End
@@ -4352,7 +3222,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   14
             Left            =   240
-            Picture         =   "FormMainMode.frx":73070
+            Picture         =   "FormMainMode.frx":57CDE
             Top             =   1020
             Width           =   300
          End
@@ -4365,7 +3235,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   15
          Left            =   240
-         Picture         =   "FormMainMode.frx":730DD
+         Picture         =   "FormMainMode.frx":57D4B
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   230
@@ -4375,7 +3245,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   15
             Left            =   240
-            Picture         =   "FormMainMode.frx":777FF
+            Picture         =   "FormMainMode.frx":5C46D
             Top             =   480
             Width           =   330
          End
@@ -4383,7 +3253,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   15
             Left            =   240
-            Picture         =   "FormMainMode.frx":77C20
+            Picture         =   "FormMainMode.frx":5C88E
             Top             =   480
             Width           =   330
          End
@@ -4391,7 +3261,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   15
             Left            =   240
-            Picture         =   "FormMainMode.frx":77EBA
+            Picture         =   "FormMainMode.frx":5CB28
             Top             =   480
             Width           =   330
          End
@@ -4399,7 +3269,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   15
             Left            =   240
-            Picture         =   "FormMainMode.frx":78152
+            Picture         =   "FormMainMode.frx":5CDC0
             Top             =   480
             Width           =   330
          End
@@ -4407,7 +3277,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   15
             Left            =   240
-            Picture         =   "FormMainMode.frx":7857A
+            Picture         =   "FormMainMode.frx":5D1E8
             Top             =   0
             Width           =   300
          End
@@ -4415,7 +3285,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   15
             Left            =   240
-            Picture         =   "FormMainMode.frx":785E6
+            Picture         =   "FormMainMode.frx":5D254
             Top             =   1020
             Width           =   300
          End
@@ -4428,7 +3298,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   16
          Left            =   240
-         Picture         =   "FormMainMode.frx":78653
+         Picture         =   "FormMainMode.frx":5D2C1
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   229
@@ -4438,7 +3308,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   16
             Left            =   240
-            Picture         =   "FormMainMode.frx":7BC65
+            Picture         =   "FormMainMode.frx":608D3
             Top             =   480
             Width           =   330
          End
@@ -4446,7 +3316,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   16
             Left            =   240
-            Picture         =   "FormMainMode.frx":7C086
+            Picture         =   "FormMainMode.frx":60CF4
             Top             =   480
             Width           =   330
          End
@@ -4454,7 +3324,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   16
             Left            =   240
-            Picture         =   "FormMainMode.frx":7C320
+            Picture         =   "FormMainMode.frx":60F8E
             Top             =   480
             Width           =   330
          End
@@ -4462,7 +3332,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   16
             Left            =   240
-            Picture         =   "FormMainMode.frx":7C5B8
+            Picture         =   "FormMainMode.frx":61226
             Top             =   480
             Width           =   330
          End
@@ -4470,7 +3340,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   16
             Left            =   240
-            Picture         =   "FormMainMode.frx":7C9E0
+            Picture         =   "FormMainMode.frx":6164E
             Top             =   0
             Width           =   300
          End
@@ -4478,7 +3348,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   16
             Left            =   240
-            Picture         =   "FormMainMode.frx":7CA4C
+            Picture         =   "FormMainMode.frx":616BA
             Top             =   1020
             Width           =   300
          End
@@ -4491,7 +3361,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   17
          Left            =   240
-         Picture         =   "FormMainMode.frx":7CAB9
+         Picture         =   "FormMainMode.frx":61727
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   228
@@ -4501,7 +3371,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   17
             Left            =   240
-            Picture         =   "FormMainMode.frx":800CB
+            Picture         =   "FormMainMode.frx":64D39
             Top             =   480
             Width           =   330
          End
@@ -4509,7 +3379,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   17
             Left            =   240
-            Picture         =   "FormMainMode.frx":804EC
+            Picture         =   "FormMainMode.frx":6515A
             Top             =   480
             Width           =   330
          End
@@ -4517,7 +3387,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   17
             Left            =   240
-            Picture         =   "FormMainMode.frx":80786
+            Picture         =   "FormMainMode.frx":653F4
             Top             =   480
             Width           =   330
          End
@@ -4525,7 +3395,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   17
             Left            =   240
-            Picture         =   "FormMainMode.frx":80A1E
+            Picture         =   "FormMainMode.frx":6568C
             Top             =   480
             Width           =   330
          End
@@ -4533,7 +3403,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   17
             Left            =   240
-            Picture         =   "FormMainMode.frx":80E46
+            Picture         =   "FormMainMode.frx":65AB4
             Top             =   0
             Width           =   300
          End
@@ -4541,7 +3411,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   17
             Left            =   240
-            Picture         =   "FormMainMode.frx":80EB2
+            Picture         =   "FormMainMode.frx":65B20
             Top             =   1020
             Width           =   300
          End
@@ -4554,7 +3424,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   18
          Left            =   240
-         Picture         =   "FormMainMode.frx":80F1F
+         Picture         =   "FormMainMode.frx":65B8D
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   227
@@ -4564,7 +3434,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   18
             Left            =   240
-            Picture         =   "FormMainMode.frx":84531
+            Picture         =   "FormMainMode.frx":6919F
             Top             =   480
             Width           =   330
          End
@@ -4572,7 +3442,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   18
             Left            =   240
-            Picture         =   "FormMainMode.frx":84952
+            Picture         =   "FormMainMode.frx":695C0
             Top             =   480
             Width           =   330
          End
@@ -4580,7 +3450,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   18
             Left            =   240
-            Picture         =   "FormMainMode.frx":84BEC
+            Picture         =   "FormMainMode.frx":6985A
             Top             =   480
             Width           =   330
          End
@@ -4588,7 +3458,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   18
             Left            =   240
-            Picture         =   "FormMainMode.frx":84E84
+            Picture         =   "FormMainMode.frx":69AF2
             Top             =   480
             Width           =   330
          End
@@ -4596,7 +3466,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   18
             Left            =   240
-            Picture         =   "FormMainMode.frx":852AC
+            Picture         =   "FormMainMode.frx":69F1A
             Top             =   0
             Width           =   300
          End
@@ -4604,7 +3474,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   18
             Left            =   240
-            Picture         =   "FormMainMode.frx":85318
+            Picture         =   "FormMainMode.frx":69F86
             Top             =   1020
             Width           =   300
          End
@@ -4617,7 +3487,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   19
          Left            =   240
-         Picture         =   "FormMainMode.frx":85385
+         Picture         =   "FormMainMode.frx":69FF3
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   226
@@ -4627,7 +3497,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   19
             Left            =   240
-            Picture         =   "FormMainMode.frx":89AA7
+            Picture         =   "FormMainMode.frx":6E715
             Top             =   480
             Width           =   330
          End
@@ -4635,7 +3505,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   19
             Left            =   240
-            Picture         =   "FormMainMode.frx":89EC8
+            Picture         =   "FormMainMode.frx":6EB36
             Top             =   480
             Width           =   330
          End
@@ -4643,7 +3513,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   19
             Left            =   240
-            Picture         =   "FormMainMode.frx":8A162
+            Picture         =   "FormMainMode.frx":6EDD0
             Top             =   480
             Width           =   330
          End
@@ -4651,7 +3521,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   19
             Left            =   240
-            Picture         =   "FormMainMode.frx":8A3FA
+            Picture         =   "FormMainMode.frx":6F068
             Top             =   480
             Width           =   330
          End
@@ -4659,7 +3529,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   19
             Left            =   240
-            Picture         =   "FormMainMode.frx":8A822
+            Picture         =   "FormMainMode.frx":6F490
             Top             =   0
             Width           =   300
          End
@@ -4667,7 +3537,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   19
             Left            =   240
-            Picture         =   "FormMainMode.frx":8A88E
+            Picture         =   "FormMainMode.frx":6F4FC
             Top             =   1020
             Width           =   300
          End
@@ -4680,7 +3550,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   20
          Left            =   240
-         Picture         =   "FormMainMode.frx":8A8FB
+         Picture         =   "FormMainMode.frx":6F569
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   225
@@ -4690,7 +3560,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   20
             Left            =   240
-            Picture         =   "FormMainMode.frx":8F01D
+            Picture         =   "FormMainMode.frx":73C8B
             Top             =   480
             Width           =   330
          End
@@ -4698,7 +3568,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   20
             Left            =   240
-            Picture         =   "FormMainMode.frx":8F43E
+            Picture         =   "FormMainMode.frx":740AC
             Top             =   480
             Width           =   330
          End
@@ -4706,7 +3576,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   20
             Left            =   240
-            Picture         =   "FormMainMode.frx":8F6D8
+            Picture         =   "FormMainMode.frx":74346
             Top             =   480
             Width           =   330
          End
@@ -4714,7 +3584,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   20
             Left            =   240
-            Picture         =   "FormMainMode.frx":8F970
+            Picture         =   "FormMainMode.frx":745DE
             Top             =   480
             Width           =   330
          End
@@ -4722,7 +3592,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   20
             Left            =   240
-            Picture         =   "FormMainMode.frx":8FD98
+            Picture         =   "FormMainMode.frx":74A06
             Top             =   0
             Width           =   300
          End
@@ -4730,7 +3600,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   20
             Left            =   240
-            Picture         =   "FormMainMode.frx":8FE04
+            Picture         =   "FormMainMode.frx":74A72
             Top             =   1020
             Width           =   300
          End
@@ -4743,7 +3613,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   21
          Left            =   240
-         Picture         =   "FormMainMode.frx":8FE71
+         Picture         =   "FormMainMode.frx":74ADF
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   224
@@ -4753,7 +3623,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   21
             Left            =   240
-            Picture         =   "FormMainMode.frx":94593
+            Picture         =   "FormMainMode.frx":79201
             Top             =   480
             Width           =   330
          End
@@ -4761,7 +3631,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   21
             Left            =   240
-            Picture         =   "FormMainMode.frx":949B4
+            Picture         =   "FormMainMode.frx":79622
             Top             =   480
             Width           =   330
          End
@@ -4769,7 +3639,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   21
             Left            =   240
-            Picture         =   "FormMainMode.frx":94C4E
+            Picture         =   "FormMainMode.frx":798BC
             Top             =   480
             Width           =   330
          End
@@ -4777,7 +3647,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   21
             Left            =   240
-            Picture         =   "FormMainMode.frx":94EE6
+            Picture         =   "FormMainMode.frx":79B54
             Top             =   480
             Width           =   330
          End
@@ -4785,7 +3655,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   21
             Left            =   240
-            Picture         =   "FormMainMode.frx":9530E
+            Picture         =   "FormMainMode.frx":79F7C
             Top             =   0
             Width           =   300
          End
@@ -4793,7 +3663,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   21
             Left            =   240
-            Picture         =   "FormMainMode.frx":9537A
+            Picture         =   "FormMainMode.frx":79FE8
             Top             =   1020
             Width           =   300
          End
@@ -4806,7 +3676,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   22
          Left            =   240
-         Picture         =   "FormMainMode.frx":953E7
+         Picture         =   "FormMainMode.frx":7A055
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   223
@@ -4816,7 +3686,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   22
             Left            =   240
-            Picture         =   "FormMainMode.frx":99B09
+            Picture         =   "FormMainMode.frx":7E777
             Top             =   480
             Width           =   330
          End
@@ -4824,7 +3694,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   22
             Left            =   240
-            Picture         =   "FormMainMode.frx":99F2A
+            Picture         =   "FormMainMode.frx":7EB98
             Top             =   480
             Width           =   330
          End
@@ -4832,7 +3702,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   22
             Left            =   240
-            Picture         =   "FormMainMode.frx":9A1C4
+            Picture         =   "FormMainMode.frx":7EE32
             Top             =   480
             Width           =   330
          End
@@ -4840,7 +3710,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   22
             Left            =   240
-            Picture         =   "FormMainMode.frx":9A45C
+            Picture         =   "FormMainMode.frx":7F0CA
             Top             =   480
             Width           =   330
          End
@@ -4848,7 +3718,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   22
             Left            =   240
-            Picture         =   "FormMainMode.frx":9A884
+            Picture         =   "FormMainMode.frx":7F4F2
             Top             =   0
             Width           =   300
          End
@@ -4856,7 +3726,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   22
             Left            =   240
-            Picture         =   "FormMainMode.frx":9A8F0
+            Picture         =   "FormMainMode.frx":7F55E
             Top             =   1020
             Width           =   300
          End
@@ -4869,7 +3739,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   23
          Left            =   240
-         Picture         =   "FormMainMode.frx":9A95D
+         Picture         =   "FormMainMode.frx":7F5CB
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   222
@@ -4879,7 +3749,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   23
             Left            =   240
-            Picture         =   "FormMainMode.frx":9F07F
+            Picture         =   "FormMainMode.frx":83CED
             Top             =   480
             Width           =   330
          End
@@ -4887,7 +3757,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   23
             Left            =   240
-            Picture         =   "FormMainMode.frx":9F4A0
+            Picture         =   "FormMainMode.frx":8410E
             Top             =   480
             Width           =   330
          End
@@ -4895,7 +3765,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   23
             Left            =   240
-            Picture         =   "FormMainMode.frx":9F73A
+            Picture         =   "FormMainMode.frx":843A8
             Top             =   480
             Width           =   330
          End
@@ -4903,7 +3773,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   23
             Left            =   240
-            Picture         =   "FormMainMode.frx":9F9D2
+            Picture         =   "FormMainMode.frx":84640
             Top             =   480
             Width           =   330
          End
@@ -4911,7 +3781,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   23
             Left            =   240
-            Picture         =   "FormMainMode.frx":9FDFA
+            Picture         =   "FormMainMode.frx":84A68
             Top             =   0
             Width           =   300
          End
@@ -4919,7 +3789,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   23
             Left            =   240
-            Picture         =   "FormMainMode.frx":9FE66
+            Picture         =   "FormMainMode.frx":84AD4
             Top             =   1020
             Width           =   300
          End
@@ -4932,7 +3802,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   24
          Left            =   240
-         Picture         =   "FormMainMode.frx":9FED3
+         Picture         =   "FormMainMode.frx":84B41
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   221
@@ -4942,7 +3812,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   24
             Left            =   240
-            Picture         =   "FormMainMode.frx":A45F5
+            Picture         =   "FormMainMode.frx":89263
             Top             =   480
             Width           =   330
          End
@@ -4950,7 +3820,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   24
             Left            =   240
-            Picture         =   "FormMainMode.frx":A4A16
+            Picture         =   "FormMainMode.frx":89684
             Top             =   480
             Width           =   330
          End
@@ -4958,7 +3828,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   24
             Left            =   240
-            Picture         =   "FormMainMode.frx":A4CB0
+            Picture         =   "FormMainMode.frx":8991E
             Top             =   480
             Width           =   330
          End
@@ -4966,7 +3836,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   24
             Left            =   240
-            Picture         =   "FormMainMode.frx":A4F48
+            Picture         =   "FormMainMode.frx":89BB6
             Top             =   480
             Width           =   330
          End
@@ -4974,7 +3844,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   24
             Left            =   240
-            Picture         =   "FormMainMode.frx":A5370
+            Picture         =   "FormMainMode.frx":89FDE
             Top             =   0
             Width           =   300
          End
@@ -4982,7 +3852,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   24
             Left            =   240
-            Picture         =   "FormMainMode.frx":A53DC
+            Picture         =   "FormMainMode.frx":8A04A
             Top             =   1020
             Width           =   300
          End
@@ -4995,7 +3865,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   25
          Left            =   240
-         Picture         =   "FormMainMode.frx":A5449
+         Picture         =   "FormMainMode.frx":8A0B7
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   220
@@ -5005,7 +3875,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   25
             Left            =   240
-            Picture         =   "FormMainMode.frx":A9B6B
+            Picture         =   "FormMainMode.frx":8E7D9
             Top             =   480
             Width           =   330
          End
@@ -5013,7 +3883,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   25
             Left            =   240
-            Picture         =   "FormMainMode.frx":A9F8C
+            Picture         =   "FormMainMode.frx":8EBFA
             Top             =   480
             Width           =   330
          End
@@ -5021,7 +3891,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   25
             Left            =   240
-            Picture         =   "FormMainMode.frx":AA226
+            Picture         =   "FormMainMode.frx":8EE94
             Top             =   480
             Width           =   330
          End
@@ -5029,7 +3899,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   25
             Left            =   240
-            Picture         =   "FormMainMode.frx":AA4BE
+            Picture         =   "FormMainMode.frx":8F12C
             Top             =   480
             Width           =   330
          End
@@ -5037,7 +3907,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   25
             Left            =   240
-            Picture         =   "FormMainMode.frx":AA8E6
+            Picture         =   "FormMainMode.frx":8F554
             Top             =   0
             Width           =   300
          End
@@ -5045,7 +3915,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   25
             Left            =   240
-            Picture         =   "FormMainMode.frx":AA952
+            Picture         =   "FormMainMode.frx":8F5C0
             Top             =   1020
             Width           =   300
          End
@@ -5058,7 +3928,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   26
          Left            =   240
-         Picture         =   "FormMainMode.frx":AA9BF
+         Picture         =   "FormMainMode.frx":8F62D
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   219
@@ -5068,7 +3938,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   26
             Left            =   240
-            Picture         =   "FormMainMode.frx":AF0E1
+            Picture         =   "FormMainMode.frx":93D4F
             Top             =   480
             Width           =   330
          End
@@ -5076,7 +3946,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   26
             Left            =   240
-            Picture         =   "FormMainMode.frx":AF502
+            Picture         =   "FormMainMode.frx":94170
             Top             =   480
             Width           =   330
          End
@@ -5084,7 +3954,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   26
             Left            =   240
-            Picture         =   "FormMainMode.frx":AF79C
+            Picture         =   "FormMainMode.frx":9440A
             Top             =   480
             Width           =   330
          End
@@ -5092,7 +3962,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   26
             Left            =   240
-            Picture         =   "FormMainMode.frx":AFA34
+            Picture         =   "FormMainMode.frx":946A2
             Top             =   480
             Width           =   330
          End
@@ -5100,7 +3970,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   26
             Left            =   240
-            Picture         =   "FormMainMode.frx":AFE5C
+            Picture         =   "FormMainMode.frx":94ACA
             Top             =   0
             Width           =   300
          End
@@ -5108,7 +3978,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   26
             Left            =   240
-            Picture         =   "FormMainMode.frx":AFEC8
+            Picture         =   "FormMainMode.frx":94B36
             Top             =   1020
             Width           =   300
          End
@@ -5121,7 +3991,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   27
          Left            =   240
-         Picture         =   "FormMainMode.frx":AFF35
+         Picture         =   "FormMainMode.frx":94BA3
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   218
@@ -5131,7 +4001,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   27
             Left            =   240
-            Picture         =   "FormMainMode.frx":B4657
+            Picture         =   "FormMainMode.frx":992C5
             Top             =   480
             Width           =   330
          End
@@ -5139,7 +4009,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   27
             Left            =   240
-            Picture         =   "FormMainMode.frx":B4A78
+            Picture         =   "FormMainMode.frx":996E6
             Top             =   480
             Width           =   330
          End
@@ -5147,7 +4017,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   27
             Left            =   240
-            Picture         =   "FormMainMode.frx":B4D12
+            Picture         =   "FormMainMode.frx":99980
             Top             =   480
             Width           =   330
          End
@@ -5155,7 +4025,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   27
             Left            =   240
-            Picture         =   "FormMainMode.frx":B4FAA
+            Picture         =   "FormMainMode.frx":99C18
             Top             =   480
             Width           =   330
          End
@@ -5163,7 +4033,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   27
             Left            =   240
-            Picture         =   "FormMainMode.frx":B53D2
+            Picture         =   "FormMainMode.frx":9A040
             Top             =   0
             Width           =   300
          End
@@ -5171,7 +4041,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   27
             Left            =   240
-            Picture         =   "FormMainMode.frx":B543E
+            Picture         =   "FormMainMode.frx":9A0AC
             Top             =   1020
             Width           =   300
          End
@@ -5184,7 +4054,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   28
          Left            =   240
-         Picture         =   "FormMainMode.frx":B54AB
+         Picture         =   "FormMainMode.frx":9A119
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   217
@@ -5194,7 +4064,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   28
             Left            =   240
-            Picture         =   "FormMainMode.frx":B8ABD
+            Picture         =   "FormMainMode.frx":9D72B
             Top             =   480
             Width           =   330
          End
@@ -5202,7 +4072,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   28
             Left            =   240
-            Picture         =   "FormMainMode.frx":B8EDE
+            Picture         =   "FormMainMode.frx":9DB4C
             Top             =   480
             Width           =   330
          End
@@ -5210,7 +4080,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   28
             Left            =   240
-            Picture         =   "FormMainMode.frx":B9178
+            Picture         =   "FormMainMode.frx":9DDE6
             Top             =   480
             Width           =   330
          End
@@ -5218,7 +4088,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   28
             Left            =   240
-            Picture         =   "FormMainMode.frx":B9410
+            Picture         =   "FormMainMode.frx":9E07E
             Top             =   480
             Width           =   330
          End
@@ -5226,7 +4096,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   28
             Left            =   240
-            Picture         =   "FormMainMode.frx":B9838
+            Picture         =   "FormMainMode.frx":9E4A6
             Top             =   0
             Width           =   300
          End
@@ -5234,7 +4104,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   28
             Left            =   240
-            Picture         =   "FormMainMode.frx":B98A4
+            Picture         =   "FormMainMode.frx":9E512
             Top             =   1020
             Width           =   300
          End
@@ -5247,7 +4117,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   29
          Left            =   240
-         Picture         =   "FormMainMode.frx":B9911
+         Picture         =   "FormMainMode.frx":9E57F
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   216
@@ -5257,7 +4127,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   29
             Left            =   240
-            Picture         =   "FormMainMode.frx":BCF23
+            Picture         =   "FormMainMode.frx":A1B91
             Top             =   480
             Width           =   330
          End
@@ -5265,7 +4135,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   29
             Left            =   240
-            Picture         =   "FormMainMode.frx":BD344
+            Picture         =   "FormMainMode.frx":A1FB2
             Top             =   480
             Width           =   330
          End
@@ -5273,7 +4143,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   29
             Left            =   240
-            Picture         =   "FormMainMode.frx":BD5DE
+            Picture         =   "FormMainMode.frx":A224C
             Top             =   480
             Width           =   330
          End
@@ -5281,7 +4151,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   29
             Left            =   240
-            Picture         =   "FormMainMode.frx":BD876
+            Picture         =   "FormMainMode.frx":A24E4
             Top             =   480
             Width           =   330
          End
@@ -5289,7 +4159,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   29
             Left            =   240
-            Picture         =   "FormMainMode.frx":BDC9E
+            Picture         =   "FormMainMode.frx":A290C
             Top             =   0
             Width           =   300
          End
@@ -5297,7 +4167,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   29
             Left            =   240
-            Picture         =   "FormMainMode.frx":BDD0A
+            Picture         =   "FormMainMode.frx":A2978
             Top             =   1020
             Width           =   300
          End
@@ -5310,7 +4180,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   30
          Left            =   240
-         Picture         =   "FormMainMode.frx":BDD77
+         Picture         =   "FormMainMode.frx":A29E5
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   215
@@ -5320,7 +4190,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   30
             Left            =   240
-            Picture         =   "FormMainMode.frx":C1389
+            Picture         =   "FormMainMode.frx":A5FF7
             Top             =   480
             Width           =   330
          End
@@ -5328,7 +4198,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   30
             Left            =   240
-            Picture         =   "FormMainMode.frx":C17AA
+            Picture         =   "FormMainMode.frx":A6418
             Top             =   480
             Width           =   330
          End
@@ -5336,7 +4206,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   30
             Left            =   240
-            Picture         =   "FormMainMode.frx":C1A44
+            Picture         =   "FormMainMode.frx":A66B2
             Top             =   480
             Width           =   330
          End
@@ -5344,7 +4214,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   30
             Left            =   240
-            Picture         =   "FormMainMode.frx":C1CDC
+            Picture         =   "FormMainMode.frx":A694A
             Top             =   480
             Width           =   330
          End
@@ -5352,7 +4222,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   30
             Left            =   240
-            Picture         =   "FormMainMode.frx":C2104
+            Picture         =   "FormMainMode.frx":A6D72
             Top             =   0
             Width           =   300
          End
@@ -5360,7 +4230,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   30
             Left            =   240
-            Picture         =   "FormMainMode.frx":C2170
+            Picture         =   "FormMainMode.frx":A6DDE
             Top             =   1020
             Width           =   300
          End
@@ -5373,7 +4243,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   31
          Left            =   240
-         Picture         =   "FormMainMode.frx":C21DD
+         Picture         =   "FormMainMode.frx":A6E4B
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   214
@@ -5383,7 +4253,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   31
             Left            =   240
-            Picture         =   "FormMainMode.frx":C57EF
+            Picture         =   "FormMainMode.frx":AA45D
             Top             =   480
             Width           =   330
          End
@@ -5391,7 +4261,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   31
             Left            =   240
-            Picture         =   "FormMainMode.frx":C5C10
+            Picture         =   "FormMainMode.frx":AA87E
             Top             =   480
             Width           =   330
          End
@@ -5399,7 +4269,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   31
             Left            =   240
-            Picture         =   "FormMainMode.frx":C5EAA
+            Picture         =   "FormMainMode.frx":AAB18
             Top             =   480
             Width           =   330
          End
@@ -5407,7 +4277,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   31
             Left            =   240
-            Picture         =   "FormMainMode.frx":C6142
+            Picture         =   "FormMainMode.frx":AADB0
             Top             =   480
             Width           =   330
          End
@@ -5415,7 +4285,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   31
             Left            =   240
-            Picture         =   "FormMainMode.frx":C656A
+            Picture         =   "FormMainMode.frx":AB1D8
             Top             =   0
             Width           =   300
          End
@@ -5423,7 +4293,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   31
             Left            =   240
-            Picture         =   "FormMainMode.frx":C65D6
+            Picture         =   "FormMainMode.frx":AB244
             Top             =   1020
             Width           =   300
          End
@@ -5436,7 +4306,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   32
          Left            =   240
-         Picture         =   "FormMainMode.frx":C6643
+         Picture         =   "FormMainMode.frx":AB2B1
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   213
@@ -5446,7 +4316,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   32
             Left            =   240
-            Picture         =   "FormMainMode.frx":C9C55
+            Picture         =   "FormMainMode.frx":AE8C3
             Top             =   480
             Width           =   330
          End
@@ -5454,7 +4324,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   32
             Left            =   240
-            Picture         =   "FormMainMode.frx":CA076
+            Picture         =   "FormMainMode.frx":AECE4
             Top             =   480
             Width           =   330
          End
@@ -5462,7 +4332,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   32
             Left            =   240
-            Picture         =   "FormMainMode.frx":CA310
+            Picture         =   "FormMainMode.frx":AEF7E
             Top             =   480
             Width           =   330
          End
@@ -5470,7 +4340,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   32
             Left            =   240
-            Picture         =   "FormMainMode.frx":CA5A8
+            Picture         =   "FormMainMode.frx":AF216
             Top             =   480
             Width           =   330
          End
@@ -5478,7 +4348,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   32
             Left            =   240
-            Picture         =   "FormMainMode.frx":CA9D0
+            Picture         =   "FormMainMode.frx":AF63E
             Top             =   0
             Width           =   300
          End
@@ -5486,7 +4356,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   32
             Left            =   240
-            Picture         =   "FormMainMode.frx":CAA3C
+            Picture         =   "FormMainMode.frx":AF6AA
             Top             =   1020
             Width           =   300
          End
@@ -5499,7 +4369,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   33
          Left            =   240
-         Picture         =   "FormMainMode.frx":CAAA9
+         Picture         =   "FormMainMode.frx":AF717
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   212
@@ -5509,7 +4379,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   33
             Left            =   240
-            Picture         =   "FormMainMode.frx":CF1CB
+            Picture         =   "FormMainMode.frx":B3E39
             Top             =   480
             Width           =   330
          End
@@ -5517,7 +4387,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   33
             Left            =   240
-            Picture         =   "FormMainMode.frx":CF5EC
+            Picture         =   "FormMainMode.frx":B425A
             Top             =   480
             Width           =   330
          End
@@ -5525,7 +4395,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   33
             Left            =   240
-            Picture         =   "FormMainMode.frx":CF886
+            Picture         =   "FormMainMode.frx":B44F4
             Top             =   480
             Width           =   330
          End
@@ -5533,7 +4403,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   33
             Left            =   240
-            Picture         =   "FormMainMode.frx":CFB1E
+            Picture         =   "FormMainMode.frx":B478C
             Top             =   480
             Width           =   330
          End
@@ -5541,7 +4411,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   33
             Left            =   240
-            Picture         =   "FormMainMode.frx":CFF46
+            Picture         =   "FormMainMode.frx":B4BB4
             Top             =   0
             Width           =   300
          End
@@ -5549,7 +4419,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   33
             Left            =   240
-            Picture         =   "FormMainMode.frx":CFFB2
+            Picture         =   "FormMainMode.frx":B4C20
             Top             =   1020
             Width           =   300
          End
@@ -5562,7 +4432,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   34
          Left            =   240
-         Picture         =   "FormMainMode.frx":D001F
+         Picture         =   "FormMainMode.frx":B4C8D
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   211
@@ -5572,7 +4442,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   34
             Left            =   240
-            Picture         =   "FormMainMode.frx":D4741
+            Picture         =   "FormMainMode.frx":B93AF
             Top             =   480
             Width           =   330
          End
@@ -5580,7 +4450,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   34
             Left            =   240
-            Picture         =   "FormMainMode.frx":D4B62
+            Picture         =   "FormMainMode.frx":B97D0
             Top             =   480
             Width           =   330
          End
@@ -5588,7 +4458,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   34
             Left            =   240
-            Picture         =   "FormMainMode.frx":D4DFC
+            Picture         =   "FormMainMode.frx":B9A6A
             Top             =   480
             Width           =   330
          End
@@ -5596,7 +4466,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   34
             Left            =   240
-            Picture         =   "FormMainMode.frx":D5094
+            Picture         =   "FormMainMode.frx":B9D02
             Top             =   480
             Width           =   330
          End
@@ -5604,7 +4474,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   34
             Left            =   240
-            Picture         =   "FormMainMode.frx":D54BC
+            Picture         =   "FormMainMode.frx":BA12A
             Top             =   0
             Width           =   300
          End
@@ -5612,7 +4482,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   34
             Left            =   240
-            Picture         =   "FormMainMode.frx":D5528
+            Picture         =   "FormMainMode.frx":BA196
             Top             =   1020
             Width           =   300
          End
@@ -5625,7 +4495,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   35
          Left            =   240
-         Picture         =   "FormMainMode.frx":D5595
+         Picture         =   "FormMainMode.frx":BA203
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   210
@@ -5635,7 +4505,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   35
             Left            =   240
-            Picture         =   "FormMainMode.frx":D8BA7
+            Picture         =   "FormMainMode.frx":BD815
             Top             =   480
             Width           =   330
          End
@@ -5643,7 +4513,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   35
             Left            =   240
-            Picture         =   "FormMainMode.frx":D8FC8
+            Picture         =   "FormMainMode.frx":BDC36
             Top             =   480
             Width           =   330
          End
@@ -5651,7 +4521,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   35
             Left            =   240
-            Picture         =   "FormMainMode.frx":D9262
+            Picture         =   "FormMainMode.frx":BDED0
             Top             =   480
             Width           =   330
          End
@@ -5659,7 +4529,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   35
             Left            =   240
-            Picture         =   "FormMainMode.frx":D94FA
+            Picture         =   "FormMainMode.frx":BE168
             Top             =   480
             Width           =   330
          End
@@ -5667,7 +4537,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   35
             Left            =   240
-            Picture         =   "FormMainMode.frx":D9922
+            Picture         =   "FormMainMode.frx":BE590
             Top             =   0
             Width           =   300
          End
@@ -5675,7 +4545,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   35
             Left            =   240
-            Picture         =   "FormMainMode.frx":D998E
+            Picture         =   "FormMainMode.frx":BE5FC
             Top             =   1020
             Width           =   300
          End
@@ -5688,7 +4558,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   36
          Left            =   240
-         Picture         =   "FormMainMode.frx":D99FB
+         Picture         =   "FormMainMode.frx":BE669
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   209
@@ -5698,7 +4568,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   36
             Left            =   240
-            Picture         =   "FormMainMode.frx":DE11D
+            Picture         =   "FormMainMode.frx":C2D8B
             Top             =   480
             Width           =   330
          End
@@ -5706,7 +4576,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   36
             Left            =   240
-            Picture         =   "FormMainMode.frx":DE53E
+            Picture         =   "FormMainMode.frx":C31AC
             Top             =   480
             Width           =   330
          End
@@ -5714,7 +4584,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   36
             Left            =   240
-            Picture         =   "FormMainMode.frx":DE7D8
+            Picture         =   "FormMainMode.frx":C3446
             Top             =   480
             Width           =   330
          End
@@ -5722,7 +4592,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   36
             Left            =   240
-            Picture         =   "FormMainMode.frx":DEA70
+            Picture         =   "FormMainMode.frx":C36DE
             Top             =   480
             Width           =   330
          End
@@ -5730,7 +4600,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   36
             Left            =   240
-            Picture         =   "FormMainMode.frx":DEE98
+            Picture         =   "FormMainMode.frx":C3B06
             Top             =   0
             Width           =   300
          End
@@ -5738,7 +4608,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   36
             Left            =   240
-            Picture         =   "FormMainMode.frx":DEF04
+            Picture         =   "FormMainMode.frx":C3B72
             Top             =   1020
             Width           =   300
          End
@@ -5751,7 +4621,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   37
          Left            =   240
-         Picture         =   "FormMainMode.frx":DEF71
+         Picture         =   "FormMainMode.frx":C3BDF
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   208
@@ -5761,7 +4631,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   37
             Left            =   240
-            Picture         =   "FormMainMode.frx":E3693
+            Picture         =   "FormMainMode.frx":C8301
             Top             =   480
             Width           =   330
          End
@@ -5769,7 +4639,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   37
             Left            =   240
-            Picture         =   "FormMainMode.frx":E3AB4
+            Picture         =   "FormMainMode.frx":C8722
             Top             =   480
             Width           =   330
          End
@@ -5777,7 +4647,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   37
             Left            =   240
-            Picture         =   "FormMainMode.frx":E3D4E
+            Picture         =   "FormMainMode.frx":C89BC
             Top             =   480
             Width           =   330
          End
@@ -5785,7 +4655,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   37
             Left            =   240
-            Picture         =   "FormMainMode.frx":E3FE6
+            Picture         =   "FormMainMode.frx":C8C54
             Top             =   480
             Width           =   330
          End
@@ -5793,7 +4663,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   37
             Left            =   240
-            Picture         =   "FormMainMode.frx":E440E
+            Picture         =   "FormMainMode.frx":C907C
             Top             =   0
             Width           =   300
          End
@@ -5801,7 +4671,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   37
             Left            =   240
-            Picture         =   "FormMainMode.frx":E447A
+            Picture         =   "FormMainMode.frx":C90E8
             Top             =   1020
             Width           =   300
          End
@@ -5814,7 +4684,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   38
          Left            =   240
-         Picture         =   "FormMainMode.frx":E44E7
+         Picture         =   "FormMainMode.frx":C9155
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   207
@@ -5824,7 +4694,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   38
             Left            =   240
-            Picture         =   "FormMainMode.frx":E7AF9
+            Picture         =   "FormMainMode.frx":CC767
             Top             =   480
             Width           =   330
          End
@@ -5832,7 +4702,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   38
             Left            =   240
-            Picture         =   "FormMainMode.frx":E7F1A
+            Picture         =   "FormMainMode.frx":CCB88
             Top             =   480
             Width           =   330
          End
@@ -5840,7 +4710,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   38
             Left            =   240
-            Picture         =   "FormMainMode.frx":E81B4
+            Picture         =   "FormMainMode.frx":CCE22
             Top             =   480
             Width           =   330
          End
@@ -5848,7 +4718,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   38
             Left            =   240
-            Picture         =   "FormMainMode.frx":E844C
+            Picture         =   "FormMainMode.frx":CD0BA
             Top             =   480
             Width           =   330
          End
@@ -5856,7 +4726,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   38
             Left            =   240
-            Picture         =   "FormMainMode.frx":E8874
+            Picture         =   "FormMainMode.frx":CD4E2
             Top             =   0
             Width           =   300
          End
@@ -5864,7 +4734,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   38
             Left            =   240
-            Picture         =   "FormMainMode.frx":E88E0
+            Picture         =   "FormMainMode.frx":CD54E
             Top             =   1020
             Width           =   300
          End
@@ -5877,7 +4747,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   39
          Left            =   240
-         Picture         =   "FormMainMode.frx":E894D
+         Picture         =   "FormMainMode.frx":CD5BB
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   206
@@ -5887,7 +4757,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   39
             Left            =   240
-            Picture         =   "FormMainMode.frx":ED06F
+            Picture         =   "FormMainMode.frx":D1CDD
             Top             =   480
             Width           =   330
          End
@@ -5895,7 +4765,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   39
             Left            =   240
-            Picture         =   "FormMainMode.frx":ED490
+            Picture         =   "FormMainMode.frx":D20FE
             Top             =   480
             Width           =   330
          End
@@ -5903,7 +4773,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   39
             Left            =   240
-            Picture         =   "FormMainMode.frx":ED72A
+            Picture         =   "FormMainMode.frx":D2398
             Top             =   480
             Width           =   330
          End
@@ -5911,7 +4781,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   39
             Left            =   240
-            Picture         =   "FormMainMode.frx":ED9C2
+            Picture         =   "FormMainMode.frx":D2630
             Top             =   480
             Width           =   330
          End
@@ -5919,7 +4789,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   39
             Left            =   240
-            Picture         =   "FormMainMode.frx":EDDEA
+            Picture         =   "FormMainMode.frx":D2A58
             Top             =   0
             Width           =   300
          End
@@ -5927,7 +4797,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   39
             Left            =   240
-            Picture         =   "FormMainMode.frx":EDE56
+            Picture         =   "FormMainMode.frx":D2AC4
             Top             =   1020
             Width           =   300
          End
@@ -5940,7 +4810,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   40
          Left            =   240
-         Picture         =   "FormMainMode.frx":EDEC3
+         Picture         =   "FormMainMode.frx":D2B31
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   205
@@ -5950,7 +4820,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   40
             Left            =   240
-            Picture         =   "FormMainMode.frx":F25E5
+            Picture         =   "FormMainMode.frx":D7253
             Top             =   480
             Width           =   330
          End
@@ -5958,7 +4828,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   40
             Left            =   240
-            Picture         =   "FormMainMode.frx":F2A06
+            Picture         =   "FormMainMode.frx":D7674
             Top             =   480
             Width           =   330
          End
@@ -5966,7 +4836,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   40
             Left            =   240
-            Picture         =   "FormMainMode.frx":F2CA0
+            Picture         =   "FormMainMode.frx":D790E
             Top             =   480
             Width           =   330
          End
@@ -5974,7 +4844,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   40
             Left            =   240
-            Picture         =   "FormMainMode.frx":F2F38
+            Picture         =   "FormMainMode.frx":D7BA6
             Top             =   480
             Width           =   330
          End
@@ -5982,7 +4852,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   40
             Left            =   240
-            Picture         =   "FormMainMode.frx":F3360
+            Picture         =   "FormMainMode.frx":D7FCE
             Top             =   0
             Width           =   300
          End
@@ -5990,7 +4860,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   40
             Left            =   240
-            Picture         =   "FormMainMode.frx":F33CC
+            Picture         =   "FormMainMode.frx":D803A
             Top             =   1020
             Width           =   300
          End
@@ -6003,7 +4873,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   41
          Left            =   240
-         Picture         =   "FormMainMode.frx":F3439
+         Picture         =   "FormMainMode.frx":D80A7
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   204
@@ -6013,7 +4883,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   41
             Left            =   240
-            Picture         =   "FormMainMode.frx":F7B5B
+            Picture         =   "FormMainMode.frx":DC7C9
             Top             =   480
             Width           =   330
          End
@@ -6021,7 +4891,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   41
             Left            =   240
-            Picture         =   "FormMainMode.frx":F7F7C
+            Picture         =   "FormMainMode.frx":DCBEA
             Top             =   480
             Width           =   330
          End
@@ -6029,7 +4899,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   41
             Left            =   240
-            Picture         =   "FormMainMode.frx":F8216
+            Picture         =   "FormMainMode.frx":DCE84
             Top             =   480
             Width           =   330
          End
@@ -6037,7 +4907,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   41
             Left            =   240
-            Picture         =   "FormMainMode.frx":F84AE
+            Picture         =   "FormMainMode.frx":DD11C
             Top             =   480
             Width           =   330
          End
@@ -6045,7 +4915,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   41
             Left            =   240
-            Picture         =   "FormMainMode.frx":F88D6
+            Picture         =   "FormMainMode.frx":DD544
             Top             =   0
             Width           =   300
          End
@@ -6053,7 +4923,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   41
             Left            =   240
-            Picture         =   "FormMainMode.frx":F8942
+            Picture         =   "FormMainMode.frx":DD5B0
             Top             =   1020
             Width           =   300
          End
@@ -6066,7 +4936,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   42
          Left            =   240
-         Picture         =   "FormMainMode.frx":F89AF
+         Picture         =   "FormMainMode.frx":DD61D
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   203
@@ -6076,7 +4946,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   42
             Left            =   240
-            Picture         =   "FormMainMode.frx":FD0D1
+            Picture         =   "FormMainMode.frx":E1D3F
             Top             =   480
             Width           =   330
          End
@@ -6084,7 +4954,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   42
             Left            =   240
-            Picture         =   "FormMainMode.frx":FD4F2
+            Picture         =   "FormMainMode.frx":E2160
             Top             =   480
             Width           =   330
          End
@@ -6092,7 +4962,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   42
             Left            =   240
-            Picture         =   "FormMainMode.frx":FD78C
+            Picture         =   "FormMainMode.frx":E23FA
             Top             =   480
             Width           =   330
          End
@@ -6100,7 +4970,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   42
             Left            =   240
-            Picture         =   "FormMainMode.frx":FDA24
+            Picture         =   "FormMainMode.frx":E2692
             Top             =   480
             Width           =   330
          End
@@ -6108,7 +4978,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   42
             Left            =   240
-            Picture         =   "FormMainMode.frx":FDE4C
+            Picture         =   "FormMainMode.frx":E2ABA
             Top             =   0
             Width           =   300
          End
@@ -6116,7 +4986,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   42
             Left            =   240
-            Picture         =   "FormMainMode.frx":FDEB8
+            Picture         =   "FormMainMode.frx":E2B26
             Top             =   1020
             Width           =   300
          End
@@ -6129,7 +4999,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   43
          Left            =   240
-         Picture         =   "FormMainMode.frx":FDF25
+         Picture         =   "FormMainMode.frx":E2B93
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   202
@@ -6139,7 +5009,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   43
             Left            =   240
-            Picture         =   "FormMainMode.frx":102647
+            Picture         =   "FormMainMode.frx":E72B5
             Top             =   480
             Width           =   330
          End
@@ -6147,7 +5017,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   43
             Left            =   240
-            Picture         =   "FormMainMode.frx":102A68
+            Picture         =   "FormMainMode.frx":E76D6
             Top             =   480
             Width           =   330
          End
@@ -6155,7 +5025,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   43
             Left            =   240
-            Picture         =   "FormMainMode.frx":102D02
+            Picture         =   "FormMainMode.frx":E7970
             Top             =   480
             Width           =   330
          End
@@ -6163,7 +5033,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   43
             Left            =   240
-            Picture         =   "FormMainMode.frx":102F9A
+            Picture         =   "FormMainMode.frx":E7C08
             Top             =   480
             Width           =   330
          End
@@ -6171,7 +5041,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   43
             Left            =   240
-            Picture         =   "FormMainMode.frx":1033C2
+            Picture         =   "FormMainMode.frx":E8030
             Top             =   0
             Width           =   300
          End
@@ -6179,7 +5049,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   43
             Left            =   240
-            Picture         =   "FormMainMode.frx":10342E
+            Picture         =   "FormMainMode.frx":E809C
             Top             =   1020
             Width           =   300
          End
@@ -6192,7 +5062,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   44
          Left            =   240
-         Picture         =   "FormMainMode.frx":10349B
+         Picture         =   "FormMainMode.frx":E8109
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   201
@@ -6202,7 +5072,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   44
             Left            =   240
-            Picture         =   "FormMainMode.frx":107BBD
+            Picture         =   "FormMainMode.frx":EC82B
             Top             =   480
             Width           =   330
          End
@@ -6210,7 +5080,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   44
             Left            =   240
-            Picture         =   "FormMainMode.frx":107FDE
+            Picture         =   "FormMainMode.frx":ECC4C
             Top             =   480
             Width           =   330
          End
@@ -6218,7 +5088,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   44
             Left            =   240
-            Picture         =   "FormMainMode.frx":108278
+            Picture         =   "FormMainMode.frx":ECEE6
             Top             =   480
             Width           =   330
          End
@@ -6226,7 +5096,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   44
             Left            =   240
-            Picture         =   "FormMainMode.frx":108510
+            Picture         =   "FormMainMode.frx":ED17E
             Top             =   480
             Width           =   330
          End
@@ -6234,7 +5104,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   44
             Left            =   240
-            Picture         =   "FormMainMode.frx":108938
+            Picture         =   "FormMainMode.frx":ED5A6
             Top             =   0
             Width           =   300
          End
@@ -6242,7 +5112,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   44
             Left            =   240
-            Picture         =   "FormMainMode.frx":1089A4
+            Picture         =   "FormMainMode.frx":ED612
             Top             =   1020
             Width           =   300
          End
@@ -6255,7 +5125,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   45
          Left            =   240
-         Picture         =   "FormMainMode.frx":108A11
+         Picture         =   "FormMainMode.frx":ED67F
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   200
@@ -6265,7 +5135,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   45
             Left            =   240
-            Picture         =   "FormMainMode.frx":10D133
+            Picture         =   "FormMainMode.frx":F1DA1
             Top             =   480
             Width           =   330
          End
@@ -6273,7 +5143,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   45
             Left            =   240
-            Picture         =   "FormMainMode.frx":10D554
+            Picture         =   "FormMainMode.frx":F21C2
             Top             =   480
             Width           =   330
          End
@@ -6281,7 +5151,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   45
             Left            =   240
-            Picture         =   "FormMainMode.frx":10D7EE
+            Picture         =   "FormMainMode.frx":F245C
             Top             =   480
             Width           =   330
          End
@@ -6289,7 +5159,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   45
             Left            =   240
-            Picture         =   "FormMainMode.frx":10DA86
+            Picture         =   "FormMainMode.frx":F26F4
             Top             =   480
             Width           =   330
          End
@@ -6297,7 +5167,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   45
             Left            =   240
-            Picture         =   "FormMainMode.frx":10DEAE
+            Picture         =   "FormMainMode.frx":F2B1C
             Top             =   0
             Width           =   300
          End
@@ -6305,7 +5175,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   45
             Left            =   240
-            Picture         =   "FormMainMode.frx":10DF1A
+            Picture         =   "FormMainMode.frx":F2B88
             Top             =   1020
             Width           =   300
          End
@@ -6318,7 +5188,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   46
          Left            =   240
-         Picture         =   "FormMainMode.frx":10DF87
+         Picture         =   "FormMainMode.frx":F2BF5
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   199
@@ -6328,7 +5198,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   46
             Left            =   240
-            Picture         =   "FormMainMode.frx":1126A9
+            Picture         =   "FormMainMode.frx":F7317
             Top             =   480
             Width           =   330
          End
@@ -6336,7 +5206,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   46
             Left            =   240
-            Picture         =   "FormMainMode.frx":112ACA
+            Picture         =   "FormMainMode.frx":F7738
             Top             =   480
             Width           =   330
          End
@@ -6344,7 +5214,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   46
             Left            =   240
-            Picture         =   "FormMainMode.frx":112D64
+            Picture         =   "FormMainMode.frx":F79D2
             Top             =   480
             Width           =   330
          End
@@ -6352,7 +5222,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   46
             Left            =   240
-            Picture         =   "FormMainMode.frx":112FFC
+            Picture         =   "FormMainMode.frx":F7C6A
             Top             =   480
             Width           =   330
          End
@@ -6360,7 +5230,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   46
             Left            =   240
-            Picture         =   "FormMainMode.frx":113424
+            Picture         =   "FormMainMode.frx":F8092
             Top             =   0
             Width           =   300
          End
@@ -6368,7 +5238,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   46
             Left            =   240
-            Picture         =   "FormMainMode.frx":113490
+            Picture         =   "FormMainMode.frx":F80FE
             Top             =   1020
             Width           =   300
          End
@@ -6381,7 +5251,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   47
          Left            =   240
-         Picture         =   "FormMainMode.frx":1134FD
+         Picture         =   "FormMainMode.frx":F816B
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   198
@@ -6391,7 +5261,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   47
             Left            =   240
-            Picture         =   "FormMainMode.frx":117C1F
+            Picture         =   "FormMainMode.frx":FC88D
             Top             =   480
             Width           =   330
          End
@@ -6399,7 +5269,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   47
             Left            =   240
-            Picture         =   "FormMainMode.frx":118040
+            Picture         =   "FormMainMode.frx":FCCAE
             Top             =   480
             Width           =   330
          End
@@ -6407,7 +5277,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   47
             Left            =   240
-            Picture         =   "FormMainMode.frx":1182DA
+            Picture         =   "FormMainMode.frx":FCF48
             Top             =   480
             Width           =   330
          End
@@ -6415,7 +5285,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   47
             Left            =   240
-            Picture         =   "FormMainMode.frx":118572
+            Picture         =   "FormMainMode.frx":FD1E0
             Top             =   480
             Width           =   330
          End
@@ -6423,7 +5293,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   47
             Left            =   240
-            Picture         =   "FormMainMode.frx":11899A
+            Picture         =   "FormMainMode.frx":FD608
             Top             =   0
             Width           =   300
          End
@@ -6431,7 +5301,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   47
             Left            =   240
-            Picture         =   "FormMainMode.frx":118A06
+            Picture         =   "FormMainMode.frx":FD674
             Top             =   1020
             Width           =   300
          End
@@ -6444,7 +5314,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   48
          Left            =   240
-         Picture         =   "FormMainMode.frx":118A73
+         Picture         =   "FormMainMode.frx":FD6E1
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   197
@@ -6454,7 +5324,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   48
             Left            =   240
-            Picture         =   "FormMainMode.frx":11D195
+            Picture         =   "FormMainMode.frx":101E03
             Top             =   480
             Width           =   330
          End
@@ -6462,7 +5332,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   48
             Left            =   240
-            Picture         =   "FormMainMode.frx":11D5B6
+            Picture         =   "FormMainMode.frx":102224
             Top             =   480
             Width           =   330
          End
@@ -6470,7 +5340,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   48
             Left            =   240
-            Picture         =   "FormMainMode.frx":11D850
+            Picture         =   "FormMainMode.frx":1024BE
             Top             =   480
             Width           =   330
          End
@@ -6478,7 +5348,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   48
             Left            =   240
-            Picture         =   "FormMainMode.frx":11DAE8
+            Picture         =   "FormMainMode.frx":102756
             Top             =   480
             Width           =   330
          End
@@ -6486,7 +5356,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   48
             Left            =   240
-            Picture         =   "FormMainMode.frx":11DF10
+            Picture         =   "FormMainMode.frx":102B7E
             Top             =   0
             Width           =   300
          End
@@ -6494,7 +5364,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   48
             Left            =   240
-            Picture         =   "FormMainMode.frx":11DF7C
+            Picture         =   "FormMainMode.frx":102BEA
             Top             =   1020
             Width           =   300
          End
@@ -6507,7 +5377,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   49
          Left            =   240
-         Picture         =   "FormMainMode.frx":11DFE9
+         Picture         =   "FormMainMode.frx":102C57
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   196
@@ -6517,7 +5387,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   49
             Left            =   240
-            Picture         =   "FormMainMode.frx":1215FB
+            Picture         =   "FormMainMode.frx":106269
             Top             =   480
             Width           =   330
          End
@@ -6525,7 +5395,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   49
             Left            =   240
-            Picture         =   "FormMainMode.frx":121A1C
+            Picture         =   "FormMainMode.frx":10668A
             Top             =   480
             Width           =   330
          End
@@ -6533,7 +5403,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   49
             Left            =   240
-            Picture         =   "FormMainMode.frx":121CB6
+            Picture         =   "FormMainMode.frx":106924
             Top             =   480
             Width           =   330
          End
@@ -6541,7 +5411,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   49
             Left            =   240
-            Picture         =   "FormMainMode.frx":121F4E
+            Picture         =   "FormMainMode.frx":106BBC
             Top             =   480
             Width           =   330
          End
@@ -6549,7 +5419,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   49
             Left            =   240
-            Picture         =   "FormMainMode.frx":122376
+            Picture         =   "FormMainMode.frx":106FE4
             Top             =   0
             Width           =   300
          End
@@ -6557,7 +5427,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   49
             Left            =   240
-            Picture         =   "FormMainMode.frx":1223E2
+            Picture         =   "FormMainMode.frx":107050
             Top             =   1020
             Width           =   300
          End
@@ -6570,7 +5440,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   50
          Left            =   240
-         Picture         =   "FormMainMode.frx":12244F
+         Picture         =   "FormMainMode.frx":1070BD
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   195
@@ -6580,7 +5450,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   50
             Left            =   240
-            Picture         =   "FormMainMode.frx":125A61
+            Picture         =   "FormMainMode.frx":10A6CF
             Top             =   480
             Width           =   330
          End
@@ -6588,7 +5458,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   50
             Left            =   240
-            Picture         =   "FormMainMode.frx":125E82
+            Picture         =   "FormMainMode.frx":10AAF0
             Top             =   480
             Width           =   330
          End
@@ -6596,7 +5466,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   50
             Left            =   240
-            Picture         =   "FormMainMode.frx":12611C
+            Picture         =   "FormMainMode.frx":10AD8A
             Top             =   480
             Width           =   330
          End
@@ -6604,7 +5474,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   50
             Left            =   240
-            Picture         =   "FormMainMode.frx":1263B4
+            Picture         =   "FormMainMode.frx":10B022
             Top             =   480
             Width           =   330
          End
@@ -6612,7 +5482,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   50
             Left            =   240
-            Picture         =   "FormMainMode.frx":1267DC
+            Picture         =   "FormMainMode.frx":10B44A
             Top             =   0
             Width           =   300
          End
@@ -6620,7 +5490,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   50
             Left            =   240
-            Picture         =   "FormMainMode.frx":126848
+            Picture         =   "FormMainMode.frx":10B4B6
             Top             =   1020
             Width           =   300
          End
@@ -6633,7 +5503,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   51
          Left            =   240
-         Picture         =   "FormMainMode.frx":1268B5
+         Picture         =   "FormMainMode.frx":10B523
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   194
@@ -6643,7 +5513,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   51
             Left            =   240
-            Picture         =   "FormMainMode.frx":129EC7
+            Picture         =   "FormMainMode.frx":10EB35
             Top             =   480
             Width           =   330
          End
@@ -6651,7 +5521,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   51
             Left            =   240
-            Picture         =   "FormMainMode.frx":12A2E8
+            Picture         =   "FormMainMode.frx":10EF56
             Top             =   480
             Width           =   330
          End
@@ -6659,7 +5529,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   51
             Left            =   240
-            Picture         =   "FormMainMode.frx":12A582
+            Picture         =   "FormMainMode.frx":10F1F0
             Top             =   480
             Width           =   330
          End
@@ -6667,7 +5537,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   51
             Left            =   240
-            Picture         =   "FormMainMode.frx":12A81A
+            Picture         =   "FormMainMode.frx":10F488
             Top             =   480
             Width           =   330
          End
@@ -6675,7 +5545,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   51
             Left            =   240
-            Picture         =   "FormMainMode.frx":12AC42
+            Picture         =   "FormMainMode.frx":10F8B0
             Top             =   0
             Width           =   300
          End
@@ -6683,7 +5553,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   51
             Left            =   240
-            Picture         =   "FormMainMode.frx":12ACAE
+            Picture         =   "FormMainMode.frx":10F91C
             Top             =   1020
             Width           =   300
          End
@@ -6696,7 +5566,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   52
          Left            =   240
-         Picture         =   "FormMainMode.frx":12AD1B
+         Picture         =   "FormMainMode.frx":10F989
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   193
@@ -6706,7 +5576,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   52
             Left            =   240
-            Picture         =   "FormMainMode.frx":12E32D
+            Picture         =   "FormMainMode.frx":112F9B
             Top             =   480
             Width           =   330
          End
@@ -6714,7 +5584,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   52
             Left            =   240
-            Picture         =   "FormMainMode.frx":12E74E
+            Picture         =   "FormMainMode.frx":1133BC
             Top             =   480
             Width           =   330
          End
@@ -6722,7 +5592,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   52
             Left            =   240
-            Picture         =   "FormMainMode.frx":12E9E8
+            Picture         =   "FormMainMode.frx":113656
             Top             =   480
             Width           =   330
          End
@@ -6730,7 +5600,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   52
             Left            =   240
-            Picture         =   "FormMainMode.frx":12EC80
+            Picture         =   "FormMainMode.frx":1138EE
             Top             =   480
             Width           =   330
          End
@@ -6738,7 +5608,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   52
             Left            =   240
-            Picture         =   "FormMainMode.frx":12F0A8
+            Picture         =   "FormMainMode.frx":113D16
             Top             =   0
             Width           =   300
          End
@@ -6746,7 +5616,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   52
             Left            =   240
-            Picture         =   "FormMainMode.frx":12F114
+            Picture         =   "FormMainMode.frx":113D82
             Top             =   1020
             Width           =   300
          End
@@ -6759,7 +5629,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   53
          Left            =   240
-         Picture         =   "FormMainMode.frx":12F181
+         Picture         =   "FormMainMode.frx":113DEF
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   192
@@ -6769,7 +5639,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   53
             Left            =   240
-            Picture         =   "FormMainMode.frx":132793
+            Picture         =   "FormMainMode.frx":117401
             Top             =   480
             Width           =   330
          End
@@ -6777,7 +5647,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   53
             Left            =   240
-            Picture         =   "FormMainMode.frx":132BB4
+            Picture         =   "FormMainMode.frx":117822
             Top             =   480
             Width           =   330
          End
@@ -6785,7 +5655,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   53
             Left            =   240
-            Picture         =   "FormMainMode.frx":132E4E
+            Picture         =   "FormMainMode.frx":117ABC
             Top             =   480
             Width           =   330
          End
@@ -6793,7 +5663,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   53
             Left            =   240
-            Picture         =   "FormMainMode.frx":1330E6
+            Picture         =   "FormMainMode.frx":117D54
             Top             =   480
             Width           =   330
          End
@@ -6801,7 +5671,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   53
             Left            =   240
-            Picture         =   "FormMainMode.frx":13350E
+            Picture         =   "FormMainMode.frx":11817C
             Top             =   0
             Width           =   300
          End
@@ -6809,7 +5679,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   53
             Left            =   240
-            Picture         =   "FormMainMode.frx":13357A
+            Picture         =   "FormMainMode.frx":1181E8
             Top             =   1020
             Width           =   300
          End
@@ -6822,7 +5692,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   54
          Left            =   240
-         Picture         =   "FormMainMode.frx":1335E7
+         Picture         =   "FormMainMode.frx":118255
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   191
@@ -6832,7 +5702,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   54
             Left            =   240
-            Picture         =   "FormMainMode.frx":136BF9
+            Picture         =   "FormMainMode.frx":11B867
             Top             =   480
             Width           =   330
          End
@@ -6840,7 +5710,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   54
             Left            =   240
-            Picture         =   "FormMainMode.frx":13701A
+            Picture         =   "FormMainMode.frx":11BC88
             Top             =   480
             Width           =   330
          End
@@ -6848,7 +5718,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   54
             Left            =   240
-            Picture         =   "FormMainMode.frx":1372B4
+            Picture         =   "FormMainMode.frx":11BF22
             Top             =   480
             Width           =   330
          End
@@ -6856,7 +5726,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   54
             Left            =   240
-            Picture         =   "FormMainMode.frx":13754C
+            Picture         =   "FormMainMode.frx":11C1BA
             Top             =   480
             Width           =   330
          End
@@ -6864,7 +5734,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   54
             Left            =   240
-            Picture         =   "FormMainMode.frx":137974
+            Picture         =   "FormMainMode.frx":11C5E2
             Top             =   0
             Width           =   300
          End
@@ -6872,7 +5742,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   54
             Left            =   240
-            Picture         =   "FormMainMode.frx":1379E0
+            Picture         =   "FormMainMode.frx":11C64E
             Top             =   1020
             Width           =   300
          End
@@ -6885,7 +5755,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   55
          Left            =   240
-         Picture         =   "FormMainMode.frx":137A4D
+         Picture         =   "FormMainMode.frx":11C6BB
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   190
@@ -6895,7 +5765,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   55
             Left            =   240
-            Picture         =   "FormMainMode.frx":13C16F
+            Picture         =   "FormMainMode.frx":120DDD
             Top             =   480
             Width           =   330
          End
@@ -6903,7 +5773,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   55
             Left            =   240
-            Picture         =   "FormMainMode.frx":13C590
+            Picture         =   "FormMainMode.frx":1211FE
             Top             =   480
             Width           =   330
          End
@@ -6911,7 +5781,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   55
             Left            =   240
-            Picture         =   "FormMainMode.frx":13C82A
+            Picture         =   "FormMainMode.frx":121498
             Top             =   480
             Width           =   330
          End
@@ -6919,7 +5789,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   55
             Left            =   240
-            Picture         =   "FormMainMode.frx":13CAC2
+            Picture         =   "FormMainMode.frx":121730
             Top             =   480
             Width           =   330
          End
@@ -6927,7 +5797,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   55
             Left            =   240
-            Picture         =   "FormMainMode.frx":13CEEA
+            Picture         =   "FormMainMode.frx":121B58
             Top             =   0
             Width           =   300
          End
@@ -6935,7 +5805,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   55
             Left            =   240
-            Picture         =   "FormMainMode.frx":13CF56
+            Picture         =   "FormMainMode.frx":121BC4
             Top             =   1020
             Width           =   300
          End
@@ -6948,7 +5818,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   56
          Left            =   240
-         Picture         =   "FormMainMode.frx":13CFC3
+         Picture         =   "FormMainMode.frx":121C31
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   189
@@ -6958,7 +5828,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   56
             Left            =   240
-            Picture         =   "FormMainMode.frx":1416E5
+            Picture         =   "FormMainMode.frx":126353
             Top             =   480
             Width           =   330
          End
@@ -6966,7 +5836,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   56
             Left            =   240
-            Picture         =   "FormMainMode.frx":141B06
+            Picture         =   "FormMainMode.frx":126774
             Top             =   480
             Width           =   330
          End
@@ -6974,7 +5844,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   56
             Left            =   240
-            Picture         =   "FormMainMode.frx":141DA0
+            Picture         =   "FormMainMode.frx":126A0E
             Top             =   480
             Width           =   330
          End
@@ -6982,7 +5852,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   56
             Left            =   240
-            Picture         =   "FormMainMode.frx":142038
+            Picture         =   "FormMainMode.frx":126CA6
             Top             =   480
             Width           =   330
          End
@@ -6990,7 +5860,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   56
             Left            =   240
-            Picture         =   "FormMainMode.frx":142460
+            Picture         =   "FormMainMode.frx":1270CE
             Top             =   0
             Width           =   300
          End
@@ -6998,7 +5868,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   56
             Left            =   240
-            Picture         =   "FormMainMode.frx":1424CC
+            Picture         =   "FormMainMode.frx":12713A
             Top             =   1020
             Width           =   300
          End
@@ -7011,7 +5881,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   57
          Left            =   240
-         Picture         =   "FormMainMode.frx":142539
+         Picture         =   "FormMainMode.frx":1271A7
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   188
@@ -7021,7 +5891,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   57
             Left            =   240
-            Picture         =   "FormMainMode.frx":146C5B
+            Picture         =   "FormMainMode.frx":12B8C9
             Top             =   480
             Width           =   330
          End
@@ -7029,7 +5899,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   57
             Left            =   240
-            Picture         =   "FormMainMode.frx":14707C
+            Picture         =   "FormMainMode.frx":12BCEA
             Top             =   480
             Width           =   330
          End
@@ -7037,7 +5907,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   57
             Left            =   240
-            Picture         =   "FormMainMode.frx":147316
+            Picture         =   "FormMainMode.frx":12BF84
             Top             =   480
             Width           =   330
          End
@@ -7045,7 +5915,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   57
             Left            =   240
-            Picture         =   "FormMainMode.frx":1475AE
+            Picture         =   "FormMainMode.frx":12C21C
             Top             =   480
             Width           =   330
          End
@@ -7053,7 +5923,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   57
             Left            =   240
-            Picture         =   "FormMainMode.frx":1479D6
+            Picture         =   "FormMainMode.frx":12C644
             Top             =   0
             Width           =   300
          End
@@ -7061,7 +5931,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   57
             Left            =   240
-            Picture         =   "FormMainMode.frx":147A42
+            Picture         =   "FormMainMode.frx":12C6B0
             Top             =   1020
             Width           =   300
          End
@@ -7285,7 +6155,7 @@ Begin VB.Form FormMainMode
          Height          =   495
          Index           =   1
          Left            =   0
-         Picture         =   "FormMainMode.frx":147AAF
+         Picture         =   "FormMainMode.frx":12C71D
          ScaleHeight     =   495
          ScaleWidth      =   2520
          TabIndex        =   181
@@ -7431,7 +6301,7 @@ Begin VB.Form FormMainMode
          Height          =   495
          Index           =   2
          Left            =   2520
-         Picture         =   "FormMainMode.frx":147CF7
+         Picture         =   "FormMainMode.frx":12C965
          ScaleHeight     =   495
          ScaleWidth      =   2520
          TabIndex        =   174
@@ -7577,7 +6447,7 @@ Begin VB.Form FormMainMode
          Height          =   495
          Index           =   3
          Left            =   5040
-         Picture         =   "FormMainMode.frx":147F3F
+         Picture         =   "FormMainMode.frx":12CBAD
          ScaleHeight     =   495
          ScaleWidth      =   2520
          TabIndex        =   167
@@ -7717,7 +6587,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   58
          Left            =   240
-         Picture         =   "FormMainMode.frx":148187
+         Picture         =   "FormMainMode.frx":12CDF5
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   166
@@ -7727,7 +6597,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   58
             Left            =   240
-            Picture         =   "FormMainMode.frx":14C8A9
+            Picture         =   "FormMainMode.frx":131517
             Top             =   1020
             Width           =   300
          End
@@ -7735,7 +6605,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   58
             Left            =   240
-            Picture         =   "FormMainMode.frx":14C916
+            Picture         =   "FormMainMode.frx":131584
             Top             =   0
             Width           =   300
          End
@@ -7743,7 +6613,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   58
             Left            =   240
-            Picture         =   "FormMainMode.frx":14C982
+            Picture         =   "FormMainMode.frx":1315F0
             Top             =   480
             Width           =   330
          End
@@ -7751,7 +6621,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   58
             Left            =   240
-            Picture         =   "FormMainMode.frx":14CDAA
+            Picture         =   "FormMainMode.frx":131A18
             Top             =   480
             Width           =   330
          End
@@ -7759,7 +6629,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   58
             Left            =   240
-            Picture         =   "FormMainMode.frx":14D042
+            Picture         =   "FormMainMode.frx":131CB0
             Top             =   480
             Width           =   330
          End
@@ -7767,7 +6637,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   58
             Left            =   240
-            Picture         =   "FormMainMode.frx":14D2DC
+            Picture         =   "FormMainMode.frx":131F4A
             Top             =   480
             Width           =   330
          End
@@ -7780,7 +6650,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   59
          Left            =   240
-         Picture         =   "FormMainMode.frx":14D6FD
+         Picture         =   "FormMainMode.frx":13236B
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   165
@@ -7790,7 +6660,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   59
             Left            =   240
-            Picture         =   "FormMainMode.frx":151E1F
+            Picture         =   "FormMainMode.frx":136A8D
             Top             =   1020
             Width           =   300
          End
@@ -7798,7 +6668,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   59
             Left            =   240
-            Picture         =   "FormMainMode.frx":151E8C
+            Picture         =   "FormMainMode.frx":136AFA
             Top             =   0
             Width           =   300
          End
@@ -7806,7 +6676,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   59
             Left            =   240
-            Picture         =   "FormMainMode.frx":151EF8
+            Picture         =   "FormMainMode.frx":136B66
             Top             =   480
             Width           =   330
          End
@@ -7814,7 +6684,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   59
             Left            =   240
-            Picture         =   "FormMainMode.frx":152320
+            Picture         =   "FormMainMode.frx":136F8E
             Top             =   480
             Width           =   330
          End
@@ -7822,7 +6692,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   59
             Left            =   240
-            Picture         =   "FormMainMode.frx":1525B8
+            Picture         =   "FormMainMode.frx":137226
             Top             =   480
             Width           =   330
          End
@@ -7830,7 +6700,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   59
             Left            =   240
-            Picture         =   "FormMainMode.frx":152852
+            Picture         =   "FormMainMode.frx":1374C0
             Top             =   480
             Width           =   330
          End
@@ -7843,7 +6713,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   60
          Left            =   240
-         Picture         =   "FormMainMode.frx":152C73
+         Picture         =   "FormMainMode.frx":1378E1
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   164
@@ -7853,7 +6723,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   60
             Left            =   240
-            Picture         =   "FormMainMode.frx":157395
+            Picture         =   "FormMainMode.frx":13C003
             Top             =   1020
             Width           =   300
          End
@@ -7861,7 +6731,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   60
             Left            =   240
-            Picture         =   "FormMainMode.frx":157402
+            Picture         =   "FormMainMode.frx":13C070
             Top             =   0
             Width           =   300
          End
@@ -7869,7 +6739,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   60
             Left            =   240
-            Picture         =   "FormMainMode.frx":15746E
+            Picture         =   "FormMainMode.frx":13C0DC
             Top             =   480
             Width           =   330
          End
@@ -7877,7 +6747,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   60
             Left            =   240
-            Picture         =   "FormMainMode.frx":157896
+            Picture         =   "FormMainMode.frx":13C504
             Top             =   480
             Width           =   330
          End
@@ -7885,7 +6755,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   60
             Left            =   240
-            Picture         =   "FormMainMode.frx":157B2E
+            Picture         =   "FormMainMode.frx":13C79C
             Top             =   480
             Width           =   330
          End
@@ -7893,7 +6763,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   60
             Left            =   240
-            Picture         =   "FormMainMode.frx":157DC8
+            Picture         =   "FormMainMode.frx":13CA36
             Top             =   480
             Width           =   330
          End
@@ -7906,7 +6776,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   61
          Left            =   240
-         Picture         =   "FormMainMode.frx":1581E9
+         Picture         =   "FormMainMode.frx":13CE57
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   163
@@ -7916,7 +6786,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   61
             Left            =   240
-            Picture         =   "FormMainMode.frx":15C90B
+            Picture         =   "FormMainMode.frx":141579
             Top             =   1020
             Width           =   300
          End
@@ -7924,7 +6794,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   61
             Left            =   240
-            Picture         =   "FormMainMode.frx":15C978
+            Picture         =   "FormMainMode.frx":1415E6
             Top             =   0
             Width           =   300
          End
@@ -7932,7 +6802,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   61
             Left            =   240
-            Picture         =   "FormMainMode.frx":15C9E4
+            Picture         =   "FormMainMode.frx":141652
             Top             =   480
             Width           =   330
          End
@@ -7940,7 +6810,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   61
             Left            =   240
-            Picture         =   "FormMainMode.frx":15CE0C
+            Picture         =   "FormMainMode.frx":141A7A
             Top             =   480
             Width           =   330
          End
@@ -7948,7 +6818,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   61
             Left            =   240
-            Picture         =   "FormMainMode.frx":15D0A4
+            Picture         =   "FormMainMode.frx":141D12
             Top             =   480
             Width           =   330
          End
@@ -7956,7 +6826,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   61
             Left            =   240
-            Picture         =   "FormMainMode.frx":15D33E
+            Picture         =   "FormMainMode.frx":141FAC
             Top             =   480
             Width           =   330
          End
@@ -7969,7 +6839,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   62
          Left            =   240
-         Picture         =   "FormMainMode.frx":15D75F
+         Picture         =   "FormMainMode.frx":1423CD
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   162
@@ -7979,7 +6849,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   62
             Left            =   240
-            Picture         =   "FormMainMode.frx":161E81
+            Picture         =   "FormMainMode.frx":146AEF
             Top             =   1020
             Width           =   300
          End
@@ -7987,7 +6857,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   62
             Left            =   240
-            Picture         =   "FormMainMode.frx":161EEE
+            Picture         =   "FormMainMode.frx":146B5C
             Top             =   0
             Width           =   300
          End
@@ -7995,7 +6865,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   62
             Left            =   240
-            Picture         =   "FormMainMode.frx":161F5A
+            Picture         =   "FormMainMode.frx":146BC8
             Top             =   480
             Width           =   330
          End
@@ -8003,7 +6873,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   62
             Left            =   240
-            Picture         =   "FormMainMode.frx":162382
+            Picture         =   "FormMainMode.frx":146FF0
             Top             =   480
             Width           =   330
          End
@@ -8011,7 +6881,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   62
             Left            =   240
-            Picture         =   "FormMainMode.frx":16261A
+            Picture         =   "FormMainMode.frx":147288
             Top             =   480
             Width           =   330
          End
@@ -8019,7 +6889,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   62
             Left            =   240
-            Picture         =   "FormMainMode.frx":1628B4
+            Picture         =   "FormMainMode.frx":147522
             Top             =   480
             Width           =   330
          End
@@ -8032,7 +6902,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   63
          Left            =   240
-         Picture         =   "FormMainMode.frx":162CD5
+         Picture         =   "FormMainMode.frx":147943
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   161
@@ -8042,7 +6912,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   63
             Left            =   240
-            Picture         =   "FormMainMode.frx":1673F7
+            Picture         =   "FormMainMode.frx":14C065
             Top             =   1020
             Width           =   300
          End
@@ -8050,7 +6920,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   63
             Left            =   240
-            Picture         =   "FormMainMode.frx":167464
+            Picture         =   "FormMainMode.frx":14C0D2
             Top             =   0
             Width           =   300
          End
@@ -8058,7 +6928,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   63
             Left            =   240
-            Picture         =   "FormMainMode.frx":1674D0
+            Picture         =   "FormMainMode.frx":14C13E
             Top             =   480
             Width           =   330
          End
@@ -8066,7 +6936,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   63
             Left            =   240
-            Picture         =   "FormMainMode.frx":1678F8
+            Picture         =   "FormMainMode.frx":14C566
             Top             =   480
             Width           =   330
          End
@@ -8074,7 +6944,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   63
             Left            =   240
-            Picture         =   "FormMainMode.frx":167B90
+            Picture         =   "FormMainMode.frx":14C7FE
             Top             =   480
             Width           =   330
          End
@@ -8082,7 +6952,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   63
             Left            =   240
-            Picture         =   "FormMainMode.frx":167E2A
+            Picture         =   "FormMainMode.frx":14CA98
             Top             =   480
             Width           =   330
          End
@@ -8095,7 +6965,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   64
          Left            =   240
-         Picture         =   "FormMainMode.frx":16824B
+         Picture         =   "FormMainMode.frx":14CEB9
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   160
@@ -8105,7 +6975,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   64
             Left            =   240
-            Picture         =   "FormMainMode.frx":16C96D
+            Picture         =   "FormMainMode.frx":1515DB
             Top             =   1020
             Width           =   300
          End
@@ -8113,7 +6983,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   64
             Left            =   240
-            Picture         =   "FormMainMode.frx":16C9DA
+            Picture         =   "FormMainMode.frx":151648
             Top             =   0
             Width           =   300
          End
@@ -8121,7 +6991,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   64
             Left            =   240
-            Picture         =   "FormMainMode.frx":16CA46
+            Picture         =   "FormMainMode.frx":1516B4
             Top             =   480
             Width           =   330
          End
@@ -8129,7 +6999,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   64
             Left            =   240
-            Picture         =   "FormMainMode.frx":16CE6E
+            Picture         =   "FormMainMode.frx":151ADC
             Top             =   480
             Width           =   330
          End
@@ -8137,7 +7007,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   64
             Left            =   240
-            Picture         =   "FormMainMode.frx":16D106
+            Picture         =   "FormMainMode.frx":151D74
             Top             =   480
             Width           =   330
          End
@@ -8145,7 +7015,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   64
             Left            =   240
-            Picture         =   "FormMainMode.frx":16D3A0
+            Picture         =   "FormMainMode.frx":15200E
             Top             =   480
             Width           =   330
          End
@@ -8158,7 +7028,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   65
          Left            =   240
-         Picture         =   "FormMainMode.frx":16D7C1
+         Picture         =   "FormMainMode.frx":15242F
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   159
@@ -8168,7 +7038,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   65
             Left            =   240
-            Picture         =   "FormMainMode.frx":171EE3
+            Picture         =   "FormMainMode.frx":156B51
             Top             =   1020
             Width           =   300
          End
@@ -8176,7 +7046,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   65
             Left            =   240
-            Picture         =   "FormMainMode.frx":171F50
+            Picture         =   "FormMainMode.frx":156BBE
             Top             =   0
             Width           =   300
          End
@@ -8184,7 +7054,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   65
             Left            =   240
-            Picture         =   "FormMainMode.frx":171FBC
+            Picture         =   "FormMainMode.frx":156C2A
             Top             =   480
             Width           =   330
          End
@@ -8192,7 +7062,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   65
             Left            =   240
-            Picture         =   "FormMainMode.frx":1723E4
+            Picture         =   "FormMainMode.frx":157052
             Top             =   480
             Width           =   330
          End
@@ -8200,7 +7070,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   65
             Left            =   240
-            Picture         =   "FormMainMode.frx":17267C
+            Picture         =   "FormMainMode.frx":1572EA
             Top             =   480
             Width           =   330
          End
@@ -8208,7 +7078,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   65
             Left            =   240
-            Picture         =   "FormMainMode.frx":172916
+            Picture         =   "FormMainMode.frx":157584
             Top             =   480
             Width           =   330
          End
@@ -8221,7 +7091,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   66
          Left            =   240
-         Picture         =   "FormMainMode.frx":172D37
+         Picture         =   "FormMainMode.frx":1579A5
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   158
@@ -8231,7 +7101,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   66
             Left            =   240
-            Picture         =   "FormMainMode.frx":177459
+            Picture         =   "FormMainMode.frx":15C0C7
             Top             =   1020
             Width           =   300
          End
@@ -8239,7 +7109,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   66
             Left            =   240
-            Picture         =   "FormMainMode.frx":1774C6
+            Picture         =   "FormMainMode.frx":15C134
             Top             =   0
             Width           =   300
          End
@@ -8247,7 +7117,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   66
             Left            =   240
-            Picture         =   "FormMainMode.frx":177532
+            Picture         =   "FormMainMode.frx":15C1A0
             Top             =   480
             Width           =   330
          End
@@ -8255,7 +7125,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   66
             Left            =   240
-            Picture         =   "FormMainMode.frx":17795A
+            Picture         =   "FormMainMode.frx":15C5C8
             Top             =   480
             Width           =   330
          End
@@ -8263,7 +7133,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   66
             Left            =   240
-            Picture         =   "FormMainMode.frx":177BF2
+            Picture         =   "FormMainMode.frx":15C860
             Top             =   480
             Width           =   330
          End
@@ -8271,7 +7141,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   66
             Left            =   240
-            Picture         =   "FormMainMode.frx":177E8C
+            Picture         =   "FormMainMode.frx":15CAFA
             Top             =   480
             Width           =   330
          End
@@ -8284,7 +7154,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   67
          Left            =   240
-         Picture         =   "FormMainMode.frx":1782AD
+         Picture         =   "FormMainMode.frx":15CF1B
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   157
@@ -8294,7 +7164,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   67
             Left            =   240
-            Picture         =   "FormMainMode.frx":17C9CF
+            Picture         =   "FormMainMode.frx":16163D
             Top             =   1020
             Width           =   300
          End
@@ -8302,7 +7172,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   67
             Left            =   240
-            Picture         =   "FormMainMode.frx":17CA3C
+            Picture         =   "FormMainMode.frx":1616AA
             Top             =   0
             Width           =   300
          End
@@ -8310,7 +7180,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   67
             Left            =   240
-            Picture         =   "FormMainMode.frx":17CAA8
+            Picture         =   "FormMainMode.frx":161716
             Top             =   480
             Width           =   330
          End
@@ -8318,7 +7188,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   67
             Left            =   240
-            Picture         =   "FormMainMode.frx":17CED0
+            Picture         =   "FormMainMode.frx":161B3E
             Top             =   480
             Width           =   330
          End
@@ -8326,7 +7196,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   67
             Left            =   240
-            Picture         =   "FormMainMode.frx":17D168
+            Picture         =   "FormMainMode.frx":161DD6
             Top             =   480
             Width           =   330
          End
@@ -8334,7 +7204,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   67
             Left            =   240
-            Picture         =   "FormMainMode.frx":17D402
+            Picture         =   "FormMainMode.frx":162070
             Top             =   480
             Width           =   330
          End
@@ -8347,7 +7217,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   68
          Left            =   240
-         Picture         =   "FormMainMode.frx":17D823
+         Picture         =   "FormMainMode.frx":162491
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   156
@@ -8357,7 +7227,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   68
             Left            =   240
-            Picture         =   "FormMainMode.frx":181F45
+            Picture         =   "FormMainMode.frx":166BB3
             Top             =   1020
             Width           =   300
          End
@@ -8365,7 +7235,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   68
             Left            =   240
-            Picture         =   "FormMainMode.frx":181FB2
+            Picture         =   "FormMainMode.frx":166C20
             Top             =   0
             Width           =   300
          End
@@ -8373,7 +7243,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   68
             Left            =   240
-            Picture         =   "FormMainMode.frx":18201E
+            Picture         =   "FormMainMode.frx":166C8C
             Top             =   480
             Width           =   330
          End
@@ -8381,7 +7251,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   68
             Left            =   240
-            Picture         =   "FormMainMode.frx":182446
+            Picture         =   "FormMainMode.frx":1670B4
             Top             =   480
             Width           =   330
          End
@@ -8389,7 +7259,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   68
             Left            =   240
-            Picture         =   "FormMainMode.frx":1826DE
+            Picture         =   "FormMainMode.frx":16734C
             Top             =   480
             Width           =   330
          End
@@ -8397,7 +7267,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   68
             Left            =   240
-            Picture         =   "FormMainMode.frx":182978
+            Picture         =   "FormMainMode.frx":1675E6
             Top             =   480
             Width           =   330
          End
@@ -8410,7 +7280,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   69
          Left            =   240
-         Picture         =   "FormMainMode.frx":182D99
+         Picture         =   "FormMainMode.frx":167A07
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   155
@@ -8420,7 +7290,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   69
             Left            =   240
-            Picture         =   "FormMainMode.frx":1874BB
+            Picture         =   "FormMainMode.frx":16C129
             Top             =   1020
             Width           =   300
          End
@@ -8428,7 +7298,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   69
             Left            =   240
-            Picture         =   "FormMainMode.frx":187528
+            Picture         =   "FormMainMode.frx":16C196
             Top             =   0
             Width           =   300
          End
@@ -8436,7 +7306,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   69
             Left            =   240
-            Picture         =   "FormMainMode.frx":187594
+            Picture         =   "FormMainMode.frx":16C202
             Top             =   480
             Width           =   330
          End
@@ -8444,7 +7314,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   69
             Left            =   240
-            Picture         =   "FormMainMode.frx":1879BC
+            Picture         =   "FormMainMode.frx":16C62A
             Top             =   480
             Width           =   330
          End
@@ -8452,7 +7322,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   69
             Left            =   240
-            Picture         =   "FormMainMode.frx":187C54
+            Picture         =   "FormMainMode.frx":16C8C2
             Top             =   480
             Width           =   330
          End
@@ -8460,7 +7330,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   69
             Left            =   240
-            Picture         =   "FormMainMode.frx":187EEE
+            Picture         =   "FormMainMode.frx":16CB5C
             Top             =   480
             Width           =   330
          End
@@ -8473,7 +7343,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   70
          Left            =   240
-         Picture         =   "FormMainMode.frx":18830F
+         Picture         =   "FormMainMode.frx":16CF7D
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   154
@@ -8483,7 +7353,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   70
             Left            =   240
-            Picture         =   "FormMainMode.frx":18CA31
+            Picture         =   "FormMainMode.frx":17169F
             Top             =   1020
             Width           =   300
          End
@@ -8491,7 +7361,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   70
             Left            =   240
-            Picture         =   "FormMainMode.frx":18CA9E
+            Picture         =   "FormMainMode.frx":17170C
             Top             =   0
             Width           =   300
          End
@@ -8499,7 +7369,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   70
             Left            =   240
-            Picture         =   "FormMainMode.frx":18CB0A
+            Picture         =   "FormMainMode.frx":171778
             Top             =   480
             Width           =   330
          End
@@ -8507,7 +7377,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   70
             Left            =   240
-            Picture         =   "FormMainMode.frx":18CF32
+            Picture         =   "FormMainMode.frx":171BA0
             Top             =   480
             Width           =   330
          End
@@ -8515,7 +7385,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   70
             Left            =   240
-            Picture         =   "FormMainMode.frx":18D1CA
+            Picture         =   "FormMainMode.frx":171E38
             Top             =   480
             Width           =   330
          End
@@ -8523,7 +7393,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   70
             Left            =   240
-            Picture         =   "FormMainMode.frx":18D464
+            Picture         =   "FormMainMode.frx":1720D2
             Top             =   480
             Width           =   330
          End
@@ -8536,7 +7406,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   71
          Left            =   240
-         Picture         =   "FormMainMode.frx":18D885
+         Picture         =   "FormMainMode.frx":1724F3
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   153
@@ -8546,7 +7416,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   71
             Left            =   240
-            Picture         =   "FormMainMode.frx":191FA7
+            Picture         =   "FormMainMode.frx":176C15
             Top             =   1020
             Width           =   300
          End
@@ -8554,7 +7424,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   71
             Left            =   240
-            Picture         =   "FormMainMode.frx":192014
+            Picture         =   "FormMainMode.frx":176C82
             Top             =   0
             Width           =   300
          End
@@ -8562,7 +7432,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   71
             Left            =   240
-            Picture         =   "FormMainMode.frx":192080
+            Picture         =   "FormMainMode.frx":176CEE
             Top             =   480
             Width           =   330
          End
@@ -8570,7 +7440,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   71
             Left            =   240
-            Picture         =   "FormMainMode.frx":1924A8
+            Picture         =   "FormMainMode.frx":177116
             Top             =   480
             Width           =   330
          End
@@ -8578,7 +7448,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   71
             Left            =   240
-            Picture         =   "FormMainMode.frx":192740
+            Picture         =   "FormMainMode.frx":1773AE
             Top             =   480
             Width           =   330
          End
@@ -8586,7 +7456,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   71
             Left            =   240
-            Picture         =   "FormMainMode.frx":1929DA
+            Picture         =   "FormMainMode.frx":177648
             Top             =   480
             Width           =   330
          End
@@ -8599,7 +7469,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   72
          Left            =   240
-         Picture         =   "FormMainMode.frx":192DFB
+         Picture         =   "FormMainMode.frx":177A69
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   152
@@ -8609,7 +7479,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   72
             Left            =   240
-            Picture         =   "FormMainMode.frx":19751D
+            Picture         =   "FormMainMode.frx":17C18B
             Top             =   1020
             Width           =   300
          End
@@ -8617,7 +7487,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   72
             Left            =   240
-            Picture         =   "FormMainMode.frx":19758A
+            Picture         =   "FormMainMode.frx":17C1F8
             Top             =   0
             Width           =   300
          End
@@ -8625,7 +7495,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   72
             Left            =   240
-            Picture         =   "FormMainMode.frx":1975F6
+            Picture         =   "FormMainMode.frx":17C264
             Top             =   480
             Width           =   330
          End
@@ -8633,7 +7503,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   72
             Left            =   240
-            Picture         =   "FormMainMode.frx":197A1E
+            Picture         =   "FormMainMode.frx":17C68C
             Top             =   480
             Width           =   330
          End
@@ -8641,7 +7511,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   72
             Left            =   240
-            Picture         =   "FormMainMode.frx":197CB6
+            Picture         =   "FormMainMode.frx":17C924
             Top             =   480
             Width           =   330
          End
@@ -8649,7 +7519,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   72
             Left            =   240
-            Picture         =   "FormMainMode.frx":197F50
+            Picture         =   "FormMainMode.frx":17CBBE
             Top             =   480
             Width           =   330
          End
@@ -8662,7 +7532,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   73
          Left            =   240
-         Picture         =   "FormMainMode.frx":198371
+         Picture         =   "FormMainMode.frx":17CFDF
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   151
@@ -8672,7 +7542,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   73
             Left            =   240
-            Picture         =   "FormMainMode.frx":19CA93
+            Picture         =   "FormMainMode.frx":181701
             Top             =   1020
             Width           =   300
          End
@@ -8680,7 +7550,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   73
             Left            =   240
-            Picture         =   "FormMainMode.frx":19CB00
+            Picture         =   "FormMainMode.frx":18176E
             Top             =   0
             Width           =   300
          End
@@ -8688,7 +7558,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   73
             Left            =   240
-            Picture         =   "FormMainMode.frx":19CB6C
+            Picture         =   "FormMainMode.frx":1817DA
             Top             =   480
             Width           =   330
          End
@@ -8696,7 +7566,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   73
             Left            =   240
-            Picture         =   "FormMainMode.frx":19CF94
+            Picture         =   "FormMainMode.frx":181C02
             Top             =   480
             Width           =   330
          End
@@ -8704,7 +7574,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   73
             Left            =   240
-            Picture         =   "FormMainMode.frx":19D22C
+            Picture         =   "FormMainMode.frx":181E9A
             Top             =   480
             Width           =   330
          End
@@ -8712,7 +7582,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   73
             Left            =   240
-            Picture         =   "FormMainMode.frx":19D4C6
+            Picture         =   "FormMainMode.frx":182134
             Top             =   480
             Width           =   330
          End
@@ -8725,7 +7595,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   74
          Left            =   240
-         Picture         =   "FormMainMode.frx":19D8E7
+         Picture         =   "FormMainMode.frx":182555
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   150
@@ -8735,7 +7605,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   74
             Left            =   240
-            Picture         =   "FormMainMode.frx":1A2009
+            Picture         =   "FormMainMode.frx":186C77
             Top             =   1020
             Width           =   300
          End
@@ -8743,7 +7613,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   74
             Left            =   240
-            Picture         =   "FormMainMode.frx":1A2076
+            Picture         =   "FormMainMode.frx":186CE4
             Top             =   0
             Width           =   300
          End
@@ -8751,7 +7621,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   74
             Left            =   240
-            Picture         =   "FormMainMode.frx":1A20E2
+            Picture         =   "FormMainMode.frx":186D50
             Top             =   480
             Width           =   330
          End
@@ -8759,7 +7629,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   74
             Left            =   240
-            Picture         =   "FormMainMode.frx":1A250A
+            Picture         =   "FormMainMode.frx":187178
             Top             =   480
             Width           =   330
          End
@@ -8767,7 +7637,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   74
             Left            =   240
-            Picture         =   "FormMainMode.frx":1A27A2
+            Picture         =   "FormMainMode.frx":187410
             Top             =   480
             Width           =   330
          End
@@ -8775,7 +7645,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   74
             Left            =   240
-            Picture         =   "FormMainMode.frx":1A2A3C
+            Picture         =   "FormMainMode.frx":1876AA
             Top             =   480
             Width           =   330
          End
@@ -8788,7 +7658,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   75
          Left            =   240
-         Picture         =   "FormMainMode.frx":1A2E5D
+         Picture         =   "FormMainMode.frx":187ACB
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   149
@@ -8798,7 +7668,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   75
             Left            =   240
-            Picture         =   "FormMainMode.frx":1A757F
+            Picture         =   "FormMainMode.frx":18C1ED
             Top             =   1020
             Width           =   300
          End
@@ -8806,7 +7676,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   75
             Left            =   240
-            Picture         =   "FormMainMode.frx":1A75EC
+            Picture         =   "FormMainMode.frx":18C25A
             Top             =   0
             Width           =   300
          End
@@ -8814,7 +7684,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   75
             Left            =   240
-            Picture         =   "FormMainMode.frx":1A7658
+            Picture         =   "FormMainMode.frx":18C2C6
             Top             =   480
             Width           =   330
          End
@@ -8822,7 +7692,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   75
             Left            =   240
-            Picture         =   "FormMainMode.frx":1A7A80
+            Picture         =   "FormMainMode.frx":18C6EE
             Top             =   480
             Width           =   330
          End
@@ -8830,7 +7700,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   75
             Left            =   240
-            Picture         =   "FormMainMode.frx":1A7D18
+            Picture         =   "FormMainMode.frx":18C986
             Top             =   480
             Width           =   330
          End
@@ -8838,7 +7708,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   75
             Left            =   240
-            Picture         =   "FormMainMode.frx":1A7FB2
+            Picture         =   "FormMainMode.frx":18CC20
             Top             =   480
             Width           =   330
          End
@@ -8851,7 +7721,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   76
          Left            =   240
-         Picture         =   "FormMainMode.frx":1A83D3
+         Picture         =   "FormMainMode.frx":18D041
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   148
@@ -8861,7 +7731,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   76
             Left            =   240
-            Picture         =   "FormMainMode.frx":1ACAF5
+            Picture         =   "FormMainMode.frx":191763
             Top             =   1020
             Width           =   300
          End
@@ -8869,7 +7739,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   76
             Left            =   240
-            Picture         =   "FormMainMode.frx":1ACB62
+            Picture         =   "FormMainMode.frx":1917D0
             Top             =   0
             Width           =   300
          End
@@ -8877,7 +7747,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   76
             Left            =   240
-            Picture         =   "FormMainMode.frx":1ACBCE
+            Picture         =   "FormMainMode.frx":19183C
             Top             =   480
             Width           =   330
          End
@@ -8885,7 +7755,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   76
             Left            =   240
-            Picture         =   "FormMainMode.frx":1ACFF6
+            Picture         =   "FormMainMode.frx":191C64
             Top             =   480
             Width           =   330
          End
@@ -8893,7 +7763,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   76
             Left            =   240
-            Picture         =   "FormMainMode.frx":1AD28E
+            Picture         =   "FormMainMode.frx":191EFC
             Top             =   480
             Width           =   330
          End
@@ -8901,7 +7771,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   76
             Left            =   240
-            Picture         =   "FormMainMode.frx":1AD528
+            Picture         =   "FormMainMode.frx":192196
             Top             =   480
             Width           =   330
          End
@@ -8914,7 +7784,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   77
          Left            =   240
-         Picture         =   "FormMainMode.frx":1AD949
+         Picture         =   "FormMainMode.frx":1925B7
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   147
@@ -8924,7 +7794,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   77
             Left            =   240
-            Picture         =   "FormMainMode.frx":1B206B
+            Picture         =   "FormMainMode.frx":196CD9
             Top             =   1020
             Width           =   300
          End
@@ -8932,7 +7802,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   77
             Left            =   240
-            Picture         =   "FormMainMode.frx":1B20D8
+            Picture         =   "FormMainMode.frx":196D46
             Top             =   0
             Width           =   300
          End
@@ -8940,7 +7810,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   77
             Left            =   240
-            Picture         =   "FormMainMode.frx":1B2144
+            Picture         =   "FormMainMode.frx":196DB2
             Top             =   480
             Width           =   330
          End
@@ -8948,7 +7818,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   77
             Left            =   240
-            Picture         =   "FormMainMode.frx":1B256C
+            Picture         =   "FormMainMode.frx":1971DA
             Top             =   480
             Width           =   330
          End
@@ -8956,7 +7826,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   77
             Left            =   240
-            Picture         =   "FormMainMode.frx":1B2804
+            Picture         =   "FormMainMode.frx":197472
             Top             =   480
             Width           =   330
          End
@@ -8964,7 +7834,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   77
             Left            =   240
-            Picture         =   "FormMainMode.frx":1B2A9E
+            Picture         =   "FormMainMode.frx":19770C
             Top             =   480
             Width           =   330
          End
@@ -8977,7 +7847,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   78
          Left            =   240
-         Picture         =   "FormMainMode.frx":1B2EBF
+         Picture         =   "FormMainMode.frx":197B2D
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   146
@@ -8987,7 +7857,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   78
             Left            =   240
-            Picture         =   "FormMainMode.frx":1B75E1
+            Picture         =   "FormMainMode.frx":19C24F
             Top             =   1020
             Width           =   300
          End
@@ -8995,7 +7865,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   78
             Left            =   240
-            Picture         =   "FormMainMode.frx":1B764E
+            Picture         =   "FormMainMode.frx":19C2BC
             Top             =   0
             Width           =   300
          End
@@ -9003,7 +7873,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   78
             Left            =   240
-            Picture         =   "FormMainMode.frx":1B76BA
+            Picture         =   "FormMainMode.frx":19C328
             Top             =   480
             Width           =   330
          End
@@ -9011,7 +7881,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   78
             Left            =   240
-            Picture         =   "FormMainMode.frx":1B7AE2
+            Picture         =   "FormMainMode.frx":19C750
             Top             =   480
             Width           =   330
          End
@@ -9019,7 +7889,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   78
             Left            =   240
-            Picture         =   "FormMainMode.frx":1B7D7A
+            Picture         =   "FormMainMode.frx":19C9E8
             Top             =   480
             Width           =   330
          End
@@ -9027,7 +7897,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   78
             Left            =   240
-            Picture         =   "FormMainMode.frx":1B8014
+            Picture         =   "FormMainMode.frx":19CC82
             Top             =   480
             Width           =   330
          End
@@ -9040,7 +7910,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   79
          Left            =   240
-         Picture         =   "FormMainMode.frx":1B8435
+         Picture         =   "FormMainMode.frx":19D0A3
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   145
@@ -9050,7 +7920,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   79
             Left            =   240
-            Picture         =   "FormMainMode.frx":1BCB57
+            Picture         =   "FormMainMode.frx":1A17C5
             Top             =   1020
             Width           =   300
          End
@@ -9058,7 +7928,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   79
             Left            =   240
-            Picture         =   "FormMainMode.frx":1BCBC4
+            Picture         =   "FormMainMode.frx":1A1832
             Top             =   0
             Width           =   300
          End
@@ -9066,7 +7936,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   79
             Left            =   240
-            Picture         =   "FormMainMode.frx":1BCC30
+            Picture         =   "FormMainMode.frx":1A189E
             Top             =   480
             Width           =   330
          End
@@ -9074,7 +7944,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   79
             Left            =   240
-            Picture         =   "FormMainMode.frx":1BD058
+            Picture         =   "FormMainMode.frx":1A1CC6
             Top             =   480
             Width           =   330
          End
@@ -9082,7 +7952,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   79
             Left            =   240
-            Picture         =   "FormMainMode.frx":1BD2F0
+            Picture         =   "FormMainMode.frx":1A1F5E
             Top             =   480
             Width           =   330
          End
@@ -9090,7 +7960,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   79
             Left            =   240
-            Picture         =   "FormMainMode.frx":1BD58A
+            Picture         =   "FormMainMode.frx":1A21F8
             Top             =   480
             Width           =   330
          End
@@ -9103,7 +7973,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   80
          Left            =   240
-         Picture         =   "FormMainMode.frx":1BD9AB
+         Picture         =   "FormMainMode.frx":1A2619
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   144
@@ -9113,7 +7983,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   80
             Left            =   240
-            Picture         =   "FormMainMode.frx":1C20CD
+            Picture         =   "FormMainMode.frx":1A6D3B
             Top             =   1020
             Width           =   300
          End
@@ -9121,7 +7991,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   80
             Left            =   240
-            Picture         =   "FormMainMode.frx":1C213A
+            Picture         =   "FormMainMode.frx":1A6DA8
             Top             =   0
             Width           =   300
          End
@@ -9129,7 +7999,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   80
             Left            =   240
-            Picture         =   "FormMainMode.frx":1C21A6
+            Picture         =   "FormMainMode.frx":1A6E14
             Top             =   480
             Width           =   330
          End
@@ -9137,7 +8007,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   80
             Left            =   240
-            Picture         =   "FormMainMode.frx":1C25CE
+            Picture         =   "FormMainMode.frx":1A723C
             Top             =   480
             Width           =   330
          End
@@ -9145,7 +8015,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   80
             Left            =   240
-            Picture         =   "FormMainMode.frx":1C2866
+            Picture         =   "FormMainMode.frx":1A74D4
             Top             =   480
             Width           =   330
          End
@@ -9153,7 +8023,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   80
             Left            =   240
-            Picture         =   "FormMainMode.frx":1C2B00
+            Picture         =   "FormMainMode.frx":1A776E
             Top             =   480
             Width           =   330
          End
@@ -9166,7 +8036,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   81
          Left            =   240
-         Picture         =   "FormMainMode.frx":1C2F21
+         Picture         =   "FormMainMode.frx":1A7B8F
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   143
@@ -9176,7 +8046,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   81
             Left            =   240
-            Picture         =   "FormMainMode.frx":1C7643
+            Picture         =   "FormMainMode.frx":1AC2B1
             Top             =   1020
             Width           =   300
          End
@@ -9184,7 +8054,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   81
             Left            =   240
-            Picture         =   "FormMainMode.frx":1C76B0
+            Picture         =   "FormMainMode.frx":1AC31E
             Top             =   0
             Width           =   300
          End
@@ -9192,7 +8062,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   81
             Left            =   240
-            Picture         =   "FormMainMode.frx":1C771C
+            Picture         =   "FormMainMode.frx":1AC38A
             Top             =   480
             Width           =   330
          End
@@ -9200,7 +8070,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   81
             Left            =   240
-            Picture         =   "FormMainMode.frx":1C7B44
+            Picture         =   "FormMainMode.frx":1AC7B2
             Top             =   480
             Width           =   330
          End
@@ -9208,7 +8078,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   81
             Left            =   240
-            Picture         =   "FormMainMode.frx":1C7DDC
+            Picture         =   "FormMainMode.frx":1ACA4A
             Top             =   480
             Width           =   330
          End
@@ -9216,7 +8086,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   81
             Left            =   240
-            Picture         =   "FormMainMode.frx":1C8076
+            Picture         =   "FormMainMode.frx":1ACCE4
             Top             =   480
             Width           =   330
          End
@@ -9229,7 +8099,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   82
          Left            =   240
-         Picture         =   "FormMainMode.frx":1C8497
+         Picture         =   "FormMainMode.frx":1AD105
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   142
@@ -9239,7 +8109,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   82
             Left            =   240
-            Picture         =   "FormMainMode.frx":1CCBB9
+            Picture         =   "FormMainMode.frx":1B1827
             Top             =   1020
             Width           =   300
          End
@@ -9247,7 +8117,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   82
             Left            =   240
-            Picture         =   "FormMainMode.frx":1CCC26
+            Picture         =   "FormMainMode.frx":1B1894
             Top             =   0
             Width           =   300
          End
@@ -9255,7 +8125,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   82
             Left            =   240
-            Picture         =   "FormMainMode.frx":1CCC92
+            Picture         =   "FormMainMode.frx":1B1900
             Top             =   480
             Width           =   330
          End
@@ -9263,7 +8133,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   82
             Left            =   240
-            Picture         =   "FormMainMode.frx":1CD0BA
+            Picture         =   "FormMainMode.frx":1B1D28
             Top             =   480
             Width           =   330
          End
@@ -9271,7 +8141,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   82
             Left            =   240
-            Picture         =   "FormMainMode.frx":1CD352
+            Picture         =   "FormMainMode.frx":1B1FC0
             Top             =   480
             Width           =   330
          End
@@ -9279,7 +8149,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   82
             Left            =   240
-            Picture         =   "FormMainMode.frx":1CD5EC
+            Picture         =   "FormMainMode.frx":1B225A
             Top             =   480
             Width           =   330
          End
@@ -9292,7 +8162,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   83
          Left            =   240
-         Picture         =   "FormMainMode.frx":1CDA0D
+         Picture         =   "FormMainMode.frx":1B267B
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   141
@@ -9302,7 +8172,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   83
             Left            =   240
-            Picture         =   "FormMainMode.frx":1D212F
+            Picture         =   "FormMainMode.frx":1B6D9D
             Top             =   1020
             Width           =   300
          End
@@ -9310,7 +8180,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   83
             Left            =   240
-            Picture         =   "FormMainMode.frx":1D219C
+            Picture         =   "FormMainMode.frx":1B6E0A
             Top             =   0
             Width           =   300
          End
@@ -9318,7 +8188,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   83
             Left            =   240
-            Picture         =   "FormMainMode.frx":1D2208
+            Picture         =   "FormMainMode.frx":1B6E76
             Top             =   480
             Width           =   330
          End
@@ -9326,7 +8196,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   83
             Left            =   240
-            Picture         =   "FormMainMode.frx":1D2630
+            Picture         =   "FormMainMode.frx":1B729E
             Top             =   480
             Width           =   330
          End
@@ -9334,7 +8204,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   83
             Left            =   240
-            Picture         =   "FormMainMode.frx":1D28C8
+            Picture         =   "FormMainMode.frx":1B7536
             Top             =   480
             Width           =   330
          End
@@ -9342,7 +8212,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   83
             Left            =   240
-            Picture         =   "FormMainMode.frx":1D2B62
+            Picture         =   "FormMainMode.frx":1B77D0
             Top             =   480
             Width           =   330
          End
@@ -9355,7 +8225,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   84
          Left            =   240
-         Picture         =   "FormMainMode.frx":1D2F83
+         Picture         =   "FormMainMode.frx":1B7BF1
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   140
@@ -9365,7 +8235,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   84
             Left            =   240
-            Picture         =   "FormMainMode.frx":1D76A5
+            Picture         =   "FormMainMode.frx":1BC313
             Top             =   1020
             Width           =   300
          End
@@ -9373,7 +8243,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   84
             Left            =   240
-            Picture         =   "FormMainMode.frx":1D7712
+            Picture         =   "FormMainMode.frx":1BC380
             Top             =   0
             Width           =   300
          End
@@ -9381,7 +8251,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   84
             Left            =   240
-            Picture         =   "FormMainMode.frx":1D777E
+            Picture         =   "FormMainMode.frx":1BC3EC
             Top             =   480
             Width           =   330
          End
@@ -9389,7 +8259,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   84
             Left            =   240
-            Picture         =   "FormMainMode.frx":1D7BA6
+            Picture         =   "FormMainMode.frx":1BC814
             Top             =   480
             Width           =   330
          End
@@ -9397,7 +8267,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   84
             Left            =   240
-            Picture         =   "FormMainMode.frx":1D7E3E
+            Picture         =   "FormMainMode.frx":1BCAAC
             Top             =   480
             Width           =   330
          End
@@ -9405,7 +8275,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   84
             Left            =   240
-            Picture         =   "FormMainMode.frx":1D80D8
+            Picture         =   "FormMainMode.frx":1BCD46
             Top             =   480
             Width           =   330
          End
@@ -9418,7 +8288,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   85
          Left            =   240
-         Picture         =   "FormMainMode.frx":1D84F9
+         Picture         =   "FormMainMode.frx":1BD167
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   139
@@ -9428,7 +8298,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   85
             Left            =   240
-            Picture         =   "FormMainMode.frx":1DCC1B
+            Picture         =   "FormMainMode.frx":1C1889
             Top             =   1020
             Width           =   300
          End
@@ -9436,7 +8306,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   85
             Left            =   240
-            Picture         =   "FormMainMode.frx":1DCC88
+            Picture         =   "FormMainMode.frx":1C18F6
             Top             =   0
             Width           =   300
          End
@@ -9444,7 +8314,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   85
             Left            =   240
-            Picture         =   "FormMainMode.frx":1DCCF4
+            Picture         =   "FormMainMode.frx":1C1962
             Top             =   480
             Width           =   330
          End
@@ -9452,7 +8322,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   85
             Left            =   240
-            Picture         =   "FormMainMode.frx":1DD11C
+            Picture         =   "FormMainMode.frx":1C1D8A
             Top             =   480
             Width           =   330
          End
@@ -9460,7 +8330,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   85
             Left            =   240
-            Picture         =   "FormMainMode.frx":1DD3B4
+            Picture         =   "FormMainMode.frx":1C2022
             Top             =   480
             Width           =   330
          End
@@ -9468,7 +8338,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   85
             Left            =   240
-            Picture         =   "FormMainMode.frx":1DD64E
+            Picture         =   "FormMainMode.frx":1C22BC
             Top             =   480
             Width           =   330
          End
@@ -9481,7 +8351,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   86
          Left            =   240
-         Picture         =   "FormMainMode.frx":1DDA6F
+         Picture         =   "FormMainMode.frx":1C26DD
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   138
@@ -9491,7 +8361,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   86
             Left            =   240
-            Picture         =   "FormMainMode.frx":1E2191
+            Picture         =   "FormMainMode.frx":1C6DFF
             Top             =   1020
             Width           =   300
          End
@@ -9499,7 +8369,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   86
             Left            =   240
-            Picture         =   "FormMainMode.frx":1E21FE
+            Picture         =   "FormMainMode.frx":1C6E6C
             Top             =   0
             Width           =   300
          End
@@ -9507,7 +8377,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   86
             Left            =   240
-            Picture         =   "FormMainMode.frx":1E226A
+            Picture         =   "FormMainMode.frx":1C6ED8
             Top             =   480
             Width           =   330
          End
@@ -9515,7 +8385,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   86
             Left            =   240
-            Picture         =   "FormMainMode.frx":1E2692
+            Picture         =   "FormMainMode.frx":1C7300
             Top             =   480
             Width           =   330
          End
@@ -9523,7 +8393,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   86
             Left            =   240
-            Picture         =   "FormMainMode.frx":1E292A
+            Picture         =   "FormMainMode.frx":1C7598
             Top             =   480
             Width           =   330
          End
@@ -9531,7 +8401,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   86
             Left            =   240
-            Picture         =   "FormMainMode.frx":1E2BC4
+            Picture         =   "FormMainMode.frx":1C7832
             Top             =   480
             Width           =   330
          End
@@ -9544,7 +8414,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   87
          Left            =   240
-         Picture         =   "FormMainMode.frx":1E2FE5
+         Picture         =   "FormMainMode.frx":1C7C53
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   137
@@ -9554,7 +8424,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   87
             Left            =   240
-            Picture         =   "FormMainMode.frx":1E7707
+            Picture         =   "FormMainMode.frx":1CC375
             Top             =   1020
             Width           =   300
          End
@@ -9562,7 +8432,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   87
             Left            =   240
-            Picture         =   "FormMainMode.frx":1E7774
+            Picture         =   "FormMainMode.frx":1CC3E2
             Top             =   0
             Width           =   300
          End
@@ -9570,7 +8440,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   87
             Left            =   240
-            Picture         =   "FormMainMode.frx":1E77E0
+            Picture         =   "FormMainMode.frx":1CC44E
             Top             =   480
             Width           =   330
          End
@@ -9578,7 +8448,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   87
             Left            =   240
-            Picture         =   "FormMainMode.frx":1E7C08
+            Picture         =   "FormMainMode.frx":1CC876
             Top             =   480
             Width           =   330
          End
@@ -9586,7 +8456,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   87
             Left            =   240
-            Picture         =   "FormMainMode.frx":1E7EA0
+            Picture         =   "FormMainMode.frx":1CCB0E
             Top             =   480
             Width           =   330
          End
@@ -9594,7 +8464,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   87
             Left            =   240
-            Picture         =   "FormMainMode.frx":1E813A
+            Picture         =   "FormMainMode.frx":1CCDA8
             Top             =   480
             Width           =   330
          End
@@ -9607,7 +8477,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   88
          Left            =   240
-         Picture         =   "FormMainMode.frx":1E855B
+         Picture         =   "FormMainMode.frx":1CD1C9
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   136
@@ -9617,7 +8487,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   88
             Left            =   240
-            Picture         =   "FormMainMode.frx":1ECC7D
+            Picture         =   "FormMainMode.frx":1D18EB
             Top             =   1020
             Width           =   300
          End
@@ -9625,7 +8495,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   88
             Left            =   240
-            Picture         =   "FormMainMode.frx":1ECCEA
+            Picture         =   "FormMainMode.frx":1D1958
             Top             =   0
             Width           =   300
          End
@@ -9633,7 +8503,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   88
             Left            =   240
-            Picture         =   "FormMainMode.frx":1ECD56
+            Picture         =   "FormMainMode.frx":1D19C4
             Top             =   480
             Width           =   330
          End
@@ -9641,7 +8511,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   88
             Left            =   240
-            Picture         =   "FormMainMode.frx":1ED17E
+            Picture         =   "FormMainMode.frx":1D1DEC
             Top             =   480
             Width           =   330
          End
@@ -9649,7 +8519,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   88
             Left            =   240
-            Picture         =   "FormMainMode.frx":1ED416
+            Picture         =   "FormMainMode.frx":1D2084
             Top             =   480
             Width           =   330
          End
@@ -9657,7 +8527,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   88
             Left            =   240
-            Picture         =   "FormMainMode.frx":1ED6B0
+            Picture         =   "FormMainMode.frx":1D231E
             Top             =   480
             Width           =   330
          End
@@ -9670,7 +8540,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   89
          Left            =   240
-         Picture         =   "FormMainMode.frx":1EDAD1
+         Picture         =   "FormMainMode.frx":1D273F
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   135
@@ -9680,7 +8550,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   89
             Left            =   240
-            Picture         =   "FormMainMode.frx":1F21F3
+            Picture         =   "FormMainMode.frx":1D6E61
             Top             =   1020
             Width           =   300
          End
@@ -9688,7 +8558,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   89
             Left            =   240
-            Picture         =   "FormMainMode.frx":1F2260
+            Picture         =   "FormMainMode.frx":1D6ECE
             Top             =   0
             Width           =   300
          End
@@ -9696,7 +8566,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   89
             Left            =   240
-            Picture         =   "FormMainMode.frx":1F22CC
+            Picture         =   "FormMainMode.frx":1D6F3A
             Top             =   480
             Width           =   330
          End
@@ -9704,7 +8574,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   89
             Left            =   240
-            Picture         =   "FormMainMode.frx":1F26F4
+            Picture         =   "FormMainMode.frx":1D7362
             Top             =   480
             Width           =   330
          End
@@ -9712,7 +8582,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   89
             Left            =   240
-            Picture         =   "FormMainMode.frx":1F298C
+            Picture         =   "FormMainMode.frx":1D75FA
             Top             =   480
             Width           =   330
          End
@@ -9720,7 +8590,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   89
             Left            =   240
-            Picture         =   "FormMainMode.frx":1F2C26
+            Picture         =   "FormMainMode.frx":1D7894
             Top             =   480
             Width           =   330
          End
@@ -9733,7 +8603,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   90
          Left            =   240
-         Picture         =   "FormMainMode.frx":1F3047
+         Picture         =   "FormMainMode.frx":1D7CB5
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   134
@@ -9743,7 +8613,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   90
             Left            =   240
-            Picture         =   "FormMainMode.frx":1F7769
+            Picture         =   "FormMainMode.frx":1DC3D7
             Top             =   1020
             Width           =   300
          End
@@ -9751,7 +8621,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   90
             Left            =   240
-            Picture         =   "FormMainMode.frx":1F77D6
+            Picture         =   "FormMainMode.frx":1DC444
             Top             =   0
             Width           =   300
          End
@@ -9759,7 +8629,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   90
             Left            =   240
-            Picture         =   "FormMainMode.frx":1F7842
+            Picture         =   "FormMainMode.frx":1DC4B0
             Top             =   480
             Width           =   330
          End
@@ -9767,7 +8637,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   90
             Left            =   240
-            Picture         =   "FormMainMode.frx":1F7C6A
+            Picture         =   "FormMainMode.frx":1DC8D8
             Top             =   480
             Width           =   330
          End
@@ -9775,7 +8645,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   90
             Left            =   240
-            Picture         =   "FormMainMode.frx":1F7F02
+            Picture         =   "FormMainMode.frx":1DCB70
             Top             =   480
             Width           =   330
          End
@@ -9783,7 +8653,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   90
             Left            =   240
-            Picture         =   "FormMainMode.frx":1F819C
+            Picture         =   "FormMainMode.frx":1DCE0A
             Top             =   480
             Width           =   330
          End
@@ -9796,7 +8666,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   91
          Left            =   240
-         Picture         =   "FormMainMode.frx":1F85BD
+         Picture         =   "FormMainMode.frx":1DD22B
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   133
@@ -9806,7 +8676,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   91
             Left            =   240
-            Picture         =   "FormMainMode.frx":1FCCDF
+            Picture         =   "FormMainMode.frx":1E194D
             Top             =   1020
             Width           =   300
          End
@@ -9814,7 +8684,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   91
             Left            =   240
-            Picture         =   "FormMainMode.frx":1FCD4C
+            Picture         =   "FormMainMode.frx":1E19BA
             Top             =   0
             Width           =   300
          End
@@ -9822,7 +8692,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   91
             Left            =   240
-            Picture         =   "FormMainMode.frx":1FCDB8
+            Picture         =   "FormMainMode.frx":1E1A26
             Top             =   480
             Width           =   330
          End
@@ -9830,7 +8700,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   91
             Left            =   240
-            Picture         =   "FormMainMode.frx":1FD1E0
+            Picture         =   "FormMainMode.frx":1E1E4E
             Top             =   480
             Width           =   330
          End
@@ -9838,7 +8708,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   91
             Left            =   240
-            Picture         =   "FormMainMode.frx":1FD478
+            Picture         =   "FormMainMode.frx":1E20E6
             Top             =   480
             Width           =   330
          End
@@ -9846,7 +8716,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   91
             Left            =   240
-            Picture         =   "FormMainMode.frx":1FD712
+            Picture         =   "FormMainMode.frx":1E2380
             Top             =   480
             Width           =   330
          End
@@ -9859,7 +8729,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   92
          Left            =   240
-         Picture         =   "FormMainMode.frx":1FDB33
+         Picture         =   "FormMainMode.frx":1E27A1
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   132
@@ -9869,7 +8739,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   92
             Left            =   240
-            Picture         =   "FormMainMode.frx":202255
+            Picture         =   "FormMainMode.frx":1E6EC3
             Top             =   1020
             Width           =   300
          End
@@ -9877,7 +8747,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   92
             Left            =   240
-            Picture         =   "FormMainMode.frx":2022C2
+            Picture         =   "FormMainMode.frx":1E6F30
             Top             =   0
             Width           =   300
          End
@@ -9885,7 +8755,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   92
             Left            =   240
-            Picture         =   "FormMainMode.frx":20232E
+            Picture         =   "FormMainMode.frx":1E6F9C
             Top             =   480
             Width           =   330
          End
@@ -9893,7 +8763,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   92
             Left            =   240
-            Picture         =   "FormMainMode.frx":202756
+            Picture         =   "FormMainMode.frx":1E73C4
             Top             =   480
             Width           =   330
          End
@@ -9901,7 +8771,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   92
             Left            =   240
-            Picture         =   "FormMainMode.frx":2029EE
+            Picture         =   "FormMainMode.frx":1E765C
             Top             =   480
             Width           =   330
          End
@@ -9909,7 +8779,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   92
             Left            =   240
-            Picture         =   "FormMainMode.frx":202C88
+            Picture         =   "FormMainMode.frx":1E78F6
             Top             =   480
             Width           =   330
          End
@@ -9922,7 +8792,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   93
          Left            =   240
-         Picture         =   "FormMainMode.frx":2030A9
+         Picture         =   "FormMainMode.frx":1E7D17
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   131
@@ -9932,7 +8802,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   93
             Left            =   240
-            Picture         =   "FormMainMode.frx":2077CB
+            Picture         =   "FormMainMode.frx":1EC439
             Top             =   1020
             Width           =   300
          End
@@ -9940,7 +8810,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   93
             Left            =   240
-            Picture         =   "FormMainMode.frx":207838
+            Picture         =   "FormMainMode.frx":1EC4A6
             Top             =   0
             Width           =   300
          End
@@ -9948,7 +8818,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   93
             Left            =   240
-            Picture         =   "FormMainMode.frx":2078A4
+            Picture         =   "FormMainMode.frx":1EC512
             Top             =   480
             Width           =   330
          End
@@ -9956,7 +8826,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   93
             Left            =   240
-            Picture         =   "FormMainMode.frx":207CCC
+            Picture         =   "FormMainMode.frx":1EC93A
             Top             =   480
             Width           =   330
          End
@@ -9964,7 +8834,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   93
             Left            =   240
-            Picture         =   "FormMainMode.frx":207F64
+            Picture         =   "FormMainMode.frx":1ECBD2
             Top             =   480
             Width           =   330
          End
@@ -9972,7 +8842,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   93
             Left            =   240
-            Picture         =   "FormMainMode.frx":2081FE
+            Picture         =   "FormMainMode.frx":1ECE6C
             Top             =   480
             Width           =   330
          End
@@ -9985,7 +8855,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   94
          Left            =   240
-         Picture         =   "FormMainMode.frx":20861F
+         Picture         =   "FormMainMode.frx":1ED28D
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   130
@@ -9995,7 +8865,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   94
             Left            =   240
-            Picture         =   "FormMainMode.frx":20CD41
+            Picture         =   "FormMainMode.frx":1F19AF
             Top             =   1020
             Width           =   300
          End
@@ -10003,7 +8873,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   94
             Left            =   240
-            Picture         =   "FormMainMode.frx":20CDAE
+            Picture         =   "FormMainMode.frx":1F1A1C
             Top             =   0
             Width           =   300
          End
@@ -10011,7 +8881,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   94
             Left            =   240
-            Picture         =   "FormMainMode.frx":20CE1A
+            Picture         =   "FormMainMode.frx":1F1A88
             Top             =   480
             Width           =   330
          End
@@ -10019,7 +8889,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   94
             Left            =   240
-            Picture         =   "FormMainMode.frx":20D242
+            Picture         =   "FormMainMode.frx":1F1EB0
             Top             =   480
             Width           =   330
          End
@@ -10027,7 +8897,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   94
             Left            =   240
-            Picture         =   "FormMainMode.frx":20D4DA
+            Picture         =   "FormMainMode.frx":1F2148
             Top             =   480
             Width           =   330
          End
@@ -10035,7 +8905,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   94
             Left            =   240
-            Picture         =   "FormMainMode.frx":20D774
+            Picture         =   "FormMainMode.frx":1F23E2
             Top             =   480
             Width           =   330
          End
@@ -10048,7 +8918,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   95
          Left            =   240
-         Picture         =   "FormMainMode.frx":20DB95
+         Picture         =   "FormMainMode.frx":1F2803
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   129
@@ -10058,7 +8928,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   95
             Left            =   240
-            Picture         =   "FormMainMode.frx":2122B7
+            Picture         =   "FormMainMode.frx":1F6F25
             Top             =   1020
             Width           =   300
          End
@@ -10066,7 +8936,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   95
             Left            =   240
-            Picture         =   "FormMainMode.frx":212324
+            Picture         =   "FormMainMode.frx":1F6F92
             Top             =   0
             Width           =   300
          End
@@ -10074,7 +8944,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   95
             Left            =   240
-            Picture         =   "FormMainMode.frx":212390
+            Picture         =   "FormMainMode.frx":1F6FFE
             Top             =   480
             Width           =   330
          End
@@ -10082,7 +8952,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   95
             Left            =   240
-            Picture         =   "FormMainMode.frx":2127B8
+            Picture         =   "FormMainMode.frx":1F7426
             Top             =   480
             Width           =   330
          End
@@ -10090,7 +8960,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   95
             Left            =   240
-            Picture         =   "FormMainMode.frx":212A50
+            Picture         =   "FormMainMode.frx":1F76BE
             Top             =   480
             Width           =   330
          End
@@ -10098,7 +8968,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   95
             Left            =   240
-            Picture         =   "FormMainMode.frx":212CEA
+            Picture         =   "FormMainMode.frx":1F7958
             Top             =   480
             Width           =   330
          End
@@ -10111,7 +8981,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   96
          Left            =   240
-         Picture         =   "FormMainMode.frx":21310B
+         Picture         =   "FormMainMode.frx":1F7D79
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   128
@@ -10121,7 +8991,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   96
             Left            =   240
-            Picture         =   "FormMainMode.frx":21782D
+            Picture         =   "FormMainMode.frx":1FC49B
             Top             =   1020
             Width           =   300
          End
@@ -10129,7 +8999,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   96
             Left            =   240
-            Picture         =   "FormMainMode.frx":21789A
+            Picture         =   "FormMainMode.frx":1FC508
             Top             =   0
             Width           =   300
          End
@@ -10137,7 +9007,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   96
             Left            =   240
-            Picture         =   "FormMainMode.frx":217906
+            Picture         =   "FormMainMode.frx":1FC574
             Top             =   480
             Width           =   330
          End
@@ -10145,7 +9015,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   96
             Left            =   240
-            Picture         =   "FormMainMode.frx":217D2E
+            Picture         =   "FormMainMode.frx":1FC99C
             Top             =   480
             Width           =   330
          End
@@ -10153,7 +9023,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   96
             Left            =   240
-            Picture         =   "FormMainMode.frx":217FC6
+            Picture         =   "FormMainMode.frx":1FCC34
             Top             =   480
             Width           =   330
          End
@@ -10161,7 +9031,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   96
             Left            =   240
-            Picture         =   "FormMainMode.frx":218260
+            Picture         =   "FormMainMode.frx":1FCECE
             Top             =   480
             Width           =   330
          End
@@ -10174,7 +9044,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   97
          Left            =   240
-         Picture         =   "FormMainMode.frx":218681
+         Picture         =   "FormMainMode.frx":1FD2EF
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   127
@@ -10184,7 +9054,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   97
             Left            =   240
-            Picture         =   "FormMainMode.frx":21CDA3
+            Picture         =   "FormMainMode.frx":201A11
             Top             =   1020
             Width           =   300
          End
@@ -10192,7 +9062,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   97
             Left            =   240
-            Picture         =   "FormMainMode.frx":21CE10
+            Picture         =   "FormMainMode.frx":201A7E
             Top             =   0
             Width           =   300
          End
@@ -10200,7 +9070,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   97
             Left            =   240
-            Picture         =   "FormMainMode.frx":21CE7C
+            Picture         =   "FormMainMode.frx":201AEA
             Top             =   480
             Width           =   330
          End
@@ -10208,7 +9078,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   97
             Left            =   240
-            Picture         =   "FormMainMode.frx":21D2A4
+            Picture         =   "FormMainMode.frx":201F12
             Top             =   480
             Width           =   330
          End
@@ -10216,7 +9086,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   97
             Left            =   240
-            Picture         =   "FormMainMode.frx":21D53C
+            Picture         =   "FormMainMode.frx":2021AA
             Top             =   480
             Width           =   330
          End
@@ -10224,7 +9094,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   97
             Left            =   240
-            Picture         =   "FormMainMode.frx":21D7D6
+            Picture         =   "FormMainMode.frx":202444
             Top             =   480
             Width           =   330
          End
@@ -10237,7 +9107,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   98
          Left            =   240
-         Picture         =   "FormMainMode.frx":21DBF7
+         Picture         =   "FormMainMode.frx":202865
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   126
@@ -10247,7 +9117,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   98
             Left            =   240
-            Picture         =   "FormMainMode.frx":222319
+            Picture         =   "FormMainMode.frx":206F87
             Top             =   1020
             Width           =   300
          End
@@ -10255,7 +9125,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   98
             Left            =   240
-            Picture         =   "FormMainMode.frx":222386
+            Picture         =   "FormMainMode.frx":206FF4
             Top             =   0
             Width           =   300
          End
@@ -10263,7 +9133,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   98
             Left            =   240
-            Picture         =   "FormMainMode.frx":2223F2
+            Picture         =   "FormMainMode.frx":207060
             Top             =   480
             Width           =   330
          End
@@ -10271,7 +9141,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   98
             Left            =   240
-            Picture         =   "FormMainMode.frx":22281A
+            Picture         =   "FormMainMode.frx":207488
             Top             =   480
             Width           =   330
          End
@@ -10279,7 +9149,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   98
             Left            =   240
-            Picture         =   "FormMainMode.frx":222AB2
+            Picture         =   "FormMainMode.frx":207720
             Top             =   480
             Width           =   330
          End
@@ -10287,7 +9157,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   98
             Left            =   240
-            Picture         =   "FormMainMode.frx":222D4C
+            Picture         =   "FormMainMode.frx":2079BA
             Top             =   480
             Width           =   330
          End
@@ -10300,7 +9170,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   99
          Left            =   240
-         Picture         =   "FormMainMode.frx":22316D
+         Picture         =   "FormMainMode.frx":207DDB
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   125
@@ -10310,7 +9180,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   99
             Left            =   240
-            Picture         =   "FormMainMode.frx":22788F
+            Picture         =   "FormMainMode.frx":20C4FD
             Top             =   1020
             Width           =   300
          End
@@ -10318,7 +9188,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   99
             Left            =   240
-            Picture         =   "FormMainMode.frx":2278FC
+            Picture         =   "FormMainMode.frx":20C56A
             Top             =   0
             Width           =   300
          End
@@ -10326,7 +9196,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   99
             Left            =   240
-            Picture         =   "FormMainMode.frx":227968
+            Picture         =   "FormMainMode.frx":20C5D6
             Top             =   480
             Width           =   330
          End
@@ -10334,7 +9204,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   99
             Left            =   240
-            Picture         =   "FormMainMode.frx":227D90
+            Picture         =   "FormMainMode.frx":20C9FE
             Top             =   480
             Width           =   330
          End
@@ -10342,7 +9212,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   99
             Left            =   240
-            Picture         =   "FormMainMode.frx":228028
+            Picture         =   "FormMainMode.frx":20CC96
             Top             =   480
             Width           =   330
          End
@@ -10350,7 +9220,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   99
             Left            =   240
-            Picture         =   "FormMainMode.frx":2282C2
+            Picture         =   "FormMainMode.frx":20CF30
             Top             =   480
             Width           =   330
          End
@@ -10363,7 +9233,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   100
          Left            =   240
-         Picture         =   "FormMainMode.frx":2286E3
+         Picture         =   "FormMainMode.frx":20D351
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   124
@@ -10373,7 +9243,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   100
             Left            =   240
-            Picture         =   "FormMainMode.frx":22CE05
+            Picture         =   "FormMainMode.frx":211A73
             Top             =   1020
             Width           =   300
          End
@@ -10381,7 +9251,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   100
             Left            =   240
-            Picture         =   "FormMainMode.frx":22CE72
+            Picture         =   "FormMainMode.frx":211AE0
             Top             =   0
             Width           =   300
          End
@@ -10389,7 +9259,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   100
             Left            =   240
-            Picture         =   "FormMainMode.frx":22CEDE
+            Picture         =   "FormMainMode.frx":211B4C
             Top             =   480
             Width           =   330
          End
@@ -10397,7 +9267,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   100
             Left            =   240
-            Picture         =   "FormMainMode.frx":22D306
+            Picture         =   "FormMainMode.frx":211F74
             Top             =   480
             Width           =   330
          End
@@ -10405,7 +9275,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   100
             Left            =   240
-            Picture         =   "FormMainMode.frx":22D59E
+            Picture         =   "FormMainMode.frx":21220C
             Top             =   480
             Width           =   330
          End
@@ -10413,7 +9283,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   100
             Left            =   240
-            Picture         =   "FormMainMode.frx":22D838
+            Picture         =   "FormMainMode.frx":2124A6
             Top             =   480
             Width           =   330
          End
@@ -10426,7 +9296,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   101
          Left            =   240
-         Picture         =   "FormMainMode.frx":22DC59
+         Picture         =   "FormMainMode.frx":2128C7
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   123
@@ -10436,7 +9306,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   101
             Left            =   240
-            Picture         =   "FormMainMode.frx":23237B
+            Picture         =   "FormMainMode.frx":216FE9
             Top             =   1020
             Width           =   300
          End
@@ -10444,7 +9314,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   101
             Left            =   240
-            Picture         =   "FormMainMode.frx":2323E8
+            Picture         =   "FormMainMode.frx":217056
             Top             =   0
             Width           =   300
          End
@@ -10452,7 +9322,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   101
             Left            =   240
-            Picture         =   "FormMainMode.frx":232454
+            Picture         =   "FormMainMode.frx":2170C2
             Top             =   480
             Width           =   330
          End
@@ -10460,7 +9330,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   101
             Left            =   240
-            Picture         =   "FormMainMode.frx":23287C
+            Picture         =   "FormMainMode.frx":2174EA
             Top             =   480
             Width           =   330
          End
@@ -10468,7 +9338,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   101
             Left            =   240
-            Picture         =   "FormMainMode.frx":232B14
+            Picture         =   "FormMainMode.frx":217782
             Top             =   480
             Width           =   330
          End
@@ -10476,7 +9346,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   101
             Left            =   240
-            Picture         =   "FormMainMode.frx":232DAE
+            Picture         =   "FormMainMode.frx":217A1C
             Top             =   480
             Width           =   330
          End
@@ -10489,7 +9359,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   102
          Left            =   240
-         Picture         =   "FormMainMode.frx":2331CF
+         Picture         =   "FormMainMode.frx":217E3D
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   122
@@ -10499,7 +9369,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   102
             Left            =   240
-            Picture         =   "FormMainMode.frx":2378F1
+            Picture         =   "FormMainMode.frx":21C55F
             Top             =   1020
             Width           =   300
          End
@@ -10507,7 +9377,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   102
             Left            =   240
-            Picture         =   "FormMainMode.frx":23795E
+            Picture         =   "FormMainMode.frx":21C5CC
             Top             =   0
             Width           =   300
          End
@@ -10515,7 +9385,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   102
             Left            =   240
-            Picture         =   "FormMainMode.frx":2379CA
+            Picture         =   "FormMainMode.frx":21C638
             Top             =   480
             Width           =   330
          End
@@ -10523,7 +9393,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   102
             Left            =   240
-            Picture         =   "FormMainMode.frx":237DF2
+            Picture         =   "FormMainMode.frx":21CA60
             Top             =   480
             Width           =   330
          End
@@ -10531,7 +9401,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   102
             Left            =   240
-            Picture         =   "FormMainMode.frx":23808A
+            Picture         =   "FormMainMode.frx":21CCF8
             Top             =   480
             Width           =   330
          End
@@ -10539,7 +9409,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   102
             Left            =   240
-            Picture         =   "FormMainMode.frx":238324
+            Picture         =   "FormMainMode.frx":21CF92
             Top             =   480
             Width           =   330
          End
@@ -10552,7 +9422,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   103
          Left            =   240
-         Picture         =   "FormMainMode.frx":238745
+         Picture         =   "FormMainMode.frx":21D3B3
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   121
@@ -10562,7 +9432,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   103
             Left            =   240
-            Picture         =   "FormMainMode.frx":23CE67
+            Picture         =   "FormMainMode.frx":221AD5
             Top             =   1020
             Width           =   300
          End
@@ -10570,7 +9440,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   103
             Left            =   240
-            Picture         =   "FormMainMode.frx":23CED4
+            Picture         =   "FormMainMode.frx":221B42
             Top             =   0
             Width           =   300
          End
@@ -10578,7 +9448,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   103
             Left            =   240
-            Picture         =   "FormMainMode.frx":23CF40
+            Picture         =   "FormMainMode.frx":221BAE
             Top             =   480
             Width           =   330
          End
@@ -10586,7 +9456,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   103
             Left            =   240
-            Picture         =   "FormMainMode.frx":23D368
+            Picture         =   "FormMainMode.frx":221FD6
             Top             =   480
             Width           =   330
          End
@@ -10594,7 +9464,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   103
             Left            =   240
-            Picture         =   "FormMainMode.frx":23D600
+            Picture         =   "FormMainMode.frx":22226E
             Top             =   480
             Width           =   330
          End
@@ -10602,7 +9472,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   103
             Left            =   240
-            Picture         =   "FormMainMode.frx":23D89A
+            Picture         =   "FormMainMode.frx":222508
             Top             =   480
             Width           =   330
          End
@@ -10615,7 +9485,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   104
          Left            =   240
-         Picture         =   "FormMainMode.frx":23DCBB
+         Picture         =   "FormMainMode.frx":222929
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   120
@@ -10625,7 +9495,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   104
             Left            =   240
-            Picture         =   "FormMainMode.frx":2423DD
+            Picture         =   "FormMainMode.frx":22704B
             Top             =   1020
             Width           =   300
          End
@@ -10633,7 +9503,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   104
             Left            =   240
-            Picture         =   "FormMainMode.frx":24244A
+            Picture         =   "FormMainMode.frx":2270B8
             Top             =   0
             Width           =   300
          End
@@ -10641,7 +9511,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   104
             Left            =   240
-            Picture         =   "FormMainMode.frx":2424B6
+            Picture         =   "FormMainMode.frx":227124
             Top             =   480
             Width           =   330
          End
@@ -10649,7 +9519,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   104
             Left            =   240
-            Picture         =   "FormMainMode.frx":2428DE
+            Picture         =   "FormMainMode.frx":22754C
             Top             =   480
             Width           =   330
          End
@@ -10657,7 +9527,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   104
             Left            =   240
-            Picture         =   "FormMainMode.frx":242B76
+            Picture         =   "FormMainMode.frx":2277E4
             Top             =   480
             Width           =   330
          End
@@ -10665,7 +9535,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   104
             Left            =   240
-            Picture         =   "FormMainMode.frx":242E10
+            Picture         =   "FormMainMode.frx":227A7E
             Top             =   480
             Width           =   330
          End
@@ -10678,7 +9548,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   105
          Left            =   240
-         Picture         =   "FormMainMode.frx":243231
+         Picture         =   "FormMainMode.frx":227E9F
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   119
@@ -10688,7 +9558,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   105
             Left            =   240
-            Picture         =   "FormMainMode.frx":247953
+            Picture         =   "FormMainMode.frx":22C5C1
             Top             =   1020
             Width           =   300
          End
@@ -10696,7 +9566,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   105
             Left            =   240
-            Picture         =   "FormMainMode.frx":2479C0
+            Picture         =   "FormMainMode.frx":22C62E
             Top             =   0
             Width           =   300
          End
@@ -10704,7 +9574,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   105
             Left            =   240
-            Picture         =   "FormMainMode.frx":247A2C
+            Picture         =   "FormMainMode.frx":22C69A
             Top             =   480
             Width           =   330
          End
@@ -10712,7 +9582,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   105
             Left            =   240
-            Picture         =   "FormMainMode.frx":247E54
+            Picture         =   "FormMainMode.frx":22CAC2
             Top             =   480
             Width           =   330
          End
@@ -10720,7 +9590,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   105
             Left            =   240
-            Picture         =   "FormMainMode.frx":2480EC
+            Picture         =   "FormMainMode.frx":22CD5A
             Top             =   480
             Width           =   330
          End
@@ -10728,7 +9598,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   105
             Left            =   240
-            Picture         =   "FormMainMode.frx":248386
+            Picture         =   "FormMainMode.frx":22CFF4
             Top             =   480
             Width           =   330
          End
@@ -10747,7 +9617,7 @@ Begin VB.Form FormMainMode
          Height          =   495
          Index           =   3
          Left            =   5040
-         Picture         =   "FormMainMode.frx":2487A7
+         Picture         =   "FormMainMode.frx":22D415
          ScaleHeight     =   495
          ScaleWidth      =   2520
          TabIndex        =   111
@@ -10893,7 +9763,7 @@ Begin VB.Form FormMainMode
          Height          =   495
          Index           =   2
          Left            =   2520
-         Picture         =   "FormMainMode.frx":2489EF
+         Picture         =   "FormMainMode.frx":22D65D
          ScaleHeight     =   495
          ScaleWidth      =   2520
          TabIndex        =   104
@@ -11039,7 +9909,7 @@ Begin VB.Form FormMainMode
          Height          =   495
          Index           =   1
          Left            =   0
-         Picture         =   "FormMainMode.frx":248C37
+         Picture         =   "FormMainMode.frx":22D8A5
          ScaleHeight     =   495
          ScaleWidth      =   2520
          TabIndex        =   97
@@ -11352,7 +10222,7 @@ Begin VB.Form FormMainMode
          Begin VB.Image cardbackjpg 
             Height          =   1455
             Left            =   0
-            Picture         =   "FormMainMode.frx":248E7F
+            Picture         =   "FormMainMode.frx":22DAED
             Top             =   360
             Width           =   8910
          End
@@ -11447,7 +10317,7 @@ Begin VB.Form FormMainMode
          Begin VB.Image bnok 
             Height          =   1050
             Left            =   5520
-            Picture         =   "FormMainMode.frx":2732B9
+            Picture         =   "FormMainMode.frx":257F27
             Top             =   2040
             Visible         =   0   'False
             Width           =   1500
@@ -11468,7 +10338,7 @@ Begin VB.Form FormMainMode
          Begin VB.Image turnpe 
             Height          =   420
             Left            =   10200
-            Picture         =   "FormMainMode.frx":2771C8
+            Picture         =   "FormMainMode.frx":25BE36
             Top             =   560
             Width           =   1125
          End
@@ -11606,7 +10476,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   1
          Left            =   240
-         Picture         =   "FormMainMode.frx":277672
+         Picture         =   "FormMainMode.frx":25C2E0
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   244
@@ -11616,7 +10486,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   1
             Left            =   240
-            Picture         =   "FormMainMode.frx":27BD94
+            Picture         =   "FormMainMode.frx":260A02
             Top             =   1020
             Width           =   300
          End
@@ -11624,7 +10494,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   1
             Left            =   240
-            Picture         =   "FormMainMode.frx":27BE01
+            Picture         =   "FormMainMode.frx":260A6F
             Top             =   0
             Width           =   300
          End
@@ -11632,7 +10502,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   1
             Left            =   240
-            Picture         =   "FormMainMode.frx":27BE6D
+            Picture         =   "FormMainMode.frx":260ADB
             Top             =   480
             Width           =   330
          End
@@ -11640,7 +10510,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   1
             Left            =   240
-            Picture         =   "FormMainMode.frx":27C295
+            Picture         =   "FormMainMode.frx":260F03
             Top             =   480
             Width           =   330
          End
@@ -11648,7 +10518,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   1
             Left            =   240
-            Picture         =   "FormMainMode.frx":27C52D
+            Picture         =   "FormMainMode.frx":26119B
             Top             =   480
             Width           =   330
          End
@@ -11656,7 +10526,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   1
             Left            =   240
-            Picture         =   "FormMainMode.frx":27C7C7
+            Picture         =   "FormMainMode.frx":261435
             Top             =   480
             Width           =   330
          End
@@ -11669,7 +10539,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   2
          Left            =   240
-         Picture         =   "FormMainMode.frx":27CBE8
+         Picture         =   "FormMainMode.frx":261856
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   243
@@ -11679,7 +10549,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   2
             Left            =   240
-            Picture         =   "FormMainMode.frx":2801FA
+            Picture         =   "FormMainMode.frx":264E68
             Top             =   480
             Width           =   330
          End
@@ -11687,7 +10557,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   2
             Left            =   240
-            Picture         =   "FormMainMode.frx":28061B
+            Picture         =   "FormMainMode.frx":265289
             Top             =   480
             Width           =   330
          End
@@ -11695,7 +10565,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   2
             Left            =   240
-            Picture         =   "FormMainMode.frx":2808B5
+            Picture         =   "FormMainMode.frx":265523
             Top             =   480
             Width           =   330
          End
@@ -11703,7 +10573,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   2
             Left            =   240
-            Picture         =   "FormMainMode.frx":280B4D
+            Picture         =   "FormMainMode.frx":2657BB
             Top             =   480
             Width           =   330
          End
@@ -11711,7 +10581,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   2
             Left            =   240
-            Picture         =   "FormMainMode.frx":280F75
+            Picture         =   "FormMainMode.frx":265BE3
             Top             =   0
             Width           =   300
          End
@@ -11719,7 +10589,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   2
             Left            =   240
-            Picture         =   "FormMainMode.frx":280FE1
+            Picture         =   "FormMainMode.frx":265C4F
             Top             =   1020
             Width           =   300
          End
@@ -11732,7 +10602,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   3
          Left            =   240
-         Picture         =   "FormMainMode.frx":28104E
+         Picture         =   "FormMainMode.frx":265CBC
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   242
@@ -11742,7 +10612,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   3
             Left            =   240
-            Picture         =   "FormMainMode.frx":284660
+            Picture         =   "FormMainMode.frx":2692CE
             Top             =   480
             Width           =   330
          End
@@ -11750,7 +10620,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   3
             Left            =   240
-            Picture         =   "FormMainMode.frx":284A81
+            Picture         =   "FormMainMode.frx":2696EF
             Top             =   480
             Width           =   330
          End
@@ -11758,7 +10628,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   3
             Left            =   240
-            Picture         =   "FormMainMode.frx":284D1B
+            Picture         =   "FormMainMode.frx":269989
             Top             =   480
             Width           =   330
          End
@@ -11766,7 +10636,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   3
             Left            =   240
-            Picture         =   "FormMainMode.frx":284FB3
+            Picture         =   "FormMainMode.frx":269C21
             Top             =   480
             Width           =   330
          End
@@ -11774,7 +10644,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   3
             Left            =   240
-            Picture         =   "FormMainMode.frx":2853DB
+            Picture         =   "FormMainMode.frx":26A049
             Top             =   0
             Width           =   300
          End
@@ -11782,7 +10652,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   3
             Left            =   240
-            Picture         =   "FormMainMode.frx":285447
+            Picture         =   "FormMainMode.frx":26A0B5
             Top             =   1020
             Width           =   300
          End
@@ -11795,7 +10665,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   4
          Left            =   240
-         Picture         =   "FormMainMode.frx":2854B4
+         Picture         =   "FormMainMode.frx":26A122
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   241
@@ -11805,7 +10675,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   4
             Left            =   240
-            Picture         =   "FormMainMode.frx":288AC6
+            Picture         =   "FormMainMode.frx":26D734
             Top             =   480
             Width           =   330
          End
@@ -11813,7 +10683,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   4
             Left            =   240
-            Picture         =   "FormMainMode.frx":288EE7
+            Picture         =   "FormMainMode.frx":26DB55
             Top             =   480
             Width           =   330
          End
@@ -11821,7 +10691,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   4
             Left            =   240
-            Picture         =   "FormMainMode.frx":289181
+            Picture         =   "FormMainMode.frx":26DDEF
             Top             =   480
             Width           =   330
          End
@@ -11829,7 +10699,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   4
             Left            =   240
-            Picture         =   "FormMainMode.frx":289419
+            Picture         =   "FormMainMode.frx":26E087
             Top             =   480
             Width           =   330
          End
@@ -11837,7 +10707,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   4
             Left            =   240
-            Picture         =   "FormMainMode.frx":289841
+            Picture         =   "FormMainMode.frx":26E4AF
             Top             =   0
             Width           =   300
          End
@@ -11845,7 +10715,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   4
             Left            =   240
-            Picture         =   "FormMainMode.frx":2898AD
+            Picture         =   "FormMainMode.frx":26E51B
             Top             =   1020
             Width           =   300
          End
@@ -11858,7 +10728,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   5
          Left            =   240
-         Picture         =   "FormMainMode.frx":28991A
+         Picture         =   "FormMainMode.frx":26E588
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   240
@@ -11868,7 +10738,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   5
             Left            =   240
-            Picture         =   "FormMainMode.frx":28CF2C
+            Picture         =   "FormMainMode.frx":271B9A
             Top             =   480
             Width           =   330
          End
@@ -11876,7 +10746,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   5
             Left            =   240
-            Picture         =   "FormMainMode.frx":28D34D
+            Picture         =   "FormMainMode.frx":271FBB
             Top             =   480
             Width           =   330
          End
@@ -11884,7 +10754,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   5
             Left            =   240
-            Picture         =   "FormMainMode.frx":28D5E7
+            Picture         =   "FormMainMode.frx":272255
             Top             =   480
             Width           =   330
          End
@@ -11892,7 +10762,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   5
             Left            =   240
-            Picture         =   "FormMainMode.frx":28D87F
+            Picture         =   "FormMainMode.frx":2724ED
             Top             =   480
             Width           =   330
          End
@@ -11900,7 +10770,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   5
             Left            =   240
-            Picture         =   "FormMainMode.frx":28DCA7
+            Picture         =   "FormMainMode.frx":272915
             Top             =   0
             Width           =   300
          End
@@ -11908,7 +10778,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   5
             Left            =   240
-            Picture         =   "FormMainMode.frx":28DD13
+            Picture         =   "FormMainMode.frx":272981
             Top             =   1020
             Width           =   300
          End
@@ -11921,7 +10791,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   6
          Left            =   240
-         Picture         =   "FormMainMode.frx":28DD80
+         Picture         =   "FormMainMode.frx":2729EE
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   239
@@ -11931,7 +10801,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   6
             Left            =   240
-            Picture         =   "FormMainMode.frx":291392
+            Picture         =   "FormMainMode.frx":276000
             Top             =   480
             Width           =   330
          End
@@ -11939,7 +10809,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   6
             Left            =   240
-            Picture         =   "FormMainMode.frx":2917B3
+            Picture         =   "FormMainMode.frx":276421
             Top             =   480
             Width           =   330
          End
@@ -11947,7 +10817,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   6
             Left            =   240
-            Picture         =   "FormMainMode.frx":291A4D
+            Picture         =   "FormMainMode.frx":2766BB
             Top             =   480
             Width           =   330
          End
@@ -11955,7 +10825,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   6
             Left            =   240
-            Picture         =   "FormMainMode.frx":291CE5
+            Picture         =   "FormMainMode.frx":276953
             Top             =   480
             Width           =   330
          End
@@ -11963,7 +10833,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   6
             Left            =   240
-            Picture         =   "FormMainMode.frx":29210D
+            Picture         =   "FormMainMode.frx":276D7B
             Top             =   0
             Width           =   300
          End
@@ -11971,7 +10841,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   6
             Left            =   240
-            Picture         =   "FormMainMode.frx":292179
+            Picture         =   "FormMainMode.frx":276DE7
             Top             =   1020
             Width           =   300
          End
@@ -11984,7 +10854,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   7
          Left            =   240
-         Picture         =   "FormMainMode.frx":2921E6
+         Picture         =   "FormMainMode.frx":276E54
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   238
@@ -11994,7 +10864,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   7
             Left            =   240
-            Picture         =   "FormMainMode.frx":2957F8
+            Picture         =   "FormMainMode.frx":27A466
             Top             =   480
             Width           =   330
          End
@@ -12002,7 +10872,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   7
             Left            =   240
-            Picture         =   "FormMainMode.frx":295C19
+            Picture         =   "FormMainMode.frx":27A887
             Top             =   480
             Width           =   330
          End
@@ -12010,7 +10880,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   7
             Left            =   240
-            Picture         =   "FormMainMode.frx":295EB3
+            Picture         =   "FormMainMode.frx":27AB21
             Top             =   480
             Width           =   330
          End
@@ -12018,7 +10888,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   7
             Left            =   240
-            Picture         =   "FormMainMode.frx":29614B
+            Picture         =   "FormMainMode.frx":27ADB9
             Top             =   480
             Width           =   330
          End
@@ -12026,7 +10896,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   7
             Left            =   240
-            Picture         =   "FormMainMode.frx":296573
+            Picture         =   "FormMainMode.frx":27B1E1
             Top             =   0
             Width           =   300
          End
@@ -12034,7 +10904,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   7
             Left            =   240
-            Picture         =   "FormMainMode.frx":2965DF
+            Picture         =   "FormMainMode.frx":27B24D
             Top             =   1020
             Width           =   300
          End
@@ -12047,7 +10917,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   8
          Left            =   240
-         Picture         =   "FormMainMode.frx":29664C
+         Picture         =   "FormMainMode.frx":27B2BA
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   237
@@ -12057,7 +10927,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   8
             Left            =   240
-            Picture         =   "FormMainMode.frx":29AD6E
+            Picture         =   "FormMainMode.frx":27F9DC
             Top             =   480
             Width           =   330
          End
@@ -12065,7 +10935,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   8
             Left            =   240
-            Picture         =   "FormMainMode.frx":29B18F
+            Picture         =   "FormMainMode.frx":27FDFD
             Top             =   480
             Width           =   330
          End
@@ -12073,7 +10943,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   8
             Left            =   240
-            Picture         =   "FormMainMode.frx":29B429
+            Picture         =   "FormMainMode.frx":280097
             Top             =   480
             Width           =   330
          End
@@ -12081,7 +10951,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   8
             Left            =   240
-            Picture         =   "FormMainMode.frx":29B6C1
+            Picture         =   "FormMainMode.frx":28032F
             Top             =   480
             Width           =   330
          End
@@ -12089,7 +10959,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   8
             Left            =   240
-            Picture         =   "FormMainMode.frx":29BAE9
+            Picture         =   "FormMainMode.frx":280757
             Top             =   0
             Width           =   300
          End
@@ -12097,7 +10967,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   8
             Left            =   240
-            Picture         =   "FormMainMode.frx":29BB55
+            Picture         =   "FormMainMode.frx":2807C3
             Top             =   1020
             Width           =   300
          End
@@ -12110,7 +10980,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   9
          Left            =   240
-         Picture         =   "FormMainMode.frx":29BBC2
+         Picture         =   "FormMainMode.frx":280830
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   236
@@ -12120,7 +10990,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   9
             Left            =   240
-            Picture         =   "FormMainMode.frx":2A02E4
+            Picture         =   "FormMainMode.frx":284F52
             Top             =   480
             Width           =   330
          End
@@ -12128,7 +10998,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   9
             Left            =   240
-            Picture         =   "FormMainMode.frx":2A0705
+            Picture         =   "FormMainMode.frx":285373
             Top             =   480
             Width           =   330
          End
@@ -12136,7 +11006,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   9
             Left            =   240
-            Picture         =   "FormMainMode.frx":2A099F
+            Picture         =   "FormMainMode.frx":28560D
             Top             =   480
             Width           =   330
          End
@@ -12144,7 +11014,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   9
             Left            =   240
-            Picture         =   "FormMainMode.frx":2A0C37
+            Picture         =   "FormMainMode.frx":2858A5
             Top             =   480
             Width           =   330
          End
@@ -12152,7 +11022,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   9
             Left            =   240
-            Picture         =   "FormMainMode.frx":2A105F
+            Picture         =   "FormMainMode.frx":285CCD
             Top             =   0
             Width           =   300
          End
@@ -12160,7 +11030,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   9
             Left            =   240
-            Picture         =   "FormMainMode.frx":2A10CB
+            Picture         =   "FormMainMode.frx":285D39
             Top             =   1020
             Width           =   300
          End
@@ -12173,7 +11043,7 @@ Begin VB.Form FormMainMode
          Height          =   1260
          Index           =   10
          Left            =   240
-         Picture         =   "FormMainMode.frx":2A1138
+         Picture         =   "FormMainMode.frx":285DA6
          ScaleHeight     =   1260
          ScaleWidth      =   810
          TabIndex        =   235
@@ -12183,7 +11053,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   10
             Left            =   240
-            Picture         =   "FormMainMode.frx":2A585A
+            Picture         =   "FormMainMode.frx":28A4C8
             Top             =   480
             Width           =   330
          End
@@ -12191,7 +11061,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   10
             Left            =   240
-            Picture         =   "FormMainMode.frx":2A5C7B
+            Picture         =   "FormMainMode.frx":28A8E9
             Top             =   480
             Width           =   330
          End
@@ -12199,7 +11069,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   10
             Left            =   240
-            Picture         =   "FormMainMode.frx":2A5F15
+            Picture         =   "FormMainMode.frx":28AB83
             Top             =   480
             Width           =   330
          End
@@ -12207,7 +11077,7 @@ Begin VB.Form FormMainMode
             Height          =   330
             Index           =   10
             Left            =   240
-            Picture         =   "FormMainMode.frx":2A61AD
+            Picture         =   "FormMainMode.frx":28AE1B
             Top             =   480
             Width           =   330
          End
@@ -12215,7 +11085,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   10
             Left            =   240
-            Picture         =   "FormMainMode.frx":2A65D5
+            Picture         =   "FormMainMode.frx":28B243
             Top             =   0
             Width           =   300
          End
@@ -12223,7 +11093,7 @@ Begin VB.Form FormMainMode
             Height          =   225
             Index           =   10
             Left            =   240
-            Picture         =   "FormMainMode.frx":2A6641
+            Picture         =   "FormMainMode.frx":28B2AF
             Top             =   1020
             Width           =   300
          End
@@ -12241,7 +11111,7 @@ Begin VB.Form FormMainMode
       Begin VB.Image movejpg_test 
          Height          =   1080
          Left            =   3120
-         Picture         =   "FormMainMode.frx":2A66AE
+         Picture         =   "FormMainMode.frx":28B31C
          Top             =   2160
          Visible         =   0   'False
          Width           =   5490
@@ -12249,35 +11119,35 @@ Begin VB.Form FormMainMode
       Begin VB.Image atkdef2 
          Height          =   270
          Left            =   9120
-         Picture         =   "FormMainMode.frx":2A8021
+         Picture         =   "FormMainMode.frx":28CC8F
          Top             =   1860
          Width           =   2280
       End
       Begin VB.Image atkdef1 
          Height          =   270
          Left            =   9120
-         Picture         =   "FormMainMode.frx":2A876B
+         Picture         =   "FormMainMode.frx":28D3D9
          Top             =   1590
          Width           =   2280
       End
       Begin VB.Image draw2 
          Height          =   270
          Left            =   9120
-         Picture         =   "FormMainMode.frx":2A8EC1
+         Picture         =   "FormMainMode.frx":28DB2F
          Top             =   1070
          Width           =   2295
       End
       Begin VB.Image move2 
          Height          =   270
          Left            =   9120
-         Picture         =   "FormMainMode.frx":2A9528
+         Picture         =   "FormMainMode.frx":28E196
          Top             =   1320
          Width           =   2280
       End
       Begin VB.Image personusminijpg_test 
          Height          =   2865
          Left            =   2040
-         Picture         =   "FormMainMode.frx":2A9C4A
+         Picture         =   "FormMainMode.frx":28E8B8
          Top             =   3120
          Visible         =   0   'False
          Width           =   1065
@@ -12291,7 +11161,7 @@ Begin VB.Form FormMainMode
       Begin VB.Image cardpagejpg 
          Height          =   915
          Left            =   0
-         Picture         =   "FormMainMode.frx":2AB778
+         Picture         =   "FormMainMode.frx":2903E6
          Top             =   960
          Width           =   1125
       End
@@ -12355,7 +11225,7 @@ Begin VB.Form FormMainMode
       Begin VB.Image Image2 
          Height          =   120
          Left            =   5280
-         Picture         =   "FormMainMode.frx":2ABFDB
+         Picture         =   "FormMainMode.frx":290C49
          Top             =   6120
          Width           =   780
       End
@@ -12462,7 +11332,7 @@ Begin VB.Form FormMainMode
       Begin VB.Image timeup 
          Height          =   105
          Left            =   5290
-         Picture         =   "FormMainMode.frx":2AC06E
+         Picture         =   "FormMainMode.frx":290CDC
          Top             =   4720
          Visible         =   0   'False
          Width           =   750
@@ -12543,21 +11413,21 @@ Begin VB.Form FormMainMode
       Begin VB.Image Image1 
          Height          =   690
          Left            =   0
-         Picture         =   "FormMainMode.frx":2AC0DA
+         Picture         =   "FormMainMode.frx":290D48
          Top             =   5440
          Width           =   1290
       End
       Begin VB.Image Image3 
          Height          =   690
          Left            =   10080
-         Picture         =   "FormMainMode.frx":2AC86A
+         Picture         =   "FormMainMode.frx":2914D8
          Top             =   5440
          Width           =   1275
       End
       Begin VB.Image personcomminijpg_test 
          Height          =   2880
          Left            =   9960
-         Picture         =   "FormMainMode.frx":2ACFB1
+         Picture         =   "FormMainMode.frx":291C1F
          Top             =   3120
          Visible         =   0   'False
          Width           =   1560
@@ -12607,28 +11477,28 @@ Begin VB.Form FormMainMode
       Begin VB.Image draw1 
          Height          =   240
          Left            =   9360
-         Picture         =   "FormMainMode.frx":2AE9DB
+         Picture         =   "FormMainMode.frx":293649
          Top             =   1080
          Width           =   2040
       End
       Begin VB.Image move1 
          Height          =   240
          Left            =   9360
-         Picture         =   "FormMainMode.frx":2AEB5A
+         Picture         =   "FormMainMode.frx":2937C8
          Top             =   1340
          Width           =   2040
       End
       Begin VB.Image move3 
          Height          =   240
          Left            =   9360
-         Picture         =   "FormMainMode.frx":2AECF6
+         Picture         =   "FormMainMode.frx":293964
          Top             =   1610
          Width           =   2040
       End
       Begin VB.Image move4 
          Height          =   240
          Left            =   9360
-         Picture         =   "FormMainMode.frx":2AEF7F
+         Picture         =   "FormMainMode.frx":293BED
          Top             =   1880
          Width           =   2040
       End
@@ -12658,6 +11528,1136 @@ Begin VB.Form FormMainMode
          Width           =   11175
          _ExtentX        =   19711
          _ExtentY        =   4471
+      End
+   End
+   Begin VB.PictureBox PEGameFreeModeSettingForm 
+      Appearance      =   0  '平面
+      BackColor       =   &H80000000&
+      BorderStyle     =   0  '沒有框線
+      ForeColor       =   &H80000008&
+      Height          =   9915
+      Left            =   10920
+      ScaleHeight     =   9915
+      ScaleWidth      =   11340
+      TabIndex        =   310
+      Top             =   1800
+      Visible         =   0   'False
+      Width           =   11340
+      Begin VB.PictureBox Picture3 
+         Appearance      =   0  '平面
+         BackColor       =   &H80000005&
+         ForeColor       =   &H80000008&
+         Height          =   1815
+         Left            =   0
+         ScaleHeight     =   1785
+         ScaleWidth      =   11385
+         TabIndex        =   335
+         Top             =   4320
+         Width           =   11415
+         Begin VB.ComboBox personlevelus 
+            BeginProperty Font 
+               Name            =   "微軟正黑體"
+               Size            =   9.75
+               Charset         =   136
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   375
+            Index           =   1
+            Left            =   120
+            TabIndex        =   350
+            Top             =   0
+            Width           =   855
+         End
+         Begin VB.ComboBox personlevelus 
+            BeginProperty Font 
+               Name            =   "微軟正黑體"
+               Size            =   9.75
+               Charset         =   136
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   375
+            Index           =   2
+            Left            =   2760
+            TabIndex        =   349
+            Top             =   0
+            Width           =   855
+         End
+         Begin VB.ComboBox personlevelus 
+            BeginProperty Font 
+               Name            =   "微軟正黑體"
+               Size            =   9.75
+               Charset         =   136
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   375
+            Index           =   3
+            Left            =   5400
+            TabIndex        =   348
+            Top             =   0
+            Width           =   855
+         End
+         Begin VB.ComboBox personnameus 
+            BeginProperty Font 
+               Name            =   "微軟正黑體"
+               Size            =   9.75
+               Charset         =   136
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   375
+            Index           =   1
+            Left            =   1080
+            TabIndex        =   347
+            Top             =   0
+            Width           =   1575
+         End
+         Begin VB.ComboBox personnameus 
+            BeginProperty Font 
+               Name            =   "微軟正黑體"
+               Size            =   9.75
+               Charset         =   136
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   375
+            Index           =   2
+            Left            =   3720
+            TabIndex        =   346
+            Top             =   0
+            Width           =   1575
+         End
+         Begin VB.ComboBox personnameus 
+            BeginProperty Font 
+               Name            =   "微軟正黑體"
+               Size            =   9.75
+               Charset         =   136
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   375
+            Index           =   3
+            Left            =   6360
+            TabIndex        =   345
+            Top             =   0
+            Width           =   1575
+         End
+         Begin VB.ComboBox personlevelcom 
+            BeginProperty Font 
+               Name            =   "微軟正黑體"
+               Size            =   9.75
+               Charset         =   136
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   375
+            Index           =   1
+            Left            =   3360
+            TabIndex        =   344
+            Top             =   1440
+            Width           =   855
+         End
+         Begin VB.ComboBox personlevelcom 
+            BeginProperty Font 
+               Name            =   "微軟正黑體"
+               Size            =   9.75
+               Charset         =   136
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   375
+            Index           =   2
+            Left            =   6000
+            TabIndex        =   343
+            Top             =   1440
+            Width           =   855
+         End
+         Begin VB.ComboBox personlevelcom 
+            BeginProperty Font 
+               Name            =   "微軟正黑體"
+               Size            =   9.75
+               Charset         =   136
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   375
+            Index           =   3
+            Left            =   8640
+            TabIndex        =   342
+            Top             =   1440
+            Width           =   855
+         End
+         Begin VB.ComboBox personnamecom 
+            BeginProperty Font 
+               Name            =   "微軟正黑體"
+               Size            =   9.75
+               Charset         =   136
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   375
+            Index           =   1
+            Left            =   4320
+            TabIndex        =   341
+            Top             =   1440
+            Width           =   1575
+         End
+         Begin VB.ComboBox personnamecom 
+            BeginProperty Font 
+               Name            =   "微軟正黑體"
+               Size            =   9.75
+               Charset         =   136
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   375
+            Index           =   2
+            Left            =   6960
+            TabIndex        =   340
+            Top             =   1440
+            Width           =   1575
+         End
+         Begin VB.ComboBox personnamecom 
+            BeginProperty Font 
+               Name            =   "微軟正黑體"
+               Size            =   9.75
+               Charset         =   136
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   375
+            Index           =   3
+            Left            =   9600
+            TabIndex        =   339
+            Top             =   1440
+            Width           =   1575
+         End
+         Begin VB.OptionButton opnpersonvs 
+            BackColor       =   &H00FFFFFF&
+            Caption         =   "3v3"
+            Height          =   375
+            Index           =   2
+            Left            =   120
+            TabIndex        =   337
+            Top             =   1080
+            Width           =   1695
+         End
+         Begin VB.CommandButton personreadifus 
+            Caption         =   "讀入..."
+            Height          =   495
+            Left            =   2040
+            TabIndex        =   336
+            Top             =   720
+            Width           =   975
+         End
+         Begin MSComDlg.CommonDialog cdgpersonus 
+            Left            =   3000
+            Top             =   720
+            _ExtentX        =   847
+            _ExtentY        =   847
+            _Version        =   393216
+            DialogTitle     =   "UnlightVBE-卡片人物資訊-開啟檔案"
+         End
+         Begin VB.OptionButton opnpersonvs 
+            BackColor       =   &H00FFFFFF&
+            Caption         =   "1v1"
+            Height          =   495
+            Index           =   1
+            Left            =   120
+            TabIndex        =   338
+            Top             =   720
+            Value           =   -1  'True
+            Width           =   855
+         End
+         Begin UnlightVBE.大人物形像 personfus 
+            Height          =   1215
+            Left            =   0
+            TabIndex        =   366
+            Top             =   0
+            Width           =   3135
+            _ExtentX        =   5530
+            _ExtentY        =   2143
+         End
+         Begin VB.Image PEGFbnstart 
+            Height          =   510
+            Left            =   9600
+            Picture         =   "FormMainMode.frx":293E6A
+            Top             =   600
+            Width           =   1440
+         End
+         Begin VB.Image bnabout 
+            Height          =   390
+            Left            =   8280
+            Picture         =   "FormMainMode.frx":2949C0
+            Top             =   720
+            Width           =   1320
+         End
+         Begin VB.Image bnconfig 
+            Height          =   390
+            Left            =   7080
+            Picture         =   "FormMainMode.frx":29502B
+            Top             =   720
+            Width           =   1320
+         End
+         Begin VB.Label Label3 
+            BackColor       =   &H00FFFFFF&
+            Caption         =   "VS"
+            BeginProperty Font 
+               Name            =   "微軟正黑體"
+               Size            =   20.25
+               Charset         =   136
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H000000FF&
+            Height          =   495
+            Left            =   5400
+            TabIndex        =   365
+            Top             =   600
+            Width           =   735
+         End
+         Begin VB.Label personresetus 
+            BackColor       =   &H00FFFFFF&
+            Caption         =   "重設"
+            BeginProperty Font 
+               Name            =   "微軟正黑體"
+               Size            =   9.75
+               Charset         =   136
+               Weight          =   400
+               Underline       =   -1  'True
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H00FF0000&
+            Height          =   255
+            Index           =   1
+            Left            =   1200
+            TabIndex        =   364
+            Top             =   360
+            Width           =   495
+         End
+         Begin VB.Label personresetus 
+            BackColor       =   &H00FFFFFF&
+            Caption         =   "重設"
+            BeginProperty Font 
+               Name            =   "微軟正黑體"
+               Size            =   9.75
+               Charset         =   136
+               Weight          =   400
+               Underline       =   -1  'True
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H00FF0000&
+            Height          =   255
+            Index           =   2
+            Left            =   3840
+            TabIndex        =   363
+            Top             =   360
+            Width           =   495
+         End
+         Begin VB.Label personresetus 
+            BackColor       =   &H00FFFFFF&
+            Caption         =   "重設"
+            BeginProperty Font 
+               Name            =   "微軟正黑體"
+               Size            =   9.75
+               Charset         =   136
+               Weight          =   400
+               Underline       =   -1  'True
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H00FF0000&
+            Height          =   255
+            Index           =   3
+            Left            =   6480
+            TabIndex        =   362
+            Top             =   360
+            Width           =   495
+         End
+         Begin VB.Label personresetcom 
+            BackColor       =   &H00FFFFFF&
+            Caption         =   "重設"
+            BeginProperty Font 
+               Name            =   "微軟正黑體"
+               Size            =   9.75
+               Charset         =   136
+               Weight          =   400
+               Underline       =   -1  'True
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H00FF0000&
+            Height          =   255
+            Index           =   1
+            Left            =   4320
+            TabIndex        =   361
+            Top             =   1200
+            Width           =   495
+         End
+         Begin VB.Label personresetcom 
+            BackColor       =   &H00FFFFFF&
+            Caption         =   "重設"
+            BeginProperty Font 
+               Name            =   "微軟正黑體"
+               Size            =   9.75
+               Charset         =   136
+               Weight          =   400
+               Underline       =   -1  'True
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H00FF0000&
+            Height          =   255
+            Index           =   2
+            Left            =   6960
+            TabIndex        =   360
+            Top             =   1200
+            Width           =   495
+         End
+         Begin VB.Label personresetcom 
+            BackColor       =   &H00FFFFFF&
+            Caption         =   "重設"
+            BeginProperty Font 
+               Name            =   "微軟正黑體"
+               Size            =   9.75
+               Charset         =   136
+               Weight          =   400
+               Underline       =   -1  'True
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H00FF0000&
+            Height          =   255
+            Index           =   3
+            Left            =   9600
+            TabIndex        =   359
+            Top             =   1200
+            Width           =   495
+         End
+         Begin VB.Label personsettingus 
+            BackColor       =   &H00FFFFFF&
+            Caption         =   "人物設定"
+            BeginProperty Font 
+               Name            =   "微軟正黑體"
+               Size            =   9.75
+               Charset         =   136
+               Weight          =   400
+               Underline       =   -1  'True
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H00FF0000&
+            Height          =   255
+            Index           =   1
+            Left            =   120
+            TabIndex        =   358
+            Top             =   360
+            Width           =   855
+         End
+         Begin VB.Label personsettingus 
+            BackColor       =   &H00FFFFFF&
+            Caption         =   "人物設定"
+            BeginProperty Font 
+               Name            =   "微軟正黑體"
+               Size            =   9.75
+               Charset         =   136
+               Weight          =   400
+               Underline       =   -1  'True
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H00FF0000&
+            Height          =   255
+            Index           =   2
+            Left            =   2760
+            TabIndex        =   357
+            Top             =   360
+            Width           =   855
+         End
+         Begin VB.Label personsettingus 
+            BackColor       =   &H00FFFFFF&
+            Caption         =   "人物設定"
+            BeginProperty Font 
+               Name            =   "微軟正黑體"
+               Size            =   9.75
+               Charset         =   136
+               Weight          =   400
+               Underline       =   -1  'True
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H00FF0000&
+            Height          =   255
+            Index           =   3
+            Left            =   5400
+            TabIndex        =   356
+            Top             =   360
+            Width           =   855
+         End
+         Begin VB.Label personsettingcom 
+            BackColor       =   &H00FFFFFF&
+            Caption         =   "人物設定"
+            BeginProperty Font 
+               Name            =   "微軟正黑體"
+               Size            =   9.75
+               Charset         =   136
+               Weight          =   400
+               Underline       =   -1  'True
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H00FF0000&
+            Height          =   255
+            Index           =   1
+            Left            =   3360
+            TabIndex        =   355
+            Top             =   1200
+            Width           =   855
+         End
+         Begin VB.Label personsettingcom 
+            BackColor       =   &H00FFFFFF&
+            Caption         =   "人物設定"
+            BeginProperty Font 
+               Name            =   "微軟正黑體"
+               Size            =   9.75
+               Charset         =   136
+               Weight          =   400
+               Underline       =   -1  'True
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H00FF0000&
+            Height          =   255
+            Index           =   2
+            Left            =   6000
+            TabIndex        =   354
+            Top             =   1200
+            Width           =   855
+         End
+         Begin VB.Label personsettingcom 
+            BackColor       =   &H00FFFFFF&
+            Caption         =   "人物設定"
+            BeginProperty Font 
+               Name            =   "微軟正黑體"
+               Size            =   9.75
+               Charset         =   136
+               Weight          =   400
+               Underline       =   -1  'True
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H00FF0000&
+            Height          =   255
+            Index           =   3
+            Left            =   8640
+            TabIndex        =   353
+            Top             =   1200
+            Width           =   855
+         End
+         Begin VB.Label Label4 
+            BackColor       =   &H00FFFFFF&
+            BackStyle       =   0  '透明
+            Caption         =   "1P"
+            BeginProperty Font 
+               Name            =   "微軟正黑體"
+               Size            =   15.75
+               Charset         =   136
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H00000000&
+            Height          =   495
+            Left            =   8040
+            TabIndex        =   352
+            Top             =   0
+            Width           =   735
+         End
+         Begin VB.Label Label5 
+            BackColor       =   &H00FFFFFF&
+            BackStyle       =   0  '透明
+            Caption         =   "COM"
+            BeginProperty Font 
+               Name            =   "微軟正黑體"
+               Size            =   15.75
+               Charset         =   136
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H00000000&
+            Height          =   615
+            Left            =   2400
+            TabIndex        =   351
+            Top             =   1400
+            Width           =   855
+         End
+      End
+      Begin VB.PictureBox PEGFcardus 
+         Appearance      =   0  '平面
+         BackColor       =   &H00000000&
+         BeginProperty Font 
+            Name            =   "微軟正黑體"
+            Size            =   9.75
+            Charset         =   136
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H80000008&
+         Height          =   3615
+         Index           =   1
+         Left            =   120
+         Picture         =   "FormMainMode.frx":29563B
+         ScaleHeight     =   3585
+         ScaleWidth      =   2505
+         TabIndex        =   331
+         Top             =   600
+         Width           =   2535
+         Begin VB.Label PEGFusbi1 
+            Alignment       =   2  '置中對齊
+            BackStyle       =   0  '透明
+            Caption         =   "?"
+            BeginProperty Font 
+               Name            =   "Bradley Gratis"
+               Size            =   18
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H00FFFFFF&
+            Height          =   375
+            Index           =   1
+            Left            =   550
+            TabIndex        =   334
+            Top             =   3240
+            Width           =   375
+         End
+         Begin VB.Label PEGFusbi2 
+            Alignment       =   2  '置中對齊
+            BackStyle       =   0  '透明
+            Caption         =   "?"
+            BeginProperty Font 
+               Name            =   "Bradley Gratis"
+               Size            =   18
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H00FFFFFF&
+            Height          =   375
+            Index           =   1
+            Left            =   1200
+            TabIndex        =   333
+            Top             =   3240
+            Width           =   495
+         End
+         Begin VB.Label PEGFusbi3 
+            Alignment       =   2  '置中對齊
+            BackStyle       =   0  '透明
+            Caption         =   "?"
+            BeginProperty Font 
+               Name            =   "Bradley Gratis"
+               Size            =   18
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H00FFFFFF&
+            Height          =   375
+            Index           =   1
+            Left            =   1920
+            TabIndex        =   332
+            Top             =   3240
+            Width           =   615
+         End
+      End
+      Begin VB.PictureBox PEGFcardus 
+         Appearance      =   0  '平面
+         BackColor       =   &H00000000&
+         BeginProperty Font 
+            Name            =   "微軟正黑體"
+            Size            =   9.75
+            Charset         =   136
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H80000008&
+         Height          =   3615
+         Index           =   2
+         Left            =   2760
+         Picture         =   "FormMainMode.frx":2994DE
+         ScaleHeight     =   3585
+         ScaleWidth      =   2505
+         TabIndex        =   327
+         Top             =   600
+         Width           =   2535
+         Begin VB.Label PEGFusbi1 
+            Alignment       =   2  '置中對齊
+            BackStyle       =   0  '透明
+            Caption         =   "?"
+            BeginProperty Font 
+               Name            =   "Bradley Gratis"
+               Size            =   18
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H00FFFFFF&
+            Height          =   375
+            Index           =   2
+            Left            =   550
+            TabIndex        =   330
+            Top             =   3240
+            Width           =   375
+         End
+         Begin VB.Label PEGFusbi2 
+            Alignment       =   2  '置中對齊
+            BackStyle       =   0  '透明
+            Caption         =   "?"
+            BeginProperty Font 
+               Name            =   "Bradley Gratis"
+               Size            =   18
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H00FFFFFF&
+            Height          =   375
+            Index           =   2
+            Left            =   1200
+            TabIndex        =   329
+            Top             =   3240
+            Width           =   495
+         End
+         Begin VB.Label PEGFusbi3 
+            Alignment       =   2  '置中對齊
+            BackStyle       =   0  '透明
+            Caption         =   "?"
+            BeginProperty Font 
+               Name            =   "Bradley Gratis"
+               Size            =   18
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H00FFFFFF&
+            Height          =   375
+            Index           =   2
+            Left            =   1920
+            TabIndex        =   328
+            Top             =   3240
+            Width           =   615
+         End
+      End
+      Begin VB.PictureBox PEGFcardus 
+         Appearance      =   0  '平面
+         BackColor       =   &H00000000&
+         BeginProperty Font 
+            Name            =   "微軟正黑體"
+            Size            =   9.75
+            Charset         =   136
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H80000008&
+         Height          =   3615
+         Index           =   3
+         Left            =   5400
+         Picture         =   "FormMainMode.frx":29D381
+         ScaleHeight     =   3585
+         ScaleWidth      =   2505
+         TabIndex        =   323
+         Top             =   600
+         Width           =   2535
+         Begin VB.Label PEGFusbi1 
+            Alignment       =   2  '置中對齊
+            BackStyle       =   0  '透明
+            Caption         =   "?"
+            BeginProperty Font 
+               Name            =   "Bradley Gratis"
+               Size            =   18
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H00FFFFFF&
+            Height          =   375
+            Index           =   3
+            Left            =   550
+            TabIndex        =   326
+            Top             =   3240
+            Width           =   375
+         End
+         Begin VB.Label PEGFusbi2 
+            Alignment       =   2  '置中對齊
+            BackStyle       =   0  '透明
+            Caption         =   "?"
+            BeginProperty Font 
+               Name            =   "Bradley Gratis"
+               Size            =   18
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H00FFFFFF&
+            Height          =   375
+            Index           =   3
+            Left            =   1200
+            TabIndex        =   325
+            Top             =   3240
+            Width           =   495
+         End
+         Begin VB.Label PEGFusbi3 
+            Alignment       =   2  '置中對齊
+            BackStyle       =   0  '透明
+            Caption         =   "?"
+            BeginProperty Font 
+               Name            =   "Bradley Gratis"
+               Size            =   18
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H00FFFFFF&
+            Height          =   375
+            Index           =   3
+            Left            =   1920
+            TabIndex        =   324
+            Top             =   3240
+            Width           =   615
+         End
+      End
+      Begin VB.PictureBox PEGFcardcom 
+         Appearance      =   0  '平面
+         BackColor       =   &H00000000&
+         ForeColor       =   &H80000008&
+         Height          =   3615
+         Index           =   1
+         Left            =   3360
+         Picture         =   "FormMainMode.frx":2A1224
+         ScaleHeight     =   3585
+         ScaleWidth      =   2505
+         TabIndex        =   319
+         Top             =   6240
+         Width           =   2535
+         Begin VB.Label PEGFcardcompi1 
+            Alignment       =   2  '置中對齊
+            BackStyle       =   0  '透明
+            Caption         =   "?"
+            BeginProperty Font 
+               Name            =   "Bradley Gratis"
+               Size            =   18
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H00FFFFFF&
+            Height          =   495
+            Index           =   1
+            Left            =   480
+            TabIndex        =   322
+            Top             =   3240
+            Width           =   495
+         End
+         Begin VB.Label PEGFcardcompi2 
+            Alignment       =   2  '置中對齊
+            BackStyle       =   0  '透明
+            Caption         =   "?"
+            BeginProperty Font 
+               Name            =   "Bradley Gratis"
+               Size            =   18
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H00FFFFFF&
+            Height          =   375
+            Index           =   1
+            Left            =   1200
+            TabIndex        =   321
+            Top             =   3240
+            Width           =   495
+         End
+         Begin VB.Label PEGFcardcompi3 
+            Alignment       =   2  '置中對齊
+            BackStyle       =   0  '透明
+            Caption         =   "?"
+            BeginProperty Font 
+               Name            =   "Bradley Gratis"
+               Size            =   18
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H00FFFFFF&
+            Height          =   375
+            Index           =   1
+            Left            =   1920
+            TabIndex        =   320
+            Top             =   3240
+            Width           =   615
+         End
+      End
+      Begin VB.PictureBox PEGFcardcom 
+         Appearance      =   0  '平面
+         BackColor       =   &H00000000&
+         ForeColor       =   &H80000008&
+         Height          =   3615
+         Index           =   2
+         Left            =   6000
+         Picture         =   "FormMainMode.frx":2A50C7
+         ScaleHeight     =   3585
+         ScaleWidth      =   2505
+         TabIndex        =   315
+         Top             =   6240
+         Width           =   2535
+         Begin VB.Label PEGFcardcompi1 
+            Alignment       =   2  '置中對齊
+            BackStyle       =   0  '透明
+            Caption         =   "?"
+            BeginProperty Font 
+               Name            =   "Bradley Gratis"
+               Size            =   18
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H00FFFFFF&
+            Height          =   495
+            Index           =   2
+            Left            =   480
+            TabIndex        =   318
+            Top             =   3240
+            Width           =   495
+         End
+         Begin VB.Label PEGFcardcompi2 
+            Alignment       =   2  '置中對齊
+            BackStyle       =   0  '透明
+            Caption         =   "?"
+            BeginProperty Font 
+               Name            =   "Bradley Gratis"
+               Size            =   18
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H00FFFFFF&
+            Height          =   375
+            Index           =   2
+            Left            =   1200
+            TabIndex        =   317
+            Top             =   3240
+            Width           =   495
+         End
+         Begin VB.Label PEGFcardcompi3 
+            Alignment       =   2  '置中對齊
+            BackStyle       =   0  '透明
+            Caption         =   "?"
+            BeginProperty Font 
+               Name            =   "Bradley Gratis"
+               Size            =   18
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H00FFFFFF&
+            Height          =   375
+            Index           =   2
+            Left            =   1920
+            TabIndex        =   316
+            Top             =   3240
+            Width           =   615
+         End
+      End
+      Begin VB.PictureBox PEGFcardcom 
+         Appearance      =   0  '平面
+         BackColor       =   &H00000000&
+         ForeColor       =   &H80000008&
+         Height          =   3615
+         Index           =   3
+         Left            =   8640
+         Picture         =   "FormMainMode.frx":2A8F6A
+         ScaleHeight     =   3585
+         ScaleWidth      =   2505
+         TabIndex        =   311
+         Top             =   6240
+         Width           =   2535
+         Begin VB.Label PEGFcardcompi1 
+            Alignment       =   2  '置中對齊
+            BackStyle       =   0  '透明
+            Caption         =   "?"
+            BeginProperty Font 
+               Name            =   "Bradley Gratis"
+               Size            =   18
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H00FFFFFF&
+            Height          =   495
+            Index           =   3
+            Left            =   480
+            TabIndex        =   314
+            Top             =   3240
+            Width           =   495
+         End
+         Begin VB.Label PEGFcardcompi2 
+            Alignment       =   2  '置中對齊
+            BackStyle       =   0  '透明
+            Caption         =   "?"
+            BeginProperty Font 
+               Name            =   "Bradley Gratis"
+               Size            =   18
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H00FFFFFF&
+            Height          =   375
+            Index           =   3
+            Left            =   1200
+            TabIndex        =   313
+            Top             =   3240
+            Width           =   495
+         End
+         Begin VB.Label PEGFcardcompi3 
+            Alignment       =   2  '置中對齊
+            BackStyle       =   0  '透明
+            Caption         =   "?"
+            BeginProperty Font 
+               Name            =   "Bradley Gratis"
+               Size            =   18
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H00FFFFFF&
+            Height          =   375
+            Index           =   3
+            Left            =   1920
+            TabIndex        =   312
+            Top             =   3240
+            Width           =   615
+         End
+      End
+      Begin VB.Label Label1 
+         BackStyle       =   0  '透明
+         Caption         =   "GameSetting"
+         BeginProperty Font 
+            Name            =   "Bradley Gratis"
+            Size            =   15.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H00FFFFFF&
+         Height          =   375
+         Left            =   240
+         TabIndex        =   368
+         Top             =   120
+         Width           =   1455
+      End
+      Begin VB.Label Label2 
+         BackStyle       =   0  '透明
+         Caption         =   "自由戰鬥模式遊戲引導設定"
+         BeginProperty Font 
+            Name            =   "微軟正黑體"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H00FFFFFF&
+         Height          =   255
+         Left            =   1680
+         TabIndex        =   367
+         Top             =   195
+         Width           =   2535
+      End
+      Begin VB.Image Image4 
+         Height          =   465
+         Left            =   0
+         Picture         =   "FormMainMode.frx":2ACE0D
+         Top             =   0
+         Width           =   11400
       End
    End
    Begin VB.PictureBox PEAttackingStartForm 
@@ -13423,107 +13423,6 @@ Begin VB.Form FormMainMode
          _ExtentY        =   3413
       End
    End
-   Begin VB.PictureBox PEStartForm 
-      Appearance      =   0  '平面
-      BackColor       =   &H00000000&
-      BorderStyle     =   0  '沒有框線
-      ForeColor       =   &H80000008&
-      Height          =   9915
-      Left            =   -120
-      ScaleHeight     =   9915
-      ScaleWidth      =   11340
-      TabIndex        =   379
-      Top             =   1080
-      Visible         =   0   'False
-      Width           =   11340
-      Begin VB.Timer tr1 
-         Enabled         =   0   'False
-         Interval        =   500
-         Left            =   9720
-         Top             =   8400
-      End
-      Begin VB.Label PEStext1 
-         Alignment       =   1  '靠右對齊
-         BackStyle       =   0  '透明
-         Caption         =   "Now  Loading..."
-         BeginProperty Font 
-            Name            =   "Bradley Gratis"
-            Size            =   20.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         ForeColor       =   &H00FFFFFF&
-         Height          =   615
-         Left            =   8280
-         TabIndex        =   380
-         Top             =   9120
-         Visible         =   0   'False
-         Width           =   2655
-      End
-   End
-   Begin VB.PictureBox PEAttackingEndingForm 
-      Appearance      =   0  '平面
-      BackColor       =   &H80000005&
-      BorderStyle     =   0  '沒有框線
-      ForeColor       =   &H80000008&
-      Height          =   9915
-      Left            =   9120
-      Picture         =   "FormMainMode.frx":2F1F58
-      ScaleHeight     =   9915
-      ScaleWidth      =   11340
-      TabIndex        =   423
-      Top             =   -1680
-      Width           =   11340
-      Begin VB.Timer PEAEtr1 
-         Enabled         =   0   'False
-         Interval        =   100
-         Left            =   5760
-         Top             =   8400
-      End
-      Begin VB.Label bnt 
-         Alignment       =   2  '置中對齊
-         BackStyle       =   0  '透明
-         Caption         =   "結束遊戲"
-         ForeColor       =   &H00FFFFFF&
-         Height          =   375
-         Left            =   9480
-         TabIndex        =   425
-         Top             =   8760
-         Visible         =   0   'False
-         Width           =   1455
-      End
-      Begin VB.Label bnreturnt 
-         Alignment       =   2  '置中對齊
-         BackStyle       =   0  '透明
-         Caption         =   "返回選單"
-         ForeColor       =   &H00FFFFFF&
-         Height          =   375
-         Left            =   7680
-         TabIndex        =   424
-         Top             =   8760
-         Visible         =   0   'False
-         Width           =   1455
-      End
-      Begin VB.Image bn 
-         Height          =   990
-         Left            =   9480
-         Picture         =   "FormMainMode.frx":314EC3
-         Top             =   8520
-         Visible         =   0   'False
-         Width           =   1470
-      End
-      Begin VB.Image bnreturn 
-         Height          =   990
-         Left            =   7680
-         Picture         =   "FormMainMode.frx":315DB8
-         Top             =   8520
-         Visible         =   0   'False
-         Width           =   1470
-      End
-   End
    Begin VB.PictureBox PEMusicForm 
       Appearance      =   0  '平面
       BackColor       =   &H80000005&
@@ -13864,6 +13763,107 @@ Begin VB.Form FormMainMode
          _cy             =   1614
       End
    End
+   Begin VB.PictureBox PEAttackingEndingForm 
+      Appearance      =   0  '平面
+      BackColor       =   &H80000005&
+      BorderStyle     =   0  '沒有框線
+      ForeColor       =   &H80000008&
+      Height          =   9915
+      Left            =   9120
+      Picture         =   "FormMainMode.frx":2F1F58
+      ScaleHeight     =   9915
+      ScaleWidth      =   11340
+      TabIndex        =   423
+      Top             =   -1680
+      Width           =   11340
+      Begin VB.Timer PEAEtr1 
+         Enabled         =   0   'False
+         Interval        =   100
+         Left            =   5760
+         Top             =   8400
+      End
+      Begin VB.Label bnt 
+         Alignment       =   2  '置中對齊
+         BackStyle       =   0  '透明
+         Caption         =   "結束遊戲"
+         ForeColor       =   &H00FFFFFF&
+         Height          =   375
+         Left            =   9480
+         TabIndex        =   425
+         Top             =   8760
+         Visible         =   0   'False
+         Width           =   1455
+      End
+      Begin VB.Label bnreturnt 
+         Alignment       =   2  '置中對齊
+         BackStyle       =   0  '透明
+         Caption         =   "返回選單"
+         ForeColor       =   &H00FFFFFF&
+         Height          =   375
+         Left            =   7680
+         TabIndex        =   424
+         Top             =   8760
+         Visible         =   0   'False
+         Width           =   1455
+      End
+      Begin VB.Image bn 
+         Height          =   990
+         Left            =   9480
+         Picture         =   "FormMainMode.frx":314EC3
+         Top             =   8520
+         Visible         =   0   'False
+         Width           =   1470
+      End
+      Begin VB.Image bnreturn 
+         Height          =   990
+         Left            =   7680
+         Picture         =   "FormMainMode.frx":315DB8
+         Top             =   8520
+         Visible         =   0   'False
+         Width           =   1470
+      End
+   End
+   Begin VB.PictureBox PEStartForm 
+      Appearance      =   0  '平面
+      BackColor       =   &H00000000&
+      BorderStyle     =   0  '沒有框線
+      ForeColor       =   &H80000008&
+      Height          =   9915
+      Left            =   -120
+      ScaleHeight     =   9915
+      ScaleWidth      =   11340
+      TabIndex        =   379
+      Top             =   1080
+      Visible         =   0   'False
+      Width           =   11340
+      Begin VB.Timer tr1 
+         Enabled         =   0   'False
+         Interval        =   500
+         Left            =   9720
+         Top             =   8400
+      End
+      Begin VB.Label PEStext1 
+         Alignment       =   1  '靠右對齊
+         BackStyle       =   0  '透明
+         Caption         =   "Now  Loading..."
+         BeginProperty Font 
+            Name            =   "Bradley Gratis"
+            Size            =   20.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H00FFFFFF&
+         Height          =   615
+         Left            =   8280
+         TabIndex        =   380
+         Top             =   9120
+         Visible         =   0   'False
+         Width           =   2655
+      End
+   End
 End
 Attribute VB_Name = "FormMainMode"
 Attribute VB_GlobalNameSpace = False
@@ -13959,7 +13959,8 @@ If Val(atkingnumtot.Caption) = 0 Then
               End If
               '========================
               FormDice.Top = FormMainMode.Top + 825
-              FormDice.Show 1
+'              FormDice.Show 1
+              一般系統類.擲骰動畫表單顯示
          Else
             '========================
               目前數(26) = 0
@@ -14000,7 +14001,8 @@ If 目前數(29) = 1 Then
    目前數(31) = 0
    Formatkingcom.Left = FormMainMode.Left + (FormMainMode.Width - Formatkingcom.Width)
    Formatkingcom.Top = FormMainMode.Top + 380
-   Formatkingcom.Show 1
+'   Formatkingcom.Show 1
+   一般系統類.技能動畫表單顯示 2
    atkingtrcom.Enabled = False
 Else
    目前數(29) = 目前數(29) + 1
@@ -14060,7 +14062,8 @@ If 目前數(29) = 1 Then
    目前數(31) = 0
    Formatkingus.Left = FormMainMode.Left
    Formatkingus.Top = FormMainMode.Top + 380
-   Formatkingus.Show 1
+'   Formatkingus.Show 1
+   一般系統類.技能動畫表單顯示 1
    atkingtrus.Enabled = False
 Else
    目前數(29) = 目前數(29) + 1
@@ -15677,11 +15680,14 @@ Select Case PEAEtr1num
          End If
          FormMainMode.wmp.Controls.play
     Case 50
+         PEAEtr1.Enabled = False
+         If Formsetting.chkautocontinuemode.Value = 1 Then
+            bnreturnt_Click
+         End If
          bnreturn.Visible = True
          bnreturnt.Visible = True
          bn.Visible = True
          bnt.Visible = True
-         PEAEtr1.Enabled = False
 End Select
 PEAEtr1num = PEAEtr1num + 1
 End Sub
@@ -15818,6 +15824,11 @@ For i = 1 To 3
 Next
 atkinghelpc.Visible = False
 PEAFcardback(1).Visible = False
+End Sub
+
+Sub PEGFbnstart_Click()
+PEGameFreeModeSettingForm.Enabled = False
+一般系統類.開始遊戲進行程序
 End Sub
 
 Sub PEMtr1_Timer()
@@ -20744,12 +20755,6 @@ FormMainMode.wmpse3.Controls.stop
 FormMainMode.wmpse3.Controls.play
 一般系統類.檢查音樂播放 3
 Formsetting.Show 1
-End Sub
-
-
-Private Sub bnstart_Click()
-PEGameFreeModeSettingForm.Enabled = False
-一般系統類.開始遊戲進行程序
 End Sub
 
 

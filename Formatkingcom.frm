@@ -43,7 +43,7 @@ Attribute VB_Exposed = False
 Dim d As Integer
 
 Private Sub Form_Activate()
-t1.Enabled = True
+'t1.Enabled = True
 End Sub
 
 
