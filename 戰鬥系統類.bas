@@ -1868,19 +1868,7 @@ If goicheck(2) = 0 Then
     goicheck(2) = 1
   End If
   If goicheck(2) = 1 Then
-    '=========¥H¤U¬O§Þ¯àÀË¬d¤Îµo°Ê
-        ²§±`ª¬ºAÀË¬d¼Æ(1, 1) = 1
-        ²§±`ª¬ºA.ATK¥[_¹q¸£ '(¶¥¬q1)
-        '=======
-        ²§±`ª¬ºAÀË¬d¼Æ(26, 1) = 1
-        ²§±`ª¬ºA.¸t²ª_¹q¸£ '(¶¥¬q1)
-        '=======
-        ²§±`ª¬ºAÀË¬d¼Æ(4, 1) = 1
-        ²§±`ª¬ºA.ATK´î_¹q¸£ '(¶¥¬q1)
-        '=======
-        ²§±`ª¬ºAÀË¬d¼Æ(25, 1) = 1
-        ²§±`ª¬ºA.¯à¤O§C¤U_¹q¸£ '(¶¥¬q1)
-     '==============
+     ¾Ô°«¨t²ÎÃþ.²§±`ª¬ºA»ë¼Æ¼W¥[ÀË¬d_ATK 2
   End If
 End If
 End Sub
@@ -1890,24 +1878,8 @@ If goidefus = 0 Then
  §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(3) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(3) + defus(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2))
  FormMainMode.Åã¥Ü¦C1.goi1 = Val(FormMainMode.Åã¥Ü¦C1.goi1) + defus(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2))
  goidefus = 1
-   '=========¥H¤U¬O§Þ¯àÀË¬d¤Îµo°Ê
-'   If ²§±`ª¬ºAÀË¬d¼Æ(8, 2) = 1 Then
-      ²§±`ª¬ºAÀË¬d¼Æ(8, 1) = 1
-      ²§±`ª¬ºA.DEF¥[_¨Ï¥ÎªÌ '(¶¥¬q1)
-'   End If
-'   If ²§±`ª¬ºAÀË¬d¼Æ(11, 2) = 1 Then
-      ²§±`ª¬ºAÀË¬d¼Æ(11, 1) = 1
-      ²§±`ª¬ºA.DEF´î_¨Ï¥ÎªÌ '(¶¥¬q1)
-'   End If
-   ²§±`ª¬ºAÀË¬d¼Æ(13, 1) = 1
-   ²§±`ª¬ºA.¸t²ª_¨Ï¥ÎªÌ '(¶¥¬q1)
-   '====
-   ²§±`ª¬ºAÀË¬d¼Æ(24, 1) = 1
-   ²§±`ª¬ºA.¯à¤O§C¤U_¨Ï¥ÎªÌ '(¶¥¬q1)
-   '====
-   ²§±`ª¬ºAÀË¬d¼Æ(39, 1) = 1
-   ²§±`ª¬ºA.Á{¬É_¨Ï¥ÎªÌ '(¶¥¬q1)
-   '==============
+ '==============
+ ¾Ô°«¨t²ÎÃþ.²§±`ª¬ºA»ë¼Æ¼W¥[ÀË¬d_DEF 1
 End If
 End Sub
 Sub chkdefcom()
@@ -1916,21 +1888,8 @@ If chkcomck = 0 Then
  §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) + defcom(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(2, 2))
  FormMainMode.Åã¥Ü¦C1.goi2 = Val(FormMainMode.Åã¥Ü¦C1.goi2) + defcom(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(2, 2))
  chkcomck = 1
-    '=========¥H¤U¬O§Þ¯àÀË¬d¤Îµo°Ê
-'   If ²§±`ª¬ºAÀË¬d¼Æ(8, 2) = 1 Then
-      ²§±`ª¬ºAÀË¬d¼Æ(2, 1) = 1
-      ²§±`ª¬ºA.DEF¥[_¹q¸£  '(¶¥¬q1)
-'   End If
-'   If ²§±`ª¬ºAÀË¬d¼Æ(11, 2) = 1 Then
-      ²§±`ª¬ºAÀË¬d¼Æ(5, 1) = 1
-      ²§±`ª¬ºA.DEF´î_¹q¸£ '(¶¥¬q1)
-'   End If
-   ²§±`ª¬ºAÀË¬d¼Æ(26, 1) = 2
-   ²§±`ª¬ºA.¸t²ª_¹q¸£ '(¶¥¬q2)
-   '===
-   ²§±`ª¬ºAÀË¬d¼Æ(25, 1) = 1
-   ²§±`ª¬ºA.¯à¤O§C¤U_¹q¸£ '(¶¥¬q1)
-   '==============
+ '==============
+ ¾Ô°«¨t²ÎÃþ.²§±`ª¬ºA»ë¼Æ¼W¥[ÀË¬d_DEF 2
 End If
 End Sub
 Sub chkus1()
@@ -1939,27 +1898,7 @@ If goicheck(1) = 0 Then
    §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) + atkus(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2))
    §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(3) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(3) + atkus(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2))
    goicheck(1) = 1
-   '=========¥H¤U¬O§Þ¯àÀË¬d¤Îµo°Ê
-'   If ²§±`ª¬ºAÀË¬d¼Æ(13, 2) = 1 Then
-      ²§±`ª¬ºAÀË¬d¼Æ(13, 1) = 1
-      ²§±`ª¬ºA.¸t²ª_¨Ï¥ÎªÌ '(¶¥¬q1)
-'   End If
-'   If ²§±`ª¬ºAÀË¬d¼Æ(24, 2) = 1 Then
-      ²§±`ª¬ºAÀË¬d¼Æ(24, 1) = 1
-      ²§±`ª¬ºA.¯à¤O§C¤U_¨Ï¥ÎªÌ '(¶¥¬q1)
-'   End If
-'   If ²§±`ª¬ºAÀË¬d¼Æ(7, 2) = 1 Then
-      ²§±`ª¬ºAÀË¬d¼Æ(7, 1) = 1
-      ²§±`ª¬ºA.ATK¥[_¨Ï¥ÎªÌ '(¶¥¬q1)
-'   End If
-'   If ²§±`ª¬ºAÀË¬d¼Æ(10, 2) = 1 Then
-      ²§±`ª¬ºAÀË¬d¼Æ(10, 1) = 1
-      ²§±`ª¬ºA.ATK´î_¨Ï¥ÎªÌ '(¶¥¬q1)
-'   End If
-    '====
-    ²§±`ª¬ºAÀË¬d¼Æ(39, 1) = 1
-    ²§±`ª¬ºA.Á{¬É_¨Ï¥ÎªÌ  '(¶¥¬q1)
-   '==============
+   ¾Ô°«¨t²ÎÃþ.²§±`ª¬ºA»ë¼Æ¼W¥[ÀË¬d_ATK 1
   End If
 End If
 End Sub
@@ -1969,27 +1908,7 @@ If goicheck(1) = 0 Then
    §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) + atkus(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2))
    §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(3) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(3) + atkus(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2))
    goicheck(1) = 1
-   '=========¥H¤U¬O§Þ¯àÀË¬d¤Îµo°Ê
-'   If ²§±`ª¬ºAÀË¬d¼Æ(13, 2) = 1 Then
-      ²§±`ª¬ºAÀË¬d¼Æ(13, 1) = 1
-      ²§±`ª¬ºA.¸t²ª_¨Ï¥ÎªÌ '(¶¥¬q1)
-'   End If
-'   If ²§±`ª¬ºAÀË¬d¼Æ(24, 2) = 1 Then
-      ²§±`ª¬ºAÀË¬d¼Æ(24, 1) = 1
-      ²§±`ª¬ºA.¯à¤O§C¤U_¨Ï¥ÎªÌ '(¶¥¬q1)
-'   End If
-'   If ²§±`ª¬ºAÀË¬d¼Æ(7, 2) = 1 Then
-      ²§±`ª¬ºAÀË¬d¼Æ(7, 1) = 1
-      ²§±`ª¬ºA.ATK¥[_¨Ï¥ÎªÌ '(¶¥¬q1)
-'   End If
-'   If ²§±`ª¬ºAÀË¬d¼Æ(10, 2) = 1 Then
-      ²§±`ª¬ºAÀË¬d¼Æ(10, 1) = 1
-      ²§±`ª¬ºA.ATK´î_¨Ï¥ÎªÌ '(¶¥¬q1)
-'   End If
-    '====
-    ²§±`ª¬ºAÀË¬d¼Æ(39, 1) = 1
-    ²§±`ª¬ºA.Á{¬É_¨Ï¥ÎªÌ  '(¶¥¬q1)
-   '==============
+   ¾Ô°«¨t²ÎÃþ.²§±`ª¬ºA»ë¼Æ¼W¥[ÀË¬d_ATK 1
   End If
 End If
 End Sub
@@ -3360,8 +3279,9 @@ End If
 End Sub
 Sub ¨Æ¥ó¥d³B²z_ªì©l_¨Ï¥ÎªÌ¤è()
 Dim ck As Boolean
-Dim m As Integer, i As Integer, j As Integer
-If Formsetting.persontgruonus(1).Value = True Then '=====(µL)
+Dim m As Integer, i As Integer, j As Integer, tmpfailed As Integer
+
+If Formsetting.comboeventcarrdus.Text = "µL" Then '=====(µL)
     For i = 1 To 18
        Randomize
        m = Int(Rnd() * 3) + 1
@@ -3386,7 +3306,7 @@ If Formsetting.persontgruonus(1).Value = True Then '=====(µL)
              Next
        End Select
     Next
-ElseIf Formsetting.persontgruonus(2).Value = True Then '=====¦Û­q
+ElseIf Formsetting.comboeventcarrdus.Text = "¦Û­q" Then '=====¦Û­q
    If ¨Æ¥ó¥d°O¿ý¼È®É¼Æ(0, 1) = 18 Or Formsetting.persontgreus.Value = 0 Then
         For i = 1 To 18
 '            If Formsetting.personus(i).Text = "(µL)" Then
@@ -3443,7 +3363,7 @@ ElseIf Formsetting.persontgruonus(2).Value = True Then '=====¦Û­q
              End If
          Next
     End If
-ElseIf Formsetting.persontgruonus(3).Value = True Then '===============¿ï¾Ü³Ì¤j­È
+ElseIf Formsetting.comboeventcarrdus.Text = "³Ì¤j­È" Then '===============¿ï¾Ü³Ì¤j­È
     If Formsetting.persontgreus.Value = 1 Then  '===¿í¦u³W«h
          For i = 1 To 18
              Select Case Formsetting.persontgus(i).Caption
@@ -3699,17 +3619,22 @@ ElseIf Formsetting.persontgruonus(3).Value = True Then '===============¿ï¾Ü³Ì¤j­
             Loop
         Next
     End If
-ElseIf Formsetting.persontgruonus(4).Value = True Then '=====ÀH¾÷
+ElseIf Formsetting.comboeventcarrdus.Text = "ÀH¾÷" Or Formsetting.comboeventcarrdus.Text = "ÀH¾÷(¤£§t¸t¤ô)" Then '=====ÀH¾÷
     If Formsetting.persontgreus.Value = 1 Then '===¿í¦u³W«h
         For i = 1 To 18
+             tmpfailed = 0
              Do
                 Randomize
                 m = Int(Rnd() * (Formsetting.personus(i).ListCount - 1)) + 1
                 If ¤@¯ë¨t²ÎÃþ.¨Æ¥ó¥d¸ê®Æ®w(Formsetting.personus(i).List(m), 1) = Formsetting.persontgus(i).Caption Or _
-                   ¤@¯ë¨t²ÎÃþ.¨Æ¥ó¥d¸ê®Æ®w(Formsetting.personus(i).List(m), 1) = 0 Then
-                   Formsetting.personus(i).ListIndex = m
-                   Exit Do
+                   (tmpfailed > 10 And ¤@¯ë¨t²ÎÃþ.¨Æ¥ó¥d¸ê®Æ®w(Formsetting.personus(i).List(m), 1) = 0) Then
+                    If Formsetting.comboeventcarrdus.Text = "ÀH¾÷(¤£§t¸t¤ô)" And Formsetting.personus(i).List(m) = "¸t¤ô" Then
+                    Else
+                        Formsetting.personus(i).ListIndex = m
+                        Exit Do
+                    End If
                 End If
+                tmpfailed = tmpfailed + 1
              Loop
          Next
         If ¨Æ¥ó¥d°O¿ý¼È®É¼Æ(0, 1) = 12 Then
@@ -3742,15 +3667,21 @@ ElseIf Formsetting.persontgruonus(4).Value = True Then '=====ÀH¾÷
          For i = 1 To 18
             Randomize
             m = Int(Rnd() * (Formsetting.personus(i).ListCount - 1)) + 1
-            Formsetting.personus(i).ListIndex = m
+            If Formsetting.comboeventcarrdus.Text = "ÀH¾÷(¤£§t¸t¤ô)" And Formsetting.personus(i).List(m) = "¸t¤ô" Then
+                i = i - 1
+            Else
+                Formsetting.personus(i).ListIndex = m
+            End If
          Next
     End If
 End If
 End Sub
+
 Sub ¨Æ¥ó¥d³B²z_ªì©l_¹q¸£¤è()
-Dim m As Integer, i As Integer, j As Integer
+Dim m As Integer, i As Integer, j As Integer, tmpfailed As Integer
 Dim ay() As String
-If Formsetting.persontgruoncom(1).Value = True Then '=====(µL)
+
+If Formsetting.comboeventcarrdcom.Text = "µL" Then '=====(µL)
     For i = 1 To 18
        Randomize
        m = Int(Rnd() * 3) + 1
@@ -3775,7 +3706,7 @@ If Formsetting.persontgruoncom(1).Value = True Then '=====(µL)
              Next
        End Select
     Next
-ElseIf Formsetting.persontgruoncom(2).Value = True Then '=====¦Û­q
+ElseIf Formsetting.comboeventcarrdcom.Text = "¦Û­q" Then '=====¦Û­q
    If ¨Æ¥ó¥d°O¿ý¼È®É¼Æ(0, 1) = 18 Or Formsetting.persontgrecom.Value = 0 Then
         For i = 1 To 18
 '            If Formsetting.personcom(i).Text = "(µL)" Then
@@ -3832,7 +3763,7 @@ ElseIf Formsetting.persontgruoncom(2).Value = True Then '=====¦Û­q
              End If
          Next
     End If
-ElseIf Formsetting.persontgruoncom(3).Value = True Then '=====¿ï¾Ü³Ì¤j­È
+ElseIf Formsetting.comboeventcarrdcom.Text = "³Ì¤j­È" Then '=====¿ï¾Ü³Ì¤j­È
     If Formsetting.persontgrecom.Value = 1 Then  '===¿í¦u³W«h
          For i = 1 To 18
              Select Case Formsetting.persontgcom(i).Caption
@@ -4074,67 +4005,22 @@ ElseIf Formsetting.persontgruoncom(3).Value = True Then '=====¿ï¾Ü³Ì¤j­È
             Loop
         Next
     End If
-ElseIf Formsetting.persontgruoncom(4).Value = True Then '=====ÀH¾÷
+ElseIf Formsetting.comboeventcarrdcom.Text = "ÀH¾÷" Or Formsetting.comboeventcarrdcom.Text = "ÀH¾÷(¤£§t¸t¤ô)" Then '=====ÀH¾÷
     If Formsetting.persontgrecom.Value = 1 Then '===¿í¦u³W«h
         For i = 1 To 18
+             tmpfailed = 0
              Do
                 Randomize
                 m = Int(Rnd() * (Formsetting.personcom(i).ListCount - 1)) + 1
                 If ¤@¯ë¨t²ÎÃþ.¨Æ¥ó¥d¸ê®Æ®w(Formsetting.personcom(i).List(m), 1) = Formsetting.persontgcom(i).Caption Or _
-                   ¤@¯ë¨t²ÎÃþ.¨Æ¥ó¥d¸ê®Æ®w(Formsetting.personcom(i).List(m), 1) = 0 Then
-                   Formsetting.personcom(i).ListIndex = m
-                   Exit Do
-                End If
-             Loop
-         Next
-         If ¨Æ¥ó¥d°O¿ý¼È®É¼Æ(0, 1) = 12 And Formsetting.persontgrecom.Value = 1 Then
-            For i = 7 To 18
-                Randomize
-                m = Int(Rnd() * 3) + 1
-                Select Case m
-                   Case 1
-                      For j = 0 To Formsetting.personcom(i).ListCount - 1
-                         If Formsetting.personcom(i).List(j) = "¼C1" Then
-                             Formsetting.personcom(i).ListIndex = j
-                         End If
-                      Next
-                   Case 2
-                      For j = 0 To Formsetting.personcom(i).ListCount - 1
-                         If Formsetting.personcom(i).List(j) = "ºj1" Then
-                             Formsetting.personcom(i).ListIndex = j
-                         End If
-                      Next
-                   Case 3
-                      For j = 0 To Formsetting.personcom(i).ListCount - 1
-                         If Formsetting.personcom(i).List(j) = "¨¾1" Then
-                             Formsetting.personcom(i).ListIndex = j
-                         End If
-                      Next
-                End Select
-            Next
-        End If
-    Else '=============================¤£¿í¦u³W«h
-         For i = 1 To 18
-            Randomize
-            m = Int(Rnd() * (Formsetting.personcom(i).ListCount - 1)) + 1
-            Formsetting.personcom(i).ListIndex = m
-         Next
-    End If
-ElseIf Formsetting.persontgruoncom(5).Value = True Then '=====ÀH¾÷(¤£§t¯S)
-    If Formsetting.persontgrecom.Value = 1 Then '===¿í¦u³W«h
-        For i = 1 To 18
-             Do
-                Randomize
-                m = Int(Rnd() * (Formsetting.personcom(i).ListCount - 1)) + 1
-                If ¤@¯ë¨t²ÎÃþ.¨Æ¥ó¥d¸ê®Æ®w(Formsetting.personcom(i).List(m), 1) = Formsetting.persontgcom(i).Caption Or _
-                   ¤@¯ë¨t²ÎÃþ.¨Æ¥ó¥d¸ê®Æ®w(Formsetting.personcom(i).List(m), 1) = 0 Then
-                   ay = Split(¤@¯ë¨t²ÎÃþ.¨Æ¥ó¥d¸ê®Æ®w(Formsetting.personcom(i).List(m), 3), "=")
-                   If ay(0) = a4a And ay(2) = a4a Then
-                   Else
+                   (tmpfailed > 10 And ¤@¯ë¨t²ÎÃþ.¨Æ¥ó¥d¸ê®Æ®w(Formsetting.personcom(i).List(m), 1) = 0) Then
+                    If Formsetting.comboeventcarrdcom.Text = "ÀH¾÷(¤£§t¸t¤ô)" And Formsetting.personcom(i).List(m) = "¸t¤ô" Then
+                    Else
                         Formsetting.personcom(i).ListIndex = m
                         Exit Do
-                   End If
+                    End If
                 End If
+                tmpfailed = tmpfailed + 1
              Loop
          Next
          If ¨Æ¥ó¥d°O¿ý¼È®É¼Æ(0, 1) = 12 And Formsetting.persontgrecom.Value = 1 Then
@@ -4167,16 +4053,16 @@ ElseIf Formsetting.persontgruoncom(5).Value = True Then '=====ÀH¾÷(¤£§t¯S)
          For i = 1 To 18
             Randomize
             m = Int(Rnd() * (Formsetting.personcom(i).ListCount - 1)) + 1
-            ay = Split(¤@¯ë¨t²ÎÃþ.¨Æ¥ó¥d¸ê®Æ®w(Formsetting.personcom(i).List(m), 3), "=")
-            If ay(0) = a4a And ay(2) = a4a Then
-                 i = i - 1
+            If Formsetting.comboeventcarrdcom.Text = "ÀH¾÷(¤£§t¸t¤ô)" And Formsetting.personcom(i).List(m) = "¸t¤ô" Then
+                i = i - 1
             Else
-                 Formsetting.personcom(i).ListIndex = m
+                Formsetting.personcom(i).ListIndex = m
             End If
          Next
     End If
 End If
 End Sub
+
 Sub ¨Æ¥ó¥d³B²z_¤À¬£_¨Ï¥ÎªÌ¤è()
 Dim tn As Integer
 Dim ay() As String
@@ -6187,4 +6073,156 @@ Select Case num
         µPÁ`¶¥¬q¼Æ(2) = µPÁ`¶¥¬q¼Æ(2) + 1
 End Select
 End Sub
+Sub ²§±`ª¬ºA»ë¼Æ´î§CÀË¬d_ATK(ByVal uscom As Integer)
+Select Case uscom
+ Case 1
+    '=========¥H¤U¬O§Þ¯àÀË¬d¤Îµo°Ê
+    ²§±`ª¬ºAÀË¬d¼Æ(13, 1) = 2
+    ²§±`ª¬ºA.¸t²ª_¨Ï¥ÎªÌ '(¶¥¬q2)
+    '=========
+    ²§±`ª¬ºAÀË¬d¼Æ(24, 1) = 2
+    ²§±`ª¬ºA.¯à¤O§C¤U_¨Ï¥ÎªÌ '(¶¥¬q2)
+    '=========
+    ²§±`ª¬ºAÀË¬d¼Æ(7, 1) = 3
+    ²§±`ª¬ºA.ATK¥[_¨Ï¥ÎªÌ '(¶¥¬q3)
+    '=========
+    ²§±`ª¬ºAÀË¬d¼Æ(10, 1) = 3
+    ²§±`ª¬ºA.ATK´î_¨Ï¥ÎªÌ '(¶¥¬q3)
+    '=========
+    ²§±`ª¬ºAÀË¬d¼Æ(39, 1) = 2
+    ²§±`ª¬ºA.Á{¬É_¨Ï¥ÎªÌ '(¶¥¬q2)
+    '=========
+ Case 2
+    '=========¥H¤U¬O§Þ¯àÀË¬d¤Îµo°Ê
+    ²§±`ª¬ºAÀË¬d¼Æ(26, 1) = 2
+    ²§±`ª¬ºA.¸t²ª_¹q¸£ '(¶¥¬q2)
+    '=========
+    ²§±`ª¬ºAÀË¬d¼Æ(1, 1) = 3
+    ²§±`ª¬ºA.ATK¥[_¹q¸£ '(¶¥¬q3)
+    '=========
+    ²§±`ª¬ºAÀË¬d¼Æ(4, 1) = 3
+    ²§±`ª¬ºA.ATK´î_¹q¸£ '(¶¥¬q3)
+    '=========
+    ²§±`ª¬ºAÀË¬d¼Æ(25, 1) = 2
+    ²§±`ª¬ºA.¯à¤O§C¤U_¹q¸£ '(¶¥¬q2)
+    '=======
+    ²§±`ª¬ºAÀË¬d¼Æ(40, 1) = 2
+    ²§±`ª¬ºA.Á{¬É_¹q¸£ '(¶¥¬q2)
+End Select
 
+End Sub
+Sub ²§±`ª¬ºA»ë¼Æ¼W¥[ÀË¬d_ATK(ByVal uscom As Integer)
+Select Case uscom
+ Case 1
+    '=========¥H¤U¬O§Þ¯àÀË¬d¤Îµo°Ê
+    ²§±`ª¬ºAÀË¬d¼Æ(13, 1) = 1
+    ²§±`ª¬ºA.¸t²ª_¨Ï¥ÎªÌ '(¶¥¬q1)
+    '==============
+    ²§±`ª¬ºAÀË¬d¼Æ(24, 1) = 1
+    ²§±`ª¬ºA.¯à¤O§C¤U_¨Ï¥ÎªÌ '(¶¥¬q1)
+    '==============
+    ²§±`ª¬ºAÀË¬d¼Æ(7, 1) = 1
+    ²§±`ª¬ºA.ATK¥[_¨Ï¥ÎªÌ '(¶¥¬q1)
+    '==============
+    ²§±`ª¬ºAÀË¬d¼Æ(10, 1) = 1
+    ²§±`ª¬ºA.ATK´î_¨Ï¥ÎªÌ '(¶¥¬q1)
+    '==============
+    ²§±`ª¬ºAÀË¬d¼Æ(39, 1) = 1
+    ²§±`ª¬ºA.Á{¬É_¨Ï¥ÎªÌ  '(¶¥¬q1)
+    '==============
+ Case 2
+    '=========¥H¤U¬O§Þ¯àÀË¬d¤Îµo°Ê
+    ²§±`ª¬ºAÀË¬d¼Æ(1, 1) = 1
+    ²§±`ª¬ºA.ATK¥[_¹q¸£ '(¶¥¬q1)
+    '=======
+    ²§±`ª¬ºAÀË¬d¼Æ(26, 1) = 1
+    ²§±`ª¬ºA.¸t²ª_¹q¸£ '(¶¥¬q1)
+    '=======
+    ²§±`ª¬ºAÀË¬d¼Æ(4, 1) = 1
+    ²§±`ª¬ºA.ATK´î_¹q¸£ '(¶¥¬q1)
+    '=======
+    ²§±`ª¬ºAÀË¬d¼Æ(25, 1) = 1
+    ²§±`ª¬ºA.¯à¤O§C¤U_¹q¸£ '(¶¥¬q1)
+    '=======
+    ²§±`ª¬ºAÀË¬d¼Æ(40, 1) = 1
+    ²§±`ª¬ºA.Á{¬É_¹q¸£ '(¶¥¬q1)
+    '==============
+End Select
+
+End Sub
+Sub ²§±`ª¬ºA»ë¼Æ¼W¥[ÀË¬d_DEF(ByVal uscom As Integer)
+Select Case uscom
+ Case 1
+    '=========¥H¤U¬O§Þ¯àÀË¬d¤Îµo°Ê
+    ²§±`ª¬ºAÀË¬d¼Æ(8, 1) = 1
+    ²§±`ª¬ºA.DEF¥[_¨Ï¥ÎªÌ '(¶¥¬q1)
+    '==============
+    ²§±`ª¬ºAÀË¬d¼Æ(11, 1) = 1
+    ²§±`ª¬ºA.DEF´î_¨Ï¥ÎªÌ '(¶¥¬q1)
+    '==============
+    ²§±`ª¬ºAÀË¬d¼Æ(13, 1) = 1
+    ²§±`ª¬ºA.¸t²ª_¨Ï¥ÎªÌ '(¶¥¬q1)
+    '==============
+    ²§±`ª¬ºAÀË¬d¼Æ(24, 1) = 1
+    ²§±`ª¬ºA.¯à¤O§C¤U_¨Ï¥ÎªÌ '(¶¥¬q1)
+    '==============
+    ²§±`ª¬ºAÀË¬d¼Æ(39, 1) = 1
+    ²§±`ª¬ºA.Á{¬É_¨Ï¥ÎªÌ '(¶¥¬q1)
+    '==============
+ Case 2
+    '=========¥H¤U¬O§Þ¯àÀË¬d¤Îµo°Ê
+    ²§±`ª¬ºAÀË¬d¼Æ(2, 1) = 1
+    ²§±`ª¬ºA.DEF¥[_¹q¸£  '(¶¥¬q1)
+    '==============
+    ²§±`ª¬ºAÀË¬d¼Æ(5, 1) = 1
+    ²§±`ª¬ºA.DEF´î_¹q¸£ '(¶¥¬q1)
+    '==============
+    ²§±`ª¬ºAÀË¬d¼Æ(26, 1) = 2
+    ²§±`ª¬ºA.¸t²ª_¹q¸£ '(¶¥¬q2)
+    '==============
+    ²§±`ª¬ºAÀË¬d¼Æ(25, 1) = 1
+    ²§±`ª¬ºA.¯à¤O§C¤U_¹q¸£ '(¶¥¬q1)
+    '==============
+    ²§±`ª¬ºAÀË¬d¼Æ(40, 1) = 1
+    ²§±`ª¬ºA.Á{¬É_¹q¸£ '(¶¥¬q1)
+    '==============
+End Select
+End Sub
+Sub ²§±`ª¬ºA»ë¼Æ´î§CÀË¬d_DEF(ByVal uscom As Integer)
+Select Case uscom
+ Case 1
+    '=========¥H¤U¬O§Þ¯àÀË¬d¤Îµo°Ê
+    ²§±`ª¬ºAÀË¬d¼Æ(8, 1) = 3
+    ²§±`ª¬ºA.DEF¥[_¨Ï¥ÎªÌ '(¶¥¬q3)
+    '==============
+    ²§±`ª¬ºAÀË¬d¼Æ(11, 1) = 3
+    ²§±`ª¬ºA.DEF´î_¨Ï¥ÎªÌ '(¶¥¬q3)
+    '==============
+    ²§±`ª¬ºAÀË¬d¼Æ(13, 1) = 2
+    ²§±`ª¬ºA.¸t²ª_¨Ï¥ÎªÌ '(¶¥¬q2)
+    '==============
+    ²§±`ª¬ºAÀË¬d¼Æ(24, 1) = 2
+    ²§±`ª¬ºA.¯à¤O§C¤U_¨Ï¥ÎªÌ '(¶¥¬q2)
+    '==============
+    ²§±`ª¬ºAÀË¬d¼Æ(39, 1) = 2
+    ²§±`ª¬ºA.Á{¬É_¨Ï¥ÎªÌ '(¶¥¬q2)
+    '==============
+ Case 2
+    '=========¥H¤U¬O§Þ¯àÀË¬d¤Îµo°Ê
+    ²§±`ª¬ºAÀË¬d¼Æ(2, 1) = 3
+    ²§±`ª¬ºA.DEF¥[_¹q¸£  '(¶¥¬q3)
+    '==============
+    ²§±`ª¬ºAÀË¬d¼Æ(5, 1) = 3
+    ²§±`ª¬ºA.DEF´î_¹q¸£ '(¶¥¬q3)
+    '==============
+    ²§±`ª¬ºAÀË¬d¼Æ(26, 1) = 3
+    ²§±`ª¬ºA.¸t²ª_¹q¸£ '(¶¥¬q3)
+    '==============
+    ²§±`ª¬ºAÀË¬d¼Æ(25, 1) = 2
+    ²§±`ª¬ºA.¯à¤O§C¤U_¹q¸£ '(¶¥¬q2)
+    '==============
+    ²§±`ª¬ºAÀË¬d¼Æ(40, 1) = 2
+    ²§±`ª¬ºA.Á{¬É_¹q¸£ '(¶¥¬q2)
+    '==============
+End Select
+End Sub

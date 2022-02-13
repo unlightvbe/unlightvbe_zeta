@@ -3,3 +3,4 @@
 *.log
 Thumbs.db
 *.mp3
+.vscode/

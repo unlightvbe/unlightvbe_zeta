@@ -1421,12 +1421,12 @@ Sub 自由戰鬥模式設定表單基本設定程序()
 Dim i As Integer '暫時變數
 Formsetting.對戰地圖選擇.ListIndex = 0
 Formsetting.BGM選擇.ListIndex = 0
+Formsetting.comboeventcarrdus.ListIndex = 2
+Formsetting.comboeventcarrdcom.ListIndex = 2
 For i = 1 To 18
     Formsetting.personus(i).ListIndex = 0
     Formsetting.personcom(i).ListIndex = 0
 Next
-Formsetting.persontgruonus(1).Value = True
-Formsetting.persontgruoncom(1).Value = True
 Formsetting.lopnmusictext.Visible = False
 Formsetting.lopnmapjpgtext.Visible = False
 Formsetting.chknewdefferent.Value = 1
@@ -1436,9 +1436,6 @@ Formsetting.chkusenewai.Value = 1
 Formsetting.chkusenewpage.Value = 1
 If FormMainMode.personsettingus(1).Caption = "人物資訊" Then
     Formsetting.chkpersonvsmode.Value = 1
-    Formsetting.persontgruoncom(4).Value = True
-    Formsetting.persontgruoncom(5).Visible = False
-    Formsetting.persontgruonus(4).Value = True
     Formsetting.ckendturn.Value = 1
 End If
 End Sub
