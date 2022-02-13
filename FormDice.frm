@@ -120,6 +120,7 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
+Option Explicit
 Dim app_path As String
 Dim showus, showcom, showendus, showendcom, trshowendus, trshowendcom, hideall, timeout, tot As Integer
 Dim 距離單位(1 To 1, 1 To 2, 1 To 2) As Integer  '距離單位暫時儲存資料(1.HP血條,1.使用者/2.電腦,1.Left單位/2.Top單位)
@@ -190,14 +191,7 @@ Private Sub Form_Load()
 End Sub
 
 Private Sub Form_QueryUnload(Cancel As Integer, UnloadMode As Integer)
-If UnloadMode = 0 Then
-   YesNo = MsgBox("確定離開遊戲?", 36, "UnlightVBE-系統提示")
-   If YesNo = 6 Then
-    End
-   Else
-    Cancel = 1
-   End If
-End If
+一般系統類.離開遊戲提示 Cancel, UnloadMode
 End Sub
 
 Private Sub trjpgshow_Timer()

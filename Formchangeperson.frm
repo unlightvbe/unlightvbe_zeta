@@ -1572,7 +1572,7 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
-
+Option Explicit
 Sub bnok_Click(Index As Integer)
 If cardhp(Index).Caption > 0 Then
     戰鬥系統類.人物交換_使用者_指定交換 Index + 1
@@ -1585,6 +1585,7 @@ bnok(Index).Picture = LoadPicture(App.Path & "\gif\changeok_2.bmp")
 End Sub
 
 Sub card_Click(Index As Integer)
+Dim k As Integer
 戰鬥系統類.技能說明載入_人物卡片背面_交換角色 Index
 '======================================================
 PEAFcardback(Index).Left = card(Index).Left
@@ -1664,7 +1665,7 @@ End Sub
 
 
 Sub PEAFcardbackBR_Click(Index As Integer, ByVal Button As Integer)
-Dim ahmt As String
+Dim ahmt As String, i As Integer, k As Integer
 Select Case Index
      Case Is <= 4
            ahmt = VBEPerson(1, 角色待機人物紀錄數(1, 2), 3, Index, 5)
@@ -1700,6 +1701,7 @@ End Select
 End Sub
 
 Sub PEAFcardbackBR_MouseMove(Index As Integer, Button As Integer, Shift As Integer, X As Single, Y As Single)
+Dim k As Integer
 PEAFcardbackBR(Index).Opacity = 100
 Select Case Index
      Case Is <= 4
@@ -1741,6 +1743,7 @@ End Sub
 
 
 Sub 使用者方智慧型AI_自動控制選人_Timer()
+Dim i As Integer
 For i = 1 To 2
     If Val(cardhp(i).Caption) > 0 Then
         Formchangeperson.bnok_Click (i)

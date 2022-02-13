@@ -1,4 +1,5 @@
 Attribute VB_Name = "§Þ¯à"
+Option Explicit
 Public atking_sheri_4_tot As Integer   '§Þ¯à-³·²ú-­¸¤b«B¥XµP¶qÀx¦sÅÜ¼Æ
 Public atking_sheri_4_tot_ai As Integer  '§Þ¯à-AI-³·²ú-­¸¤b«B¥XµP¶qÀx¦sÅÜ¼Æ
 Public atking_©¬­[_·O´dªºÂÅ²´_tot(1 To 2) As Integer  '§Þ¯à-©¬­[-·O´dªºÂÅ²´»ë¤l¶q¬ö¿ý¼È®ÉÅÜ¼Æ(1.¼Æ­È/2.¬O§_±Ò°Ê)
@@ -98,6 +99,7 @@ End If
 
 End Sub
 Sub ³·²ú_¦Û±þ¶É¦V(ByVal Index As Integer)
+Dim i As Integer
 If FormMainMode.personatk(1).Caption = "¦Û±þ¶É¦V" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(1, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "³·²ú" Then
  Select Case atkingck(1, 1)
@@ -163,7 +165,7 @@ If FormMainMode.personatk(1).Caption = "¦Û±þ¶É¦V" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub ³·²ú_VBE_¦Û±þ¶É¦V(ByVal Index As Integer)
-Dim bloodnum As Integer '¼È®ÉÅÜ¼Æ
+Dim bloodnum As Integer, i As Integer '¼È®ÉÅÜ¼Æ
 If FormMainMode.personatk(1).Caption = "VBE¦Û±þ¶É¦V" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(42, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "³·²ú" Then
  Select Case atkingck(42, 1)
@@ -418,7 +420,7 @@ End If
 
 End Sub
 Sub ³·²ú_VBE_­¸¤b«B()
-Dim ttt As Integer '¼È®ÉÅÜ¼Æ
+Dim ttt As Integer, i As Integer '¼È®ÉÅÜ¼Æ
 If FormMainMode.personatk(4).Caption = "VBE­¸¤b«B" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(45, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "³·²ú" Then
     Select Case atkingck(45, 1)
@@ -498,7 +500,7 @@ End If
 End Sub
 
 Sub ³·²ú_­¸¤b«B()
-Dim ttt As Integer '¼È®ÉÅÜ¼Æ
+Dim ttt As Integer, i As Integer '¼È®ÉÅÜ¼Æ
 If FormMainMode.personatk(4).Caption = "­¸¤b«B" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(3, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "³·²ú" Then
     Select Case atkingck(3, 1)
@@ -742,7 +744,7 @@ If FormMainMode.personatk(2).Caption = "¥²±þ¬[¶Õ" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub ¥j¾|¥Ëº¸¦h_¦å¤§®¦½ç()
-Dim bloodtot As Integer '¼È®ÉÅÜ¼Æ
+Dim bloodtot As Integer, i As Integer '¼È®ÉÅÜ¼Æ
 If FormMainMode.personatk(3).Caption = "¦å¤§®¦½ç" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(60, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "¥j¾|¥Ëº¸¦h" Then
    Select Case atkingck(60, 1)
@@ -797,7 +799,7 @@ End Sub
 
 
 Sub ¥j¾|¥Ëº¸¦h_²rÀ»()
-Dim rrr As Integer '¼È®ÉÅÜ¼Æ
+Dim rrr As Integer, i As Integer '¼È®ÉÅÜ¼Æ
 If FormMainMode.personatk(1).Caption = "²rÀ»" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(6, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "¥j¾|¥Ëº¸¦h" Then
    Select Case atkingck(6, 1)
@@ -845,7 +847,7 @@ If FormMainMode.personatk(1).Caption = "²rÀ»" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬
 End If
 End Sub
 Sub ¥j¾|¥Ëº¸¦h_ºë¯«¤O§l¦¬()
-Dim rrr(1 To 3) As Integer 'µP§PÂ_¼È®ÉÅÜ¼Æ
+Dim rrr(1 To 3) As Integer, i As Integer 'µP§PÂ_¼È®ÉÅÜ¼Æ
 If FormMainMode.personatk(4).Caption = "ºë¯«¤O§l¦¬" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(61, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "¥j¾|¥Ëº¸¦h" Then
    Select Case atkingck(61, 1)
@@ -895,8 +897,6 @@ If FormMainMode.personatk(4).Caption = "ºë¯«¤O§l¦¬" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w
                  End If
              Next
         Case 3
-            cardpn = 0
-'            Erase cardp
             Erase atking_¥j¾|¥Ëº¸¦h_ºë¯«¤O§l¦¬¬ö¿ý¼Æ
             '=====================
             For i = 1 To 106
@@ -958,7 +958,7 @@ End If
 
 End Sub
 Sub ¦ã¯ô_¤@Áû¤ß()
-Dim cardnum(1 To 2) As Integer '¼È®ÉÅÜ¼Æ
+Dim cardnum(1 To 2) As Integer, i As Integer '¼È®ÉÅÜ¼Æ
 If FormMainMode.personatk(1).Caption = "¤@Áû¤ß" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(37, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "¦ã¯ô" Then
    Select Case atkingck(37, 1)
@@ -1021,7 +1021,7 @@ End If
 End Sub
 Sub ¦ã¯ô_¨â­Ó¨­Åé()
 Dim bloodtot As Single  '¼È®ÉÅÜ¼Æ
-Dim num As Integer
+Dim num As Integer, i As Integer
 If FormMainMode.personatk(2).Caption = "¨â­Ó¨­Åé" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(32, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "¦ã¯ô" Then
    Select Case atkingck(32, 1)
@@ -1074,6 +1074,7 @@ End Sub
 Sub ¦ã¯ô_¤E­ÓÆF»î()
 Dim bloodtot As Single  '¼È®ÉÅÜ¼Æ
 Dim pic As Integer 'RND¼È®ÉÅÜ¼Æ
+Dim i As Integer
 If FormMainMode.personatk(3).Caption = "¤E­ÓÆF»î" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(26, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "¦ã¯ô" Then
    Select Case atkingck(26, 1)
@@ -1126,7 +1127,7 @@ If FormMainMode.personatk(3).Caption = "¤E­ÓÆF»î" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub ¦ã¯ô_¤Q¤T°¦²´()
-Dim rrr(1 To 2) As Integer '¼È®ÉÅÜ¼Æ
+Dim rrr(1 To 2) As Integer, i As Integer '¼È®ÉÅÜ¼Æ
 If FormMainMode.personatk(4).Caption = "¤Q¤T°¦²´" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(16, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "¦ã¯ô" Then
    Select Case atkingck(16, 1)
@@ -1202,6 +1203,7 @@ If FormMainMode.personatk(4).Caption = "¤Q¤T°¦²´" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub Á¢_½ü±Û¦±_¯[¼þ¦âªº·L­·()
+Dim i As Integer
 If FormMainMode.personatk(1).Caption = "½ü±Û¦±-¯[¼þ¦âªº·L­·" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(13, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "Á¢" Then
    Select Case atkingck(13, 1)
@@ -1250,6 +1252,7 @@ If FormMainMode.personatk(1).Caption = "½ü±Û¦±-¯[¼þ¦âªº·L­·" And (°õ¦æ°Ê§@_ÀË¬d¬
 End If
 End Sub
 Sub Á¢_EX_½ü±Û¦±_¯[¼þ¦âªº·L­·()
+Dim i As Integer
 If FormMainMode.personatk(1).Caption = "Ex½ü±Û¦±-¯[¼þ¦âªº·L­·" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(19, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "Á¢" Then
    Select Case atkingck(19, 1)
@@ -1373,6 +1376,7 @@ If FormMainMode.personatk(2).Caption = "¨ó«µ¦±-¥[¦Ê¯Pªº¦uÅ@" And (°õ¦æ°Ê§@_ÀË¬d¬
 End If
 End Sub
 Sub Á¢_EX_¨ó«µ¦±_¥[¦Ê¯Pªº¦uÅ@()
+Dim i As Integer
 If FormMainMode.personatk(2).Caption = "Ex¨ó«µ¦±-¥[¦Ê¯Pªº¦uÅ@" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(38, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "Á¢" Then
    Select Case atkingck(38, 1)
@@ -1424,7 +1428,7 @@ End If
 End Sub
 
 Sub Á¢_¦w»î¦±_¦º¯«ªºÂí»îºq()
-Dim rrr As Integer '¼È®ÉÅÜ¼Æ
+Dim rrr As Integer, i As Integer, j As Integer '¼È®ÉÅÜ¼Æ
 If FormMainMode.personatk(3).Caption = "¦w»î¦±-¦º¯«ªºÂí»îºq" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(14, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "Á¢" Then
    Select Case atkingck(14, 1)
@@ -1514,7 +1518,7 @@ If FormMainMode.personatk(3).Caption = "¦w»î¦±-¦º¯«ªºÂí»îºq" And (°õ¦æ°Ê§@_ÀË¬d¬
 End If
 End Sub
 Sub Á¢_EX_¦w»î¦±_¦º¯«ªºÂí»îºq()
-Dim rrr As Integer '¼È®ÉÅÜ¼Æ
+Dim rrr As Integer, i As Integer, j As Integer '¼È®ÉÅÜ¼Æ
 If FormMainMode.personatk(3).Caption = "Ex¦w»î¦±-¦º¯«ªºÂí»îºq" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(62, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "Á¢" Then
    Select Case atkingck(62, 1)
@@ -1604,7 +1608,7 @@ If FormMainMode.personatk(3).Caption = "Ex¦w»î¦±-¦º¯«ªºÂí»îºq" And (°õ¦æ°Ê§@_ÀË¬
 End If
 End Sub
 Sub Á¢_²×¦±_µLºÉ½ü°jªº²×µ²()
-Dim num(1 To 2) As Integer '¿ï¾Ü¤Hª«¼È®ÉÅÜ¼Æ
+Dim num(1 To 2) As Integer, i As Integer '¿ï¾Ü¤Hª«¼È®ÉÅÜ¼Æ
 If FormMainMode.personatk(4).Caption = "²×¦±-µLºÉ½ü°jªº²×µ²" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(15, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "Á¢" Then
    Select Case atkingck(15, 1)
@@ -1660,7 +1664,7 @@ If FormMainMode.personatk(4).Caption = "²×¦±-µLºÉ½ü°jªº²×µ²" And (°õ¦æ°Ê§@_ÀË¬d¬
 End If
 End Sub
 Sub Á¢_EX_²×¦±_µLºÉ½ü°jªº²×µ²()
-Dim num(1 To 2) As Integer '¿ï¾Ü¤Hª«¼È®ÉÅÜ¼Æ
+Dim num(1 To 2) As Integer, i As Integer '¿ï¾Ü¤Hª«¼È®ÉÅÜ¼Æ
 If FormMainMode.personatk(4).Caption = "Ex²×¦±-µLºÉ½ü°jªº²×µ²" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(161, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "Á¢" Then
    Select Case atkingck(161, 1)
@@ -1722,7 +1726,7 @@ End If
 End Sub
 
 Sub Á¢_²×¦±_µLºÉ½ü°jªº²×µ²_ÂÂ()
-Dim rrr(1 To 3) As Integer '¼È®ÉÅÜ¼Æ
+Dim rrr(1 To 3) As Integer, i As Integer '¼È®ÉÅÜ¼Æ
 If FormMainMode.personatk(4).Caption = "²×¦±-µLºÉ½ü°jªº²×µ²" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(15, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "Á¢" Then
    Select Case atkingck(15, 1)
@@ -1784,7 +1788,7 @@ End If
 End Sub
 Sub ¥ìªÜµY_«å´kªº¹Óªí()
 Dim cardp(1 To 106) As Boolean '¬ö¿ý¼È®ÉÅÜ¼Æ
-Dim cardpn As Integer '¬ö¿ýµPÁ`¼Æ¼È®ÉÅÜ¼Æ
+Dim cardpn As Integer, i As Integer '¬ö¿ýµPÁ`¼Æ¼È®ÉÅÜ¼Æ
 If FormMainMode.personatk(1).Caption = "«å´kªº¹Óªí" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(56, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "¥ìªÜµY" Then
    Select Case atkingck(56, 1)
@@ -1909,6 +1913,7 @@ End If
 
 End Sub
 Sub ¥ìªÜµY_ºE­ú¤§ºq()
+Dim i As Integer
 If FormMainMode.personatk(2).Caption = "ºE­ú¤§ºq" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(57, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "¥ìªÜµY" Then
    Select Case atkingck(57, 1)
@@ -1974,7 +1979,7 @@ If FormMainMode.personatk(2).Caption = "ºE­ú¤§ºq" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub ¥ìªÜµY_¬õ½¬¨®½ü()
-Dim bloodtot As Integer '¼È®ÉÅÜ¼Æ
+Dim bloodtot As Integer, i As Integer '¼È®ÉÅÜ¼Æ
 Dim num(1 To 2) As Integer '¿ï¾Ü¤Hª«¼È®ÉÅÜ¼Æ
 If FormMainMode.personatk(3).Caption = "¬õ½¬¨®½ü" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(58, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "¥ìªÜµY" Then
@@ -2050,7 +2055,7 @@ If FormMainMode.personatk(3).Caption = "¬õ½¬¨®½ü" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub ¥ìªÜµY_¨ª¬õ¥Ûºh()
-Dim mkp As Integer '¼È®ÉÅÜ¼Æ
+Dim mkp As Integer, i As Integer '¼È®ÉÅÜ¼Æ
 Dim cardp(1 To 106) As Boolean '¬ö¿ý¼È®ÉÅÜ¼Æ
 Dim cardpn(1 To 2) As Integer '¬ö¿ýµPÁ`¼Æ¼È®ÉÅÜ¼Æ(1.µP¬ö¿ý¥Ø«eÁ`¼Æ/2.µP¿ï©w¥Ø«eÁ`¼Æ)
 If FormMainMode.personatk(4).Caption = "¨ª¬õ¥Ûºh" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(59, 2) = 1) _
@@ -2638,6 +2643,7 @@ If FormMainMode.personatk(4).Caption = "¨ª¬õ¥Ûºh" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub CC_·ÀµßªÅ¶¡()
+Dim i As Integer
 If FormMainMode.personatk(1).Caption = "·ÀµßªÅ¶¡" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(33, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "C.C." Then
    Select Case atkingck(33, 1)
@@ -2682,7 +2688,7 @@ If FormMainMode.personatk(1).Caption = "·ÀµßªÅ¶¡" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub CC_¥Õ»È¾Ô¾÷()
-Dim bloodntot As Integer '¼È®ÉÅÜ¼Æ
+Dim bloodntot As Integer, i As Integer '¼È®ÉÅÜ¼Æ
 If FormMainMode.personatk(2).Caption = "¥Õ»È¾Ô¾÷" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(34, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "C.C." Then
    Select Case atkingck(34, 1)
@@ -2743,6 +2749,7 @@ If FormMainMode.personatk(2).Caption = "¥Õ»È¾Ô¾÷" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub CC_­ì¤l¤§¤ß()
+Dim i As Integer
 If FormMainMode.personatk(3).Caption = "­ì¤l¤§¤ß" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(36, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "C.C." Then
    Select Case atkingck(36, 1)
@@ -2805,6 +2812,7 @@ If FormMainMode.personatk(3).Caption = "­ì¤l¤§¤ß" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub CC_°ªÀW¹qºÏ¤â³N¤M()
+Dim i As Integer
 If FormMainMode.personatk(4).Caption = "°ªÀW¹qºÏ¤â³N¤M" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(35, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "C.C." Then
    Select Case atkingck(35, 1)
@@ -2884,6 +2892,7 @@ If FormMainMode.personatk(4).Caption = "°ªÀW¹qºÏ¤â³N¤M" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³
 End If
 End Sub
 Sub ©¬­[_¼««ã¤§¤ö()
+Dim i As Integer
 If FormMainMode.personatk(1).Caption = "¼««ã¤§¤ö" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(7, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "©¬­[" Then
    Select Case atkingck(7, 1)
@@ -2942,18 +2951,17 @@ If FormMainMode.personatk(1).Caption = "¼««ã¤§¤ö" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub ©¬­[_ÀRÁÄ¤§­I()
+Dim i As Integer
 If FormMainMode.personatk(2).Caption = "ÀRÁÄ¤§­I" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(17, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "©¬­[" Then
    Select Case atkingck(17, 1)
       Case 1
          If movecp < 3 Then
             If atkingpagetot(1, 1) >= 3 And atkingpagetot(1, 5) >= 2 And atkingck(17, 2) = 0 Then
-'            If atkingpagetot(1, 1) >= 1 And atkingck(17, 2) = 0 Then
                ¾Ô°«¨t²ÎÃþ.¤Hª«§Þ¯àÄæ¿O¶}Ãö True, 2
                atkingck(17, 2) = 1
                atkingtrn(1) = Val(atkingtrn(1)) + 1
             ElseIf (atkingpagetot(1, 1) < 3 Or atkingpagetot(1, 5) < 2) And atkingck(17, 2) = 1 Then
-'            ElseIf atkingpagetot(1, 1) < 1 And atkingck(17, 2) = 1 Then
                ¾Ô°«¨t²ÎÃþ.¤Hª«§Þ¯àÄæ¿O¶}Ãö False, 2
                atkingck(17, 2) = 0
                atkingtrn(1) = Val(atkingtrn(1)) - 1
@@ -3006,6 +3014,7 @@ If FormMainMode.personatk(2).Caption = "ÀRÁÄ¤§­I" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub ©¬­[_·O´dªºÂÅ²´()
+Dim i As Integer
 If FormMainMode.personatk(3).Caption = "·O´dªºÂÅ²´" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(9, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "©¬­[" Then
    Select Case atkingck(9, 1)
@@ -3087,7 +3096,7 @@ If FormMainMode.personatk(3).Caption = "·O´dªºÂÅ²´" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w
 End If
 End Sub
 Sub ©¬­[_¾Ô·Xªº¯T¤ú()
-Dim rrr As Integer '¼È®ÉÅÜ¼Æ
+Dim rrr As Integer, i As Integer '¼È®ÉÅÜ¼Æ
 If FormMainMode.personatk(4).Caption = "¾Ô·Xªº¯T¤ú" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(18, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "©¬­[" Then
    Select Case atkingck(18, 1)
@@ -3139,6 +3148,7 @@ If FormMainMode.personatk(4).Caption = "¾Ô·Xªº¯T¤ú" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w
 End If
 End Sub
 Sub ¥v¶ð®L_±þ¼®¾¹©x()
+Dim i As Integer
 If FormMainMode.personatk(1).Caption = "±þ¼®¾¹©x" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(21, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "¥v¶ð®L" Then
    Select Case atkingck(21, 1)
@@ -3187,7 +3197,7 @@ If FormMainMode.personatk(1).Caption = "±þ¼®¾¹©x" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub ¥v¶ð®L_·MªÌ¤§¤â()
-Dim apn As Integer
+Dim apn As Integer, i As Integer
 If FormMainMode.personatk(2).Caption = "·MªÌ¤§¤â" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(23, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "¥v¶ð®L" Then
    Select Case atkingck(23, 1)
@@ -3245,19 +3255,17 @@ End If
 End Sub
 
 Sub ¥v¶ð®L_®É¶¡ºØ¤l()
-Dim bloodtot As Integer '¼È®ÉÅÜ¼Æ
+Dim bloodtot As Integer, i As Integer '¼È®ÉÅÜ¼Æ
 If FormMainMode.personatk(3).Caption = "®É¶¡ºØ¤l" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(24, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "¥v¶ð®L" Then
    Select Case atkingck(24, 1)
         Case 1
             If movecp < 3 Then
              If atkingpagetot(1, 2) >= 2 And atkingpagetot(1, 4) >= 2 And atkingck(24, 2) = 0 Then
-'             If atkingpagetot(1, 2) >= 1 And atkingck(24, 2) = 0 Then
                ¾Ô°«¨t²ÎÃþ.¤Hª«§Þ¯àÄæ¿O¶}Ãö True, 3
                atkingck(24, 2) = 1
                atkingtrn(1) = Val(atkingtrn(1)) + 1
             ElseIf (atkingpagetot(1, 2) < 2 Or atkingpagetot(1, 4) < 2) And atkingck(24, 2) = 1 Then
-'            ElseIf atkingpagetot(1, 2) < 1 And atkingck(24, 2) = 1 Then
                ¾Ô°«¨t²ÎÃþ.¤Hª«§Þ¯àÄæ¿O¶}Ãö False, 3
                atkingck(24, 2) = 0
                atkingtrn(1) = Val(atkingtrn(1)) - 1
@@ -3300,6 +3308,7 @@ End If
 End Sub
 Sub ¥v¶ð®L_©R¹BªºÅKªù()
 Dim num(1 To 2, 1 To 2) As Integer '¿ï¾Ü¤Hª«¼È®ÉÅÜ¼Æ
+Dim i As Integer
 If FormMainMode.personatk(4).Caption = "©R¹BªºÅKªù" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(25, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "¥v¶ð®L" Then
    Select Case atkingck(25, 1)
@@ -3366,6 +3375,7 @@ If FormMainMode.personatk(4).Caption = "©R¹BªºÅKªù" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w
 End If
 End Sub
 Sub Ã¹²ïµY_¶ÂÃú¤Û¼v()
+Dim i As Integer
 If FormMainMode.personatk(1).Caption = "¶ÂÃú¤Û¼v" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(54, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "Ã¹²ïµY" Then
    Select Case atkingck(54, 1)
@@ -3438,6 +3448,7 @@ If FormMainMode.personatk(1).Caption = "¶ÂÃú¤Û¼v" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub Ã¹²ïµY_EX_¶ÂÃú¤Û¼v()
+Dim i As Integer
 If FormMainMode.personatk(1).Caption = "Ex¶ÂÃú¤Û¼v" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(55, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "Ã¹²ïµY" Then
    Select Case atkingck(55, 1)
@@ -3511,6 +3522,7 @@ End If
 End Sub
 
 Sub Ã¹²ïµY_¬V¦å¤§¤b()
+Dim i As Integer
 If FormMainMode.personatk(2).Caption = "¬V¦å¤§¤b" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(51, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "Ã¹²ïµY" Then
    Select Case atkingck(51, 1)
@@ -3558,6 +3570,7 @@ If FormMainMode.personatk(2).Caption = "¬V¦å¤§¤b" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub Ã¹²ïµY_©C©Gªº¨è¦L()
+Dim i As Integer
 If FormMainMode.personatk(3).Caption = "©C©Gªº¨è¦L" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(53, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "Ã¹²ïµY" Then
    Select Case atkingck(53, 1)
@@ -3606,7 +3619,7 @@ If FormMainMode.personatk(3).Caption = "©C©Gªº¨è¦L" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w
 End If
 End Sub
 Sub Ã¹²ïµY_¶ÂÃúªºÄñÂ¶()
-Dim m As Integer '¼È®ÉÅÜ¼Æ
+Dim m As Integer, i As Integer '¼È®ÉÅÜ¼Æ
 If FormMainMode.personatk(4).Caption = "¶ÂÃúªºÄñÂ¶" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(52, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "Ã¹²ïµY" Then
    Select Case atkingck(52, 1)
@@ -3707,6 +3720,7 @@ If FormMainMode.personatk(4).Caption = "¶ÂÃúªºÄñÂ¶" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w
 End If
 End Sub
 Sub ±ö­Û_High_hand()
+Dim i As Integer
 If FormMainMode.personatk(1).Caption = "High hand" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(63, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "±ö­Û" Then
    Select Case atkingck(63, 1)
@@ -3746,7 +3760,7 @@ If FormMainMode.personatk(1).Caption = "High hand" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²
 End If
 End Sub
 Sub ±ö­Û_Jackpot()
-Dim m As Integer
+Dim m As Integer, i As Integer
 If FormMainMode.personatk(2).Caption = "Jackpot" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(64, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "±ö­Û" Then
    Select Case atkingck(64, 1)
@@ -3802,6 +3816,7 @@ If FormMainMode.personatk(2).Caption = "Jackpot" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±
 End If
 End Sub
 Sub ±ö­Û_Lowball()
+Dim i As Integer
 If FormMainMode.personatk(3).Caption = "Lowball" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(65, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "±ö­Û" Then
    Select Case atkingck(65, 1)
@@ -3846,6 +3861,7 @@ If FormMainMode.personatk(3).Caption = "Lowball" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±
 End If
 End Sub
 Sub ±ö­Û_Gamble()
+Dim i As Integer
 If FormMainMode.personatk(4).Caption = "Gamble" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(66, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "±ö­Û" Then
    Select Case atkingck(66, 1)
@@ -3889,6 +3905,7 @@ If FormMainMode.personatk(4).Caption = "Gamble" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`
 End If
 End Sub
 Sub ­µ­µ¹Ú_¬ü¨ý¤û¥¤()
+Dim i As Integer, k As Integer
 If FormMainMode.personatk(1).Caption = "¬ü¨ý¤û¥¤" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(67, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "­µ­µ¹Ú" Then
    Select Case atkingck(67, 1)
@@ -3942,7 +3959,7 @@ If FormMainMode.personatk(1).Caption = "¬ü¨ý¤û¥¤" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub ­µ­µ¹Ú_·Å¬Xª`®g()
-Dim n(1 To 2) As Integer
+Dim n(1 To 2) As Integer, i As Integer
 If FormMainMode.personatk(2).Caption = "·Å¬Xª`®g" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(68, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "­µ­µ¹Ú" Then
    Select Case atkingck(68, 1)
@@ -4003,7 +4020,7 @@ If FormMainMode.personatk(2).Caption = "·Å¬Xª`®g" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub ­µ­µ¹Ú_´r§Ö©â¦å(ByVal Index As Integer)
-Dim n(1 To 2) As Integer
+Dim n(1 To 2) As Integer, i As Integer
 If FormMainMode.personatk(3).Caption = "´r§Ö©â¦å" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(69, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "­µ­µ¹Ú" Then
  Select Case atkingck(69, 1)
@@ -4081,6 +4098,7 @@ If FormMainMode.personatk(3).Caption = "´r§Ö©â¦å" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub ­µ­µ¹Ú_¯µ±K­WÃÄ()
+Dim i As Integer
 If FormMainMode.personatk(4).Caption = "¯µ±K­WÃÄ" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(70, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "­µ­µ¹Ú" Then
    Select Case atkingck(70, 1)
@@ -4132,6 +4150,7 @@ If FormMainMode.personatk(4).Caption = "¯µ±K­WÃÄ" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub ¦ã§B§õ´µ¯S_ºë±K®gÀ»()
+Dim i As Integer
 If FormMainMode.personatk(1).Caption = "ºë±K®gÀ»" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(71, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "¦ã§B§õ´µ¯S" Then
    Select Case atkingck(71, 1)
@@ -4174,6 +4193,7 @@ If FormMainMode.personatk(1).Caption = "ºë±K®gÀ»" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub ¦ã§B§õ´µ¯S_¹pÀ»()
+Dim i As Integer, m As Integer
 If FormMainMode.personatk(2).Caption = "¹pÀ»" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(72, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "¦ã§B§õ´µ¯S" Then
    Select Case atkingck(72, 1)
@@ -4257,6 +4277,7 @@ If FormMainMode.personatk(2).Caption = "¹pÀ»" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬
 End If
 End Sub
 Sub ¦ã§B§õ´µ¯S_¯ýªL()
+Dim i As Integer
 If FormMainMode.personatk(3).Caption = "¯ýªL" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(73, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "¦ã§B§õ´µ¯S" Then
    Select Case atkingck(73, 1)
@@ -4307,6 +4328,7 @@ If FormMainMode.personatk(3).Caption = "¯ýªL" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬
 End If
 End Sub
 Sub ¦ã§B§õ´µ¯S_´¼²¤()
+Dim i As Integer
 If FormMainMode.personatk(4).Caption = "´¼²¤" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(74, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "¦ã§B§õ´µ¯S" Then
    Select Case atkingck(74, 1)
@@ -4360,6 +4382,7 @@ If FormMainMode.personatk(4).Caption = "´¼²¤" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬
 End If
 End Sub
 Sub ¦ã¨Ì¬d®w_³s®g()
+Dim i As Integer, rrr As Integer
 If FormMainMode.personatk(1).Caption = "³s®g" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(78, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "¦ã¨Ì¬d®w" Then
    Select Case atkingck(78, 1)
@@ -4407,7 +4430,7 @@ If FormMainMode.personatk(1).Caption = "³s®g" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬
 End If
 End Sub
 Sub ¦ã¨Ì¬d®w_¯«³t¤§¼C(ByVal Index As Integer)
-Dim aw As Integer
+Dim aw As Integer, i As Integer
 If FormMainMode.personatk(2).Caption = "¯«³t¤§¼C" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(79, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "¦ã¨Ì¬d®w" Then
    Select Case atkingck(79, 1)
@@ -4484,7 +4507,7 @@ If FormMainMode.personatk(2).Caption = "¯«³t¤§¼C" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub ¦ã¨Ì¬d®w_¼««ã¤@À»()
-Dim ape As Integer
+Dim ape As Integer, i As Integer
 If FormMainMode.personatk(3).Caption = "¼««ã¤@À»" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(80, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "¦ã¨Ì¬d®w" Then
    Select Case atkingck(80, 1)
@@ -4531,6 +4554,7 @@ If FormMainMode.personatk(3).Caption = "¼««ã¤@À»" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub ¦ã¨Ì¬d®w_¤£©}¤§¤ß()
+Dim i As Integer, rrr As Integer
 If FormMainMode.personatk(4).Caption = "¤£©}¤§¤ß" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(81, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "¦ã¨Ì¬d®w" Then
    Select Case atkingck(81, 1)
@@ -4579,7 +4603,8 @@ If FormMainMode.personatk(4).Caption = "¤£©}¤§¤ß" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub ¥¬³Ò_µo±ø¾÷ºc()
-Dim tn As Integer
+Dim tn As Integer, i As Integer
+Dim ay() As String
 If FormMainMode.personatk(1).Caption = "µo±ø¾÷ºc" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(82, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "¥¬³Ò" Then
    Select Case atkingck(82, 1)
@@ -4680,6 +4705,7 @@ If FormMainMode.personatk(1).Caption = "µo±ø¾÷ºc" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub ¥¬³Ò_®É¶¡°lÂy()
+Dim i As Integer
 If FormMainMode.personatk(2).Caption = "®É¶¡°lÂy" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(83, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "¥¬³Ò" Then
    Select Case atkingck(83, 1)
@@ -4722,7 +4748,7 @@ If FormMainMode.personatk(2).Caption = "®É¶¡°lÂy" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub ¥¬³Ò_®É¶¡Ãz¼u()
-Dim tn As Integer
+Dim tn As Integer, i As Integer
 If FormMainMode.personatk(3).Caption = "®É¶¡Ãz¼u" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(84, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "¥¬³Ò" Then
    Select Case atkingck(84, 1)
@@ -4767,7 +4793,7 @@ If FormMainMode.personatk(3).Caption = "®É¶¡Ãz¼u" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub ¥¬³Ò_©]¹õ®É¤À()
-Dim tn(1 To 3) As Boolean
+Dim tn(1 To 3) As Boolean, i As Integer
 If FormMainMode.personatk(4).Caption = "©]¹õ®É¤À" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(85, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "¥¬³Ò" Then
    Select Case atkingck(85, 1)
@@ -4825,6 +4851,7 @@ If FormMainMode.personatk(4).Caption = "©]¹õ®É¤À" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub ªü¨©º¸_ÅQ¤ý°{À»()
+Dim i As Integer
 If FormMainMode.personatk(1).Caption = "ÅQ¤ý°{À»" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(86, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "ªü¨©º¸" Then
    Select Case atkingck(86, 1)
@@ -4867,6 +4894,7 @@ If FormMainMode.personatk(1).Caption = "ÅQ¤ý°{À»" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub ªü¨©º¸_°{¹q±Û­·¨ë()
+Dim i As Integer
 If FormMainMode.personatk(2).Caption = "°{¹q±Û­·¨ë" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(87, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "ªü¨©º¸" Then
    Select Case atkingck(87, 1)
@@ -4913,7 +4941,7 @@ If FormMainMode.personatk(2).Caption = "°{¹q±Û­·¨ë" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w
 End If
 End Sub
 Sub ªü¨©º¸_¤Û¼v¼C»R()
-Dim rrr(1 To 3) As Integer '¼È®ÉÅÜ¼Æ
+Dim rrr(1 To 3) As Integer, i As Integer '¼È®ÉÅÜ¼Æ
 If FormMainMode.personatk(3).Caption = "¤Û¼v¼C»R" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(88, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "ªü¨©º¸" Then
    Select Case atkingck(88, 1)
@@ -4971,6 +4999,7 @@ If FormMainMode.personatk(3).Caption = "¤Û¼v¼C»R" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub ªü¨©º¸_©â¤MÂ_¤ô­p()
+Dim i As Integer
 If FormMainMode.personatk(4).Caption = "©â¤MÂ_¤ô­p" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(89, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "ªü¨©º¸" Then
    Select Case atkingck(89, 1)
@@ -5030,6 +5059,7 @@ If FormMainMode.personatk(4).Caption = "©â¤MÂ_¤ô­p" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w
 End If
 End Sub
 Sub §Q®¦_§T¼v§ðÀ»()
+Dim i As Integer
 If FormMainMode.personatk(1).Caption = "§T¼v§ðÀ»" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(90, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "§Q®¦" Then
    Select Case atkingck(90, 1)
@@ -5089,6 +5119,7 @@ If FormMainMode.personatk(1).Caption = "§T¼v§ðÀ»" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub §Q®¦_¬r¤ú()
+Dim i As Integer
 If FormMainMode.personatk(2).Caption = "¬r¤ú" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(91, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "§Q®¦" Then
    Select Case atkingck(91, 1)
@@ -5152,6 +5183,7 @@ If FormMainMode.personatk(2).Caption = "¬r¤ú" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬
 End If
 End Sub
 Sub §Q®¦_¤ÏÀ»ªº¯T·Ï()
+Dim i As Integer
 If FormMainMode.personatk(3).Caption = "¤ÏÀ»ªº¯T·Ï" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(92, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "§Q®¦" Then
    Select Case atkingck(92, 1)
@@ -5212,6 +5244,7 @@ If FormMainMode.personatk(3).Caption = "¤ÏÀ»ªº¯T·Ï" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w
 End If
 End Sub
 Sub §Q®¦_­I¨ë()
+Dim i As Integer
 If FormMainMode.personatk(4).Caption = "­I¨ë" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(93, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "§Q®¦" Then
    Select Case atkingck(93, 1)
@@ -5261,6 +5294,7 @@ If FormMainMode.personatk(4).Caption = "­I¨ë" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬
 End If
 End Sub
 Sub ®L¬¥¯S_¥V¤§¹Ú()
+Dim i As Integer
 If FormMainMode.personatk(2).Caption = "¥V¤§¹Ú" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(95, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "®L¬¥¯S" Then
    Select Case atkingck(95, 1)
@@ -5385,6 +5419,7 @@ If FormMainMode.personatk(1).Caption = "¤j¸t°ó" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`
 End If
 End Sub
 Sub ®L¬¥¯S_©]¥¼¥¡()
+Dim i As Integer
 If FormMainMode.personatk(3).Caption = "©]¥¼¥¡" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(96, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "®L¬¥¯S" Then
    Select Case atkingck(96, 1)
@@ -5438,6 +5473,7 @@ If FormMainMode.personatk(3).Caption = "©]¥¼¥¡" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`
 End If
 End Sub
 Sub ®L¬¥¯S_©¯ºÖªº²z¥Ñ()
+Dim i As Integer
 If FormMainMode.personatk(4).Caption = "©¯ºÖªº²z¥Ñ" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(97, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "®L¬¥¯S" Then
    Select Case atkingck(97, 1)
@@ -5490,6 +5526,7 @@ If FormMainMode.personatk(4).Caption = "©¯ºÖªº²z¥Ñ" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w
 End If
 End Sub
 Sub ®õ·çº¸_Rud_913()
+Dim i As Integer
 If FormMainMode.personatk(1).Caption = "Rud-913" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(116, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "®õ·çº¸" Then
    Select Case atkingck(116, 1)
@@ -5535,6 +5572,7 @@ If FormMainMode.personatk(1).Caption = "Rud-913" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±
 End If
 End Sub
 Sub ®õ·çº¸_Von_541()
+Dim i As Integer
 If FormMainMode.personatk(2).Caption = "Von-541" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(117, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "®õ·çº¸" Then
    Select Case atkingck(117, 1)
@@ -5582,7 +5620,7 @@ If FormMainMode.personatk(2).Caption = "Von-541" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±
 End If
 End Sub
 Sub ®õ·çº¸_Chr_799()
-Dim m As Integer
+Dim m As Integer, i As Integer, j As Integer
 If FormMainMode.personatk(3).Caption = "Chr-799" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(118, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "®õ·çº¸" Then
    Select Case atkingck(118, 1)
@@ -5750,6 +5788,7 @@ If FormMainMode.personatk(3).Caption = "Chr-799" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±
 End If
 End Sub
 Sub ®õ·çº¸_Wil_846()
+Dim i As Integer, j As Integer
 If FormMainMode.personatk(4).Caption = "Wil-846" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(119, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "®õ·çº¸" Then
    Select Case atkingck(119, 1)
@@ -5847,7 +5886,7 @@ If FormMainMode.personatk(4).Caption = "Wil-846" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±
 End If
 End Sub
 Sub º¿®æ²ú¯S_¤ë¥ú()
-Dim m As Integer
+Dim m As Integer, i As Integer
 If FormMainMode.personatk(1).Caption = "¤ë¥ú" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(122, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "º¿®æ²ú¯S" Then
    Select Case atkingck(122, 1)
@@ -5963,19 +6002,18 @@ If FormMainMode.personatk(1).Caption = "¤ë¥ú" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬
 End If
 End Sub
 Sub º¿®æ²ú¯S_«é±«()
+Dim i As Integer
 If FormMainMode.personatk(2).Caption = "«é±«" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(123, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "º¿®æ²ú¯S" Then
    Select Case atkingck(123, 1)
         Case 1
             If movecp = 1 Then
              If atkingpagetot(1, 2) >= 3 And atkingpagetot(1, 3) >= 1 And atkingck(123, 2) = 0 Then
-'             If atkingpagetot(1, 2) >= 1 And atkingck(123, 2) = 0 Then
                ¾Ô°«¨t²ÎÃþ.¤Hª«§Þ¯àÄæ¿O¶}Ãö True, 2
                atkingck(123, 2) = 1
                atkingtrn(1) = Val(atkingtrn(1)) + 1
                §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) + 5
             ElseIf (atkingpagetot(1, 2) < 3 Or atkingpagetot(1, 3) < 1) And atkingck(123, 2) = 1 Then
-'            ElseIf atkingpagetot(1, 2) < 1 And atkingck(123, 2) = 1 Then
                ¾Ô°«¨t²ÎÃþ.¤Hª«§Þ¯àÄæ¿O¶}Ãö False, 2
                atkingck(123, 2) = 0
                atkingtrn(1) = Val(atkingtrn(1)) - 1
@@ -6027,7 +6065,7 @@ If FormMainMode.personatk(2).Caption = "«é±«" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬
 End If
 End Sub
 Sub º¿®æ²ú¯S_¥½¤é¤Û¼v()
-Dim m As Integer '¼È®ÉÅÜ¼Æ
+Dim m As Integer, i As Integer '¼È®ÉÅÜ¼Æ
 If FormMainMode.personatk(3).Caption = "¥½¤é¤Û¼v" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(124, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "º¿®æ²ú¯S" Then
    Select Case atkingck(124, 1)
@@ -6124,18 +6162,16 @@ If FormMainMode.personatk(3).Caption = "¥½¤é¤Û¼v" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub º¿®æ²ú¯S_¦aº»Ây¤ßÃ~()
-Dim m As Integer
+Dim m As Integer, i As Integer
 If FormMainMode.personatk(4).Caption = "¦aº»Ây¤ßÃ~" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(125, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "º¿®æ²ú¯S" Then
    Select Case atkingck(125, 1)
         Case 1
              If atkingpagetot(1, 1) >= 3 And atkingpagetot(1, 5) >= 3 And atkingck(125, 2) = 0 Then
-'             If atkingpagetot(1, 2) >= 1 And atkingck(125, 2) = 0 Then
                ¾Ô°«¨t²ÎÃþ.¤Hª«§Þ¯àÄæ¿O¶}Ãö True, 4
                atkingck(125, 2) = 1
                atkingtrn(1) = Val(atkingtrn(1)) + 1
             ElseIf (atkingpagetot(1, 1) < 3 Or atkingpagetot(1, 5) < 3) And atkingck(125, 2) = 1 Then
-'            ElseIf atkingpagetot(1, 2) < 1 And atkingck(125, 2) = 1 Then
                ¾Ô°«¨t²ÎÃþ.¤Hª«§Þ¯àÄæ¿O¶}Ãö False, 4
                atkingck(125, 2) = 0
                atkingtrn(1) = Val(atkingtrn(1)) - 1
@@ -6168,6 +6204,7 @@ If FormMainMode.personatk(4).Caption = "¦aº»Ây¤ßÃ~" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w
 End If
 End Sub
 Sub ®w°Ç¥§¦è_¨Fºz¤¤ªº®ü¥«¸Â¼Ó()
+Dim i As Integer
 If FormMainMode.personatk(1).Caption = "¨Fºz¤¤ªº®ü¥«¸Â¼Ó" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(128, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "®w°Ç¥§¦è" Then
    Select Case atkingck(128, 1)
@@ -6202,6 +6239,7 @@ If FormMainMode.personatk(1).Caption = "¨Fºz¤¤ªº®ü¥«¸Â¼Ó" And (°õ¦æ°Ê§@_ÀË¬d¬O§_
 End If
 End Sub
 Sub ®w°Ç¥§¦è_ºÆ¨g²´ºÛ()
+Dim i As Integer, m As Integer
 If FormMainMode.personatk(2).Caption = "ºÆ¨g²´ºÛ" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(129, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "®w°Ç¥§¦è" Then
    Select Case atkingck(129, 1)
@@ -6283,7 +6321,7 @@ If FormMainMode.personatk(2).Caption = "ºÆ¨g²´ºÛ" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub ®w°Ç¥§¦è_²`²W()
-Dim m As Integer
+Dim m As Integer, i As Integer
 If FormMainMode.personatk(3).Caption = "²`²W" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(130, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "®w°Ç¥§¦è" Then
    Select Case atkingck(130, 1)
@@ -6327,7 +6365,7 @@ If FormMainMode.personatk(3).Caption = "²`²W" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬
 End If
 End Sub
 Sub ®w°Ç¥§¦è_¶Â·tºx´õ()
-Dim m As Integer
+Dim m As Integer, i As Integer
 If FormMainMode.personatk(4).Caption = "¶Â·tºx´õ" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(131, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "®w°Ç¥§¦è" Then
    Select Case atkingck(131, 1)
@@ -6450,6 +6488,7 @@ If FormMainMode.personatk(1).Caption = "C.T.L" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª
 End If
 End Sub
 Sub Á¢®æ¯PªÜ_BPA()
+Dim i As Integer
 If FormMainMode.personatk(2).Caption = "B.P.A" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(136, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "Á¢®æ¯PªÜ" Then
    Select Case atkingck(136, 1)
@@ -6494,6 +6533,7 @@ If FormMainMode.personatk(2).Caption = "B.P.A" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª
 End If
 End Sub
 Sub Á¢®æ¯PªÜ_LAR()
+Dim i As Integer
 If FormMainMode.personatk(3).Caption = "L.A.R" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(137, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "Á¢®æ¯PªÜ" Then
    Select Case atkingck(137, 1)
@@ -6540,7 +6580,7 @@ If FormMainMode.personatk(3).Caption = "L.A.R" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª
 End If
 End Sub
 Sub Á¢®æ¯PªÜ_SSS()
-Dim rrr(1 To 3) As Integer '¼È®ÉÅÜ¼Æ
+Dim rrr(1 To 3) As Integer, i As Integer, j As Integer '¼È®ÉÅÜ¼Æ
 If FormMainMode.personatk(4).Caption = "S.S.S" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(138, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "Á¢®æ¯PªÜ" Then
    Select Case atkingck(138, 1)
@@ -6612,6 +6652,7 @@ If FormMainMode.personatk(4).Caption = "S.S.S" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª
 End If
 End Sub
 Sub ¦h©gÌH_´Ý­h¶É¦V()
+Dim i As Integer, m As Integer
 If FormMainMode.personatk(1).Caption = "´Ý­h¶É¦V" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(140, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "¦h©gÌH" Then
    Select Case atkingck(140, 1)
@@ -6818,6 +6859,7 @@ If FormMainMode.personatk(2).Caption = "²§½èªÌ" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`
 End If
 End Sub
 Sub ¦h©gÌH_¶W¯Å¤k¥D¨¤()
+Dim i As Integer, j As Integer
 If FormMainMode.personatk(3).Caption = "¶W¯Å¤k¥D¨¤" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(142, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "¦h©gÌH" Then
    Select Case atkingck(142, 1)
@@ -6915,6 +6957,7 @@ If FormMainMode.personatk(3).Caption = "¶W¯Å¤k¥D¨¤" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w
 End If
 End Sub
 Sub ¦h©gÌH_«ß¦ºÀ»()
+Dim i As Integer, j As Integer
 If FormMainMode.personatk(4).Caption = "«ß¦ºÀ»" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(143, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "¦h©gÌH" Then
    Select Case atkingck(143, 1)
@@ -6979,7 +7022,7 @@ If FormMainMode.personatk(4).Caption = "«ß¦ºÀ»" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`
 End If
 End Sub
 Sub ³Ç¦h_¦]ªG¤§½u()
-Dim m As Integer
+Dim m As Integer, i As Integer
 If FormMainMode.personatk(1).Caption = "¦]ªG¤§½u" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(144, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "³Ç¦h" Then
    Select Case atkingck(144, 1)
@@ -7031,7 +7074,7 @@ If FormMainMode.personatk(1).Caption = "¦]ªG¤§½u" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub ³Ç¦h_¦]ªG¤§½ü()
-Dim m, n As Integer
+Dim m As Integer, n As Integer, i As Integer
 Dim aw(1 To 2) As Integer
 If FormMainMode.personatk(2).Caption = "¦]ªG¤§½ü" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(145, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "³Ç¦h" Then
@@ -7095,7 +7138,7 @@ If FormMainMode.personatk(2).Caption = "¦]ªG¤§½ü" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub ³Ç¦h_¦]ªG¤§¨è()
-Dim m As Integer
+Dim m As Integer, i As Integer
 If FormMainMode.personatk(3).Caption = "¦]ªG¤§¨è" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(146, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "³Ç¦h" Then
    Select Case atkingck(146, 1)
@@ -7236,6 +7279,7 @@ If FormMainMode.personatk(4).Caption = "¦]ªG¤§¤Û" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub ªü©_ªiº¸¦h_¤j¦a±YÃa()
+Dim i As Integer
 If FormMainMode.personatk(1).Caption = "¤j¦a±YÃa" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(149, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "ªü©_ªiº¸¦h" Then
    Select Case atkingck(149, 1)
@@ -7279,7 +7323,7 @@ If FormMainMode.personatk(1).Caption = "¤j¦a±YÃa" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub ªü©_ªiº¸¦h_­P©RºjÀ»()
-Dim rrr(1 To 3) As Integer '¼È®ÉÅÜ¼Æ
+Dim rrr(1 To 3) As Integer, i As Integer '¼È®ÉÅÜ¼Æ
 If FormMainMode.personatk(2).Caption = "­P©RºjÀ»" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(150, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "ªü©_ªiº¸¦h" Then
    Select Case atkingck(150, 1)
@@ -7337,6 +7381,7 @@ If FormMainMode.personatk(2).Caption = "­P©RºjÀ»" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub ªü©_ªiº¸¦h_§T¼v§ðÀ»()
+Dim i As Integer
 If FormMainMode.personatk(3).Caption = "§T¼v§ðÀ»" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(151, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "ªü©_ªiº¸¦h" Then
    Select Case atkingck(151, 1)
@@ -7396,6 +7441,7 @@ If FormMainMode.personatk(3).Caption = "§T¼v§ðÀ»" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub ªü©_ªiº¸¦h_¨¾Å@®gÀ»()
+Dim i As Integer
 If FormMainMode.personatk(4).Caption = "¨¾Å@®gÀ»" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(152, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "ªü©_ªiº¸¦h" Then
    Select Case atkingck(152, 1)
@@ -7444,7 +7490,7 @@ If FormMainMode.personatk(4).Caption = "¨¾Å@®gÀ»" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub ¬¥¬¥©g_°fÂà¾Ô§½ªººjÅT()
-Dim bloodnum As Integer
+Dim bloodnum As Integer, i As Integer
 If FormMainMode.personatk(1).Caption = "°fÂà¾Ô§½ªººjÅT" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(153, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "¬¥¬¥©g" Then
    Select Case atkingck(153, 1)
@@ -7516,6 +7562,7 @@ If FormMainMode.personatk(1).Caption = "°fÂà¾Ô§½ªººjÅT" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³
 End If
 End Sub
 Sub ¬¥¬¥©g_­·¼É·Pª¾()
+Dim i As Integer
 If FormMainMode.personatk(2).Caption = "­·¼É·Pª¾" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(154, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "¬¥¬¥©g" Then
    Select Case atkingck(154, 1)
@@ -7555,6 +7602,7 @@ If FormMainMode.personatk(2).Caption = "­·¼É·Pª¾" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub ¬¥¬¥©g_¯¥À»À£¨î()
+Dim i As Integer, j As Integer
 If FormMainMode.personatk(3).Caption = "¯¥À»À£¨î" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(155, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "¬¥¬¥©g" Then
    Select Case atkingck(155, 1)
@@ -7618,6 +7666,7 @@ If FormMainMode.personatk(3).Caption = "¯¥À»À£¨î" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub ¬¥¬¥©g_³g°ý¤§¤b»P¶Ý¦å¤§ºj()
+Dim i As Integer, k As Integer
 If FormMainMode.personatk(4).Caption = "³g°ý¤§¤b»P¶Ý¦å¤§ºj" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(156, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "¬¥¬¥©g" Then
    Select Case atkingck(156, 1)
@@ -7710,6 +7759,7 @@ If FormMainMode.personatk(4).Caption = "³g°ý¤§¤b»P¶Ý¦å¤§ºj" And (°õ¦æ°Ê§@_ÀË¬d¬O
 End If
 End Sub
 Sub §J¹y_ÅÑ¨ú¸ê®Æ()
+Dim i As Integer, m As Integer
 If FormMainMode.personatk(1).Caption = "ÅÑ¨ú¸ê®Æ" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(157, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "§J¹y" Then
    Select Case atkingck(157, 1)
@@ -7795,7 +7845,7 @@ End If
 End Sub
 Sub §J¹y_°k¤`­pµe()
 Dim rrr(1 To 2) As Integer 'µP§PÂ_¼È®ÉÅÜ¼Æ
-Dim au As Integer
+Dim au As Integer, i As Integer, m As Integer
 If FormMainMode.personatk(2).Caption = "°k¤`­pµe" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(158, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "§J¹y" Then
    Select Case atkingck(158, 1)
@@ -7947,7 +7997,7 @@ End If
 End Sub
 Sub §J¹y_´c·N±¡³ø()
 Dim rrr(1 To 2) As Integer 'µP§PÂ_¼È®ÉÅÜ¼Æ
-Dim au As Integer
+Dim au As Integer, i As Integer, k As Integer
 If FormMainMode.personatk(4).Caption = "´c·N±¡³ø" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(160, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "§J¹y" Then
    Select Case atkingck(160, 1)
@@ -8042,6 +8092,7 @@ If FormMainMode.personatk(4).Caption = "´c·N±¡³ø" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub ÅS½{¨È_»G¦´¤§ÆF()
+Dim i As Integer
 If FormMainMode.personatk(1).Caption = "»G¦´¤§ÆF" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(98, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "ÅS½{¨È" Then
    Select Case atkingck(98, 1)
@@ -8102,6 +8153,7 @@ If FormMainMode.personatk(1).Caption = "»G¦´¤§ÆF" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub ÅS½{¨È_ÂaÄg¤§·t()
+Dim i As Integer
 If FormMainMode.personatk(2).Caption = "ÂaÄg¤§·t" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(99, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "ÅS½{¨È" Then
    Select Case atkingck(99, 1)
@@ -8147,6 +8199,7 @@ If FormMainMode.personatk(2).Caption = "ÂaÄg¤§·t" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub ÅS½{¨È_·t¼v¤§Ál()
+Dim i As Integer
 If FormMainMode.personatk(3).Caption = "·t¼v¤§Ál" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(100, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "ÅS½{¨È" Then
    Select Case atkingck(100, 1)
@@ -8195,7 +8248,7 @@ If FormMainMode.personatk(3).Caption = "·t¼v¤§Ál" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub ÅS½{¨È_´õÃM¼C°{(ByVal Index As Integer)
-Dim aw As Integer
+Dim aw As Integer, i As Integer
 If FormMainMode.personatk(4).Caption = "´õÃM¼C°{" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(101, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "ÅS½{¨È" Then
    Select Case atkingck(101, 1)
@@ -8289,7 +8342,7 @@ If FormMainMode.personatk(4).Caption = "´õÃM¼C°{" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub ¦ãÁ¢¥i_¤ý®y¤§ª¢()
-Dim dge As Integer
+Dim dge As Integer, i As Integer
 If FormMainMode.personatk(1).Caption = "¤ý®y¤§ª¢" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(102, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "¦ãÁ¢¥i" Then
    Select Case atkingck(102, 1)
@@ -8356,7 +8409,7 @@ If FormMainMode.personatk(1).Caption = "¤ý®y¤§ª¢" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub ¦ãÁ¢¥i_¥Õ¦Ê¦X()
-Dim dge As Integer
+Dim dge As Integer, i As Integer
 If FormMainMode.personatk(2).Caption = "¥Õ¦Ê¦X" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(103, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "¦ãÁ¢¥i" Then
    Select Case atkingck(103, 1)
@@ -8420,7 +8473,7 @@ If FormMainMode.personatk(2).Caption = "¥Õ¦Ê¦X" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`
 End If
 End Sub
 Sub ¦ãÁ¢¥i_¸t¤ý«Â¥ú()
-Dim dge As Integer
+Dim dge As Integer, i As Integer
 If FormMainMode.personatk(3).Caption = "¸t¤ý«Â¥ú" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(104, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "¦ãÁ¢¥i" Then
    Select Case atkingck(104, 1)
@@ -8474,7 +8527,7 @@ If FormMainMode.personatk(3).Caption = "¸t¤ý«Â¥ú" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub ¦ãÁ¢¥i_±ÏÀÙ¤Ñ¨Ï()
-Dim dge As Integer
+Dim dge As Integer, i As Integer, j As Integer
 If FormMainMode.personatk(4).Caption = "±ÏÀÙ¤Ñ¨Ï" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(105, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "¦ãÁ¢¥i" Then
    Select Case atkingck(105, 1)
@@ -8600,7 +8653,7 @@ If FormMainMode.personatk(4).Caption = "±ÏÀÙ¤Ñ¨Ï" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub ±ö²ú_¹Ú¤ÛÅ]§ú()
-Dim m As Integer, n As Integer, bd As Integer
+Dim m As Integer, n As Integer, bd As Integer, i As Integer, j As Integer
 If FormMainMode.personatk(1).Caption = "¹Ú¤ÛÅ]§ú" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(106, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "±ö²ú" Then
    Select Case atkingck(106, 1)
@@ -8704,7 +8757,7 @@ If FormMainMode.personatk(1).Caption = "¹Ú¤ÛÅ]§ú" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub ±ö²ú_·K´a¹Ú¦Ð()
-Dim m As Integer, n As Integer, bd As Integer
+Dim m As Integer, n As Integer, bd As Integer, i As Integer
 If FormMainMode.personatk(2).Caption = "·K´a¹Ú¦Ð" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(107, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "±ö²ú" Then
    Select Case atkingck(107, 1)
@@ -8788,7 +8841,7 @@ If FormMainMode.personatk(2).Caption = "·K´a¹Ú¦Ð" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub ±ö²ú_ºø¦Ï¤Û¹Ú()
-Dim bloodnum As Integer
+Dim bloodnum As Integer, i As Integer
 If FormMainMode.personatk(3).Caption = "ºø¦Ï¤Û¹Ú" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(108, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "±ö²ú" Then
    Select Case atkingck(108, 1)
@@ -8864,6 +8917,7 @@ If FormMainMode.personatk(3).Caption = "ºø¦Ï¤Û¹Ú" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub ±ö²ú_¹Ú¹Ò·nÄx()
+Dim i As Integer
 If FormMainMode.personatk(4).Caption = "¹Ú¹Ò·nÄx" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(109, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "±ö²ú" Then
    Select Case atkingck(109, 1)
@@ -8916,7 +8970,7 @@ If FormMainMode.personatk(4).Caption = "¹Ú¹Ò·nÄx" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub ¨©µY¹F_³·¥ú()
-Dim bloodnum As Integer
+Dim bloodnum As Integer, i As Integer
 If FormMainMode.personatk(1).Caption = "³·¥ú" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(110, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "¨©µY¹F" Then
    Select Case atkingck(110, 1)
@@ -8988,6 +9042,7 @@ If FormMainMode.personatk(1).Caption = "³·¥ú" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬
 End If
 End Sub
 Sub ¨©µY¹F_¤ô´¹¤ÛÃè()
+Dim i As Integer
 If FormMainMode.personatk(2).Caption = "¤ô´¹¤ÛÃè" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(111, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "¨©µY¹F" Then
    Select Case atkingck(111, 1)
@@ -9057,7 +9112,7 @@ If FormMainMode.personatk(2).Caption = "¤ô´¹¤ÛÃè" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub ¨©µY¹F_µõ¦a¦B¤ú()
-Dim wtr As Integer, wert(1 To 3) As Boolean, wery As Integer '¼È®ÉÅÜ¼Æ
+Dim wtr As Integer, wert(1 To 3) As Boolean, wery As Integer, i As Integer '¼È®ÉÅÜ¼Æ
 If FormMainMode.personatk(3).Caption = "µõ¦a¦B¤ú" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(112, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "¨©µY¹F" Then
    Select Case atkingck(112, 1)
@@ -9114,6 +9169,7 @@ If FormMainMode.personatk(3).Caption = "µõ¦a¦B¤ú" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub ¨©µY¹F_·»»î¤§«B()
+Dim i As Integer
 If FormMainMode.personatk(4).Caption = "·»»î¤§«B" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(113, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "¨©µY¹F" Then
    Select Case atkingck(113, 1)
@@ -9184,7 +9240,7 @@ If FormMainMode.personatk(4).Caption = "·»»î¤§«B" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
 End If
 End Sub
 Sub ¤×²ú¥d_¦l¦ðªºÅKÂñ()
-Dim wert As Integer '¼È®ÉÅÜ¼Æ
+Dim wert As Integer, i As Integer '¼È®ÉÅÜ¼Æ
 If FormMainMode.personatk(1).Caption = "¦l¦ðªºÅKÂñ" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(46, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "¤×²ú¥d" Then
    Select Case atkingck(46, 1)
@@ -9291,7 +9347,7 @@ If FormMainMode.personatk(1).Caption = "¦l¦ðªºÅKÂñ" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w
 End If
 End Sub
 Sub ¤×²ú¥d_¤£µ½ªº«H¥õ()
-Dim wert As Integer '¼È®ÉÅÜ¼Æ
+Dim wert As Integer, i As Integer '¼È®ÉÅÜ¼Æ
 If FormMainMode.personatk(2).Caption = "¤£µ½ªº«H¥õ" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(47, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "¤×²ú¥d" Then
    Select Case atkingck(47, 1)
@@ -9376,7 +9432,7 @@ If FormMainMode.personatk(2).Caption = "¤£µ½ªº«H¥õ" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w
 End If
 End Sub
 Sub ¤×²ú¥d_¦±´cªº¦w¹ç()
-Dim wert As Integer '¼È®ÉÅÜ¼Æ
+Dim wert As Integer, i As Integer, k As Integer '¼È®ÉÅÜ¼Æ
 If FormMainMode.personatk(3).Caption = "¦±´cªº¦w¹ç" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(48, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "¤×²ú¥d" Then
    Select Case atkingck(48, 1)
@@ -9449,7 +9505,7 @@ If FormMainMode.personatk(3).Caption = "¦±´cªº¦w¹ç" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w
 End If
 End Sub
 Sub ¤×²ú¥d_¶W¸ü()
-Dim wert As Integer '¼È®ÉÅÜ¼Æ
+Dim wert As Integer, i As Integer '¼È®ÉÅÜ¼Æ
 If FormMainMode.personatk(4).Caption = "¶W¸ü" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(49, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "¤×²ú¥d" Then
    Select Case atkingck(49, 1)
@@ -9573,6 +9629,7 @@ If FormMainMode.personatk(4).Caption = "¶W¸ü" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬
 End If
 End Sub
 Sub Ã¹²ïµY_EX_¬V¦å¤§¤b()
+Dim i As Integer
 If FormMainMode.personatk(2).Caption = "Ex¬V¦å¤§¤b" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(50, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "Ã¹²ïµY" Then
    Select Case atkingck(50, 1)

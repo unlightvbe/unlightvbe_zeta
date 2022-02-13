@@ -1,4 +1,5 @@
 Attribute VB_Name = "智慧型AI系統類"
+Option Explicit
 Public cardcountAInum() As String  '公用牌計算暫時基本資料(第x張,1.正面類型/2.正面數值/3.反面類型/4.反面數值/5.牌編號)
 Public cardcountAInumMOV() As String  '公用牌計算暫時基本資料-移動階段續-原本(第x張,1.正面類型/2.正面數值/3.反面類型/4.反面數值/5.牌編號)
 Dim cardAIn() As Integer '排列組合計算暫時變數
@@ -42,6 +43,7 @@ ReDim cardAInumFinal2(1 To 2 ^ cardAInumuscom, 1 To 4) As Integer
 智慧型AI系統類.排列組合計算 pagenumber
 End Sub
 Sub 智慧型AI系統計算_一階段_取得牌面資料(ByVal 是否一般 As Boolean, ByVal uscom As Integer)
+Dim i As Integer
 If 是否一般 = True Then
         '=========擷取目前牌面資料
         Select Case uscom
@@ -65,7 +67,7 @@ End If
 智慧型AI系統類.排列組合統計數值計算_個別組合
 End Sub
 Sub 智慧型AI系統計算_二階段_計算期望值_初始(ByVal turn As Integer, ByVal movecpre As Integer, ByVal uscom As Integer)
-Dim wnum As Integer, whnum As Integer '暫時變數
+Dim wnum As Integer, whnum As Integer, i As Integer, j As Integer '暫時變數
 Select Case turn
     Case 1 '===攻擊階段
          If uscom = 1 Then whnum = atkus(角色人物對戰人數(1, 2)) Else whnum = atkcom(角色人物對戰人數(2, 2))
@@ -206,6 +208,7 @@ End Select
 
 End Sub
 Sub 排列組合計算(ByVal qnum As Integer)
+Dim i As Integer
 '===========
 ReDim cardAIn(1 To Val(qnum))
 Erase cardAInumnm
@@ -241,6 +244,7 @@ cardAInumnm = Split(cardAInumans, "=")
 
 End Sub
 Sub 排列組合計算_區塊進位(ByVal num As Integer)
+Dim i As Integer
 For i = 1 To num - 1
     If cardAIn(i) = 2 Then
         cardAIn(i + 1) = cardAIn(i + 1) + 1
@@ -250,7 +254,7 @@ Next
 
 End Sub
 Sub 排列組合統計數值計算_手牌總計()
-Dim we As Integer  '暫時變數
+Dim we As Integer, i As Integer, j As Integer '暫時變數
 For i = 1 To cardAInumuscom
     For j = 1 To 2
         we = 2 * j
@@ -295,7 +299,7 @@ For i = 1 To cardAInumuscom
 Next
 End Sub
 Sub 排列組合統計數值計算_個別組合()
-Dim we As Integer '暫時變數
+Dim we As Integer, i As Integer, j As Integer '暫時變數
 For i = 1 To 2 ^ cardAInumuscom
     For j = 1 To cardAInumuscom
         Select Case Mid(cardAInumnm(i - 1), j, 1)
@@ -402,6 +406,7 @@ For i = 1 To 2 ^ cardAInumuscom
 Next
 End Sub
 Sub 智慧型AI系統計算_三階段_統計排列()
+Dim i As Integer, j As Integer, k As Integer
 '=================複製內容
 For k = 1 To 2 ^ cardAInumuscom
     cardAInumFinal2(k, 1) = cardAInumFinal(k, 1)
@@ -423,6 +428,7 @@ For i = 2 ^ cardAInumuscom To 1 Step -1
 Next
 End Sub
 Sub 智慧型AI系統計算_四階段_比序_1_初始()
+Dim i As Integer
 For i = 1 To 2 ^ cardAInumuscom
     If Val(cardAInumFinal2(i, 1)) > Val(cardAInumselect1) Then
         cardAInumselect1 = cardAInumFinal2(i, 1)
@@ -442,6 +448,7 @@ If cardAInumselect2 = "" Then  '沒有任何組合符合條件
 End If
 End Sub
 Sub 智慧型AI系統計算_四階段_比序_2_超額比序判斷_1()
+Dim i As Integer, j As Integer
 cardAInumselect3 = Split(cardAInumselect2, "=")
 If UBound(cardAInumselect3) > 1 Then
     For i = 1 To 2 ^ cardAInumuscom
@@ -465,6 +472,7 @@ If UBound(cardAInumselect3) > 1 Then
 End If
 End Sub
 Sub 智慧型AI系統計算_四階段_比序_2_超額比序判斷_2()
+Dim i As Integer
 If UBound(cardAInumselect3) > 1 Then
     Dim wer As Integer
     For i = 1 To 2 ^ cardAInumuscom
@@ -495,7 +503,7 @@ Else
 End If
 End Sub
 Sub 智慧型AI系統計算_最後階段_實行選牌(ByVal choose As Integer, ByVal uscom As Integer)
-Dim wer As Integer '暫時變數
+Dim wer As Integer, i As Integer, cspce As String, cspme As String '暫時變數
 If choose = 1 Then
     wer = 0
 Else
@@ -541,6 +549,7 @@ Select Case uscom
 End Select
 End Sub
 Sub 智慧型AI系統計算_暫時匯出(ByVal uscom As Integer)
+Dim i As Integer, k As Integer
 If Formsetting.checktest.Value = 1 Then
 '    Open App.Path & "\test\out1.txt" For Output As #1
     Open App.Path & "\test\AIout" & Format(Now, "_yyyy-m-d_hh-mm-ss_") & 戰鬥系統類.turn & "turn_" & 戰鬥系統類.turnatk & "_" & uscom & "_1.txt" For Output As #1
@@ -672,7 +681,7 @@ Select Case name
 End Select
 End Function
 Function 階層數(ByVal num As Integer) As Single
-Dim w As Double
+Dim w As Double, i As Integer
 w = 1
 If num <> 0 Then
     For i = 1 To Val(num)
@@ -689,7 +698,7 @@ Function 階層數_取C(ByVal c1 As Integer, ByVal c2 As Integer) As Single
 
 End Function
 Sub 智慧型AI系統計算_移動階段續_取得計算之排列組合(ByVal n1 As Integer, ByVal n2 As Integer)
-Dim wtstr As String, wtall As Integer, wtpnum() As String, wtn As Integer
+Dim wtstr As String, wtall As Integer, wtpnum() As String, wtn As Integer, i As Integer, j As Integer
 '===================
 智慧型AI系統類.排列組合計算 n1
 wtall = 智慧型AI系統類.階層數_取C(n1, n2)
@@ -723,7 +732,7 @@ Function 智慧型AI系統計算_移動階段續_判斷出牌資格(ByVal uscom As Integer) As Boo
 Erase cardAInumMOVmain
 Erase cardAInumMOVnm
 Erase cardAInumMOVnmtot
-Dim wtmovnum As Integer '暫時變數
+Dim wtmovnum As Integer, i As Integer '暫時變數
 If cardAInumchoose = -10 Then
     智慧型AI系統計算_移動階段續_判斷出牌資格 = False
     Exit Function
@@ -758,6 +767,7 @@ Else
 End If
 End Function
 Sub 智慧型AI系統計算_移動階段續_否定面_一階段_重設期望值_個別()
+Dim i As Integer
 For i = 1 To cardAInumuscom
     If cardAInumcaseperson(cardAInumchoose, 2, i) < 10 Then
         cardAInumcaseperson(cardAInumchoose, 2, i) = 0
@@ -766,7 +776,7 @@ For i = 1 To cardAInumuscom
 Next
 End Sub
 Sub 智慧型AI系統計算_移動階段續_正向面_一階段_準備進行資料()
-Dim wercnum As Integer, werct As String, werpnum As Integer
+Dim wercnum As Integer, werct As String, werpnum As Integer, k As Integer, q As Integer
 ReDim cardcountAInumMOV(1 To cardAInumuscom, 1 To 5) As String
 是否移動階段續估計判斷程序 = True
 For k = 1 To cardAInumuscom
@@ -803,7 +813,7 @@ Sub 智慧型AI系統計算_移動階段續_正向面_二階段_進行估計排列組合串計算(ByVal pagen
 Dim weru As Integer, wernum As Integer, werqr As String
 Dim werstru As String
 Dim werpstr() As String
-Dim wermovnm As Integer, wermovynm As Integer
+Dim wermovnm As Integer, wermovynm As Integer, i As Integer, k As Integer
 '============進行估計之移動牌排列組合計算
 For i = 1 To Val(cardAInumMOVnmtot(0, 3))
        智慧型AI系統計算_移動階段續_取得計算之排列組合 Val(cardAInumMOVnmtot(0, 3)), i
@@ -890,7 +900,7 @@ End If
 '==============================
 End Sub
 Sub 智慧型AI系統計算_移動階段續_正向面_三階段_進行估計期望值計算(ByVal uscom As Integer, ByVal name As String, ByVal choose As Integer, ByVal movecpre As Integer, ByVal pagenumber As Integer)
-Dim weru As Integer, wertp As Integer, movecpren As Integer, turnm As Integer, werucount As Boolean
+Dim weru As Integer, wertp As Integer, movecpren As Integer, turnm As Integer, werucount As Boolean, i As Integer, k As Integer, q As Integer, wp As Integer, wds As Integer
 For i = 1 To 2 ^ Val(cardAInumMOVnmtot(0, 3))
     For k = 1 To 2
          '===========將資料轉移至待運算資料
@@ -974,7 +984,7 @@ End If
 End Sub
 Sub 智慧型AI系統計算_移動階段續_正向面_四階段_統計估計期望值及判斷(ByVal uscom As Integer)
 Dim atk1max As Integer, atk2max As Integer, defmax As Integer, chemax As Integer, chestr As String
-Dim wtmovnum As Integer
+Dim wtmovnum As Integer, i As Integer
 '==================篩選是否符合移動量
 For i = 14 * (角色人物對戰人數(uscom, 2) - 1) + 1 To 14 * 角色人物對戰人數(uscom, 2)
     If (人物異常狀態資料庫(uscom, i, 3) = 6 And uscom = 2) Or (人物異常狀態資料庫(uscom, i, 3) = 12 And uscom = 1) Then
@@ -1034,7 +1044,7 @@ Sub 智慧型AI系統計算_移動階段續_正向面_確認實行_選擇最終組合(ByVal movche As Int
 Dim werstr As String, werg() As String, werg2() As String, werg3() As String
 Dim werpagenum As Integer, werpgnumstr As String
 Dim wermovmaxnum As Integer, wermvaxstr As String
-Dim werrndnum As Integer, werche As Integer
+Dim werrndnum As Integer, werche As Integer, i As Integer, k As Integer
 '==========================
 If movche = 1 Then werche = 3 Else werche = 4
 '==========================
@@ -1096,7 +1106,7 @@ Else
     wer = 1
 End If
 '=================
-Dim pu As Integer '暫時變數
+Dim pu As Integer, i As Integer, cspce As String, cspme As String '暫時變數
 '=======================如組合符合出牌條件的話
 Select Case uscom
      Case 1 '==使用者方
@@ -1155,6 +1165,7 @@ End Select
 是否移動階段續估計判斷程序 = False
 End Sub
 Sub 智慧型AI系統計算_引導程序_超出牌張數(ByVal uscom As Integer, ByVal turn As Integer, ByVal name As String, ByVal movecpre As Integer, ByVal choose As Integer)
+Dim i As Integer, w As Integer
 If Val(pageglead(uscom)) > 10 Then
     Erase cardAInumOvertenrecord
     智慧型AI系統類.智慧型AI系統計算_一階段_初始 10
@@ -1165,7 +1176,6 @@ If Val(pageglead(uscom)) > 10 Then
             Case 2
                 戰鬥系統類.出牌順序計算_電腦_手牌
         End Select
-        Dim w As Integer '暫時變數
         w = 2 * uscom '(2-使用者手牌/4-電腦手牌)
         For i = 1 To 10
             cardcountAInum(i, 5) = 出牌順序統計暫時變數(w, i, 2)
@@ -1198,6 +1208,7 @@ End If
 End Sub
 Sub 檢查人物技能是否有EX技(ByVal uscom As Integer, ByVal name As String)
 Erase personatkingtfr
+Dim i As Integer, k As Integer
 For i = 1 To 3
      If VBEPerson(uscom, i, 1, 1, 1) = name Then
          For k = 1 To 4
@@ -1217,6 +1228,7 @@ For i = 1 To 3
 Next
 End Sub
 Sub 智慧型AI系統_使用者出牌階段判斷反轉()
+Dim i As Integer
 For i = 1 To 106
     If Val(pagecardnum(i, 11)) = 4 And Val(pagecardnum(i, 5)) = 1 And Val(pagecardnum(i, 6)) = 1 Then
         FormMainMode.cgen_Click (i)

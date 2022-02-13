@@ -359,6 +359,7 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
+Option Explicit
 'Dim m_showusnum As Integer
  Dim m_adcomtext As Integer
  Dim m_adustext As Integer
@@ -418,6 +419,7 @@ End If
 End Sub
 
 Private Sub UserControl_Show()
+Dim i As Integer
 adusall = 1
 adcomall = 1
 t1.Enabled = True

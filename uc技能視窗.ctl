@@ -26,7 +26,7 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
-
+Option Explicit
 Dim m_smallimage As String
 Public Property Get 技能圖片() As String
    技能圖片 = m_smallimage

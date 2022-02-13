@@ -132,7 +132,7 @@ Begin VB.Form FormAbout
       Width           =   3615
    End
    Begin VB.Label aboutvn 
-      Caption         =   "Bulid 2949 (ULVBE-1.10.2949)"
+      Caption         =   "Bulid 2964 (ULVBE-1.10.2964)"
       BeginProperty Font 
          Name            =   "·L³n¥¿¶ÂÅé"
          Size            =   12
@@ -188,6 +188,7 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
+Option Explicit
 Private Sub Command1_Click()
 FormAbout.Visible = False
 End Sub

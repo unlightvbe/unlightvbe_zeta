@@ -1,4 +1,5 @@
 Attribute VB_Name = "一般系統類"
+Option Explicit
 Public app_path As String  '路徑設定碼
 Public 角色人物對戰人數(1 To 2, 1 To 2) As Integer '雙方對戰角色人數紀錄數(1.使用者/2.電腦,1.總共人數/2.目前第幾位)
 Public 角色待機人物紀錄數(1 To 2, 1 To 3) As Integer '雙方待機角色人物編號紀錄數(1.使用者/2.電腦,1.無意義/2~3.第n位編號)
@@ -1561,7 +1562,7 @@ For i = 1 To 3
 Next
 End Sub
 Sub 自由戰鬥模式設定表單各式設定讀入程序()
-Dim ne As Integer, nd As Integer '暫時變數
+Dim ne As Integer, nd As Integer, i As Integer '暫時變數
 '========角色色格讀入
 For i = 1 To 18
     ne = i Mod 6
@@ -1575,7 +1576,7 @@ For i = 1 To 18
 Next
 End Sub
 Sub 通知表單顯示(ByVal num As Integer)
-Dim pstr() As String
+Dim pstr() As String, k As Integer
 Select Case num
     Case 1
         FormMessage.Label2 = "大小姐您好" & Chr(10)
@@ -1609,4 +1610,16 @@ End Sub
 Sub 擲骰動畫表單顯示()
 FormDice.FormActivate
 FormDice.Show 1
+End Sub
+Sub 離開遊戲提示(Cancel As Integer, UnloadMode As Integer)
+Dim YesNo As VbMsgBoxResult
+If UnloadMode = 0 Then
+   YesNo = MsgBox("確定離開遊戲?", 36, "UnlightVBE-系統提示")
+   If YesNo = VbMsgBoxResult.vbYes Then
+    End
+   Else
+    Cancel = 1
+   End If
+End If
+
 End Sub

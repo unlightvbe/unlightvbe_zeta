@@ -1,6 +1,7 @@
 Attribute VB_Name = "AI人物"
+Option Explicit
 Sub 全人物通用(ByVal n As Integer)
-Dim ay As Integer
+Dim ay As Integer, i As Integer, j As Integer, cspce As String, cspme As String
 Select Case n
     Case 1
         '================異常狀態-MOV減-有效移動值判斷處理
@@ -94,6 +95,7 @@ Select Case n
 End Select
 End Sub
 Sub 艾依查庫(ByVal n As Integer)
+Dim j As Integer, cspce As String, cspme As String
 If FormMainMode.compi1(角色人物對戰人數(2, 2)) = "艾依查庫" Then
     Select Case n
         Case 1
@@ -148,6 +150,7 @@ If FormMainMode.compi1(角色人物對戰人數(2, 2)) = "艾依查庫" Then
 End If
 End Sub
 Sub 艾伯李斯特(ByVal n As Integer)
+Dim j As Integer, cspce As String, cspme As String
 Dim aw As Integer
 If FormMainMode.compi1(角色人物對戰人數(2, 2)) = "艾伯李斯特" Then
     Select Case n
@@ -243,6 +246,7 @@ If FormMainMode.compi1(角色人物對戰人數(2, 2)) = "艾伯李斯特" Then
 End If
 End Sub
 Sub 史塔夏(ByVal n As Integer)
+Dim j As Integer, cspce As String, cspme As String, i As Integer
 Dim aw(1 To 2) As Integer
 Dim ae As Integer
 Dim num(1 To 2, 1 To 2) As Integer '選擇人物暫時變數
@@ -365,6 +369,7 @@ If FormMainMode.compi1(角色人物對戰人數(2, 2)) = "史塔夏" Then
 End If
 End Sub
 Sub CC(ByVal n As Integer)
+Dim j As Integer, cspce As String, cspme As String
 Dim aw As Integer
 If FormMainMode.compi1(角色人物對戰人數(2, 2)) = "C.C." Then
     Select Case n
@@ -427,6 +432,7 @@ If FormMainMode.compi1(角色人物對戰人數(2, 2)) = "C.C." Then
 End If
 End Sub
 Sub 梅倫(ByVal n As Integer)
+Dim j As Integer, cspce As String, cspme As String
 If FormMainMode.compi1(角色人物對戰人數(2, 2)) = "梅倫" Then
     Select Case n
         Case 1
@@ -456,6 +462,7 @@ If FormMainMode.compi1(角色人物對戰人數(2, 2)) = "梅倫" Then
 End If
 End Sub
 Sub 利恩(ByVal n As Integer)
+Dim j As Integer, cspce As String, cspme As String
 If FormMainMode.compi1(角色人物對戰人數(2, 2)) = "利恩" Then
     Select Case n
         Case 1
@@ -487,6 +494,7 @@ If FormMainMode.compi1(角色人物對戰人數(2, 2)) = "利恩" Then
 End If
 End Sub
 Sub 夏洛特(ByVal n As Integer)
+Dim j As Integer, cspce As String, cspme As String
 If FormMainMode.compi1(角色人物對戰人數(2, 2)) = "夏洛特" Then
     Select Case n
         Case 1
@@ -516,6 +524,7 @@ If FormMainMode.compi1(角色人物對戰人數(2, 2)) = "夏洛特" Then
 End If
 End Sub
 Sub 庫勒尼西(ByVal n As Integer)
+Dim j As Integer, cspce As String, cspme As String
 Dim aw As Integer
 If FormMainMode.compi1(角色人物對戰人數(2, 2)) = "庫勒尼西" Then
     Select Case n
@@ -555,6 +564,7 @@ If FormMainMode.compi1(角色人物對戰人數(2, 2)) = "庫勒尼西" Then
 End If
 End Sub
 Sub 蕾格烈芙(ByVal n As Integer)
+Dim j As Integer, cspce As String, cspme As String
 If FormMainMode.compi1(角色人物對戰人數(2, 2)) = "蕾格烈芙" Then
     Select Case n
         Case 1
@@ -609,6 +619,7 @@ If FormMainMode.compi1(角色人物對戰人數(2, 2)) = "蕾格烈芙" Then
 End If
 End Sub
 Sub 多妮妲(ByVal n As Integer)
+Dim j As Integer, cspce As String, cspme As String
 Dim aw As Integer
 If FormMainMode.compi1(角色人物對戰人數(2, 2)) = "多妮妲" Then
     Select Case n
@@ -637,6 +648,7 @@ If FormMainMode.compi1(角色人物對戰人數(2, 2)) = "多妮妲" Then
 End If
 End Sub
 Sub 阿奇波爾多(ByVal n As Integer)
+Dim j As Integer, cspce As String, cspme As String
 If FormMainMode.compi1(角色人物對戰人數(2, 2)) = "阿奇波爾多" Then
     Select Case n
         Case 1
@@ -691,6 +703,7 @@ If FormMainMode.compi1(角色人物對戰人數(2, 2)) = "阿奇波爾多" Then
 End If
 End Sub
 Sub 瑪格莉特(ByVal n As Integer)
+Dim j As Integer, cspce As String, cspme As String
 If FormMainMode.compi1(角色人物對戰人數(2, 2)) = "瑪格莉特" Then
     Select Case n
         Case 1
@@ -722,6 +735,7 @@ If FormMainMode.compi1(角色人物對戰人數(2, 2)) = "瑪格莉特" Then
 End If
 End Sub
 Sub 艾蕾可(ByVal n As Integer)
+Dim j As Integer, cspce As String, cspme As String
 Dim aw As Integer
 If FormMainMode.compi1(角色人物對戰人數(2, 2)) = "艾蕾可" Then
     Select Case n

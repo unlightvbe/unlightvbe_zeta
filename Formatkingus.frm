@@ -40,23 +40,12 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
+Option Explicit
 Dim d As Integer
 
 Private Sub Form_QueryUnload(Cancel As Integer, UnloadMode As Integer)
-If UnloadMode = 0 Then
-   YesNo = MsgBox("確定離開遊戲?", 36, "UnlightVBE-系統提示")
-   If YesNo = 6 Then
-    End
-   Else
-    Cancel = 1
-   End If
-End If
+一般系統類.離開遊戲提示 Cancel, UnloadMode
 End Sub
-
-Private Sub Form_Activate()
-'t1.Enabled = True
-End Sub
-
 
 Private Sub t1_Timer()
 If 目前數(31) = 19 Then

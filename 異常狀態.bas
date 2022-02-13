@@ -1,7 +1,9 @@
 Attribute VB_Name = "異常狀態"
+Option Explicit
 Public 異常狀態_混沌紀錄數(1 To 4) As Integer '異常狀態-混沌-骰量紀錄暫時變數(1.紀錄數值(原始)/2.紀錄數值(變更後)/3.數值紀錄是否啟動/4.攻擊防禦模式階段數)
 Public 異常狀態_AI_混沌紀錄數(1 To 4) As Integer '異常狀態-AI-混沌-骰量紀錄暫時變數(1.紀錄數值(原始)/2.紀錄數值(變更後)/3.數值紀錄是否啟動/4.攻擊防禦模式階段數)
 Sub ATK加_使用者()
+Dim i As Integer
 Select Case 異常狀態檢查數(7, 1)
    Case 1
      For i = 14 * (角色人物對戰人數(1, 2) - 1) + 1 To 14 * 角色人物對戰人數(1, 2)
@@ -37,6 +39,7 @@ Select Case 異常狀態檢查數(7, 1)
 End Select
 End Sub
 Sub ATK加_電腦()
+Dim i As Integer
 Select Case 異常狀態檢查數(1, 1)
    Case 1
      For i = 14 * (角色人物對戰人數(2, 2) - 1) + 1 To 14 * 角色人物對戰人數(2, 2)
@@ -72,6 +75,7 @@ Select Case 異常狀態檢查數(1, 1)
 End Select
 End Sub
 Sub ATK減_使用者()
+Dim i As Integer
 Select Case 異常狀態檢查數(10, 1)
    Case 1
      For i = 14 * (角色人物對戰人數(1, 2) - 1) + 1 To 14 * 角色人物對戰人數(1, 2)
@@ -107,6 +111,7 @@ Select Case 異常狀態檢查數(10, 1)
 End Select
 End Sub
 Sub ATK減_電腦()
+Dim i As Integer
 Select Case 異常狀態檢查數(4, 1)
    Case 1
      For i = 14 * (角色人物對戰人數(2, 2) - 1) + 1 To 14 * 角色人物對戰人數(2, 2)
@@ -143,6 +148,7 @@ Select Case 異常狀態檢查數(4, 1)
 End Select
 End Sub
 Sub DEF加_使用者()
+Dim i As Integer
 Select Case 異常狀態檢查數(8, 1)
    Case 1
      For i = 14 * (角色人物對戰人數(1, 2) - 1) + 1 To 14 * 角色人物對戰人數(1, 2)
@@ -170,6 +176,7 @@ Select Case 異常狀態檢查數(8, 1)
 End Select
 End Sub
 Sub DEF減_使用者()
+Dim i As Integer
 Select Case 異常狀態檢查數(11, 1)
    Case 1
      For i = 14 * (角色人物對戰人數(1, 2) - 1) + 1 To 14 * 角色人物對戰人數(1, 2)
@@ -197,6 +204,7 @@ Select Case 異常狀態檢查數(11, 1)
 End Select
 End Sub
 Sub DEF加_電腦()
+Dim i As Integer
 Select Case 異常狀態檢查數(2, 1)
    Case 1
      For i = 14 * (角色人物對戰人數(2, 2) - 1) + 1 To 14 * 角色人物對戰人數(2, 2)
@@ -225,6 +233,7 @@ End Select
 End Sub
 
 Sub DEF減_電腦()
+Dim i As Integer
 Select Case 異常狀態檢查數(5, 1)
    Case 1
      For i = 14 * (角色人物對戰人數(2, 2) - 1) + 1 To 14 * 角色人物對戰人數(2, 2)
@@ -252,6 +261,7 @@ Select Case 異常狀態檢查數(5, 1)
 End Select
 End Sub
 Sub MOV加_使用者()
+Dim i As Integer
 Select Case 異常狀態檢查數(9, 1)
    Case 1
      For i = 14 * (角色人物對戰人數(1, 2) - 1) + 1 To 14 * 角色人物對戰人數(1, 2)
@@ -277,6 +287,7 @@ End Select
 End Sub
 
 Sub MOV減_使用者()
+Dim i As Integer
 Select Case 異常狀態檢查數(12, 1)
    Case 1
      For i = 14 * (角色人物對戰人數(1, 2) - 1) + 1 To 14 * 角色人物對戰人數(1, 2)
@@ -304,6 +315,7 @@ Select Case 異常狀態檢查數(12, 1)
 End Select
 End Sub
 Sub MOV加_電腦()
+Dim i As Integer
 Select Case 異常狀態檢查數(3, 1)
    Case 1
      For i = 14 * (角色人物對戰人數(2, 2) - 1) + 1 To 14 * 角色人物對戰人數(2, 2)
@@ -329,6 +341,7 @@ End Select
 End Sub
 
 Sub MOV減_電腦()
+Dim i As Integer
 Select Case 異常狀態檢查數(6, 1)
    Case 1
      For i = 14 * (角色人物對戰人數(2, 2) - 1) + 1 To 14 * 角色人物對戰人數(2, 2)
@@ -359,6 +372,7 @@ Select Case 異常狀態檢查數(6, 1)
 End Select
 End Sub
 Sub 不死_使用者()
+Dim i As Integer
 Select Case 異常狀態檢查數(14, 1)
     Case 1
         For i = 14 * (角色人物對戰人數(1, 2) - 1) + 1 To 14 * 角色人物對戰人數(1, 2)
@@ -383,6 +397,7 @@ Select Case 異常狀態檢查數(14, 1)
 End Select
 End Sub
 Sub 不死_電腦()
+Dim i As Integer
 Select Case 異常狀態檢查數(18, 1)
     Case 1
         For i = 14 * (角色人物對戰人數(2, 2) - 1) + 1 To 14 * 角色人物對戰人數(2, 2)
@@ -407,6 +422,7 @@ Select Case 異常狀態檢查數(18, 1)
 End Select
 End Sub
 Sub 中毒_使用者()
+Dim i As Integer
 Select Case 異常狀態檢查數(20, 1)
     Case 1
         For i = 14 * (角色人物對戰人數(1, 2) - 1) + 1 To 14 * 角色人物對戰人數(1, 2)
@@ -425,6 +441,7 @@ Select Case 異常狀態檢查數(20, 1)
 End Select
 End Sub
 Sub 中毒_電腦()
+Dim i As Integer
 Select Case 異常狀態檢查數(21, 1)
     Case 1
         For i = 14 * (角色人物對戰人數(2, 2) - 1) + 1 To 14 * 角色人物對戰人數(2, 2)
@@ -446,6 +463,7 @@ Select Case 異常狀態檢查數(21, 1)
 End Select
 End Sub
 Sub 自壞_使用者()
+Dim i As Integer
 Select Case 異常狀態檢查數(15, 1)
     Case 1
      For i = 14 * (角色人物對戰人數(1, 2) - 1) + 1 To 14 * 角色人物對戰人數(1, 2)
@@ -464,6 +482,7 @@ Select Case 異常狀態檢查數(15, 1)
 End Select
 End Sub
 Sub 自壞_電腦()
+Dim i As Integer
 Select Case 異常狀態檢查數(19, 1)
     Case 1
      For i = 14 * (角色人物對戰人數(2, 2) - 1) + 1 To 14 * 角色人物對戰人數(2, 2)
@@ -482,6 +501,7 @@ Select Case 異常狀態檢查數(19, 1)
 End Select
 End Sub
 Sub 封印_使用者()
+Dim i As Integer
 Select Case 異常狀態檢查數(22, 1)
     Case 1
      For i = 14 * (角色人物對戰人數(1, 2) - 1) + 1 To 14 * 角色人物對戰人數(1, 2)
@@ -499,6 +519,7 @@ Select Case 異常狀態檢查數(22, 1)
 End Select
 End Sub
 Sub 封印_電腦()
+Dim i As Integer
 Select Case 異常狀態檢查數(23, 1)
     Case 1
      For i = 14 * (角色人物對戰人數(2, 2) - 1) + 1 To 14 * 角色人物對戰人數(2, 2)
@@ -516,6 +537,7 @@ Select Case 異常狀態檢查數(23, 1)
 End Select
 End Sub
 Sub 能力低下_使用者()
+Dim i As Integer
 Select Case 異常狀態檢查數(24, 1)
   Case 1
      For i = 14 * (角色人物對戰人數(1, 2) - 1) + 1 To 14 * 角色人物對戰人數(1, 2)
@@ -537,6 +559,7 @@ Select Case 異常狀態檢查數(24, 1)
 End Select
 End Sub
 Sub 能力低下_電腦()
+Dim i As Integer
 Select Case 異常狀態檢查數(25, 1)
   Case 1
      For i = 14 * (角色人物對戰人數(2, 2) - 1) + 1 To 14 * 角色人物對戰人數(2, 2)
@@ -558,6 +581,7 @@ Select Case 異常狀態檢查數(25, 1)
 End Select
 End Sub
 Sub 麻痺_使用者()
+Dim i As Integer
 Select Case 異常狀態檢查數(16, 1)
    Case 1
      For i = 14 * (角色人物對戰人數(1, 2) - 1) + 1 To 14 * 角色人物對戰人數(1, 2)
@@ -582,6 +606,7 @@ Select Case 異常狀態檢查數(16, 1)
 End Select
 End Sub
 Sub 麻痺_電腦()
+Dim i As Integer
 Select Case 異常狀態檢查數(17, 1)
    Case 1
      For i = 14 * (角色人物對戰人數(2, 2) - 1) + 1 To 14 * 角色人物對戰人數(2, 2)
@@ -607,6 +632,7 @@ Select Case 異常狀態檢查數(17, 1)
 End Select
 End Sub
 Sub 聖痕_使用者()
+Dim i As Integer
 Select Case 異常狀態檢查數(13, 1)
   Case 1
      For i = 14 * (角色人物對戰人數(1, 2) - 1) + 1 To 14 * 角色人物對戰人數(1, 2)
@@ -628,6 +654,7 @@ Select Case 異常狀態檢查數(13, 1)
 End Select
 End Sub
 Sub 聖痕_電腦()
+Dim i As Integer
 Select Case 異常狀態檢查數(26, 1)
   Case 1
      For i = 14 * (角色人物對戰人數(2, 2) - 1) + 1 To 14 * 角色人物對戰人數(2, 2)
@@ -657,6 +684,7 @@ Select Case 異常狀態檢查數(26, 1)
 End Select
 End Sub
 Sub 恐怖_使用者()
+Dim i As Integer
 Select Case 異常狀態檢查數(29, 1)
    Case 1
      For i = 14 * (角色人物對戰人數(1, 2) - 1) + 1 To 14 * 角色人物對戰人數(1, 2)
@@ -682,6 +710,7 @@ Select Case 異常狀態檢查數(29, 1)
 End Select
 End Sub
 Sub 狂戰士_使用者()
+Dim i As Integer
 Select Case 異常狀態檢查數(27, 1)
    Case 1
      For i = 14 * (角色人物對戰人數(1, 2) - 1) + 1 To 14 * 角色人物對戰人數(1, 2)
@@ -708,6 +737,7 @@ End Select
 End Sub
 
 Sub 狂戰士_電腦()
+Dim i As Integer
 Select Case 異常狀態檢查數(28, 1)
    Case 1
      For i = 14 * (角色人物對戰人數(2, 2) - 1) + 1 To 14 * 角色人物對戰人數(2, 2)
@@ -733,6 +763,7 @@ Select Case 異常狀態檢查數(28, 1)
 End Select
 End Sub
 Sub 恐怖_電腦()
+Dim i As Integer
 Select Case 異常狀態檢查數(30, 1)
    Case 1
      For i = 14 * (角色人物對戰人數(2, 2) - 1) + 1 To 14 * 角色人物對戰人數(2, 2)
@@ -758,6 +789,7 @@ Select Case 異常狀態檢查數(30, 1)
 End Select
 End Sub
 Sub 混沌_使用者()
+Dim i As Integer
 Select Case 異常狀態檢查數(31, 1)
    Case 1
      For i = 14 * (角色人物對戰人數(1, 2) - 1) + 1 To 14 * 角色人物對戰人數(1, 2)
@@ -793,6 +825,7 @@ Select Case 異常狀態檢查數(31, 1)
 End Select
 End Sub
 Sub 混沌_電腦()
+Dim i As Integer
 Select Case 異常狀態檢查數(32, 1)
    Case 1
      For i = 14 * (角色人物對戰人數(2, 2) - 1) + 1 To 14 * 角色人物對戰人數(2, 2)
@@ -829,7 +862,7 @@ End Select
 End Sub
 
 Sub 咒縛_使用者(ByVal moveend As Integer)
-Dim dge As Integer
+Dim dge As Integer, i As Integer
 Select Case 異常狀態檢查數(33, 1)
     Case 1
         If movecp > 0 Then
@@ -856,7 +889,7 @@ Select Case 異常狀態檢查數(33, 1)
 End Select
 End Sub
 Sub 咒縛_電腦(ByVal moveend As Integer)
-Dim dge As Integer
+Dim dge As Integer, i As Integer
 Select Case 異常狀態檢查數(34, 1)
     Case 1
         If movecp > 0 Then
@@ -883,6 +916,7 @@ Select Case 異常狀態檢查數(34, 1)
 End Select
 End Sub
 Sub 庇護_使用者(ByVal num As Integer, ByRef tot As Integer)
+Dim i As Integer
 Select Case 異常狀態檢查數(35, 1)
   Case 1
      For i = 14 * (角色待機人物紀錄數(1, num) - 1) + 1 To 14 * 角色待機人物紀錄數(1, num)
@@ -910,6 +944,7 @@ Select Case 異常狀態檢查數(35, 1)
 End Select
 End Sub
 Sub 庇護_電腦(ByVal num As Integer, ByRef tot As Integer)
+Dim i As Integer
 Select Case 異常狀態檢查數(36, 1)
   Case 1
      For i = 14 * (角色待機人物紀錄數(2, num) - 1) + 1 To 14 * 角色待機人物紀錄數(2, num)
@@ -937,6 +972,7 @@ Select Case 異常狀態檢查數(36, 1)
 End Select
 End Sub
 Sub 再生_使用者()
+Dim i As Integer
 Select Case 異常狀態檢查數(37, 1)
     Case 1
         For i = 14 * (角色人物對戰人數(1, 2) - 1) + 1 To 14 * 角色人物對戰人數(1, 2)
@@ -955,6 +991,7 @@ Select Case 異常狀態檢查數(37, 1)
 End Select
 End Sub
 Sub 再生_電腦()
+Dim i As Integer
 Select Case 異常狀態檢查數(38, 1)
     Case 1
         For i = 14 * (角色人物對戰人數(2, 2) - 1) + 1 To 14 * 角色人物對戰人數(2, 2)
@@ -973,6 +1010,7 @@ Select Case 異常狀態檢查數(38, 1)
 End Select
 End Sub
 Sub 臨界_使用者()
+Dim i As Integer
 Select Case 異常狀態檢查數(39, 1)
   Case 1
      For i = 14 * (角色人物對戰人數(1, 2) - 1) + 1 To 14 * 角色人物對戰人數(1, 2)

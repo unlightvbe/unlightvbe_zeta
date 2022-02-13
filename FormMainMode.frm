@@ -13870,7 +13870,7 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
-
+Option Explicit
 Private Sub atkinghelpc_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)
 atkinghelpc.Visible = False
 End Sub
@@ -14010,6 +14010,7 @@ End If
 End Sub
 
 Private Sub atkingtrtot_Timer()
+Dim tt As Integer
 tt = Val(atkingnumtot.Caption)
    If tt > 0 Then
       If Val(atkingno(tt, 2)) = 2 Then
@@ -14321,6 +14322,7 @@ End Sub
 
 
 Private Sub cardbackjpg_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)
+Dim i As Integer
 For i = 1 To 106
  cge(i).Visible = False
  cqe(i).Visible = False
@@ -14371,6 +14373,7 @@ End Sub
 
 
 Private Sub cardpagebox_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)
+Dim i As Integer
 For i = 1 To 106
  cge(i).Visible = False
  cqe(i).Visible = False
@@ -14435,6 +14438,7 @@ cgen(Index).Visible = True
 End Sub
 
 Sub cgen_Click(Index As Integer)
+Dim uspce As String, uspme As String
 uspce = pagecardnum(Index, 1)
 uspme = pagecardnum(Index, 2)
 pagecardnum(Index, 1) = pagecardnum(Index, 3)
@@ -14458,6 +14462,7 @@ card_Click Index
 End Sub
 
 Sub cnmove_Click()
+Dim i As Integer, med As Integer
 '======================
 If 電腦方事件卡是否出完選擇數 = True Then
     GoTo 電腦方事件卡先出制度_執行階段結束
@@ -14590,6 +14595,7 @@ cnmove2.Visible = False
 End Sub
 
 Private Sub comaiatk_MouseMove(Index As Integer, Button As Integer, Shift As Integer, X As Single, Y As Single)
+    Dim i As Integer
     For i = 1 To 3
       cardcom(i).Visible = False
     Next
@@ -14718,6 +14724,7 @@ cqe(Index).Visible = False
 End Sub
 
 Sub cqen_Click(Index As Integer)
+Dim uspce As String, uspme As String
 uspce = pagecardnum(Index, 1)
 uspme = pagecardnum(Index, 2)
 pagecardnum(Index, 1) = pagecardnum(Index, 3)
@@ -14825,14 +14832,7 @@ End Sub
 
 
 Private Sub Form_QueryUnload(Cancel As Integer, UnloadMode As Integer)
-If UnloadMode = 0 Then
-  YesNo = MsgBox("確定離開遊戲?", 36, "UnlightVBE-系統提示")
-  If YesNo = 6 Then
-    End
-  Else
-    Cancel = 1
-  End If
-End If
+一般系統類.離開遊戲提示 Cancel, UnloadMode
 End Sub
 
 
@@ -15179,6 +15179,7 @@ wmpse8.Close
 End Sub
 
 Private Sub messageus_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)
+Dim i As Integer
 For i = 1 To 106
  cge(i).Visible = False
  cqe(i).Visible = False
@@ -15705,7 +15706,7 @@ FormMainMode.wmpse9.Controls.play
 End Sub
 
 Sub PEAFcardbackBR_Click(Index As Integer, ByVal Button As Integer)
-Dim ahmt As String
+Dim ahmt As String, i As Integer, k As Integer
 Select Case Index
      Case Is <= 4
            ahmt = VBEPerson(人物卡面背面編號紀錄數(1), 人物卡面背面編號紀錄數(2), 3, Index, 5)
@@ -15741,6 +15742,7 @@ End Select
 End Sub
 
 Sub PEAFcardbackBR_MouseMove(Index As Integer, Button As Integer, Shift As Integer, X As Single, Y As Single)
+Dim k As Integer
 PEAFcardbackBR(Index).Opacity = 100
 Select Case Index
      Case Is <= 4
@@ -15804,6 +15806,7 @@ End If
 End Sub
 
 Private Sub PEAttackingForm_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)
+Dim i As Integer
 For i = 1 To 106
  cge(i).Visible = False
  cqe(i).Visible = False
@@ -15906,6 +15909,7 @@ End Select
 End Sub
 
 Private Sub personatk_MouseMove(Index As Integer, Button As Integer, Shift As Integer, X As Single, Y As Single)
+Dim i As Integer
 For i = 1 To 106
  cge(i).Visible = False
  cqe(i).Visible = False
@@ -15925,6 +15929,7 @@ Next
 End Sub
 
 Private Sub Picture1_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)
+Dim i As Integer
 For i = 1 To 3
   cardcom(i).Visible = False
 Next
@@ -16277,6 +16282,7 @@ trnextend.Enabled = False
 End Sub
 
 Private Sub trtimeline_Timer()
+Dim i As Integer
 timelineout1.X1 = timelineout1.X1 + 2
 timelineout2.X2 = timelineout2.X2 - 2
 For i = 1 To 3
@@ -17386,6 +17392,7 @@ End Select
 End Sub
 
 Private Sub 攻擊階段_階段1_Timer()
+Dim j As Integer, cspce As String, cspme As String
 '======================
 If 電腦方事件卡是否出完選擇數 = True Then
     GoTo 電腦方事件卡先出制度_執行階段結束
@@ -17470,6 +17477,7 @@ End If
 End Sub
 
 Private Sub 攻擊階段_階段2_Timer()
+Dim p As Integer, i As Integer, j As Integer
 '----------以下為攻擊模式程序
 擲骰表單溝通暫時變數(2) = 0
 擲骰表單溝通暫時變數(3) = 0
@@ -17532,11 +17540,11 @@ End If
    '==========================
     If turnatk = 1 And atkingck(1, 2) = 1 Then
        atkingck(1, 1) = 3
-       技能.雪莉_自殺傾向 Index  '(階段3)
+       技能.雪莉_自殺傾向 0  '(階段3)
     End If
     If turnatk = 1 And atkingck(42, 2) = 1 Then
        atkingck(42, 1) = 3
-       技能.雪莉_VBE_自殺傾向 Index  '(階段3)
+       技能.雪莉_VBE_自殺傾向 0  '(階段3)
     End If
     If turnatk = 1 And atkingck(3, 2) = 1 Then
        atkingck(3, 1) = 3
@@ -17604,7 +17612,7 @@ End If
     End If
     If turnatk = 1 And atkingck(69, 2) = 1 Then
        atkingck(69, 1) = 3
-       技能.音音夢_愉快抽血 Index  '(階段3)
+       技能.音音夢_愉快抽血 0  '(階段3)
     End If
     If turnatk = 1 And atkingck(71, 2) = 1 Then
        atkingck(71, 1) = 2
@@ -17987,6 +17995,7 @@ trtimeline.Enabled = True
 End Sub
 
 Private Sub 防禦階段_階段初始_Timer()
+Dim p As Integer, i As Integer, j As Integer, q As Integer
 '----------以下為防禦模式程序
 擲骰表單溝通暫時變數(2) = 0
 擲骰表單溝通暫時變數(3) = 0
@@ -18503,6 +18512,7 @@ End If
 End Sub
 
 Sub 使用者出牌_AI出牌控制_事件卡_Timer()
+Dim i As Integer
 If turnpageonin = 1 And 牌移動.Enabled = False Then
     For i = 71 To 106
         If Val(pagecardnum(i, 5)) = 1 And Val(pagecardnum(i, 6)) = 1 Then
@@ -18534,6 +18544,7 @@ End Sub
 
 
 Private Sub 使用者出牌_手牌對齊_Timer()
+Dim i As Integer
 For i = 1 To Val(pageusglead)
    If 出牌順序統計暫時變數(2, i, 1) > 目前數(5) Then
       If 目前數(13) = 0 Then
@@ -18637,6 +18648,7 @@ End Sub
 
 
 Private Sub 使用者出牌_出牌對齊_靠右_Timer()
+Dim i As Integer
 For i = 1 To pageusqlead
    If 出牌順序統計暫時變數(1, i, 1) < 目前數(5) Then
       card(出牌順序統計暫時變數(1, i, 2)).Left = card(出牌順序統計暫時變數(1, i, 2)).Left + (480 / 10)
@@ -18653,6 +18665,7 @@ End If
 End Sub
 
 Private Sub 使用者出牌_出牌對齊_靠左_Timer()
+Dim i As Integer
 For i = 1 To (pageusqlead - 1)
    card(出牌順序統計暫時變數(1, i, 2)).Left = card(出牌順序統計暫時變數(1, i, 2)).Left - (480 / 10)
 Next
@@ -18666,7 +18679,7 @@ End Sub
 
 
 Private Sub 移動階段_階段初始_Timer()
-Dim movecpn As Integer
+Dim movecpn As Integer, mfd As Integer
 movecpn = movecp
 '===============
 movecom = atkingpagetot(2, 3)
@@ -19117,6 +19130,7 @@ Sub 智慧型AI_使用者出牌_Timer()
 End Sub
 
 Private Sub 牌移動_Timer()
+Dim i As Integer
 card(牌移動暫時變數(3)).Left = card(牌移動暫時變數(3)).Left + 距離單位(2, 1, 1)
 card(牌移動暫時變數(3)).Top = card(牌移動暫時變數(3)).Top + 距離單位(2, 1, 2)
 If Abs(牌移動暫時變數(1) - card(牌移動暫時變數(3)).Left) <= 50 Or Abs(牌移動暫時變數(2) - card(牌移動暫時變數(3)).Top) <= 50 Then
@@ -19407,9 +19421,8 @@ End Sub
 
 
 Private Sub 牌移動_收牌_Timer()
+Dim i As Integer
 If 目前數(11) = pageqlead(目前數(10)) Then
-'   FormMainMode.wmpse1.Controls.stop
-'    FormMainMode.wmpse1.Controls.play
     戰鬥系統類.checkpage
    牌移動_收牌.Enabled = False
    目前數(10) = 目前數(10) + 1
@@ -19420,12 +19433,9 @@ For i = 1 + 目前數(11) To pageqlead(目前數(10)) - 目前數(12)
      If Abs(240 - card(距離單位_收牌暫時數(i, 3)).Left) <= 10 Or Abs(960 - card(距離單位_收牌暫時數(i, 3)).Top) <= 10 Then
          card(距離單位_收牌暫時數(i, 3)).Left = 240
          card(距離單位_收牌暫時數(i, 3)).Top = 960
-'         MsgBox "收牌測試"
          card(距離單位_收牌暫時數(i, 3)).Visible = False
          pagecardnum(距離單位_收牌暫時數(i, 3), 6) = 3
          目前數(11) = 目前數(11) + 1
-'         FormMainMode.wmpse1.Controls.stop
-'         FormMainMode.wmpse1.Controls.play
      End If
      card(距離單位_收牌暫時數(i, 3)).Left = card(距離單位_收牌暫時數(i, 3)).Left + 距離單位_收牌暫時數(i, 1)
      card(距離單位_收牌暫時數(i, 3)).Top = card(距離單位_收牌暫時數(i, 3)).Top + 距離單位_收牌暫時數(i, 2)
@@ -19914,6 +19924,7 @@ End Sub
 
 
 Private Sub 電腦出牌_Timer()
+Dim i As Integer, cspce As String, cspme As String
  '=========================專屬事件卡出牌階段
 For i = 71 To 106
     If Val(pagecardnum(i, 5)) = 2 And Val(pagecardnum(i, 6)) = 1 Then
@@ -19925,8 +19936,8 @@ For i = 71 To 106
         ElseIf pagecardnum(i, 3) = a6a Then
             cspce = pagecardnum(i, 1)
             cspme = pagecardnum(i, 2)
-            pagecardnum(i, 1) = pagecardnum(j, 3)
-            pagecardnum(i, 2) = pagecardnum(j, 4)
+            pagecardnum(i, 1) = pagecardnum(i, 3)
+            pagecardnum(i, 2) = pagecardnum(i, 4)
             pagecardnum(i, 3) = cspce
             pagecardnum(i, 4) = cspme
             If pageonin(i) = 2 Then
@@ -19947,8 +19958,8 @@ For i = 71 To 106
         ElseIf pagecardnum(i, 3) = a7a And (turnatk = 1 Or turnatk = 2) Then
             cspce = pagecardnum(i, 1)
             cspme = pagecardnum(i, 2)
-            pagecardnum(i, 1) = pagecardnum(j, 3)
-            pagecardnum(i, 2) = pagecardnum(j, 4)
+            pagecardnum(i, 1) = pagecardnum(i, 3)
+            pagecardnum(i, 2) = pagecardnum(i, 4)
             pagecardnum(i, 3) = cspce
             pagecardnum(i, 4) = cspme
             If pageonin(i) = 2 Then
@@ -19969,8 +19980,8 @@ For i = 71 To 106
         ElseIf pagecardnum(i, 3) = a8a Then
             cspce = pagecardnum(i, 1)
             cspme = pagecardnum(i, 2)
-            pagecardnum(i, 1) = pagecardnum(j, 3)
-            pagecardnum(i, 2) = pagecardnum(j, 4)
+            pagecardnum(i, 1) = pagecardnum(i, 3)
+            pagecardnum(i, 2) = pagecardnum(i, 4)
             pagecardnum(i, 3) = cspce
             pagecardnum(i, 4) = cspme
             If pageonin(i) = 2 Then
@@ -19991,8 +20002,8 @@ For i = 71 To 106
         ElseIf pagecardnum(i, 3) = a9a Then
             cspce = pagecardnum(i, 1)
             cspme = pagecardnum(i, 2)
-            pagecardnum(i, 1) = pagecardnum(j, 3)
-            pagecardnum(i, 2) = pagecardnum(j, 4)
+            pagecardnum(i, 1) = pagecardnum(i, 3)
+            pagecardnum(i, 2) = pagecardnum(i, 4)
             pagecardnum(i, 3) = cspce
             pagecardnum(i, 4) = cspme
             If pageonin(i) = 2 Then
@@ -20066,6 +20077,7 @@ End Sub
 
 
 Private Sub 電腦出牌_手牌對齊_Timer()
+Dim i As Integer
 For i = 1 To Val(pagecomglead)
    If 出牌順序統計暫時變數(4, i, 1) > 目前數(9) Then
        card(出牌順序統計暫時變數(4, i, 2)).Left = card(出牌順序統計暫時變數(4, i, 2)).Left + (240 / 10)
@@ -20158,6 +20170,7 @@ End Sub
 
 
 Private Sub 電腦出牌_出牌對齊_靠右_Timer()
+Dim i As Integer
 For i = 1 To Val(pagecomqlead)
    If 出牌順序統計暫時變數(3, i, 1) < 目前數(9) Then
       card(出牌順序統計暫時變數(3, i, 2)).Left = card(出牌順序統計暫時變數(3, i, 2)).Left + (480 / 10)
@@ -20173,6 +20186,7 @@ End If
 End Sub
 
 Private Sub 電腦出牌_出牌對齊_靠左_Timer()
+Dim i As Integer
 For i = 1 To (pageqlead(2) - 1)
    card(出牌順序統計暫時變數(3, i, 2)).Left = card(出牌順序統計暫時變數(3, i, 2)).Left - (480 / 10)
 Next
@@ -20769,7 +20783,6 @@ If Right$(app_path, 1) <> "\" Then app_path = app_path & "\"
 End Sub
 Private Sub personreadifus_Click()
 cdgpersonus.ShowOpen
-Formgamesetting.Visible = True
 人物系統類.卡片人物資訊讀入_初階段 cdgpersonus.filename
 End Sub
 Private Sub personlevelcom_Click(Index As Integer)
@@ -20826,6 +20839,7 @@ personnameus(Index).ListIndex = -1
 personlevelus(Index).Clear
 End Sub
 Private Sub start1_Timer()
+Dim i As Integer
 If st > 200 Then
    stup.Enabled = True
    stdown.Enabled = True
@@ -20997,6 +21011,7 @@ End If
 End Sub
 
 Private Sub cardcomtr_Timer()
+Dim i As Integer
 If sq <= 400 Then
   For i = 3 To 1 Step -1
      If PEAScardcom(i).Visible = True Then
@@ -21050,6 +21065,7 @@ End If
 End Sub
 
 Private Sub cardustr_Timer()
+Dim i As Integer
 If sq <= 400 Then
   For i = 3 To 1 Step -1
      If PEAScardus(i).Visible = True Then

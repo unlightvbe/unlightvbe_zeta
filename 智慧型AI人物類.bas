@@ -1,7 +1,8 @@
 Attribute VB_Name = "智慧型AI人物類"
+Option Explicit
 Public 夏洛特_階段處理記錄數(1 To 3) As Integer '智慧型AI-夏洛特-戰略判斷紀錄數(1.當前階段實行/2.目標結束之回合數/3.幸福的理由是否發動)
 Sub 艾伯李斯特(ByVal turn As Integer, ByVal movecpre As Integer, ByVal Pn1 As Integer, ByVal Pn2 As Integer, ByVal Pn3 As Integer, ByVal Pn4 As Integer)
-Dim wnm As Integer, sq As Integer '暫時變數
+Dim wnm As Integer, sq As Integer, i As Integer, k As Integer '暫時變數
 Select Case turn
     Case 1 '==攻擊階段類
           For i = 1 To 2 ^ cardAInumuscom
@@ -185,7 +186,7 @@ End Select
 
 End Sub
 Sub 雪莉(ByVal turn As Integer, ByVal movecpre As Integer, ByVal uscom As Integer, ByVal Pn1 As Integer, ByVal Pn2 As Integer, ByVal Pn3 As Integer, ByVal Pn4 As Integer)
-Dim wnm As Integer, sq As Integer, livewer As Integer '暫時變數
+Dim wnm As Integer, sq As Integer, livewer As Integer, i As Integer, k As Integer, p As Integer '暫時變數
 If uscom = 1 Then livewer = liveus(角色人物對戰人數(1, 2)) Else livewer = livecom(角色人物對戰人數(2, 2))
 '=============================
 Select Case turn
@@ -300,7 +301,7 @@ Select Case turn
 End Select
 End Sub
 Sub 艾茵(ByVal turn As Integer, ByVal movecpre As Integer, ByVal uscom As Integer, ByVal Pn1 As Integer, ByVal Pn2 As Integer, ByVal Pn3 As Integer, ByVal Pn4 As Integer)
-Dim wnm As Integer, sq As Integer, livewer As Integer, livewermax As Integer '暫時變數
+Dim wnm As Integer, sq As Integer, livewer As Integer, livewermax As Integer, i As Integer, k As Integer, p As Integer '暫時變數
 If uscom = 1 Then
     livewer = liveus(角色人物對戰人數(1, 2))
     livewermax = liveusmax(角色人物對戰人數(1, 2))
@@ -434,7 +435,7 @@ End Select
 
 End Sub
 Sub 古魯瓦爾多(ByVal turn As Integer, ByVal movecpre As Integer, ByVal uscom As Integer, ByVal Pn1 As Integer, ByVal Pn2 As Integer, ByVal Pn3 As Integer, ByVal Pn4 As Integer)
-Dim wnm As Integer, sq As Integer, werp As Integer, weryu(1 To 3) As Integer '暫時變數
+Dim wnm As Integer, sq As Integer, werp As Integer, weryu(1 To 3) As Integer, i As Integer, k As Integer, p As Integer '暫時變數
 Select Case turn
     Case 1 '==攻擊階段類
           For i = 1 To 2 ^ cardAInumuscom
@@ -499,14 +500,14 @@ Select Case turn
                         werp = 0
                         If cardAInumcaseperson(i, 1, 14) >= 2 And cardAInumcaseperson(i, 1, 13) = 0 Then
                               For k = 14 * (角色人物對戰人數(uscom, 2) - 1) + 1 To 14 * 角色人物對戰人數(uscom, 2)
-                                    If 人物異常狀態資料庫(2, k, 3) = 17 And usocm = 2 Then
+                                    If 人物異常狀態資料庫(2, k, 3) = 17 And uscom = 2 Then
                                         werp = 1
-                                    ElseIf 人物異常狀態資料庫(1, k, 3) = 16 And usocm = 1 Then
+                                    ElseIf 人物異常狀態資料庫(1, k, 3) = 16 And uscom = 1 Then
                                         werp = 1
                                     End If
-                                    If 人物異常狀態資料庫(2, k, 3) = 6 And usocm = 2 Then
+                                    If 人物異常狀態資料庫(2, k, 3) = 6 And uscom = 2 Then
                                         werp = 1
-                                    ElseIf 人物異常狀態資料庫(1, k, 3) = 12 And usocm = 1 Then
+                                    ElseIf 人物異常狀態資料庫(1, k, 3) = 12 And uscom = 1 Then
                                         werp = 1
                                     End If
                               Next
@@ -577,7 +578,7 @@ End Select
 
 End Sub
 Sub 帕茉(ByVal turn As Integer, ByVal movecpre As Integer, ByVal uscom As Integer, ByVal Pn1 As Integer, ByVal Pn2 As Integer, ByVal Pn3 As Integer, ByVal Pn4 As Integer)
-Dim wnm As Integer, sq As Integer, werp As Integer, weryu(1 To 3) As Integer, livewer As Integer, livewermax As Integer '暫時變數
+Dim wnm As Integer, sq As Integer, werp As Integer, weryu(1 To 3) As Integer, livewer As Integer, livewermax As Integer, i As Integer, k As Integer '暫時變數
 If uscom = 1 Then livewer = liveus(角色人物對戰人數(1, 2)) Else livewer = livecom(角色人物對戰人數(2, 2))
 If uscom = 1 Then livewermax = liveusmax(角色人物對戰人數(1, 2)) Else livewermax = livecommax(角色人物對戰人數(2, 2))
 '=============================
@@ -742,7 +743,7 @@ End Select
 
 End Sub
 Sub 史塔夏(ByVal turn As Integer, ByVal movecpre As Integer, ByVal uscom As Integer, ByVal Pn1 As Integer, ByVal Pn2 As Integer, ByVal Pn3 As Integer, ByVal Pn4 As Integer)
-Dim wnm As Integer, sq As Integer, werp As Integer, livewer As Integer, weryu(1 To 3) As Integer '暫時變數
+Dim wnm As Integer, sq As Integer, werp As Integer, livewer As Integer, weryu(1 To 3) As Integer, i As Integer, k As Integer '暫時變數
 If uscom = 1 Then livewer = liveus(角色人物對戰人數(1, 2)) Else livewer = livecom(角色人物對戰人數(2, 2))
 Select Case turn
     Case 1 '==攻擊階段類
@@ -970,7 +971,7 @@ End Select
 
 End Sub
 Sub CC(ByVal turn As Integer, ByVal movecpre As Integer, ByVal uscom As Integer, ByVal Pn1 As Integer, ByVal Pn2 As Integer, ByVal Pn3 As Integer, ByVal Pn4 As Integer)
-Dim wnm As Integer, sq As Integer, werp As Integer, livewer As Integer, weryu(1 To 3) As Integer '暫時變數
+Dim wnm As Integer, sq As Integer, werp As Integer, livewer As Integer, weryu(1 To 3) As Integer, i As Integer, k As Integer '暫時變數
 If uscom = 1 Then livewer = liveus(角色人物對戰人數(1, 2)) Else livewer = livecom(角色人物對戰人數(2, 2))
 Select Case turn
     Case 1 '==攻擊階段類
@@ -1099,7 +1100,7 @@ End Select
 
 End Sub
 Sub 伊芙琳(ByVal turn As Integer, ByVal movecpre As Integer, ByVal uscom As Integer, ByVal Pn1 As Integer, ByVal Pn2 As Integer, ByVal Pn3 As Integer, ByVal Pn4 As Integer)
-Dim wnm As Integer, sq As Integer, werp As Integer, livewer As Integer, weryu(1 To 5) As Integer '暫時變數
+Dim wnm As Integer, sq As Integer, werp As Integer, livewer As Integer, weryu(1 To 5) As Integer, i As Integer, k As Integer '暫時變數
 If uscom = 1 Then livewer = liveus(角色人物對戰人數(1, 2)) Else livewer = livecom(角色人物對戰人數(2, 2))
 Select Case turn
     Case 1 '==攻擊階段類
@@ -1284,7 +1285,7 @@ End Select
 
 End Sub
 Sub 布勞(ByVal turn As Integer, ByVal movecpre As Integer, ByVal uscom As Integer, ByVal Pn1 As Integer, ByVal Pn2 As Integer, ByVal Pn3 As Integer, ByVal Pn4 As Integer)
-Dim wnm As Integer, sq As Integer, werp As Integer, livewer As Integer, weryu(1 To 5) As Integer '暫時變數
+Dim wnm As Integer, sq As Integer, werp As Integer, livewer As Integer, weryu(1 To 5) As Integer, i As Integer, k As Integer '暫時變數
 If uscom = 1 Then livewer = liveus(角色人物對戰人數(1, 2)) Else livewer = livecom(角色人物對戰人數(2, 2))
 Select Case turn
     Case 1 '==攻擊階段類
@@ -1528,7 +1529,7 @@ End Select
 
 End Sub
 Sub 梅倫(ByVal turn As Integer, ByVal movecpre As Integer, ByVal uscom As Integer, ByVal Pn1 As Integer, ByVal Pn2 As Integer, ByVal Pn3 As Integer, ByVal Pn4 As Integer)
-Dim wnm As Integer, sq As Integer, werp As Integer, livewer As Integer, weryu(1 To 5) As Integer '暫時變數
+Dim wnm As Integer, sq As Integer, werp As Integer, livewer As Integer, weryu(1 To 5) As Integer, i As Integer, k As Integer, p As Integer '暫時變數
 If uscom = 1 Then livewer = liveus(角色人物對戰人數(1, 2)) Else livewer = livecom(角色人物對戰人數(2, 2))
 Select Case turn
     Case 1 '==攻擊階段類
@@ -1708,7 +1709,7 @@ End Select
 
 End Sub
 Sub 音音夢(ByVal turn As Integer, ByVal movecpre As Integer, ByVal uscom As Integer, ByVal Pn1 As Integer, ByVal Pn2 As Integer, ByVal Pn3 As Integer, ByVal Pn4 As Integer)
-Dim wnm As Integer, sq As Integer, werp As Integer, livewer As Integer, livewer41 As Integer, weryu(1 To 5) As Integer '暫時變數
+Dim wnm As Integer, sq As Integer, werp As Integer, livewer As Integer, livewer41 As Integer, weryu(1 To 5) As Integer, i As Integer, k As Integer '暫時變數
 If uscom = 1 Then
     livewer = liveus(角色人物對戰人數(1, 2))
     livewer41 = liveus41(角色人物對戰人數(1, 2))
@@ -1992,7 +1993,7 @@ End Select
 
 End Sub
 Sub 艾依查庫(ByVal turn As Integer, ByVal movecpre As Integer, ByVal uscom As Integer, ByVal Pn1 As Integer, ByVal Pn2 As Integer, ByVal Pn3 As Integer, ByVal Pn4 As Integer)
-Dim wnm As Integer, sq As Integer, werp As Integer, livewer As Integer, livewermax As Integer, weryu(1 To 3) As Integer  '暫時變數
+Dim wnm As Integer, sq As Integer, werp As Integer, livewer As Integer, livewermax As Integer, weryu(1 To 3) As Integer, i As Integer, k As Integer, p As Integer  '暫時變數
 If uscom = 1 Then livewer = liveus(角色人物對戰人數(1, 2)) Else livewer = livecom(角色人物對戰人數(2, 2))
 If uscom = 1 Then livewermax = liveusmax(角色人物對戰人數(1, 2)) Else livewermax = livecommax(角色人物對戰人數(2, 2))
 Select Case turn
@@ -2151,7 +2152,7 @@ End Select
 End Sub
 
 Sub 阿貝爾(ByVal turn As Integer, ByVal movecpre As Integer, ByVal uscom As Integer, ByVal Pn1 As Integer, ByVal Pn2 As Integer, ByVal Pn3 As Integer, ByVal Pn4 As Integer)
-Dim wnm As Integer, sq As Integer, werp As Integer, livewer As Integer, weryu(1 To 3) As Integer '暫時變數
+Dim wnm As Integer, sq As Integer, werp As Integer, livewer As Integer, weryu(1 To 3) As Integer, i As Integer, k As Integer, p As Integer '暫時變數
 If uscom = 1 Then livewer = liveus(角色人物對戰人數(1, 2)) Else livewer = livecom(角色人物對戰人數(2, 2))
 Select Case turn
     Case 1 '==攻擊階段類
@@ -2282,7 +2283,7 @@ End Select
 
 End Sub
 Sub 利恩(ByVal turn As Integer, ByVal movecpre As Integer, ByVal uscom As Integer, ByVal Pn1 As Integer, ByVal Pn2 As Integer, ByVal Pn3 As Integer, ByVal Pn4 As Integer)
-Dim wnm As Integer, sq As Integer, werp As Integer, livewer As Integer, weryu(1 To 3) As Integer '暫時變數
+Dim wnm As Integer, sq As Integer, werp As Integer, livewer As Integer, weryu(1 To 3) As Integer, i As Integer, k As Integer '暫時變數
 If uscom = 1 Then livewer = liveus(角色人物對戰人數(1, 2)) Else livewer = livecom(角色人物對戰人數(2, 2))
 Select Case turn
     Case 1 '==攻擊階段類
@@ -2417,7 +2418,7 @@ End Select
 
 End Sub
 Sub 夏洛特(ByVal turn As Integer, ByVal movecpre As Integer, ByVal uscom As Integer, ByVal Pn1 As Integer, ByVal Pn2 As Integer, ByVal Pn3 As Integer, ByVal Pn4 As Integer)
-Dim wnm As Integer, sq As Integer, werp As Integer, livewer As Integer, livewer41 As Integer, livewermax As Integer, weryu(1 To 3) As Integer '暫時變數
+Dim wnm As Integer, sq As Integer, werp As Integer, livewer As Integer, livewer41 As Integer, livewermax As Integer, weryu(1 To 3) As Integer, i As Integer, k As Integer, p As Integer '暫時變數
 If uscom = 1 Then
     livewer = liveus(角色人物對戰人數(1, 2))
     livewer41 = liveus41(角色人物對戰人數(1, 2))
@@ -2590,7 +2591,7 @@ End Select
 
 End Sub
 Sub 泰瑞爾(ByVal turn As Integer, ByVal movecpre As Integer, ByVal uscom As Integer, ByVal Pn1 As Integer, ByVal Pn2 As Integer, ByVal Pn3 As Integer, ByVal Pn4 As Integer)
-Dim wnm As Integer, sq As Integer, werp As Integer, livewer As Integer, weryu(1 To 3) As Integer '暫時變數
+Dim wnm As Integer, sq As Integer, werp As Integer, livewer As Integer, weryu(1 To 3) As Integer, i As Integer, k As Integer '暫時變數
 If uscom = 1 Then livewer = liveus(角色人物對戰人數(1, 2)) Else livewer = livecom(角色人物對戰人數(2, 2))
 Select Case turn
     Case 1 '==攻擊階段類
@@ -2735,7 +2736,7 @@ End Select
 
 End Sub
 Sub 瑪格莉特(ByVal turn As Integer, ByVal movecpre As Integer, ByVal uscom As Integer, ByVal Pn1 As Integer, ByVal Pn2 As Integer, ByVal Pn3 As Integer, ByVal Pn4 As Integer)
-Dim wnm As Integer, sq As Integer, werp As Integer, livewer As Integer, livewermax As Integer, weryu(1 To 3) As Integer '暫時變數
+Dim wnm As Integer, sq As Integer, werp As Integer, livewer As Integer, livewermax As Integer, weryu(1 To 3) As Integer, i As Integer, k As Integer '暫時變數
 If uscom = 1 Then
     livewer = liveus(角色人物對戰人數(1, 2))
     livewermax = liveusmax(角色人物對戰人數(1, 2))
@@ -2870,7 +2871,7 @@ End Select
 
 End Sub
 Sub 庫勒尼西(ByVal turn As Integer, ByVal movecpre As Integer, ByVal uscom As Integer, ByVal Pn1 As Integer, ByVal Pn2 As Integer, ByVal Pn3 As Integer, ByVal Pn4 As Integer)
-Dim wnm As Integer, sq As Integer, werp As Integer, livewer As Integer, weryu(1 To 3) As Integer '暫時變數
+Dim wnm As Integer, sq As Integer, werp As Integer, livewer As Integer, weryu(1 To 3) As Integer, i As Integer, k As Integer '暫時變數
 If uscom = 1 Then livewer = liveus(角色人物對戰人數(1, 2)) Else livewer = livecom(角色人物對戰人數(2, 2))
 Select Case turn
     Case 1 '==攻擊階段類
@@ -2970,7 +2971,7 @@ End Select
 
 End Sub
 Sub 蕾格烈芙(ByVal turn As Integer, ByVal movecpre As Integer, ByVal uscom As Integer, ByVal Pn1 As Integer, ByVal Pn2 As Integer, ByVal Pn3 As Integer, ByVal Pn4 As Integer)
-Dim wnm As Integer, sq As Integer, werp As Integer, livewer As Integer, weryu(1 To 3) As Integer '暫時變數
+Dim wnm As Integer, sq As Integer, werp As Integer, livewer As Integer, weryu(1 To 3) As Integer, i As Integer, k As Integer '暫時變數
 If uscom = 1 Then livewer = liveus(角色人物對戰人數(1, 2)) Else livewer = livecom(角色人物對戰人數(2, 2))
 Select Case turn
     Case 1 '==攻擊階段類
@@ -3095,7 +3096,7 @@ End Select
 
 End Sub
 Sub 多妮妲(ByVal turn As Integer, ByVal movecpre As Integer, ByVal uscom As Integer, ByVal Pn1 As Integer, ByVal Pn2 As Integer, ByVal Pn3 As Integer, ByVal Pn4 As Integer)
-Dim wnm As Integer, sq As Integer, werp As Integer, livewer As Integer, weryu(1 To 3) As Integer '暫時變數
+Dim wnm As Integer, sq As Integer, werp As Integer, livewer As Integer, weryu(1 To 3) As Integer, i As Integer, k As Integer, p As Integer '暫時變數
 If uscom = 1 Then livewer = liveus(角色人物對戰人數(1, 2)) Else livewer = livecom(角色人物對戰人數(2, 2))
 Select Case turn
     Case 1 '==攻擊階段類
@@ -3254,7 +3255,7 @@ End Select
 
 End Sub
 Sub 傑多(ByVal turn As Integer, ByVal movecpre As Integer, ByVal uscom As Integer, ByVal Pn1 As Integer, ByVal Pn2 As Integer, ByVal Pn3 As Integer, ByVal Pn4 As Integer)
-Dim wnm As Integer, sq As Integer, werp As Integer, livewer As Integer, weryu(1 To 3) As Integer '暫時變數
+Dim wnm As Integer, sq As Integer, werp As Integer, livewer As Integer, weryu(1 To 3) As Integer, i As Integer, k As Integer, p As Integer '暫時變數
 If uscom = 1 Then livewer = liveus(角色人物對戰人數(1, 2)) Else livewer = livecom(角色人物對戰人數(2, 2))
 Select Case turn
     Case 1 '==攻擊階段類
@@ -3368,7 +3369,7 @@ End Select
 
 End Sub
 Sub 阿奇波爾多(ByVal turn As Integer, ByVal movecpre As Integer, ByVal uscom As Integer, ByVal Pn1 As Integer, ByVal Pn2 As Integer, ByVal Pn3 As Integer, ByVal Pn4 As Integer)
-Dim wnm As Integer, sq As Integer, werp As Integer, livewer As Integer, weryu(1 To 3) As Integer '暫時變數
+Dim wnm As Integer, sq As Integer, werp As Integer, livewer As Integer, weryu(1 To 3) As Integer, i As Integer, k As Integer, p As Integer '暫時變數
 If uscom = 1 Then livewer = liveus(角色人物對戰人數(1, 2)) Else livewer = livecom(角色人物對戰人數(2, 2))
 Select Case turn
     Case 1 '==攻擊階段類
@@ -3521,7 +3522,7 @@ End Select
 
 End Sub
 Sub 露緹亞(ByVal turn As Integer, ByVal movecpre As Integer, ByVal uscom As Integer, ByVal Pn1 As Integer, ByVal Pn2 As Integer, ByVal Pn3 As Integer, ByVal Pn4 As Integer)
-Dim wnm As Integer, sq As Integer, werp As Integer, livewer As Integer, weryu(1 To 3) As Integer '暫時變數
+Dim wnm As Integer, sq As Integer, werp As Integer, livewer As Integer, weryu(1 To 3) As Integer, i As Integer, k As Integer '暫時變數
 If uscom = 1 Then livewer = liveus(角色人物對戰人數(1, 2)) Else livewer = livecom(角色人物對戰人數(2, 2))
 Select Case turn
     Case 1 '==攻擊階段類
@@ -3658,7 +3659,7 @@ End Select
 
 End Sub
 Sub 梅莉(ByVal turn As Integer, ByVal movecpre As Integer, ByVal uscom As Integer, ByVal Pn1 As Integer, ByVal Pn2 As Integer, ByVal Pn3 As Integer, ByVal Pn4 As Integer)
-Dim wnm As Integer, sq As Integer, werp As Integer, livewer As Integer, weryu(1 To 3) As Integer '暫時變數
+Dim wnm As Integer, sq As Integer, werp As Integer, livewer As Integer, weryu(1 To 3) As Integer, i As Integer, k As Integer '暫時變數
 If uscom = 1 Then livewer = liveus(角色人物對戰人數(1, 2)) Else livewer = livecom(角色人物對戰人數(2, 2))
 Select Case turn
     Case 1 '==攻擊階段類
@@ -3853,7 +3854,7 @@ End Select
 
 End Sub
 Sub 貝琳達(ByVal turn As Integer, ByVal movecpre As Integer, ByVal uscom As Integer, ByVal Pn1 As Integer, ByVal Pn2 As Integer, ByVal Pn3 As Integer, ByVal Pn4 As Integer)
-Dim wnm As Integer, sq As Integer, werp As Integer, livewer As Integer, weryu(1 To 5) As Integer '暫時變數
+Dim wnm As Integer, sq As Integer, werp As Integer, livewer As Integer, weryu(1 To 5) As Integer, i As Integer, k As Integer, p As Integer '暫時變數
 If uscom = 1 Then livewer = liveus(角色人物對戰人數(1, 2)) Else livewer = livecom(角色人物對戰人數(2, 2))
 Select Case turn
     Case 1 '==攻擊階段類
@@ -4016,7 +4017,7 @@ End Select
 
 End Sub
 Sub 蕾(ByVal turn As Integer, ByVal movecpre As Integer, ByVal uscom As Integer, ByVal Pn1 As Integer, ByVal Pn2 As Integer, ByVal Pn3 As Integer, ByVal Pn4 As Integer)
-Dim wnm As Integer, sq As Integer, werp As Integer, livewer As Integer, weryu(1 To 3) As Integer '暫時變數
+Dim wnm As Integer, sq As Integer, werp As Integer, livewer As Integer, weryu(1 To 3) As Integer, i As Integer, k As Integer, p As Integer '暫時變數
 If uscom = 1 Then livewer = liveus(角色人物對戰人數(1, 2)) Else livewer = livecom(角色人物對戰人數(2, 2))
 Select Case turn
     Case 1 '==攻擊階段類
@@ -4237,7 +4238,7 @@ End Select
 
 End Sub
 Sub 羅莎琳(ByVal turn As Integer, ByVal movecpre As Integer, ByVal uscom As Integer, ByVal Pn1 As Integer, ByVal Pn2 As Integer, ByVal Pn3 As Integer, ByVal Pn4 As Integer)
-Dim wnm As Integer, sq As Integer, werp As Integer, livewer As Integer, weryu(1 To 3) As Integer '暫時變數
+Dim wnm As Integer, sq As Integer, werp As Integer, livewer As Integer, weryu(1 To 3) As Integer, i As Integer, k As Integer, p As Integer '暫時變數
 If uscom = 1 Then livewer = liveus(角色人物對戰人數(1, 2)) Else livewer = livecom(角色人物對戰人數(2, 2))
 Select Case turn
     Case 1 '==攻擊階段類
@@ -4405,7 +4406,7 @@ End Select
 
 End Sub
 Sub 洛洛妮(ByVal turn As Integer, ByVal movecpre As Integer, ByVal uscom As Integer, ByVal Pn1 As Integer, ByVal Pn2 As Integer, ByVal Pn3 As Integer, ByVal Pn4 As Integer)
-Dim wnm As Integer, sq As Integer, werp As Integer, livewer As Integer, livewermax As Integer, weryu(1 To 3) As Integer '暫時變數
+Dim wnm As Integer, sq As Integer, werp As Integer, livewer As Integer, livewermax As Integer, weryu(1 To 3) As Integer, i As Integer, k As Integer, p As Integer '暫時變數
 If uscom = 1 Then
     livewer = liveus(角色人物對戰人數(1, 2))
     livewermax = liveusmax(角色人物對戰人數(1, 2))
@@ -4536,7 +4537,7 @@ End Select
 
 End Sub
 Sub 克頓(ByVal turn As Integer, ByVal movecpre As Integer, ByVal uscom As Integer, ByVal Pn1 As Integer, ByVal Pn2 As Integer, ByVal Pn3 As Integer, ByVal Pn4 As Integer)
-Dim wnm As Integer, sq As Integer, werp As Integer, livewer As Integer, weryu(1 To 3) As Integer '暫時變數
+Dim wnm As Integer, sq As Integer, werp As Integer, livewer As Integer, weryu(1 To 3) As Integer, i As Integer, k As Integer, p As Integer '暫時變數
 If uscom = 1 Then livewer = liveus(角色人物對戰人數(1, 2)) Else livewer = livecom(角色人物對戰人數(2, 2))
 Select Case turn
     Case 1 '==攻擊階段類
@@ -4693,7 +4694,7 @@ End Select
 
 End Sub
 Sub 艾蕾可(ByVal turn As Integer, ByVal movecpre As Integer, ByVal uscom As Integer, ByVal Pn1 As Integer, ByVal Pn2 As Integer, ByVal Pn3 As Integer, ByVal Pn4 As Integer)
-Dim wnm As Integer, sq As Integer, werp As Integer, livewer As Integer, weryu(1 To 5) As Integer '暫時變數
+Dim wnm As Integer, sq As Integer, werp As Integer, livewer As Integer, weryu(1 To 5) As Integer, i As Integer, k As Integer, p As Integer '暫時變數
 If uscom = 1 Then livewer = liveus(角色人物對戰人數(1, 2)) Else livewer = livecom(角色人物對戰人數(2, 2))
 Select Case turn
     Case 1 '==攻擊階段類
@@ -4831,7 +4832,7 @@ End Select
 
 End Sub
 Sub 尤莉卡(ByVal turn As Integer, ByVal movecpre As Integer, ByVal uscom As Integer, ByVal Pn1 As Integer, ByVal Pn2 As Integer, ByVal Pn3 As Integer, ByVal Pn4 As Integer)
-Dim wnm As Integer, sq As Integer, werp As Integer, livewer As Integer, weryu(1 To 5) As Integer '暫時變數
+Dim wnm As Integer, sq As Integer, werp As Integer, livewer As Integer, weryu(1 To 5) As Integer, i As Integer, k As Integer '暫時變數
 If uscom = 1 Then livewer = liveus(角色人物對戰人數(1, 2)) Else livewer = livecom(角色人物對戰人數(2, 2))
 Select Case turn
     Case 1 '==攻擊階段類

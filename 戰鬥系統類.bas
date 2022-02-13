@@ -30,6 +30,7 @@ Public pageusleadmax(0 To 1) As Integer   '使用者牌順序計數表(0.手牌/1.出牌)
 Public pagecomleadmax(0 To 1) As Integer   '電腦牌順序計數表(0.手牌/1.出牌)
 Public pageqlead(1 To 2) As Integer   '出牌計數變數(1.使用者/2.電腦)
 Public pageglead(1 To 2) As Integer   '手牌計數變數(1.使用者/2.電腦)
+Option Explicit
 Public movedsus As Integer   '使用者移動階段決定值變數
 Public turnpageonin As Integer  '階段是否可出牌變數(一般)
 Public turnpageoninatking As Integer  '階段是否可出牌變數(技能使用)
@@ -136,6 +137,7 @@ End Select
 
 End Sub
 Function 執行動作_路徑使用新式異常狀態圖案(ByVal ph As String) As String
+Dim i As Integer
 For i = 1 To Len(ph)
     If Mid(ph, i, 1) = "." Then
         ph = Mid(ph, 1, i - 1) & "new" & Right(ph, 4)
@@ -571,6 +573,7 @@ Sub 執行動作_電腦_棄牌(ByVal n As Integer)
     一般系統類.檢查音樂播放 1
 End Sub
 Sub 執行動作_洗牌_舊()
+Dim g As Integer
 For g = 1 To 57
      If pagecardnum(g, 6) = 3 Then
          pagegive = Val(pagegive) - 1
@@ -580,6 +583,7 @@ Next
 FormMainMode.pageul = 57 - Val(pagegive)
 End Sub
 Sub 執行動作_洗牌()
+Dim g As Integer
 For g = 1 To 57
      If pagecardnum(g, 6) = 3 Then
          公用牌各牌類型紀錄數(0, 1) = Val(公用牌各牌類型紀錄數(0, 1)) - 1
@@ -649,6 +653,7 @@ Next
 FormMainMode.pageul = Val(公用牌各牌類型紀錄數(0, 2)) - Val(公用牌各牌類型紀錄數(0, 1))
 End Sub
 Sub 執行動作_清除所有異常狀態_電腦()
+Dim i As Integer
 For i = 14 * (角色人物對戰人數(2, 2) - 1) + 1 To 14 * 角色人物對戰人數(2, 2)
    If 人物異常狀態資料庫(2, i, 2) > 0 Then
       異常狀態檢查數(人物異常狀態資料庫(2, i, 3), 2) = 0
@@ -658,6 +663,7 @@ Next
 戰鬥系統類.異常狀態繼承_電腦
 End Sub
 Sub 執行動作_清除所有異常狀態_使用者()
+Dim i As Integer
 For i = 14 * (角色人物對戰人數(1, 2) - 1) + 1 To 14 * 角色人物對戰人數(1, 2)
    If 人物異常狀態資料庫(1, i, 2) > 0 Then
       異常狀態檢查數(人物異常狀態資料庫(1, i, 3), 2) = 0
@@ -728,6 +734,7 @@ Else
 End If
 End Sub
 Sub 異常狀態繼承_使用者()
+Dim k As Integer, i As Integer, j As Integer
 For k = 1 To 3
     For i = 14 * (角色待機人物紀錄數(1, k) - 1) + 1 To (14 * 角色待機人物紀錄數(1, k)) - 1
          If 人物異常狀態資料庫(1, i, 2) = 0 Then
@@ -754,6 +761,7 @@ For k = 1 To 3
 Next
 End Sub
 Sub 異常狀態繼承_電腦()
+Dim k As Integer, i As Integer, j As Integer
 For k = 1 To 3
     For i = 14 * (角色待機人物紀錄數(2, k) - 1) + 1 To (14 * 角色待機人物紀錄數(2, k)) - 1
           If 人物異常狀態資料庫(2, i, 2) = 0 Then
@@ -968,27 +976,28 @@ Else
 End If
 End Function
 Sub comatk_AI_雪莉_巨大黑犬_劍(ByVal i As Integer)
-            If Val(pagecardnum(i, 6)) = 1 And Val(pagecardnum(i, 5)) = 2 Then
-               If pagecardnum(i, 1) = a1a Then
-                  pagecardnum(i, 11) = 1
-              ElseIf pagecardnum(i, 3) = a1a Then
-                  cspce = pagecardnum(i, 1)
-                  cspme = pagecardnum(i, 2)
-                  pagecardnum(i, 1) = pagecardnum(i, 3)
-                  pagecardnum(i, 2) = pagecardnum(i, 4)
-                  pagecardnum(i, 3) = cspce
-                  pagecardnum(i, 4) = cspme
-                  If pageonin(i) = 2 Then
-                     pageonin(i) = 1
-                  Else
-                     pageonin(i) = 2
-                  End If
-                  pagecardnum(i, 11) = 1
-               End If
-            End If
-
+Dim cspce As String, cspme As String
+If Val(pagecardnum(i, 6)) = 1 And Val(pagecardnum(i, 5)) = 2 Then
+   If pagecardnum(i, 1) = a1a Then
+      pagecardnum(i, 11) = 1
+  ElseIf pagecardnum(i, 3) = a1a Then
+      cspce = pagecardnum(i, 1)
+      cspme = pagecardnum(i, 2)
+      pagecardnum(i, 1) = pagecardnum(i, 3)
+      pagecardnum(i, 2) = pagecardnum(i, 4)
+      pagecardnum(i, 3) = cspce
+      pagecardnum(i, 4) = cspme
+      If pageonin(i) = 2 Then
+         pageonin(i) = 1
+      Else
+         pageonin(i) = 2
+      End If
+      pagecardnum(i, 11) = 1
+   End If
+End If
 End Sub
 Sub comatk_AI_雪莉_飛刃雨_移(j As Integer)
+Dim cspce As String, cspme As String
 If Val(pagecardnum(j, 6)) = 1 And Val(pagecardnum(j, 5)) = 2 Then
      If pagecardnum(j, 1) = a3a And Val(pagecardnum(j, 2)) = 1 Then
        pagecardnum(j, 11) = 1
@@ -1009,6 +1018,7 @@ If Val(pagecardnum(j, 6)) = 1 And Val(pagecardnum(j, 5)) = 2 Then
   End If
 End Sub
 Sub comatk_AI_傑多_因果之幻_移(j As Integer)
+Dim cspce As String, cspme As String
 If Val(pagecardnum(j, 6)) = 1 And Val(pagecardnum(j, 5)) = 2 Then
      If pagecardnum(j, 1) = a3a And Val(pagecardnum(j, 2)) >= 1 Then
        pagecardnum(j, 11) = 1
@@ -1029,66 +1039,69 @@ If Val(pagecardnum(j, 6)) = 1 And Val(pagecardnum(j, 5)) = 2 Then
   End If
 End Sub
 Sub comatk_AI_雪莉_自殺傾向_特(ByVal a As Integer)
-            If Val(pagecardnum(a, 6)) = 1 And Val(pagecardnum(a, 5)) = 2 And Val(pagecardnum(a, 5)) <> 1 Then
-               If pagecardnum(a, 1) = a4a Then
-                  pagecardnum(a, 11) = 1
-              ElseIf pagecardnum(a, 3) = a4a Then
-                  cspce = pagecardnum(a, 1)
-                  cspme = pagecardnum(a, 2)
-                  pagecardnum(a, 1) = pagecardnum(a, 3)
-                  pagecardnum(a, 2) = pagecardnum(a, 4)
-                  pagecardnum(a, 3) = cspce
-                  pagecardnum(a, 4) = cspme
-                  If pageonin(a) = 2 Then
-                     pageonin(a) = 1
-                  Else
-                     pageonin(a) = 2
-                  End If
-                  pagecardnum(a, 11) = 1
-               End If
-            End If
+Dim cspce As String, cspme As String
+If Val(pagecardnum(a, 6)) = 1 And Val(pagecardnum(a, 5)) = 2 And Val(pagecardnum(a, 5)) <> 1 Then
+   If pagecardnum(a, 1) = a4a Then
+      pagecardnum(a, 11) = 1
+  ElseIf pagecardnum(a, 3) = a4a Then
+      cspce = pagecardnum(a, 1)
+      cspme = pagecardnum(a, 2)
+      pagecardnum(a, 1) = pagecardnum(a, 3)
+      pagecardnum(a, 2) = pagecardnum(a, 4)
+      pagecardnum(a, 3) = cspce
+      pagecardnum(a, 4) = cspme
+      If pageonin(a) = 2 Then
+         pageonin(a) = 1
+      Else
+         pageonin(a) = 2
+      End If
+      pagecardnum(a, 11) = 1
+   End If
+End If
 
 End Sub
 Sub comatk_AI_雪莉_多妮妲_異質者_特(ByVal a As Integer)
-            If Val(pagecardnum(a, 6)) = 1 And Val(pagecardnum(a, 5)) = 2 Then
-               If pagecardnum(a, 1) = a4a Then
-                  pagecardnum(a, 11) = 1
-              ElseIf pagecardnum(a, 3) = a4a Then
-                  cspce = pagecardnum(a, 1)
-                  cspme = pagecardnum(a, 2)
-                  pagecardnum(a, 1) = pagecardnum(a, 3)
-                  pagecardnum(a, 2) = pagecardnum(a, 4)
-                  pagecardnum(a, 3) = cspce
-                  pagecardnum(a, 4) = cspme
-                  If pageonin(a) = 2 Then
-                     pageonin(a) = 1
-                  Else
-                     pageonin(a) = 2
-                  End If
-                  pagecardnum(a, 11) = 1
-               End If
-            End If
+Dim cspce As String, cspme As String
+If Val(pagecardnum(a, 6)) = 1 And Val(pagecardnum(a, 5)) = 2 Then
+   If pagecardnum(a, 1) = a4a Then
+      pagecardnum(a, 11) = 1
+  ElseIf pagecardnum(a, 3) = a4a Then
+      cspce = pagecardnum(a, 1)
+      cspme = pagecardnum(a, 2)
+      pagecardnum(a, 1) = pagecardnum(a, 3)
+      pagecardnum(a, 2) = pagecardnum(a, 4)
+      pagecardnum(a, 3) = cspce
+      pagecardnum(a, 4) = cspme
+      If pageonin(a) = 2 Then
+         pageonin(a) = 1
+      Else
+         pageonin(a) = 2
+      End If
+      pagecardnum(a, 11) = 1
+   End If
+End If
 
 End Sub
 Sub comatk_AI_蕾_終曲_無盡輪迴的終結_特(ByVal a As Integer)
-            If Val(pagecardnum(a, 6)) = 1 And Val(pagecardnum(a, 5)) = 2 Then
-               If pagecardnum(a, 1) = a4a Then
-                  pagecardnum(a, 11) = 1
-              ElseIf pagecardnum(a, 3) = a4a Then
-                  cspce = pagecardnum(a, 1)
-                  cspme = pagecardnum(a, 2)
-                  pagecardnum(a, 1) = pagecardnum(a, 3)
-                  pagecardnum(a, 2) = pagecardnum(a, 4)
-                  pagecardnum(a, 3) = cspce
-                  pagecardnum(a, 4) = cspme
-                  If pageonin(a) = 2 Then
-                     pageonin(a) = 1
-                  Else
-                     pageonin(a) = 2
-                  End If
-                  pagecardnum(a, 11) = 1
-               End If
-            End If
+Dim cspce As String, cspme As String
+If Val(pagecardnum(a, 6)) = 1 And Val(pagecardnum(a, 5)) = 2 Then
+   If pagecardnum(a, 1) = a4a Then
+      pagecardnum(a, 11) = 1
+  ElseIf pagecardnum(a, 3) = a4a Then
+      cspce = pagecardnum(a, 1)
+      cspme = pagecardnum(a, 2)
+      pagecardnum(a, 1) = pagecardnum(a, 3)
+      pagecardnum(a, 2) = pagecardnum(a, 4)
+      pagecardnum(a, 3) = cspce
+      pagecardnum(a, 4) = cspme
+      If pageonin(a) = 2 Then
+         pageonin(a) = 1
+      Else
+         pageonin(a) = 2
+      End If
+      pagecardnum(a, 11) = 1
+   End If
+End If
 
 End Sub
 Sub 直接寫入顯示列數值(ByVal n As Integer, ByVal num As Integer)
@@ -1126,7 +1139,7 @@ FormMainMode.card(num).Height = 1260
 FormMainMode.card(num).Picture = LoadPicture(app_path & "card\" & pagecardnum(num, 8) & "-" & pageonin(num) & ".bmp")
 End Sub
 Sub 出牌順序計算_使用者_手牌()
-Dim pagegustot As Integer '暫時變數
+Dim pagegustot As Integer, i As Integer, j As Integer, o As Integer, g As Integer, h As Integer '暫時變數
 
 For i = 1 To 106
    For j = 1 To 2
@@ -1157,7 +1170,7 @@ Next
 'MsgBox 123
 End Sub
 Sub 出牌順序計算_使用者_出牌()
-Dim pagegustot As Integer '暫時變數
+Dim pagegustot As Integer, i As Integer, j As Integer, o As Integer, g As Integer, h As Integer '暫時變數
 
 For i = 1 To 106
    For j = 1 To 2
@@ -1188,7 +1201,7 @@ Next
 
 End Sub
 Sub 出牌順序計算_電腦_手牌()
-Dim pagegustot As Integer '暫時變數
+Dim pagegustot As Integer, i As Integer, j As Integer, o As Integer, g As Integer, h As Integer '暫時變數
 
 For i = 1 To 106
    For j = 1 To 2
@@ -1222,7 +1235,7 @@ For o = 1 To Val(pagegustot) - 1
 Next
 End Sub
 Sub 出牌順序計算_電腦_出牌()
-Dim pagegustot As Integer '暫時變數
+Dim pagegustot As Integer, i As Integer, j As Integer, o As Integer, g As Integer, h As Integer '暫時變數
 
 For i = 1 To 106
    For j = 1 To 2
@@ -1252,6 +1265,7 @@ For o = 1 To Val(pagegustot) - 1
 Next
 End Sub
 Sub 收牌計算距離單位_使用者()
+Dim i As Integer
 For i = 1 To 106
     距離單位_收牌暫時數(i, 1) = 0
     距離單位_收牌暫時數(i, 2) = 0
@@ -1271,6 +1285,7 @@ For i = 1 To pageqlead(1)
 Next
 End Sub
 Sub 收牌計算距離單位_電腦()
+Dim i As Integer
 For i = 1 To 106
     距離單位_收牌暫時數(i, 1) = 0
     距離單位_收牌暫時數(i, 2) = 0
@@ -1295,6 +1310,7 @@ Erase atkingno
 End Sub
 Sub 技能說明載入_使用者(ByVal n As Integer)
 Dim ahmt As String
+Dim i As Integer
 FormMainMode.atkinghelpt1.Caption = VBEPerson(1, 角色人物對戰人數(1, 2), 3, n, 2)
 FormMainMode.atkinghelpt2.Caption = VBEPerson(1, 角色人物對戰人數(1, 2), 3, n, 3)
 FormMainMode.atkinghelpt3.Caption = VBEPerson(1, 角色人物對戰人數(1, 2), 3, n, 4)
@@ -1318,6 +1334,7 @@ End If
 End Sub
 Sub 技能說明載入_電腦(ByVal n As Integer)
 Dim ahmt As String
+Dim i As Integer
 FormMainMode.atkinghelpt1.Caption = VBEPerson(2, 角色人物對戰人數(2, 2), 3, n, 2)
 FormMainMode.atkinghelpt2.Caption = VBEPerson(2, 角色人物對戰人數(2, 2), 3, n, 3)
 FormMainMode.atkinghelpt3.Caption = VBEPerson(2, 角色人物對戰人數(2, 2), 3, n, 4)
@@ -1623,6 +1640,7 @@ If pagecardnum(Index, 6) = 2 And pagecardnum(Index, 5) = 2 Then
 End If
 End Sub
 Sub 電腦牌_模擬轉牌_外(ByVal Index As Integer)
+Dim uspce As String, uspme As String
 uspce = pagecardnum(Index, 1)
 uspme = pagecardnum(Index, 2)
 pagecardnum(Index, 1) = pagecardnum(Index, 3)
@@ -1797,7 +1815,7 @@ If FormMainMode.人物消失檢查.Enabled = False Then
 End If
 End Sub
 Function 雙方HP檢查_結束回合檢查() As Boolean
-Dim num(1 To 2) As Integer '選擇人物暫時變數
+Dim num(1 To 2) As Integer, i As Integer '選擇人物暫時變數
 If turn >= Val(Formsetting.ckendturnnum.Text) And Formsetting.ckendturn.Value = 1 Then
         雙方HP檢查_結束回合檢查 = True
         '==============
@@ -1827,7 +1845,7 @@ End If
 End Function
 
 Sub checkpage()
-
+Dim i As Integer
 For i = 1 To 目前數(11)
   If 目前數(10) = 1 Then
    FormMainMode.pageusqlead = Val(FormMainMode.pageusqlead) - 1
@@ -1976,6 +1994,7 @@ If goicheck(1) = 0 Then
 End If
 End Sub
 Sub cleanatkingpagetot()
+Dim i As Integer, j As Integer
 For i = 1 To 2
      For j = 1 To 5
         atkingpagetot(i, j) = 0
@@ -1983,7 +2002,8 @@ For i = 1 To 2
 Next
 End Sub
 Sub comatk1()
-
+Dim a As Integer
+Dim cspce As String, cspme As String
 For a = 1 To 106
   If Val(pagecardnum(a, 6)) = 1 And Val(pagecardnum(a, 5)) = 2 And Val(pagecardnum(a, 11)) <> 1 Then
      If pagecardnum(a, 1) = a1a Then
@@ -2006,7 +2026,8 @@ For a = 1 To 106
 Next
 End Sub
 Sub comatk2()
-
+Dim j As Integer
+Dim cspce As String, cspme As String
 For j = 1 To 106
   If Val(pagecardnum(j, 6)) = 1 And Val(pagecardnum(j, 5)) = 2 And Val(pagecardnum(j, 11)) <> 1 Then
      If pagecardnum(j, 1) = a5a Then
@@ -2029,7 +2050,8 @@ For j = 1 To 106
 Next
 End Sub
 Sub comatk_智慧型AI引導程序_超出牌張數(ByVal turn As Integer, ByVal movecpre As Integer, ByVal choose As Integer)
-Dim werstr As String, werbo As Boolean
+Dim werstr As String, werbo As Boolean, a As Integer, k As Integer
+Dim cspce As String, cspme As String
 If movecpre = 1 And turn = 1 Then
    werstr = a1a
 ElseIf movecpre > 1 And turn = 1 Then
@@ -2966,6 +2988,7 @@ End Select
         End Select
 End Sub
 Sub moveatkin()
+Dim j As Integer, cspce As String, cspme As String
 Do
     For j = 71 To 106
       If Val(pagecardnum(j, 6)) = 1 And Val(pagecardnum(j, 5)) = 2 And Val(pagecardnum(j, 11)) <> 1 Then
@@ -3033,7 +3056,7 @@ FormMainMode.cnmove2.Visible = False
 擲骰表單溝通暫時變數(1) = 1
 End Sub
 Sub 人物交換_使用者_指定交換(ByVal num As Integer)
-Dim ae As Integer
+Dim ae As Integer, n As Integer, i As Integer
 ae = 角色人物對戰人數(1, 2)
 角色人物對戰人數(1, 2) = 角色待機人物紀錄數(1, num)
 角色待機人物紀錄數(1, 1) = 角色人物對戰人數(1, 2)
@@ -3105,7 +3128,7 @@ End If
 End Sub
 
 Sub 人物交換_電腦_指定交換(ByVal num As Integer)
-Dim ae As Integer
+Dim ae As Integer, n As Integer, i As Integer
 ae = 角色人物對戰人數(2, 2)
 角色人物對戰人數(2, 2) = 角色待機人物紀錄數(2, num)
 角色待機人物紀錄數(2, num) = ae
@@ -3164,7 +3187,7 @@ End If
 '==========
 End Sub
 Sub 執行動作_交換人物角色_使用者_初始()
-Dim i As Integer
+Dim i As Integer, k As Integer, j As Integer
 Dim ne As Integer
 For i = 2 To 3
    Formchangeperson.card(i - 1).Picture = FormMainMode.cardus(角色待機人物紀錄數(1, i)).Picture
@@ -3275,7 +3298,7 @@ Sub 執行動作_交換人物角色_結束執行()
 End Sub
 Sub 事件卡處理_指定_使用者方()
 Dim kp(1 To 18)  As Integer '事件卡標記暫時數
-Dim m, km As Integer
+Dim m As Integer, km As Integer, i As Integer
 If 事件卡記錄暫時數(0, 1) = 18 Then
     Do
         Randomize
@@ -3306,7 +3329,7 @@ End If
 End Sub
 Sub 事件卡處理_指定_電腦方()
 Dim kp(1 To 18)  As Integer '事件卡標記暫時數
-Dim m, km As Integer
+Dim m As Integer, km As Integer, i As Integer
 If 事件卡記錄暫時數(0, 1) = 18 Then
     Do
         Randomize
@@ -3337,7 +3360,7 @@ End If
 End Sub
 Sub 事件卡處理_初始_使用者方()
 Dim ck As Boolean
-Dim m As Integer
+Dim m As Integer, i As Integer, j As Integer
 If Formsetting.persontgruonus(1).Value = True Then '=====(無)
     For i = 1 To 18
        Randomize
@@ -3725,7 +3748,7 @@ ElseIf Formsetting.persontgruonus(4).Value = True Then '=====隨機
 End If
 End Sub
 Sub 事件卡處理_初始_電腦方()
-Dim m As Integer
+Dim m As Integer, i As Integer, j As Integer
 Dim ay() As String
 If Formsetting.persontgruoncom(1).Value = True Then '=====(無)
     For i = 1 To 18
@@ -4187,7 +4210,7 @@ If tn <= 18 Then
 End If
 End Sub
 Sub 事件卡處理_分派_電腦方()
-Dim tn As Integer
+Dim tn As Integer, i As Integer
 Dim ay() As String
 tn = Val(FormMainMode.turni.Caption)
 If tn <= 18 Then
@@ -4230,6 +4253,7 @@ Else
 End If
 End Sub
 Function 執行動作_檢查是否有指定異常狀態(ByVal uscom As Integer, ByVal num As Integer) As Boolean
+Dim i As Integer
 執行動作_檢查是否有指定異常狀態 = False
 Select Case uscom
    Case 1
@@ -4336,6 +4360,7 @@ FormMainMode.atkingtrtot.Enabled = True
 End Sub
 Sub 技能說明載入_人物卡片背面_使用者(ByVal n As Integer)
 Dim strw() As String
+Dim i As Integer, k As Integer
 If 角色人物對戰人數(1, 2) = n Then
     For i = 5 To 8
         FormMainMode.PEAFpersoncardback_text(i) = VBEPerson(1, n, 3, i - 4, 1)
@@ -4662,6 +4687,7 @@ End If
 End Sub
 Sub 技能說明載入_人物卡片背面_電腦(ByVal n As Integer)
 Dim strw() As String
+Dim i As Integer, k As Integer
 For i = 1 To 4
     FormMainMode.PEAFpersoncardback_text(i) = VBEPerson(2, n, 3, i, 1)
     '========
@@ -4824,6 +4850,7 @@ FormMainMode.PEAFpersoncardback_main(1).Caption = ""
 End Sub
 
 Sub 執行動作_人物卡片背面解除亮光(ByVal n As Integer)
+Dim k As Integer
 Select Case n
       Case 1
             For k = 1 To 4
@@ -4837,6 +4864,7 @@ End Select
 End Sub
 Sub 技能說明載入_人物卡片背面_交換角色(ByVal n As Integer)
 Dim strw() As String
+Dim i As Integer, k As Integer
 If n = 2 Then
     For i = 5 To 8
         Formchangeperson.PEAFpersoncardback_text(i) = VBEPerson(1, 角色待機人物紀錄數(1, n + 1), 3, i - 4, 1)
@@ -6106,6 +6134,7 @@ Select Case name
 End Select
 End Sub
 Sub 公用牌未使用檢查()
+Dim i As Integer
 For i = Val(公用牌各牌類型紀錄數(0, 2)) + 1 To 70
      pagecardnum(i, 6) = 5
 Next

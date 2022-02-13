@@ -280,6 +280,7 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
+Option Explicit
 Dim m_smallimage As String
 Dim m_smallimageus As String
 Dim m_smallimagecom As String
@@ -416,13 +417,13 @@ Public Property Let 電腦方小人物圖片(ByVal New_電腦方小人物圖片 As String)
    m_smallimagecom = New_電腦方小人物圖片
    PropertyChanged "電腦方小人物圖片"
    If Me.電腦方小人物圖片 <> "" Then
-       image2.AutoSize = True
-       image2.AutoRedraw = True
-       image2.LoadImage_FromFile Me.電腦方小人物圖片
-       image2.Top = 0
-       image2.Left = 7680
+       Image2.AutoSize = True
+       Image2.AutoRedraw = True
+       Image2.LoadImage_FromFile Me.電腦方小人物圖片
+       Image2.Top = 0
+       Image2.Left = 7680
     End If
-    Me.電腦方小人物圖片width = image2.Width
+    Me.電腦方小人物圖片width = Image2.Width
 End Property
 Public Property Let 顯示列圖片(ByVal new_顯示列圖片 As String)
    m_smallimage = new_顯示列圖片
@@ -485,7 +486,7 @@ End Property
 Public Property Let 電腦方小人物圖片left(ByVal new電腦方小人物圖片left As Integer)
     m_smallimagecomleft = new電腦方小人物圖片left
    PropertyChanged "電腦方小人物圖片left"
-   image2.Left = Me.電腦方小人物圖片left
+   Image2.Left = Me.電腦方小人物圖片left
 End Property
 
 Public Property Let 移動階段選擇值(ByVal new移動階段選擇值 As Integer)
@@ -522,6 +523,7 @@ Public Property Let 電腦方小人物圖片width(ByVal new電腦方小人物圖片width As Inte
    PropertyChanged "電腦方小人物圖片width"
 End Property
 Public Property Let 移動方向圖片顯示(ByVal new移動方向圖片顯示 As Boolean)
+   Dim i As Integer
    m_moveleftrightc = new移動方向圖片顯示
    PropertyChanged "移動方向圖片顯示"
    If Me.移動方向圖片顯示 = True Then
@@ -728,7 +730,7 @@ bn32.LoadImage_FromFile App.Path & "\gif\right_2.png"
 bn42.LoadImage_FromFile App.Path & "\gif\change_2.png"
 Me.移動階段圖顯示 = False
 Me.移動階段選擇值 = 0
-
+Dim i As Integer
 For i = 1 To 6
    moveleftjpg(i).Left = 2400 + i * 300
    moveleftjpg(i).Top = 120

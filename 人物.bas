@@ -1,4 +1,5 @@
 Attribute VB_Name = "人物系統類"
+Option Explicit
 Public totpersonnumber As Integer '現在目前處理第幾人暫時數
 Public 總共人物名稱 As String '目前總共讀入人物名稱
 Public 總共人物檔案名 As String '目前總共讀入人物檔案名
@@ -47,9 +48,9 @@ Dim textlinea As String '讀入文件時一行處理暫時變數
 Dim 文件字串() As String
 Dim textcheck As Boolean '判斷文件檢查碼正確性變數
 Dim filename As String '目標人物檔案名暫時數
-Dim at() As String
+Dim at() As String, aw() As String
+Dim i As Integer
 at = Split(總共人物名稱, "=")
-Dim aw() As String
 aw = Split(總共人物檔案名, "=")
 For i = 0 To UBound(at)
    If at(i) = personname Then
@@ -90,9 +91,9 @@ Dim textlinea As String '讀入文件時一行處理暫時變數
 Dim 文件字串() As String
 Dim textcheck As Boolean '判斷文件檢查碼正確性變數
 Dim filename As String '目標人物檔案名暫時數
-Dim at() As String
+Dim at() As String, aw() As String
+Dim i As Integer
 at = Split(總共人物名稱, "=")
-Dim aw() As String
 aw = Split(總共人物檔案名, "=")
 For i = 0 To UBound(at)
    If at(i) = personname Then
@@ -134,9 +135,9 @@ Dim 文件字串() As String
 Dim textcheck As Boolean '判斷文件檢查碼正確性變數
 Dim filename As String '目標人物檔案名暫時數
 Dim 略過資訊 As Boolean '是否略過目前區段暫時數
-Dim at() As String
+Dim at() As String, aw() As String
+Dim i As Integer
 at = Split(總共人物名稱, "=")
-Dim aw() As String
 aw = Split(總共人物檔案名, "=")
 For i = 0 To UBound(at)
    If at(i) = personname Then
@@ -327,9 +328,9 @@ Dim 文件字串() As String
 Dim textcheck As Boolean '判斷文件檢查碼正確性變數
 Dim filename As String '目標人物檔案名暫時數
 Dim 略過資訊 As Boolean '是否略過目前區段暫時數
-Dim at() As String
+Dim at() As String, aw() As String
+Dim i As Integer
 at = Split(總共人物名稱, "=")
-Dim aw() As String
 aw = Split(總共人物檔案名, "=")
 For i = 0 To UBound(at)
    If at(i) = personname Then
@@ -523,9 +524,9 @@ Dim textcheck As Boolean '判斷文件檢查碼正確性變數
 Dim filename As String '目標人物檔案名暫時數
 Dim 略過資訊 As Boolean '是否略過目前區段暫時數
 Dim persontalka As Integer '資料寫入暫時變數
-Dim at() As String
+Dim at() As String, aw() As String
+Dim i As Integer
 at = Split(總共人物名稱, "=")
-Dim aw() As String
 aw = Split(總共人物檔案名, "=")
 For i = 0 To UBound(at)
    If at(i) = personname Then
@@ -689,9 +690,9 @@ Dim textcheck As Boolean '判斷文件檢查碼正確性變數
 Dim filename As String '目標人物檔案名暫時數
 Dim 略過資訊 As Boolean '是否略過目前區段暫時數
 Dim persontalka As Integer '資料寫入暫時變數
-Dim at() As String
+Dim at() As String, aw() As String
+Dim i As Integer
 at = Split(總共人物名稱, "=")
-Dim aw() As String
 aw = Split(總共人物檔案名, "=")
 For i = 0 To UBound(at)
    If at(i) = personname Then
@@ -794,7 +795,7 @@ Sub 加入總共人物檔案名字串(ByVal name As String)
 總共人物檔案名 = 總共人物檔案名 & "=" & name
 End Sub
 Sub 更新人物清單_使用者方_初設()
-Dim at() As String
+Dim at() As String, i As Integer, j As Integer
 at = Split(總共人物名稱, "=")
 For i = 1 To 3
    FormMainMode.personnameus(i).Clear
@@ -805,7 +806,7 @@ For i = 1 To 3
 Next
 End Sub
 Sub 更新人物清單_電腦方_初設()
-Dim at() As String
+Dim at() As String, i As Integer, j As Integer
 at = Split(總共人物名稱, "=")
 For i = 1 To 3
    FormMainMode.personnamecom(i).Clear
@@ -819,7 +820,7 @@ Sub 更新人物清單_使用者方_變更(ByVal 現在所在數 As Integer)
 Dim at() As String
 at = Split(總共人物名稱, "=")
 Dim ag(1 To 3) As String  '紀錄目前選項暫時數
-Dim ap, au As Integer '暫時變數
+Dim ap As Integer, au As Integer, i As Integer, j As Integer, p As Integer, q As Integer, k As Integer '暫時變數
 For i = 1 To 3
    ag(i) = FormMainMode.personnameus(i).Text
 Next
@@ -901,7 +902,7 @@ Sub 更新人物清單_使用者方_變更_開始隨機(ByVal 現在所在數 As Integer, ByVal name1
 Dim at() As String
 at = Split(總共人物名稱, "=")
 Dim ag(1 To 3) As String  '紀錄目前選項暫時數
-Dim ap, au As Integer '暫時變數
+Dim ap As Integer, au As Integer, i As Integer, j As Integer, p As Integer, q As Integer, k As Integer '暫時變數
 For i = 1 To 3
    ag(i) = FormMainMode.personnameus(i).Text
 Next
@@ -982,7 +983,7 @@ Sub 更新人物清單_電腦方_變更(ByVal 現在所在數 As Integer)
 Dim at() As String
 at = Split(總共人物名稱, "=")
 Dim ag(1 To 3) As String  '紀錄目前選項暫時數
-Dim ap, au As Integer '暫時變數
+Dim ap As Integer, au As Integer, i As Integer, j As Integer, p As Integer, q As Integer, k As Integer '暫時變數
 For i = 1 To 3
    ag(i) = FormMainMode.personnamecom(i).Text
 Next
@@ -1064,7 +1065,7 @@ Sub 更新人物清單_電腦方_變更_開始隨機(ByVal 現在所在數 As Integer, ByVal name1 A
 Dim at() As String
 at = Split(總共人物名稱, "=")
 Dim ag(1 To 3) As String  '紀錄目前選項暫時數
-Dim ap, au As Integer '暫時變數
+Dim ap As Integer, au As Integer, i As Integer, j As Integer, p As Integer, q As Integer, k As Integer '暫時變數
 For i = 1 To 3
    ag(i) = FormMainMode.personnamecom(i).Text
 Next
@@ -1153,7 +1154,7 @@ FormMainMode.PEGFcardcompi3(Index).Caption = VBEPerson(2, Index, 1, 3, 3)
 FormMainMode.PEGFcardcom(Index).Picture = LoadPicture(VBEPerson(2, Index, 1, 5, 5))
 End Sub
 Sub 角色隨機_使用者(ByVal Index As Integer)
-Dim i As Integer
+Dim i As Integer, j As Integer, k As Integer
 For i = 1 To 4
     For j = 1 To 30
         For k = 1 To 10
@@ -1176,7 +1177,7 @@ VBEPerson(1, Index, 2, 3, 5) = 1
 VBEPerson(1, Index, 1, 3, 4) = "000000"
 End Sub
 Sub 角色隨機_電腦(ByVal Index As Integer)
-Dim i As Integer
+Dim i As Integer, j As Integer, k As Integer
 For i = 1 To 4
     For j = 1 To 30
         For k = 1 To 10
@@ -1206,7 +1207,7 @@ Dim persontalkname As String  '每句對話人物記錄總變數
 Dim persontalkrec As String '總共可選擇指定對話紀錄編號串
 Dim persontalkrecnum As Integer '總共可選擇指定對話紀錄數
 Dim at() As String '選擇對話暫時變數
-Dim m As Integer '暫時變數
+Dim m As Integer, i As Integer, k As Integer '暫時變數
 Dim atbo(1 To 10) As Boolean '人物本身對話空白標記記錄數
 personcomname = VBEPerson(2, 1, 1, 1, 1)
 
@@ -1247,6 +1248,7 @@ Else
 End If
 End Function
 Sub 清除角色人物資訊變數(ByVal uscom As Integer, ByVal num As Integer)
+Dim i As Integer, j As Integer, k As Integer
 For i = 1 To UBound(VBEPerson, 3)
     For j = 1 To UBound(VBEPerson, 4)
         For k = 1 To UBound(VBEPerson, 5)

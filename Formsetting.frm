@@ -9,7 +9,7 @@ Begin VB.Form Formsetting
    ClientHeight    =   8730
    ClientLeft      =   6330
    ClientTop       =   2535
-   ClientWidth     =   13800
+   ClientWidth     =   18255
    BeginProperty Font 
       Name            =   "微軟正黑體"
       Size            =   12
@@ -24,13 +24,13 @@ Begin VB.Form Formsetting
    MaxButton       =   0   'False
    MinButton       =   0   'False
    ScaleHeight     =   8730
-   ScaleWidth      =   13800
+   ScaleWidth      =   18255
    Begin VB.Frame 表單_系統 
       Caption         =   "系統"
       Height          =   5895
-      Left            =   10440
+      Left            =   9360
       TabIndex        =   136
-      Top             =   1680
+      Top             =   3120
       Width           =   9015
       Begin VB.CheckBox chkautocontinuemode 
          Caption         =   "自動繼續模式"
@@ -138,11 +138,28 @@ Begin VB.Form Formsetting
    Begin VB.Frame 事件卡_電腦 
       Caption         =   "事件卡編輯(電腦方)"
       Height          =   5895
-      Left            =   10080
+      Left            =   9360
       TabIndex        =   51
-      Top             =   1320
+      Top             =   1560
       Visible         =   0   'False
       Width           =   9015
+      Begin VB.ComboBox comboeventcarrdcom 
+         BeginProperty Font 
+            Name            =   "微軟正黑體"
+            Size            =   9.75
+            Charset         =   136
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   375
+         Left            =   2520
+         Style           =   2  '單純下拉式
+         TabIndex        =   148
+         Top             =   240
+         Width           =   2655
+      End
       Begin VB.CheckBox persontgrecom 
          Caption         =   "遵守Unlight事件卡規則"
          BeginProperty Font 
@@ -1347,11 +1364,30 @@ Begin VB.Form Formsetting
    Begin VB.Frame 事件卡_使用者 
       Caption         =   "事件卡編輯(使用者方)"
       Height          =   5895
-      Left            =   10080
+      Left            =   9240
       TabIndex        =   5
-      Top             =   840
+      Top             =   120
       Visible         =   0   'False
       Width           =   9015
+      Begin VB.ComboBox comboeventcarrdus 
+         BeginProperty Font 
+            Name            =   "微軟正黑體"
+            Size            =   9.75
+            Charset         =   136
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   375
+         ItemData        =   "Formsetting.frx":0D3A
+         Left            =   2640
+         List            =   "Formsetting.frx":0D3C
+         Style           =   2  '單純下拉式
+         TabIndex        =   147
+         Top             =   240
+         Width           =   2655
+      End
       Begin VB.PictureBox persontgrenus 
          Appearance      =   0  '平面
          BorderStyle     =   0  '沒有框線
@@ -2142,7 +2178,7 @@ Begin VB.Form Formsetting
       Begin VB.Image Image2 
          Height          =   480
          Left            =   3480
-         Picture         =   "Formsetting.frx":0D3A
+         Picture         =   "Formsetting.frx":0D3E
          Top             =   120
          Width           =   2145
       End
@@ -2171,7 +2207,7 @@ Begin VB.Form Formsetting
       ForeColor       =   &H80000008&
       Height          =   1455
       Left            =   240
-      Picture         =   "Formsetting.frx":18BD
+      Picture         =   "Formsetting.frx":18C1
       ScaleHeight     =   1455
       ScaleWidth      =   1455
       TabIndex        =   0
@@ -2209,7 +2245,7 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
-
+Option Explicit
 Private Sub ckbgmmute_Click()
 If ckbgmmute.Value = 1 Then
    FormMainMode.wmp.settings.mute = True
@@ -2247,6 +2283,34 @@ Else
    FormMainMode.wmpse7.settings.mute = False
    FormMainMode.wmpse8.settings.mute = False
    FormMainMode.wmpse9.settings.mute = False
+End If
+End Sub
+
+Private Sub comboeventcarrdcom_Click()
+Dim i As Integer
+
+If comboeventcarrdus.Text = "自訂" Then
+    For i = 1 To 18
+        personus(i).Enabled = True
+    Next
+Else
+    For i = 1 To 18
+        personus(i).Enabled = False
+    Next
+End If
+End Sub
+
+Private Sub comboeventcarrdus_Click()
+Dim i As Integer
+
+If comboeventcarrdus.Text = "自訂" Then
+    For i = 1 To 18
+        personus(i).Enabled = True
+    Next
+Else
+    For i = 1 To 18
+        personus(i).Enabled = False
+    Next
 End If
 End Sub
 
@@ -2292,6 +2356,7 @@ VBEError:
 End Sub
 
 Private Sub Form_Activate()
+Dim i As Integer
 Formsetting.Width = 9315
 Formsetting.Height = 9150
 For i = 1 To 3
@@ -2313,6 +2378,7 @@ Next
 End Sub
 
 Private Sub Form_Load()
+Dim i As Integer
 對戰地圖選擇.AddItem "《隨機》"
 對戰地圖選擇.AddItem "人魂墓地"
 對戰地圖選擇.AddItem "白魔的圓環石陣"
@@ -2630,6 +2696,7 @@ End Select
 End Sub
 
 Private Sub persontgrecom_Click()
+Dim i As Integer
 If persontgrecom.Value = 1 Then
     For i = 1 To 18
        personcom_Click (i)
@@ -2646,6 +2713,7 @@ End If
 End Sub
 
 Private Sub persontgreus_Click()
+Dim i As Integer
 If persontgreus.Value = 1 Then
     For i = 1 To 18
        personus_Click (i)
@@ -2660,6 +2728,7 @@ End If
 End Sub
 
 Private Sub persontgruoncom_Click(Index As Integer)
+Dim i As Integer
 Select Case Index
     Case 1
        For i = 1 To 18
@@ -2681,6 +2750,7 @@ End Select
 End Sub
 
 Private Sub persontgruonus_Click(Index As Integer)
+Dim i As Integer
 Select Case Index
     Case 1
        For i = 1 To 18
@@ -2831,6 +2901,7 @@ Loop
 End Sub
 
 Sub 對戰地圖選擇_Click()
+Dim i As Integer
 Select Case 對戰地圖選擇.Text
    Case "冰封湖畔(舊)"
       BGM選擇.ListIndex = 13
@@ -2857,4 +2928,43 @@ Else
    randombk.Visible = True
 End If
 
+End Sub
+Sub 事件卡設定_列表填入(ByVal uscom As Integer, ByVal isCustom As Boolean)
+Dim tmpindex As Integer
+Select Case uscom
+    Case 1
+        If Formsetting.comboeventcarrdus.ListCount > 0 Then
+            tmpindex = Formsetting.comboeventcarrdus.ListIndex
+        End If
+        Formsetting.comboeventcarrdus.Clear
+        Formsetting.comboeventcarrdus.AddItem "無"
+        Formsetting.comboeventcarrdus.AddItem "最大值"
+        Formsetting.comboeventcarrdus.AddItem "隨機"
+        Formsetting.comboeventcarrdus.AddItem "隨機(不含聖水)"
+        If isCustom = True Then
+            Formsetting.comboeventcarrdus.AddItem "自訂"
+        End If
+        If tmpindex >= 0 And tmpindex < Formsetting.comboeventcarrdus.ListCount Then
+            Formsetting.comboeventcarrdus.ListIndex = tmpindex
+        Else
+            Formsetting.comboeventcarrdus.ListIndex = 2
+        End If
+    Case 2
+        If Formsetting.comboeventcarrdcom.ListCount > 0 Then
+            tmpindex = Formsetting.comboeventcarrdcom.ListIndex
+        End If
+        Formsetting.comboeventcarrdcom.Clear
+        Formsetting.comboeventcarrdcom.AddItem "無"
+        Formsetting.comboeventcarrdcom.AddItem "最大值"
+        Formsetting.comboeventcarrdcom.AddItem "隨機"
+        Formsetting.comboeventcarrdcom.AddItem "隨機(不含聖水)"
+        If isCustom = True Then
+            Formsetting.comboeventcarrdcom.AddItem "自訂"
+        End If
+        If tmpindex >= 0 And tmpindex < Formsetting.comboeventcarrdcom.ListCount Then
+            Formsetting.comboeventcarrdcom.ListIndex = tmpindex
+        Else
+            Formsetting.comboeventcarrdcom.ListIndex = 2
+        End If
+End Select
 End Sub
