@@ -74,6 +74,9 @@ Public 擲骰表單溝通暫時變數(1 To 4) As Integer 'Form6表單值溝通暫時變數(1.一回合
 Public 人物消失檢查暫時變數(1 To 3) As Integer '人物消失檢查計數器紀錄暫時變數(1.目前計數/2.使用者標記/3.電腦標記)
 Public 公用牌各牌類型紀錄數(0 To 31, 1 To 2) As Integer '各場景公用牌牌類型紀錄暫時變數(0.(1)目前已發牌總數量/(2)目前場景牌總數量,1~31.(1)目前已使用之牌數/(2)該牌型能使用之總數量)
 Public 卡片人物資訊檔案讀取失敗紀錄串 As String '卡片人物資訊檔案讀取失敗時檔案名紀錄暫時變數
+Public atkingckdice(1 To 2, 1 To 2, 1 To 4) As String '人物技能骰子影響紀錄暫時變數(1.使用者/2.電腦,1.對使用者/2.對電腦,1.主動技/2.被動技/3.異常狀態/4.人物實際狀態,對總骰數之影響量變化串)
+Public 顯示列雙方數值鎖定紀錄數(1 To 2) As Boolean '戰鬥系統顯示列雙方數值鎖定表示紀錄變數(1.使用者方/2.電腦方)
+
 Sub 人物技能欄燈開關(ByVal k As Boolean, ByVal n As Integer)
 Select Case n
    Case 1
@@ -787,23 +790,14 @@ For k = 1 To 3
     Next
 Next
 End Sub
-Sub 特殊_史塔夏_殺戮狀態_使用者()
-Select Case atking_史塔夏_殺戮模式狀態數(1)
-   Case 1
-            If atking_史塔夏_殺戮模式狀態數(5) = 0 Then
-                atking_史塔夏_殺戮模式狀態數(3) = 攻擊防禦骰子總數(1)
-                atking_史塔夏_殺戮模式狀態數(4) = 攻擊防禦骰子總數(1) * 2
-                atking_史塔夏_殺戮模式狀態數(5) = 1
-                攻擊防禦骰子總數(1) = 攻擊防禦骰子總數(1) * 2
-            ElseIf atking_史塔夏_殺戮模式狀態數(5) = 1 Then
-                atking_史塔夏_殺戮模式狀態數(3) = atking_史塔夏_殺戮模式狀態數(3) + (攻擊防禦骰子總數(1) - atking_史塔夏_殺戮模式狀態數(4))
-                攻擊防禦骰子總數(1) = atking_史塔夏_殺戮模式狀態數(3) * 2
-                atking_史塔夏_殺戮模式狀態數(4) = atking_史塔夏_殺戮模式狀態數(3) * 2
-            End If
+Sub 特殊_史塔夏_殺戮狀態_使用者(ByVal stagenum As Integer)
+Select Case stagenum
+    Case 1
+            atkingckdice(1, 1, 4) = atkingckdice(1, 1, 4) & "*" & 2 & "="
     Case 2
-           atking_史塔夏_殺戮模式狀態數(3) = 0
-           atking_史塔夏_殺戮模式狀態數(4) = 0
-           atking_史塔夏_殺戮模式狀態數(5) = 0
+            atking_史塔夏_殺戮模式狀態數(3) = 0
+            atking_史塔夏_殺戮模式狀態數(4) = 0
+            atking_史塔夏_殺戮模式狀態數(5) = 0
     Case 3
             FormMainMode.personusminijpg.Visible = False
             FormMainMode.personusminijpg.小人物圖片 = app_path & "gif\史塔夏\一般\Staciamini1.png"
@@ -874,13 +868,13 @@ Select Case atking_AI_史塔夏_殺戮模式狀態數(1)
 End Select
 End Sub
 
-Sub 特殊_音音夢_成長狀態_使用者()
-Select Case atking_音音夢_成長模式狀態數(1)
-   Case 1
+Sub 特殊_音音夢_成長狀態_使用者(ByVal stagenum As Integer)
+Select Case stagenum
+    Case 1
             攻擊防禦骰子總數(1) = 10
     Case 2
-           攻擊防禦骰子總數(1) = 10
-           戰鬥系統類.直接寫入顯示列數值 1, 10
+            攻擊防禦骰子總數(1) = 10
+            戰鬥系統類.直接寫入顯示列數值 1, 10
     Case 3
             FormMainMode.personusminijpg.Visible = False
             FormMainMode.personusminijpg.小人物圖片 = app_path & "gif\音音夢\一般\Nenemmini1.png"
@@ -1509,22 +1503,6 @@ If pagecardnum(Index, 6) = 1 And pagecardnum(Index, 5) = 2 Then
     目前數(7) = 0
     戰鬥系統類.出牌順序計算_電腦_出牌
     FormMainMode.電腦出牌_出牌對齊_靠左.Enabled = True
-    '============以下是技能檢查及啟動
-    atkingckai(1, 1) = 2
-    If turnatk = 2 Then
-       AI技能.雪莉_自殺傾向 Index '(階段2)
-       AI技能.音音夢_愉快抽血 Index '(階段1)
-    End If
-    If turnatk = 2 And atkingckai(26, 2) = 1 Then
-        atkingckai(26, 1) = 2
-        AI技能.艾依查庫_神速之劍 Index '(階段2)
-        atkingckai(26, 1) = 1
-    End If
-    If turnatk = 2 And atkingckai(98, 2) = 1 Then
-        atkingckai(98, 1) = 2
-        AI技能.露緹亞_渦騎劍閃 Index  '(階段2)
-        atkingckai(98, 1) = 1
-    End If
    '=============以下是牌移動(出牌)(電腦)
     戰鬥系統類.座標計算_電腦出牌
     牌移動暫時變數(3) = Index
@@ -1600,22 +1578,6 @@ If pagecardnum(Index, 6) = 2 And pagecardnum(Index, 5) = 2 Then
     FormMainMode.pagecomglead = Val(FormMainMode.pagecomglead) + 1
     FormMainMode.pagecomqlead = Val(FormMainMode.pagecomqlead) - 1
     pagecardnum(Index, 11) = 0
-   '============以下是技能檢查及啟動
-    atkingckai(1, 1) = 2
-    If turnatk = 2 Then
-       AI技能.雪莉_自殺傾向 Index '(階段2)
-       AI技能.音音夢_愉快抽血 Index '(階段1)
-    End If
-    If turnatk = 2 And atkingckai(26, 2) = 1 Then
-        atkingckai(26, 1) = 2
-        AI技能.艾依查庫_神速之劍 Index '(階段2)
-        atkingckai(26, 1) = 1
-    End If
-    If turnatk = 2 And atkingckai(98, 2) = 1 Then
-        atkingckai(98, 1) = 2
-        AI技能.露緹亞_渦騎劍閃 Index  '(階段2)
-        atkingckai(98, 1) = 1
-    End If
    '=============以下是牌移動(回牌)(電腦)
     戰鬥系統類.座標計算_電腦手牌
     牌移動暫時變數(3) = Index
@@ -1714,19 +1676,6 @@ End If
    If pagecardnum(Index, 3) = a4a Then
       atkingpagetot(2, 4) = Val(atkingpagetot(2, 4)) - pagecardnum(Index, 4)
    End If
-    '============以下是技能檢查及啟動
-    If turnatk = 2 Then
-        atkingckai(26, 1) = 3
-        AI技能.艾依查庫_神速之劍 Index '(階段3)
-        atkingckai(1, 1) = 3
-        AI技能.雪莉_自殺傾向 Index  '(階段3)
-        atkingckai(111, 1) = 2
-        AI技能.音音夢_愉快抽血 Index '(階段2)
-    End If
-    If turnatk = 2 Then
-        atkingckai(98, 1) = 3
-        AI技能.露緹亞_渦騎劍閃 Index '(階段3)
-    End If
     '=================
     atkingckai(1, 1) = 1
     atkingckai(111, 1) = 1
@@ -1868,7 +1817,7 @@ If goicheck(2) = 0 Then
     goicheck(2) = 1
   End If
   If goicheck(2) = 1 Then
-     戰鬥系統類.異常狀態骰數增加檢查_ATK 2
+'     戰鬥系統類.異常狀態骰數增加檢查_ATK 2
   End If
 End If
 End Sub
@@ -1898,7 +1847,7 @@ If goicheck(1) = 0 Then
    攻擊防禦骰子總數(1) = 攻擊防禦骰子總數(1) + atkus(角色人物對戰人數(1, 2))
    攻擊防禦骰子總數(3) = 攻擊防禦骰子總數(3) + atkus(角色人物對戰人數(1, 2))
    goicheck(1) = 1
-   戰鬥系統類.異常狀態骰數增加檢查_ATK 1
+'   戰鬥系統類.異常狀態骰數增加檢查_ATK 1
   End If
 End If
 End Sub
@@ -1908,7 +1857,7 @@ If goicheck(1) = 0 Then
    攻擊防禦骰子總數(1) = 攻擊防禦骰子總數(1) + atkus(角色人物對戰人數(1, 2))
    攻擊防禦骰子總數(3) = 攻擊防禦骰子總數(3) + atkus(角色人物對戰人數(1, 2))
    goicheck(1) = 1
-   戰鬥系統類.異常狀態骰數增加檢查_ATK 1
+'   戰鬥系統類.異常狀態骰數增加檢查_ATK 1
   End If
 End If
 End Sub
@@ -2009,903 +1958,6 @@ For a = 1 To 106
     End If
 Next
 End Sub
-Sub getpage_舊(ByVal k As Integer, m As Integer)
-Select Case m
-            Case 1
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 1) = a1a
-               pagecardnum(m, 2) = b6b
-               pagecardnum(m, 4) = b6b
-               pagecardnum(m, 3) = a1a
-               'checkus(m) = 1
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\001-1.bmp")
-               pagecardnum(m, 8) = "001"
-               pageonin(m) = 1
-               pagecardnum(m, 5) = k
-               pagecardnum(m, 6) = 1
-               'getpageus(k) = 1
-             'End If
-            Case 2
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 1) = a1a
-               pagecardnum(m, 2) = b5b
-               pagecardnum(m, 4) = b2b
-               pagecardnum(m, 3) = a4a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\002-1.bmp")
-               pagecardnum(m, 8) = "002"
-               pageonin(m) = 1
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 3
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 3) = a1a
-               pagecardnum(m, 4) = b5b
-               pagecardnum(m, 2) = b2b
-               pagecardnum(m, 1) = a4a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\002-2.bmp")
-               pagecardnum(m, 8) = "002"
-               pageonin(m) = 2
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 4
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 1) = a1a
-               pagecardnum(m, 2) = b4b
-               pagecardnum(m, 4) = b1b
-               pagecardnum(m, 3) = a4a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\003-1.bmp")
-               pagecardnum(m, 8) = "003"
-               pageonin(m) = 1
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 5
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 3) = a1a
-               pagecardnum(m, 4) = b4b
-               pagecardnum(m, 2) = b1b
-               pagecardnum(m, 1) = a4a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\003-2.bmp")
-               pagecardnum(m, 8) = "003"
-               pageonin(m) = 2
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 6
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 1) = a1a
-               pagecardnum(m, 2) = b3b
-               pagecardnum(m, 4) = b3b
-               pagecardnum(m, 3) = a5a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\004-1.bmp")
-               pagecardnum(m, 8) = "004"
-               pageonin(m) = 1
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 7
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 3) = a1a
-               pagecardnum(m, 4) = b3b
-               pagecardnum(m, 2) = b3b
-               pagecardnum(m, 1) = a5a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\004-2.bmp")
-               pagecardnum(m, 8) = "004"
-               pageonin(m) = 2
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 8
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 1) = a1a
-               pagecardnum(m, 2) = b3b
-               pagecardnum(m, 4) = b3b
-               pagecardnum(m, 3) = a2a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\005-1.bmp")
-               pagecardnum(m, 8) = "005"
-               pageonin(m) = 1
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 9
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 3) = a1a
-               pagecardnum(m, 4) = b3b
-               pagecardnum(m, 2) = b3b
-               pagecardnum(m, 1) = a2a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\005-2.bmp")
-               pagecardnum(m, 8) = "005"
-               pageonin(m) = 2
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 10
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 1) = a1a
-               pagecardnum(m, 2) = b2b
-               pagecardnum(m, 4) = b2b
-               pagecardnum(m, 3) = a5a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\006-1.bmp")
-               pagecardnum(m, 8) = "006"
-               pageonin(m) = 1
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 11
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 3) = a1a
-               pagecardnum(m, 4) = b2b
-               pagecardnum(m, 2) = b2b
-               pagecardnum(m, 1) = a5a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\006-2.bmp")
-               pagecardnum(m, 8) = "006"
-               pageonin(m) = 2
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 12
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 1) = a1a
-               pagecardnum(m, 2) = b2b
-               pagecardnum(m, 4) = b1b
-               pagecardnum(m, 3) = a5a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\007-1.bmp")
-               pagecardnum(m, 8) = "007"
-               pageonin(m) = 1
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 13
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 3) = a1a
-               pagecardnum(m, 4) = b2b
-               pagecardnum(m, 2) = b1b
-               pagecardnum(m, 1) = a5a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\007-2.bmp")
-               pagecardnum(m, 8) = "007"
-               pageonin(m) = 2
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 14
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 1) = a1a
-               pagecardnum(m, 2) = b2b
-               pagecardnum(m, 4) = b2b
-               pagecardnum(m, 3) = a2a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\008-1.bmp")
-               pagecardnum(m, 8) = "008"
-               pageonin(m) = 1
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 15
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 3) = a1a
-               pagecardnum(m, 4) = b2b
-               pagecardnum(m, 2) = b2b
-               pagecardnum(m, 1) = a2a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\008-2.bmp")
-               pagecardnum(m, 8) = "008"
-               pageonin(m) = 2
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 16
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 1) = a1a
-               pagecardnum(m, 2) = b2b
-               pagecardnum(m, 4) = b1b
-               pagecardnum(m, 3) = a2a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\009-1.bmp")
-               pagecardnum(m, 8) = "009"
-               pageonin(m) = 1
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 17
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 3) = a1a
-               pagecardnum(m, 4) = b2b
-               pagecardnum(m, 2) = b1b
-               pagecardnum(m, 1) = a2a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\009-2.bmp")
-               pagecardnum(m, 8) = "009"
-               pageonin(m) = 2
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 18
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 1) = a1a
-               pagecardnum(m, 2) = b2b
-               pagecardnum(m, 4) = b1b
-               pagecardnum(m, 3) = a4a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\010-1.bmp")
-               pagecardnum(m, 8) = "010"
-               pageonin(m) = 1
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 19
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 1) = a1a
-               pagecardnum(m, 2) = b1b
-               pagecardnum(m, 4) = b1b
-               pagecardnum(m, 3) = a5a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\011-1.bmp")
-               pagecardnum(m, 8) = "011"
-               pageonin(m) = 1
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 20
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 1) = a1a
-               pagecardnum(m, 2) = b1b
-               pagecardnum(m, 4) = b1b
-               pagecardnum(m, 3) = a5a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\011-1.bmp")
-               pagecardnum(m, 8) = "011"
-               pageonin(m) = 1
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 21
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 3) = a1a
-               pagecardnum(m, 4) = b1b
-               pagecardnum(m, 2) = b1b
-               pagecardnum(m, 1) = a5a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\011-2.bmp")
-               pagecardnum(m, 8) = "011"
-               pageonin(m) = 2
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 22
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 3) = a1a
-               pagecardnum(m, 4) = b1b
-               pagecardnum(m, 2) = b1b
-               pagecardnum(m, 1) = a5a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\011-2.bmp")
-               pagecardnum(m, 8) = "011"
-               pageonin(m) = 2
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 23
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 1) = a1a
-               pagecardnum(m, 2) = b1b
-               pagecardnum(m, 4) = b1b
-               pagecardnum(m, 3) = a2a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\012-1.bmp")
-               pagecardnum(m, 8) = "012"
-               pageonin(m) = 1
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 24
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 1) = a1a
-               pagecardnum(m, 2) = b1b
-               pagecardnum(m, 4) = b1b
-               pagecardnum(m, 3) = a2a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\012-1.bmp")
-               pagecardnum(m, 8) = "012"
-               pageonin(m) = 1
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 25
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 3) = a1a
-               pagecardnum(m, 4) = b1b
-               pagecardnum(m, 2) = b1b
-               pagecardnum(m, 1) = a2a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\012-2.bmp")
-               pagecardnum(m, 8) = "012"
-               pageonin(m) = 2
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 26
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 3) = a1a
-               pagecardnum(m, 4) = b1b
-               pagecardnum(m, 2) = b1b
-               pagecardnum(m, 1) = a2a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\012-2.bmp")
-               pagecardnum(m, 8) = "012"
-               pageonin(m) = 2
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 27
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 1) = a1a
-               pagecardnum(m, 2) = b1b
-               pagecardnum(m, 4) = b1b
-               pagecardnum(m, 3) = a4a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\013-1.bmp")
-               pagecardnum(m, 8) = "013"
-               pageonin(m) = 1
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 28
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 1) = a5a
-               pagecardnum(m, 2) = b5b
-               pagecardnum(m, 4) = b2b
-               pagecardnum(m, 3) = a4a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\014-1.bmp")
-               pagecardnum(m, 8) = "014"
-               pageonin(m) = 1
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 29
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 3) = a5a
-               pagecardnum(m, 4) = b5b
-               pagecardnum(m, 2) = b2b
-               pagecardnum(m, 1) = a4a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\014-2.bmp")
-               pagecardnum(m, 8) = "014"
-               pageonin(m) = 2
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 30
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 1) = a5a
-               pagecardnum(m, 2) = b4b
-               pagecardnum(m, 4) = b4b
-               pagecardnum(m, 3) = a5a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\015-1.bmp")
-               pagecardnum(m, 8) = "015"
-               pageonin(m) = 1
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 31
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 1) = a5a
-               pagecardnum(m, 2) = b4b
-               pagecardnum(m, 4) = b1b
-               pagecardnum(m, 3) = a4a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\016-1.bmp")
-               pagecardnum(m, 8) = "016"
-               pageonin(m) = 1
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 32
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 3) = a5a
-               pagecardnum(m, 4) = b4b
-               pagecardnum(m, 2) = b1b
-               pagecardnum(m, 1) = a4a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\016-2.bmp")
-               pagecardnum(m, 8) = "016"
-               pageonin(m) = 2
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 33
-              'If checkus(m) = 0 Then
-               pagecardnum(m, 1) = a5a
-               pagecardnum(m, 2) = b3b
-               pagecardnum(m, 4) = b1b
-               pagecardnum(m, 3) = a3a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\017-1.bmp")
-               pagecardnum(m, 8) = "017"
-               pageonin(m) = 1
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 34
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 3) = a5a
-               pagecardnum(m, 4) = b3b
-               pagecardnum(m, 2) = b1b
-               pagecardnum(m, 1) = a3a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\017-2.bmp")
-               pagecardnum(m, 8) = "017"
-               pageonin(m) = 2
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 35
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 1) = a5a
-               pagecardnum(m, 2) = b3b
-               pagecardnum(m, 4) = b2b
-               pagecardnum(m, 3) = a4a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\018-1.bmp")
-               pagecardnum(m, 8) = "018"
-               pageonin(m) = 1
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 36
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 1) = a5a
-               pagecardnum(m, 2) = b2b
-               pagecardnum(m, 4) = b1b
-               pagecardnum(m, 3) = a3a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\019-1.bmp")
-               pagecardnum(m, 8) = "019"
-               pageonin(m) = 1
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 37
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 3) = a5a
-               pagecardnum(m, 4) = b2b
-               pagecardnum(m, 2) = b1b
-               pagecardnum(m, 1) = a3a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\019-2.bmp")
-               pagecardnum(m, 8) = "019"
-               pageonin(m) = 2
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 38
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 1) = a5a
-               pagecardnum(m, 2) = b2b
-               pagecardnum(m, 4) = b1b
-               pagecardnum(m, 3) = a4a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\020-1.bmp")
-               pagecardnum(m, 8) = "020"
-               pageonin(m) = 1
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 39
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 1) = a5a
-               pagecardnum(m, 2) = b1b
-               pagecardnum(m, 4) = b1b
-               pagecardnum(m, 3) = a3a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\021-1.bmp")
-               pagecardnum(m, 8) = "021"
-               pageonin(m) = 1
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 40
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 1) = a5a
-               pagecardnum(m, 2) = b1b
-               pagecardnum(m, 4) = b1b
-               pagecardnum(m, 3) = a3a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\021-1.bmp")
-               pagecardnum(m, 8) = "021"
-               pageonin(m) = 1
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 41
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 1) = a5a
-               pagecardnum(m, 2) = b1b
-               pagecardnum(m, 4) = b1b
-               pagecardnum(m, 3) = a3a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\021-1.bmp")
-               pagecardnum(m, 8) = "021"
-               pageonin(m) = 1
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 42
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 3) = a5a
-               pagecardnum(m, 4) = b1b
-               pagecardnum(m, 2) = b1b
-               pagecardnum(m, 1) = a3a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\021-2.bmp")
-               pagecardnum(m, 8) = "021"
-               pageonin(m) = 2
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 43
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 3) = a5a
-               pagecardnum(m, 4) = b1b
-               pagecardnum(m, 2) = b1b
-               pagecardnum(m, 1) = a3a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\021-2.bmp")
-               pagecardnum(m, 8) = "021"
-               pageonin(m) = 2
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 44
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 3) = a5a
-               pagecardnum(m, 4) = b1b
-               pagecardnum(m, 2) = b1b
-               pagecardnum(m, 1) = a3a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\021-2.bmp")
-               pagecardnum(m, 8) = "021"
-               pageonin(m) = 2
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 45
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 1) = a2a
-               pagecardnum(m, 2) = b5b
-               pagecardnum(m, 4) = b5b
-               pagecardnum(m, 3) = a2a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\022-1.bmp")
-               pagecardnum(m, 8) = "022"
-               pageonin(m) = 1
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 46
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 1) = a2a
-               pagecardnum(m, 2) = b3b
-               pagecardnum(m, 4) = b1b
-               pagecardnum(m, 3) = a3a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\023-1.bmp")
-               pagecardnum(m, 8) = "023"
-               pageonin(m) = 1
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 47
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 1) = a2a
-               pagecardnum(m, 2) = b2b
-               pagecardnum(m, 4) = b1b
-               pagecardnum(m, 3) = a3a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\024-1.bmp")
-               pagecardnum(m, 8) = "024"
-               pageonin(m) = 1
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 48
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 3) = a2a
-               pagecardnum(m, 4) = b2b
-               pagecardnum(m, 2) = b1b
-               pagecardnum(m, 1) = a3a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\024-2.bmp")
-               pagecardnum(m, 8) = "024"
-               pageonin(m) = 2
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 49
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 1) = a2a
-               pagecardnum(m, 2) = b1b
-               pagecardnum(m, 4) = b1b
-               pagecardnum(m, 3) = a3a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\025-1.bmp")
-               pagecardnum(m, 8) = "025"
-               pageonin(m) = 1
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 50
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 1) = a2a
-               pagecardnum(m, 2) = b1b
-               pagecardnum(m, 4) = b1b
-               pagecardnum(m, 3) = a3a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\025-1.bmp")
-               pagecardnum(m, 8) = "025"
-               pageonin(m) = 1
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 51
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 1) = a2a
-               pagecardnum(m, 2) = b1b
-               pagecardnum(m, 4) = b1b
-               pagecardnum(m, 3) = a3a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\025-1.bmp")
-               pagecardnum(m, 8) = "025"
-               pageonin(m) = 1
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 52
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 3) = a2a
-               pagecardnum(m, 4) = b1b
-               pagecardnum(m, 2) = b1b
-               pagecardnum(m, 1) = a3a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\025-2.bmp")
-               pagecardnum(m, 8) = "025"
-               pageonin(m) = 2
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 53
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 3) = a2a
-               pagecardnum(m, 4) = b1b
-               pagecardnum(m, 2) = b1b
-               pagecardnum(m, 1) = a3a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\025-2.bmp")
-               pagecardnum(m, 8) = "025"
-               pageonin(m) = 2
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 54
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 3) = a2a
-               pagecardnum(m, 4) = b1b
-               pagecardnum(m, 2) = b1b
-               pagecardnum(m, 1) = a3a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\025-2.bmp")
-               pagecardnum(m, 8) = "025"
-               pageonin(m) = 2
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 55
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 3) = a4a
-               pagecardnum(m, 4) = b3b
-               pagecardnum(m, 2) = b2b
-               pagecardnum(m, 1) = a3a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\026-2.bmp")
-               pagecardnum(m, 8) = "026"
-               pageonin(m) = 2
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 56
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 3) = a4a
-               pagecardnum(m, 4) = b3b
-               pagecardnum(m, 2) = b2b
-               pagecardnum(m, 1) = a3a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\026-2.bmp")
-               pagecardnum(m, 8) = "026"
-               pageonin(m) = 2
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-            Case 57
-             'If checkus(m) = 0 Then
-               pagecardnum(m, 1) = a4a
-               pagecardnum(m, 2) = b3b
-               pagecardnum(m, 4) = b2b
-               pagecardnum(m, 3) = a3a
-               'checkus(m) = 1
-               pagecardnum(m, 5) = k
-               pagegive = Val(pagegive) + 1
-               FormMainMode.card(m).Picture = LoadPicture(app_path & "card\026-1.bmp")
-               pagecardnum(m, 8) = "026"
-               pageonin(m) = 1
-               pagecardnum(m, 6) = 1
-                'getpageus(k) = 1
-             'End If
-End Select
-        Select Case k
-                      Case 1 '使用者
-                          pagecardnum(m, 11) = 0
-                          FormMainMode.pageul = Val(FormMainMode.pageul) - 1
-                          FormMainMode.pageusglead.Caption = Val(FormMainMode.pageusglead) + 1
-                          戰鬥系統類.座標計算_使用者手牌
-                          牌移動暫時變數(3) = m
-                          pagecardnum(m, 9) = 240 '指定目前Left(座標)
-                          pagecardnum(m, 10) = 960 '指定目前Top(座標)
-                          FormMainMode.card(m).Left = 240
-                          FormMainMode.card(m).Top = 960
-                          戰鬥系統類.計算牌移動距離單位
-                          戰鬥系統類.公用牌回復正面 (牌移動暫時變數(3))
-                          FormMainMode.card(m).Visible = True
-                          戰鬥系統類.牌順序增加_手牌_使用者 m
-                          FormMainMode.牌移動.Enabled = True
-                          FormMainMode.wmpse1.Controls.stop
-                          FormMainMode.wmpse1.Controls.play
-                          一般系統類.檢查音樂播放 1
-                      Case 2 '電腦
-                          pagecardnum(m, 11) = 0
-                          FormMainMode.pageul = Val(FormMainMode.pageul) - 1
-                          FormMainMode.pagecomglead.Caption = Val(FormMainMode.pagecomglead) + 1
-                          戰鬥系統類.座標計算_電腦手牌
-                          牌移動暫時變數(3) = m
-                          pagecardnum(m, 9) = 240 '指定目前Left(座標)
-                          pagecardnum(m, 10) = 960 '指定目前Top(座標)
-                          FormMainMode.card(m).Left = 240
-                          FormMainMode.card(m).Top = 960
-                          戰鬥系統類.計算牌移動距離單位
-                          戰鬥系統類.公用牌變背面
-                          FormMainMode.card(m).Visible = True
-                          戰鬥系統類.牌順序增加_手牌_電腦 m
-                          FormMainMode.牌移動.Enabled = True
-                          FormMainMode.wmpse1.Controls.stop
-                          FormMainMode.wmpse1.Controls.play
-                          一般系統類.檢查音樂播放 1
-        End Select
-End Sub
 Sub moveatkin()
 Dim j As Integer, cspce As String, cspme As String
 Do
@@ -2913,7 +1965,6 @@ Do
       If Val(pagecardnum(j, 6)) = 1 And Val(pagecardnum(j, 5)) = 2 And Val(pagecardnum(j, 11)) <> 1 Then
          If pagecardnum(j, 1) = a3a And pagecardnum(j, 3) = a3a Then '移動單面事件卡優先
            pagecardnum(j, 11) = 1
-'           movecom = Val(movecom) + Val(pagecardnum(j, 2))
             目前數(25) = 目前數(25) + Val(pagecardnum(j, 2))
          End If
          If 目前數(25) >= 2 Then Exit Do
@@ -2923,7 +1974,6 @@ Do
       If Val(pagecardnum(j, 6)) = 1 And Val(pagecardnum(j, 5)) = 2 And Val(pagecardnum(j, 11)) <> 1 Then
          If pagecardnum(j, 1) = a3a Then
            pagecardnum(j, 11) = 1
-'           movecom = Val(movecom) + Val(pagecardnum(j, 2))
             目前數(25) = 目前數(25) + 1
          ElseIf pagecardnum(j, 3) = a3a Then
            cspce = pagecardnum(j, 1)
@@ -2938,7 +1988,6 @@ Do
               pageonin(j) = 2
            End If
            pagecardnum(j, 11) = 1
-'           movecom = Val(movecom) + Val(pagecardnum(j, 2))
             目前數(25) = 目前數(25) + Val(pagecardnum(j, 2))
          End If
          If 目前數(25) >= 2 Then Exit Do
@@ -2946,7 +1995,6 @@ Do
     Next
     Exit Do
 Loop
-'movecheckcom = movecom
 End Sub
 Sub movetnus()
 FormMainMode.messageus.AddItem "你有主動權。"
@@ -3023,14 +2071,12 @@ FormMainMode.bloodnumus2.Caption = liveusmax(角色人物對戰人數(1, 2))
 '========================以下是技能檢查及啟動
 If FormMainMode.uspi1(角色人物對戰人數(1, 2)).Caption = "史塔夏" Then
     If atking_史塔夏_殺戮模式狀態數(2) = 1 Then
-       atking_史塔夏_殺戮模式狀態數(1) = 4
-       戰鬥系統類.特殊_史塔夏_殺戮狀態_使用者 '(階段4)
+       戰鬥系統類.特殊_史塔夏_殺戮狀態_使用者 4 '(階段4)
     End If
 End If
 If FormMainMode.uspi1(角色人物對戰人數(1, 2)).Caption = "音音夢" Then
     If atking_音音夢_成長模式狀態數(2) = 1 Then
-       atking_音音夢_成長模式狀態數(1) = 4
-       戰鬥系統類.特殊_音音夢_成長狀態_使用者 '(階段4)
+       戰鬥系統類.特殊_音音夢_成長狀態_使用者 4 '(階段4)
     End If
 End If
 '=============================
@@ -4169,12 +3215,10 @@ If turnatk = 2 And atkingck(146, 2) = 1 Then
    技能.傑多_因果之刻  '(階段3)
 End If
 If turnatk = 2 And atkingck(100, 2) = 1 Then
-   atkingck(100, 1) = 2
-   技能.露緹亞_暗影之翼  '(階段2)
+   技能.露緹亞_暗影之翼 2 '(階段2)
 End If
 If turnatk = 2 And atkingck(111, 2) = 1 Then
-   atkingck(111, 1) = 3
-   技能.貝琳達_水晶幻鏡  '(階段3)
+   技能.貝琳達_水晶幻鏡 3 '(階段3)
 End If
 '=================
 技能動畫顯示階段數 = 9
@@ -4189,12 +3233,10 @@ If turnatk = 2 And atkingck(146, 2) = 1 Then
    技能.傑多_因果之刻  '(階段4)
 End If
 If turnatk = 2 And atkingck(100, 2) = 1 Then
-   atkingck(100, 1) = 3
-   技能.露緹亞_暗影之翼  '(階段3)
+   技能.露緹亞_暗影之翼 3 '(階段3)
 End If
 If turnatk = 2 And atkingck(111, 2) = 1 Then
-   atkingck(111, 1) = 4
-   技能.貝琳達_水晶幻鏡  '(階段4)
+   技能.貝琳達_水晶幻鏡 4 '(階段4)
 End If
 '================
 FormMainMode.atkingtrtot.Interval = 600
@@ -4209,16 +3251,14 @@ If turnatk = 1 And atkingckai(31, 2) = 1 Then
    AI技能.梅倫_Jackpot  '(階段3)
 End If
 If turnatk = 1 And atkingckai(97, 2) = 1 Then
-   atkingckai(97, 1) = 2
-   AI技能.露緹亞_暗影之翼  '(階段2)
+   AI技能.露緹亞_暗影之翼 2 '(階段2)
 End If
 If turnatk = 1 And atkingckai(121, 2) = 1 Then
    atkingckai(121, 1) = 3
    AI技能.傑多_因果之刻  '(階段3)
 End If
 If turnatk = 1 And atkingckai(123, 2) = 1 Then
-   atkingckai(123, 1) = 3
-   AI技能.貝琳達_水晶幻鏡  '(階段3)
+   AI技能.貝琳達_水晶幻鏡 3 '(階段3)
 End If
 '=================
 技能動畫顯示階段數 = 9
@@ -4229,16 +3269,14 @@ If turnatk = 1 And atkingckai(31, 2) = 1 Then
    AI技能.梅倫_Jackpot  '(階段4)
 End If
 If turnatk = 1 And atkingckai(97, 2) = 1 Then
-   atkingckai(97, 1) = 3
-   AI技能.露緹亞_暗影之翼  '(階段3)
+   AI技能.露緹亞_暗影之翼 3 '(階段3)
 End If
 If turnatk = 1 And atkingckai(121, 2) = 1 Then
    atkingckai(121, 1) = 4
    AI技能.傑多_因果之刻  '(階段4)
 End If
 If turnatk = 1 And atkingckai(123, 2) = 1 Then
-   atkingckai(123, 1) = 4
-   AI技能.貝琳達_水晶幻鏡  '(階段4)
+   AI技能.貝琳達_水晶幻鏡 4 '(階段4)
 End If
 '=================
 FormMainMode.atkingtrtot.Interval = 600
@@ -6073,44 +5111,6 @@ Select Case num
         牌總階段數(2) = 牌總階段數(2) + 1
 End Select
 End Sub
-Sub 異常狀態骰數減低檢查_ATK(ByVal uscom As Integer)
-Select Case uscom
- Case 1
-    '=========以下是技能檢查及發動
-    異常狀態檢查數(13, 1) = 2
-    異常狀態.聖痕_使用者 '(階段2)
-    '=========
-    異常狀態檢查數(24, 1) = 2
-    異常狀態.能力低下_使用者 '(階段2)
-    '=========
-    異常狀態檢查數(7, 1) = 3
-    異常狀態.ATK加_使用者 '(階段3)
-    '=========
-    異常狀態檢查數(10, 1) = 3
-    異常狀態.ATK減_使用者 '(階段3)
-    '=========
-    異常狀態檢查數(39, 1) = 2
-    異常狀態.臨界_使用者 '(階段2)
-    '=========
- Case 2
-    '=========以下是技能檢查及發動
-    異常狀態檢查數(26, 1) = 2
-    異常狀態.聖痕_電腦 '(階段2)
-    '=========
-    異常狀態檢查數(1, 1) = 3
-    異常狀態.ATK加_電腦 '(階段3)
-    '=========
-    異常狀態檢查數(4, 1) = 3
-    異常狀態.ATK減_電腦 '(階段3)
-    '=========
-    異常狀態檢查數(25, 1) = 2
-    異常狀態.能力低下_電腦 '(階段2)
-    '=======
-    異常狀態檢查數(40, 1) = 2
-    異常狀態.臨界_電腦 '(階段2)
-End Select
-
-End Sub
 Sub 異常狀態骰數增加檢查_ATK(ByVal uscom As Integer)
 Select Case uscom
  Case 1
@@ -6188,41 +5188,259 @@ Select Case uscom
     '==============
 End Select
 End Sub
-Sub 異常狀態骰數減低檢查_DEF(ByVal uscom As Integer)
-Select Case uscom
+Sub 骰量更新顯示()
+攻擊防禦骰子總數(1) = 0
+攻擊防禦骰子總數(2) = 0
+Erase 顯示列雙方數值鎖定紀錄數
+Erase atkingckdice
+Dim uscom As Integer
+
+'(階段45)
+Select Case turnatk
  Case 1
-    '=========以下是技能檢查及發動
-    異常狀態檢查數(8, 1) = 3
-    異常狀態.DEF加_使用者 '(階段3)
-    '==============
-    異常狀態檢查數(11, 1) = 3
-    異常狀態.DEF減_使用者 '(階段3)
-    '==============
-    異常狀態檢查數(13, 1) = 2
-    異常狀態.聖痕_使用者 '(階段2)
-    '==============
-    異常狀態檢查數(24, 1) = 2
-    異常狀態.能力低下_使用者 '(階段2)
-    '==============
-    異常狀態檢查數(39, 1) = 2
-    異常狀態.臨界_使用者 '(階段2)
-    '==============
+    If atkingck(3, 2) = 1 Then 技能.雪莉_飛刃雨 45
+    If atkingck(45, 2) = 1 Then 技能.雪莉_VBE_飛刃雨 45
+    If atkingck(6, 2) = 1 Then 技能.古魯瓦爾多_猛擊 45
+    If atkingck(9, 2) = 1 Then 技能.帕茉_慈悲的藍眼 45
+    If atkingck(13, 2) = 1 Then 技能.蕾_輪旋曲_琉璃色的微風 45
+    If atkingck(19, 2) = 1 Then 技能.蕾_EX_輪旋曲_琉璃色的微風 45
+    If atkingck(15, 2) = 1 Then 技能.蕾_終曲_無盡輪迴的終結 45
+    If atkingck(16, 2) = 1 Then 技能.艾茵_十三隻眼 45
+    If atkingck(23, 2) = 1 Then 技能.史塔夏_愚者之手 45
+    If atkingck(34, 2) = 1 Then 技能.CC_白銀戰機 45
+    If atkingck(35, 2) = 1 Then 技能.CC_高頻電磁手術刀 45
+    If atkingck(51, 2) = 1 Then 技能.羅莎琳_染血之刃 45
+    If atkingck(52, 2) = 1 Then 技能.羅莎琳_黑霧的纏繞 45
+    If atkingck(58, 2) = 1 Then 技能.伊芙琳_紅蓮車輪 45
+    If atkingck(71, 2) = 1 Then 技能.艾伯李斯特_精密射擊 45
+    If atkingck(72, 2) = 1 Then 技能.艾伯李斯特_雷擊 45
+    If atkingck(78, 2) = 1 Then 技能.艾依查庫_連射 45
+    If atkingck(79, 2) = 1 Then 技能.艾依查庫_神速之劍 45
+    If atkingck(80, 2) = 1 Then 技能.艾依查庫_憤怒一擊 45
+    If atkingck(84, 2) = 1 Then 技能.布勞_時間爆彈 45
+    If atkingck(86, 2) = 1 Then 技能.阿貝爾_霸王閃擊 45
+    If atkingck(87, 2) = 1 Then 技能.阿貝爾_閃電旋風刺 45
+    If atkingck(88, 2) = 1 Then 技能.阿貝爾_幻影劍舞 45
+    If atkingck(91, 2) = 1 Then 技能.利恩_毒牙 45
+    If atkingck(93, 2) = 1 Then 技能.利恩_背刺 45
+    If atkingck(95, 2) = 1 Then 技能.夏洛特_冬之夢 45
+    If atkingck(116, 2) = 1 Then 技能.泰瑞爾_Rud_913 45
+    If atkingck(118, 2) = 1 Then 技能.泰瑞爾_Chr_799 45
+    If atkingck(122, 2) = 1 Then 技能.瑪格莉特_月光 45
+    If atkingck(135, 2) = 1 Then 技能.蕾格烈芙_CTL 45
+    If atkingck(136, 2) = 1 Then 技能.蕾格烈芙_BPA 45
+    If atkingck(143, 2) = 1 Then 技能.多妮妲_律死擊 45
+    If atkingck(147, 2) = 1 Then 技能.傑多_因果之幻 45
+    If atkingck(150, 2) = 1 Then 技能.阿奇波爾多_致命槍擊 45
+    If atkingck(155, 2) = 1 Then 技能.洛洛妮_砲擊壓制 45
+    If atkingck(156, 2) = 1 Then 技能.洛洛妮_貪婪之刃與嗜血之槍 45
+    If atkingck(159, 2) = 1 Then 技能.克頓_隱蔽射擊 45
+    If atkingck(98, 2) = 1 Then 技能.露緹亞_腐朽之靈 45
+    If atkingck(101, 2) = 1 Then 技能.露緹亞_渦騎劍閃 45
+    If atkingck(106, 2) = 1 Then 技能.梅莉_夢幻魔杖 45
+    If atkingck(109, 2) = 1 Then 技能.梅莉_夢境搖籃 45
+    If atkingck(112, 2) = 1 Then 技能.貝琳達_裂地冰牙 45
+    If atkingck(113, 2) = 1 Then 技能.貝琳達_溶魂之雨 45
+    If atkingck(161, 2) = 1 Then 技能.蕾_EX_終曲_無盡輪迴的終結 45
+    If atkingck(46, 2) = 1 Then 技能.尤莉卡_奸佞的鐵鎚 45
+    If atkingck(50, 2) = 1 Then 技能.羅莎琳_EX_染血之刃 45
+    If atkingck(1, 2) = 1 Then 技能.雪莉_自殺傾向 45
+    If atkingck(42, 2) = 1 Then 技能.雪莉_VBE_自殺傾向 45
+    If atkingck(69, 2) = 1 Then 技能.音音夢_愉快抽血 45
+    '==================================
+    If atkingckai(28, 2) = 1 Then AI技能.音音夢_溫柔注射 45
+    If atkingckai(42, 2) = 1 Then AI技能.瑪格莉特_恍惚 45
+    If atkingckai(46, 2) = 1 Then AI技能.庫勒尼西_黑暗漩渦 45
+    If atkingckai(56, 2) = 1 Then AI技能.艾茵_九個靈魂 45
+    If atkingckai(57, 2) = 1 Then AI技能.CC_原子之心 45
+    If atkingckai(49, 2) = 1 Then AI技能.阿奇波爾多_防護射擊 45
+    If atkingckai(62, 2) = 1 Then AI技能.古魯瓦爾多_血之恩賜 45
+    If atkingckai(64, 2) = 1 Then AI技能.梅倫_High_hand 45
+    If atkingckai(67, 2) = 1 Then AI技能.艾伯李斯特_茨林 45
+    If atkingckai(76, 2) = 1 Then AI技能.泰瑞爾_Von_541 45
+    If atkingckai(79, 2) = 1 Then AI技能.庫勒尼西_瘋狂眼窩 45
+    If atkingckai(85, 2) = 1 Then AI技能.洛洛妮_風暴感知 45
+    If atkingckai(91, 2) = 1 Then AI技能.艾蕾可_王座之炎 45
+    If atkingckai(96, 2) = 1 Then AI技能.露緹亞_朦朧之暗 45
+    If atkingckai(97, 2) = 1 Then AI技能.露緹亞_暗影之翼 45
+    If atkingckai(100, 2) = 1 Then AI技能.梅莉_徬徨夢羽 45
+    If atkingckai(123, 2) = 1 Then AI技能.貝琳達_水晶幻鏡 45
+    If atkingckai(128, 2) = 1 Then AI技能.羅莎琳_黑霧幻影 45
+    If atkingckai(129, 2) = 1 Then AI技能.羅莎琳_EX_黑霧幻影 45
+    If atkingckai(137, 2) = 1 Then AI技能.尤莉卡_不善的信仰 45
+    If atkingckai(138, 2) = 1 Then AI技能.尤莉卡_曲惡的安寧 45
+    '==================================
+    戰鬥系統類.異常狀態骰數增加檢查_ATK 1
+    戰鬥系統類.異常狀態骰數增加檢查_DEF 2
+    '==================================
+    If atking_史塔夏_殺戮模式狀態數(2) = 1 Then 戰鬥系統類.特殊_史塔夏_殺戮狀態_使用者 1 '(階段1)
  Case 2
-    '=========以下是技能檢查及發動
-    異常狀態檢查數(2, 1) = 3
-    異常狀態.DEF加_電腦  '(階段3)
-    '==============
-    異常狀態檢查數(5, 1) = 3
-    異常狀態.DEF減_電腦 '(階段3)
-    '==============
-    異常狀態檢查數(26, 1) = 3
-    異常狀態.聖痕_電腦 '(階段3)
-    '==============
-    異常狀態檢查數(25, 1) = 2
-    異常狀態.能力低下_電腦 '(階段2)
-    '==============
-    異常狀態檢查數(40, 1) = 2
-    異常狀態.臨界_電腦 '(階段2)
-    '==============
+    If atkingck(26, 2) = 1 Then 技能.艾茵_九個靈魂 45
+    If atkingck(36, 2) = 1 Then 技能.CC_原子之心 45
+    If atkingck(54, 2) = 1 Then 技能.羅莎琳_黑霧幻影 45
+    If atkingck(55, 2) = 1 Then 技能.羅莎琳_EX_黑霧幻影 45
+    If atkingck(60, 2) = 1 Then 技能.古魯瓦爾多_血之恩賜 45
+    If atkingck(63, 2) = 1 Then 技能.梅倫_High_hand 45
+    If atkingck(68, 2) = 1 Then 技能.音音夢_溫柔注射 45
+    If atkingck(73, 2) = 1 Then 技能.艾伯李斯特_茨林 45
+    If atkingck(117, 2) = 1 Then 技能.泰瑞爾_Von_541 45
+    If atkingck(123, 2) = 1 Then 技能.瑪格莉特_恍惚 45
+    If atkingck(129, 2) = 1 Then 技能.庫勒尼西_瘋狂眼窩 45
+    If atkingck(131, 2) = 1 Then 技能.庫勒尼西_黑暗漩渦 45
+    If atkingck(152, 2) = 1 Then 技能.阿奇波爾多_防護射擊 45
+    If atkingck(154, 2) = 1 Then 技能.洛洛妮_風暴感知 45
+    If atkingck(99, 2) = 1 Then 技能.露緹亞_朦朧之暗 45
+    If atkingck(100, 2) = 1 Then 技能.露緹亞_暗影之翼 45
+    If atkingck(102, 2) = 1 Then 技能.艾蕾可_王座之炎 45
+    If atkingck(107, 2) = 1 Then 技能.梅莉_徬徨夢羽 45
+    If atkingck(111, 2) = 1 Then 技能.貝琳達_水晶幻鏡 45
+    If atkingck(47, 2) = 1 Then 技能.尤莉卡_不善的信仰 45
+    If atkingck(48, 2) = 1 Then 技能.尤莉卡_曲惡的安寧 45
+    '==============================
+    If atkingckai(5, 2) = 1 Then AI技能.雪莉_飛刃雨 45
+    If atkingckai(11, 2) = 1 Then AI技能.蕾_終曲_無盡輪迴的終結 45
+    If atkingckai(3, 2) = 1 Then AI技能.古魯瓦爾多_猛擊 45
+    If atkingckai(4, 2) = 1 Then AI技能.蕾_輪旋曲_琉璃色的微風 45
+    If atkingckai(13, 2) = 1 Then AI技能.蕾_EX_輪旋曲_琉璃色的微風 45
+    If atkingckai(16, 2) = 1 Then AI技能.吸血姬蕾米雅_吸血 45
+    If atkingckai(19, 2) = 1 Then AI技能.艾伯李斯特_精密射擊 45
+    If atkingckai(20, 2) = 1 Then AI技能.史塔夏_愚者之手 45
+    If atkingckai(22, 2) = 1 Then AI技能.阿貝爾_霸王閃擊 45
+    If atkingckai(23, 2) = 1 Then AI技能.阿貝爾_幻影劍舞 45
+    If atkingckai(24, 2) = 1 Then AI技能.布勞_時間爆彈 45
+    If atkingckai(25, 2) = 1 Then AI技能.艾依查庫_連射 45
+    If atkingckai(26, 2) = 1 Then AI技能.艾依查庫_神速之劍 45
+    If atkingckai(32, 2) = 1 Then AI技能.羅莎琳_染血之刃 45
+    If atkingckai(33, 2) = 1 Then AI技能.CC_白銀戰機 45
+    If atkingckai(35, 2) = 1 Then AI技能.帕茉_慈悲的藍眼 45
+    If atkingckai(37, 2) = 1 Then AI技能.艾茵_十三隻眼 45
+    If atkingckai(39, 2) = 1 Then AI技能.夏洛特_冬之夢 45
+    If atkingckai(77, 2) = 1 Then AI技能.泰瑞爾_Chr_799 45
+    If atkingckai(40, 2) = 1 Then AI技能.泰瑞爾_Rud_913 45
+    If atkingckai(48, 2) = 1 Then AI技能.傑多_因果之幻 45
+    If atkingckai(50, 2) = 1 Then AI技能.CC_高頻電磁手術刀 45
+    If atkingckai(51, 2) = 1 Then AI技能.伊芙琳_紅蓮車輪 45
+    If atkingckai(52, 2) = 1 Then AI技能.多妮妲_律死擊 45
+    If atkingckai(59, 2) = 1 Then AI技能.羅莎琳_黑霧的纏繞 45
+    If atkingckai(66, 2) = 1 Then AI技能.艾伯李斯特_雷擊 45
+    If atkingckai(69, 2) = 1 Then AI技能.艾依查庫_憤怒一擊 45
+    If atkingckai(71, 2) = 1 Then AI技能.阿貝爾_閃電旋風刺 45
+    If atkingckai(73, 2) = 1 Then AI技能.利恩_毒牙 45
+    If atkingckai(75, 2) = 1 Then AI技能.利恩_背刺 45
+    If atkingckai(78, 2) = 1 Then AI技能.瑪格莉特_月光 45
+    If atkingckai(80, 2) = 1 Then AI技能.蕾格烈芙_CTL 45
+    If atkingckai(81, 2) = 1 Then AI技能.蕾格烈芙_BPA 45
+    If atkingckai(83, 2) = 1 Then AI技能.阿奇波爾多_致命槍擊 45
+    If atkingckai(86, 2) = 1 Then AI技能.洛洛妮_砲擊壓制 45
+    If atkingckai(87, 2) = 1 Then AI技能.洛洛妮_貪婪之刃與嗜血之槍 45
+    If atkingckai(95, 2) = 1 Then AI技能.露緹亞_腐朽之靈 45
+    If atkingckai(98, 2) = 1 Then AI技能.露緹亞_渦騎劍閃 45
+    If atkingckai(99, 2) = 1 Then AI技能.梅莉_夢幻魔杖 45
+    If atkingckai(102, 2) = 1 Then AI技能.梅莉_夢境搖籃 45
+    If atkingckai(124, 2) = 1 Then AI技能.貝琳達_裂地冰牙 45
+    If atkingckai(125, 2) = 1 Then AI技能.貝琳達_溶魂之雨 45
+    If atkingckai(127, 2) = 1 Then AI技能.蕾_EX_終曲_無盡輪迴的終結 45
+    If atkingckai(133, 2) = 1 Then AI技能.克頓_隱蔽射擊 45
+    If atkingckai(136, 2) = 1 Then AI技能.尤莉卡_奸佞的鐵鎚 45
+    If atkingckai(140, 2) = 1 Then AI技能.羅莎琳_EX_染血之刃 45
+    If atkingckai(1, 2) = 1 Then AI技能.雪莉_自殺傾向 45
+    If atkingckai(111, 2) = 1 Then AI技能.音音夢_愉快抽血 45
+    '==================================
+    戰鬥系統類.異常狀態骰數增加檢查_ATK 2
+    戰鬥系統類.異常狀態骰數增加檢查_DEF 1
 End Select
+
+For uscom = 1 To 2
+    Select Case uscom
+        Case 1
+            If turnatk = 1 Then
+                If atkingpagetot(1, 1) > 0 And movecp = 1 Then
+                    攻擊防禦骰子總數(1) = 攻擊防禦骰子總數(1) + atkus(角色人物對戰人數(1, 2))
+                    攻擊防禦骰子總數(1) = 攻擊防禦骰子總數(1) + atkingpagetot(1, 1)
+                ElseIf atkingpagetot(1, 5) > 0 And movecp > 1 Then
+                    攻擊防禦骰子總數(1) = 攻擊防禦骰子總數(1) + atkus(角色人物對戰人數(1, 2))
+                    攻擊防禦骰子總數(1) = 攻擊防禦骰子總數(1) + atkingpagetot(1, 5)
+                End If
+            ElseIf turnatk = 2 Then
+                攻擊防禦骰子總數(1) = 攻擊防禦骰子總數(1) + defus(角色人物對戰人數(1, 2))
+                攻擊防禦骰子總數(1) = 攻擊防禦骰子總數(1) + atkingpagetot(1, 2)
+            End If
+            '=======主動技
+            解析骰量變化 atkingckdice(1, 1, 1), 1
+            '=======被動技
+            解析骰量變化 atkingckdice(1, 1, 2), 1
+            '=======異常狀態
+            解析骰量變化 atkingckdice(1, 1, 3), 1
+            '=======人物實際狀態
+            解析骰量變化 atkingckdice(1, 1, 4), 1
+            '=================================對手
+            '=======主動技
+            解析骰量變化 atkingckdice(2, 1, 1), 1
+            '=======被動技
+            解析骰量變化 atkingckdice(2, 1, 2), 1
+            '=======異常狀態
+            解析骰量變化 atkingckdice(2, 1, 3), 1
+            '=======人物實際狀態
+            解析骰量變化 atkingckdice(2, 1, 4), 1
+            '===================================
+        Case 2
+            If turnatk = 2 Then
+                If atkingpagetot(2, 1) > 0 And movecp = 1 Then
+                    攻擊防禦骰子總數(2) = 攻擊防禦骰子總數(2) + atkcom(角色人物對戰人數(2, 2))
+                    攻擊防禦骰子總數(2) = 攻擊防禦骰子總數(2) + atkingpagetot(2, 1)
+                ElseIf atkingpagetot(2, 5) > 0 And movecp > 1 Then
+                    攻擊防禦骰子總數(2) = 攻擊防禦骰子總數(2) + atkcom(角色人物對戰人數(2, 2))
+                    攻擊防禦骰子總數(2) = 攻擊防禦骰子總數(2) + atkingpagetot(2, 5)
+                End If
+            ElseIf turnatk = 1 Then
+                攻擊防禦骰子總數(2) = 攻擊防禦骰子總數(2) + defcom(角色人物對戰人數(2, 2))
+                攻擊防禦骰子總數(2) = 攻擊防禦骰子總數(2) + atkingpagetot(2, 2)
+            End If
+            '=======主動技
+            解析骰量變化 atkingckdice(2, 2, 1), 2
+            '=======被動技
+            解析骰量變化 atkingckdice(2, 2, 2), 2
+            '=======異常狀態
+            解析骰量變化 atkingckdice(2, 2, 3), 2
+            '=======人物實際狀態
+            解析骰量變化 atkingckdice(2, 2, 4), 2
+            '=================================對手
+            '=======主動技
+            解析骰量變化 atkingckdice(1, 2, 1), 2
+            '=======被動技
+            解析骰量變化 atkingckdice(1, 2, 2), 2
+            '=======異常狀態
+            解析骰量變化 atkingckdice(1, 2, 3), 2
+            '=======人物實際狀態
+            解析骰量變化 atkingckdice(1, 2, 4), 2
+            '===================================
+    End Select
+Next
+End Sub
+
+Sub 解析骰量變化(ByVal str As String, ByVal uscom As Integer)
+Dim cmdstr() As String
+Dim i As Integer
+
+cmdstr = Split(str, "=")
+If 顯示列雙方數值鎖定紀錄數(uscom) = False Then
+    For i = 0 To UBound(cmdstr) - 1
+        Select Case Mid(cmdstr(i), 1, 1)
+            Case "+"
+                攻擊防禦骰子總數(uscom) = 攻擊防禦骰子總數(uscom) + Mid(cmdstr(i), 2, Len(cmdstr(i)))
+            Case "-"
+                攻擊防禦骰子總數(uscom) = 攻擊防禦骰子總數(uscom) - Mid(cmdstr(i), 2, Len(cmdstr(i)))
+            Case "*"
+                攻擊防禦骰子總數(uscom) = 攻擊防禦骰子總數(uscom) * Mid(cmdstr(i), 2, Len(cmdstr(i)))
+            Case "/"
+                攻擊防禦骰子總數(uscom) = Int(攻擊防禦骰子總數(uscom) / Mid(cmdstr(i), 2, Len(cmdstr(i))) + 0.9)
+            Case "\"
+                攻擊防禦骰子總數(uscom) = 攻擊防禦骰子總數(uscom) \ Mid(cmdstr(i), 2, Len(cmdstr(i)))
+            Case "@"
+                攻擊防禦骰子總數(uscom) = Mid(cmdstr(i), 2, Len(cmdstr(i)))
+                顯示列雙方數值鎖定紀錄數(uscom) = True
+                Exit Sub '==指定數值時其他變化量無效
+        End Select
+    Next
+End If
 End Sub

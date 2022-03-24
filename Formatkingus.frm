@@ -60,6 +60,7 @@ If 目前數(31) = 19 Then
          FormMainMode.atkingtrtot.Enabled = True
       End If
    End If
+   Unload Me
 ElseIf 目前數(31) = 10 Then
    FormMainMode.技能執行中更換圖片_Timer
    FormMainMode.技能執行中啟動_Timer

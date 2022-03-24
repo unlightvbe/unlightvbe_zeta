@@ -352,9 +352,9 @@ Select Case 事件卡記錄暫時數(1, 3)
         FormMainMode.bnok.Enabled = False
         '=======================
         If 戰鬥系統類.turnatk = 1 Then
-            戰鬥系統類.異常狀態骰數減低檢查_ATK 1
+'            戰鬥系統類.異常狀態骰數減低檢查_ATK 1
         ElseIf 戰鬥系統類.turnatk = 2 Then
-            戰鬥系統類.異常狀態骰數減低檢查_DEF 1
+'            戰鬥系統類.異常狀態骰數減低檢查_DEF 1
         End If
         戰鬥系統類.執行動作_清除所有異常狀態_使用者
         FormMainMode.trgoi1_Timer
@@ -401,9 +401,9 @@ Select Case 事件卡記錄暫時數(2, 3)
         事件卡記錄暫時數(2, 2) = 1
         '=======================
         If 戰鬥系統類.turnatk = 2 Then
-            戰鬥系統類.異常狀態骰數減低檢查_ATK 2
+'            戰鬥系統類.異常狀態骰數減低檢查_ATK 2
         ElseIf 戰鬥系統類.turnatk = 1 Then
-            戰鬥系統類.異常狀態骰數減低檢查_DEF 2
+'            戰鬥系統類.異常狀態骰數減低檢查_DEF 2
         End If
         戰鬥系統類.執行動作_清除所有異常狀態_電腦
         FormMainMode.trgoi2_Timer

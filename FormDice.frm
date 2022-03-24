@@ -142,6 +142,8 @@ Else
 End If
 '-----以下為人物頭像調整
 '=====================
+FormDice.jpgus.大人物圖片 = VBEPerson(1, 角色人物對戰人數(1, 2), 1, 5, 3)
+FormDice.jpgcom.大人物圖片 = VBEPerson(2, 角色人物對戰人數(2, 2), 1, 5, 3)
 jpgus.Height = jpgus.大人物圖片height
 jpgus.Width = jpgus.大人物圖片width
 jpgus.Top = FormDice.ScaleHeight - jpgus.大人物圖片height
@@ -269,12 +271,11 @@ Sub outprocess()
     End Select
   End If
   FormMainMode.骰子執行完啟動.Enabled = True
-'  Unload Me
+  Unload Me
 End Sub
 Sub usatkcom()
      tot = Val(擲骰表單溝通暫時變數(2)) - Val(擲骰表單溝通暫時變數(3))
 '======以下為異常狀態檢查及啟動
-'formmainmode.技能.蕾_終曲_無盡輪迴的終結_舊   '(階段3)
 atkingck(17, 1) = 3
 技能.帕茉_靜謐之背 '(階段3)
 '=========

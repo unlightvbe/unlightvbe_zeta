@@ -14167,23 +14167,6 @@ If pagecardnum(Index, 6) = 1 And (turnpageonin = 1 Or turnpageoninatking = 1) An
    目前數(3) = 0
    戰鬥系統類.出牌順序計算_使用者_出牌
    使用者出牌_出牌對齊_靠左.Enabled = True
-    '============以下是技能檢查及啟動
-    atkingck(1, 1) = 1
-    If turnatk = 1 And 階段狀態數 = 1 Then
-       技能.雪莉_自殺傾向 Index  '(階段1)
-       技能.雪莉_VBE_自殺傾向 Index '(階段1)
-       技能.音音夢_愉快抽血 Index '(階段1)
-    End If
-    If turnatk = 1 And atkingck(79, 2) = 1 Then
-        atkingck(79, 1) = 2
-        技能.艾依查庫_神速之劍 Index '(階段2)
-        atkingck(79, 1) = 1
-    End If
-    If turnatk = 1 And atkingck(101, 2) = 1 Then
-        atkingck(101, 1) = 2
-        技能.露緹亞_渦騎劍閃 Index  '(階段2)
-        atkingck(101, 1) = 1
-    End If
    '=============以下是牌移動(出牌)(使用者)
     戰鬥系統類.座標計算_使用者出牌
     牌移動暫時變數(3) = Index
@@ -14265,20 +14248,6 @@ If pagecardnum(Index, 6) = 2 And (turnpageonin = 1 Or turnpageoninatking = 1) An
    pageqlead(1) = Val(pageqlead(1)) - 1
    pageusglead = Val(pageusglead) + 1
    pageusqlead = Val(pageusqlead) - 1
-   '============以下是技能檢查及啟動
-    If turnatk = 1 Then
-       技能.雪莉_自殺傾向 Index  '(階段1)
-       技能.雪莉_VBE_自殺傾向 Index '(階段1)
-       技能.音音夢_愉快抽血 Index '(階段1)
-    End If
-    If turnatk = 1 And atkingck(79, 2) = 1 Then
-        atkingck(79, 1) = 2
-        技能.艾依查庫_神速之劍 Index '(階段2)
-    End If
-    If turnatk = 1 And atkingck(101, 2) = 1 Then
-        atkingck(101, 1) = 2
-        技能.露緹亞_渦騎劍閃 Index '(階段2)
-    End If
    '=============以下是牌移動(回牌)(使用者)
     戰鬥系統類.座標計算_使用者手牌
     牌移動暫時變數(3) = Index
@@ -14797,30 +14766,9 @@ End If
    If pagecardnum(Index, 3) = a4a Then
       atkingpagetot(1, 4) = Val(atkingpagetot(1, 4)) - Val(pagecardnum(Index, 4))
    End If
-    '============以下是技能檢查及啟動
-    atkingck(1, 1) = 2
-    atkingck(42, 1) = 2
-    atkingck(69, 1) = 2
-    If turnatk = 1 Then
-        技能.雪莉_自殺傾向 Index  '(階段2)
-        技能.雪莉_VBE_自殺傾向 Index  '(階段2)
-        技能.音音夢_愉快抽血 Index '(階段2)
-    End If
-    If turnatk = 1 Then
-        atkingck(79, 1) = 3
-        技能.艾依查庫_神速之劍 Index '(階段3)
-    End If
-    If turnatk = 1 Then
-        atkingck(101, 1) = 3
-        技能.露緹亞_渦騎劍閃 Index '(階段3)
-    End If
     '======================
     Call pageusqlead_Change
     '=====================
-    atkingck(1, 1) = 1
-    atkingck(42, 1) = 1
-    atkingck(69, 1) = 1
-   '==================
    FormMainMode.trgoi1.Enabled = True
 End Sub
 
@@ -14913,8 +14861,7 @@ End If
 '==============以下是技能檢查及啟動
 If uspi1(角色人物對戰人數(1, 2)).Caption = "音音夢" Then
     If atking_音音夢_成長模式狀態數(2) = 1 And turnatk = 1 Then
-       atking_音音夢_成長模式狀態數(1) = 2
-       戰鬥系統類.特殊_音音夢_成長狀態_使用者 '(階段2)
+       戰鬥系統類.特殊_音音夢_成長狀態_使用者 2 '(階段2)
     End If
 End If
 If turnatk = 1 Then
@@ -15015,20 +14962,16 @@ If 智慧型AI系統_目前可執行之人物判斷(namecom(角色人物對戰人數(2, 2))) = True The
 End If
    '============以下是技能檢查及啟動
     If turnatk = 2 Then
-        atkingckai(1, 1) = 1
-       AI技能.雪莉_自殺傾向 (0)  '(階段1)
+       AI技能.雪莉_自殺傾向 1 '(階段1)
     End If
     If turnatk = 2 And movecp = 3 Then
-       atkingckai(5, 1) = 1
-       AI技能.雪莉_飛刃雨 '(階段1)
+       AI技能.雪莉_飛刃雨 1 '(階段1)
     End If
     If turnatk = 2 Then
-       atkingckai(48, 1) = 5
-       AI技能.傑多_因果之幻 '(階段5)
+       AI技能.傑多_因果之幻 5 '(階段5)
     End If
     If turnatk = 2 And movecp < 3 Then
-        atkingckai(11, 1) = 1
-       AI技能.蕾_終曲_無盡輪迴的終結  '(階段1)
+       AI技能.蕾_終曲_無盡輪迴的終結 1 '(階段1)
     End If
     '==========
     AI人物.CC 1
@@ -15062,10 +15005,7 @@ If compi1(角色人物對戰人數(2, 2)).Caption = "音音夢" Then
     End If
 End If
 If atkingckai(5, 2) = 1 Then
-    atkingckai(5, 1) = 2
-    AI技能.雪莉_飛刃雨 '(階段2)
-ElseIf atkingckai(5, 2) = 0 Then
-    atkingckai(5, 1) = 3  '(目標階段3)
+    AI技能.雪莉_飛刃雨 2 '(階段2)
 End If
 If turnatk = 2 Then
     atkingck(128, 1) = 1
@@ -15111,8 +15051,7 @@ atkingtrn(1) = 0
 atkingtrn(2) = 0
 '=================以下是技能檢查及啟動(回合結束階段1)
 If turnatk = 5 And atkingck(34, 2) = 1 Then
-    atkingck(34, 1) = 2
-    技能.CC_白銀戰機 '(階段2)
+    技能.CC_白銀戰機 2 '(階段2)
 End If
 If turnatk = 5 And atkingck(33, 2) = 1 Then
     atkingck(33, 1) = 2
@@ -15123,8 +15062,7 @@ If turnatk = 5 And atkingckai(103, 2) = 1 Then
     AI技能.CC_滅菌空間 '(階段2)
 End If
 If turnatk = 5 And atkingckai(33, 2) = 1 Then
-    atkingckai(33, 1) = 2
-    AI技能.CC_白銀戰機 '(階段2)
+    AI技能.CC_白銀戰機 2 '(階段2)
 End If
 '=================
 技能動畫顯示階段數 = 7
@@ -15132,8 +15070,7 @@ End If
 '=================以下是技能檢查及啟動(回合結束階段2)
 '==================
 If turnatk = 5 And atkingck(34, 2) = 1 Then
-    atkingck(34, 1) = 3
-    技能.CC_白銀戰機 '(階段3)
+    技能.CC_白銀戰機 3 '(階段3)
 End If
 If turnatk = 5 And atkingck(33, 2) = 1 Then
     atkingck(33, 1) = 3
@@ -15145,8 +15082,7 @@ If turnatk = 5 And atkingckai(103, 2) = 1 Then
     AI技能.CC_滅菌空間 '(階段3)
 End If
 If turnatk = 5 And atkingckai(33, 2) = 1 Then
-    atkingckai(33, 1) = 3
-    AI技能.CC_白銀戰機 '(階段3)
+    AI技能.CC_白銀戰機 3 '(階段3)
 End If
 '=================
 atkingtrtot.Interval = 600
@@ -15280,8 +15216,7 @@ End If
 '==============================
 If uspi1(角色人物對戰人數(1, 2)).Caption = "史塔夏" Then
     If atking_史塔夏_殺戮模式狀態數(2) = 1 Then
-       atking_史塔夏_殺戮模式狀態數(1) = 3
-       戰鬥系統類.特殊_史塔夏_殺戮狀態_使用者 '(階段3)
+       戰鬥系統類.特殊_史塔夏_殺戮狀態_使用者 3 '(階段3)
     End If
 End If
 If compi1(角色人物對戰人數(2, 2)).Caption = "史塔夏" Then
@@ -15292,8 +15227,7 @@ If compi1(角色人物對戰人數(2, 2)).Caption = "史塔夏" Then
 End If
 If uspi1(角色人物對戰人數(1, 2)).Caption = "音音夢" Then
     If atking_音音夢_成長模式狀態數(2) = 1 Then
-       atking_音音夢_成長模式狀態數(1) = 3
-       戰鬥系統類.特殊_音音夢_成長狀態_使用者 '(階段3)
+       戰鬥系統類.特殊_音音夢_成長狀態_使用者 3 '(階段3)
     End If
 End If
 If compi1(角色人物對戰人數(2, 2)).Caption = "音音夢" Then
@@ -15382,67 +15316,69 @@ atkingckai(12, 1) = 2
 atkingckai(82, 1) = 2
 '============以下是技能檢查
 If turnatk = 2 And 階段狀態數 = 3 Then
-    AI技能.雪莉_飛刃雨 '(階段3/4)
-    AI技能.蕾_終曲_無盡輪迴的終結 '(階段1)
-    AI技能.古魯瓦爾多_猛擊  '(階段1)
-    AI技能.蕾_輪旋曲_琉璃色的微風 '(階段1)
+    AI技能.雪莉_飛刃雨 3 '(階段3)
+    AI技能.蕾_終曲_無盡輪迴的終結 2 '(階段2)
+    AI技能.古魯瓦爾多_猛擊 1 '(階段1)
+    AI技能.蕾_輪旋曲_琉璃色的微風 1 '(階段1)
     AI技能.南瓜王_重壓 '(階段1)
     AI技能.妖精王妃_冰結之翼 '(階段1)
-    AI技能.蕾_EX_輪旋曲_琉璃色的微風 '(階段1)
-    AI技能.吸血姬蕾米雅_吸血  '(階段1)
+    AI技能.蕾_EX_輪旋曲_琉璃色的微風 1 '(階段1)
+    AI技能.吸血姬蕾米雅_吸血 1 '(階段1)
     AI技能.吸血姬蕾米雅_高貴的晚餐 '(階段1)
-    AI技能.艾伯李斯特_精密射擊  '(階段1)
-    AI技能.史塔夏_愚者之手  '(階段1)
+    AI技能.艾伯李斯特_精密射擊 1 '(階段1)
+    AI技能.史塔夏_愚者之手 1 '(階段1)
     AI技能.史塔夏_命運的鐵門  '(階段1)
-    AI技能.阿貝爾_霸王閃擊  '(階段1)
-    AI技能.阿貝爾_幻影劍舞  '(階段1)
-    AI技能.布勞_時間爆彈  '(階段1)
-    AI技能.艾依查庫_連射  '(階段1)
-    AI技能.艾依查庫_神速之劍 (0) '(階段1)
+    AI技能.阿貝爾_霸王閃擊 1 '(階段1)
+    AI技能.阿貝爾_幻影劍舞 1 '(階段1)
+    AI技能.布勞_時間爆彈 1 '(階段1)
+    AI技能.艾依查庫_連射 1 '(階段1)
+    AI技能.艾依查庫_神速之劍 1 '(階段1)
     AI技能.梅倫_Gamble '(階段1)
-    AI技能.羅莎琳_染血之刃 '(階段1)
-    AI技能.CC_白銀戰機 '(階段1)
+    AI技能.羅莎琳_染血之刃 1 '(階段1)
+    AI技能.CC_白銀戰機 1 '(階段1)
     AI技能.帕茉_戰慄的狼牙 '(階段1)
-    AI技能.帕茉_慈悲的藍眼 '(階段1)
+    AI技能.帕茉_慈悲的藍眼 1 '(階段1)
     AI技能.帕茉_靜謐之背 '(階段1)
-    AI技能.艾茵_十三隻眼 '(階段1)
-    AI技能.夏洛特_冬之夢 '(階段1)
-    AI技能.泰瑞爾_Chr_799 '(階段1)
-    AI技能.泰瑞爾_Rud_913 '(階段1)
+    AI技能.艾茵_十三隻眼 1 '(階段1)
+    AI技能.夏洛特_冬之夢 1 '(階段1)
+    AI技能.泰瑞爾_Chr_799 1 '(階段1)
+    AI技能.泰瑞爾_Rud_913 1 '(階段1)
     AI技能.泰瑞爾_Wil_846 '(階段1)
     AI技能.瑪格莉特_地獄獵心獸 '(階段1)
-    AI技能.傑多_因果之幻 '(階段1)
-    AI技能.CC_高頻電磁手術刀 '(階段1)
-    AI技能.伊芙琳_紅蓮車輪 '(階段1)
-    AI技能.多妮妲_律死擊 '(階段1)
+    AI技能.傑多_因果之幻 1 '(階段1)
+    AI技能.CC_高頻電磁手術刀 1 '(階段1)
+    AI技能.伊芙琳_紅蓮車輪 1 '(階段1)
+    AI技能.多妮妲_律死擊 1 '(階段1)
     AI技能.多妮妲_殘虐傾向 '(階段1)
     AI技能.庫勒尼西_深淵 '(階段1)
-    AI技能.羅莎琳_黑霧的纏繞 '(階段1)
+    AI技能.羅莎琳_黑霧的纏繞 1 '(階段1)
     AI技能.梅倫_Lowball '(階段1)
-    AI技能.艾伯李斯特_雷擊 '(階段1)
-    AI技能.艾依查庫_憤怒一擊 '(階段1)
-    AI技能.阿貝爾_閃電旋風刺 '(階段1)
+    AI技能.艾伯李斯特_雷擊 1 '(階段1)
+    AI技能.艾依查庫_憤怒一擊 1 '(階段1)
+    AI技能.阿貝爾_閃電旋風刺 1 '(階段1)
     AI技能.利恩_劫影攻擊 '(階段1)
-    AI技能.利恩_毒牙 '(階段1)
-    AI技能.利恩_背刺 '(階段1)
-    AI技能.瑪格莉特_月光 '(階段1)
-    AI技能.蕾格烈芙_CTL '(階段1)
-    AI技能.蕾格烈芙_BPA '(階段1)
-    AI技能.阿奇波爾多_致命槍擊 '(階段1)
+    AI技能.利恩_毒牙 1 '(階段1)
+    AI技能.利恩_背刺 1 '(階段1)
+    AI技能.瑪格莉特_月光 1 '(階段1)
+    AI技能.蕾格烈芙_CTL 1 '(階段1)
+    AI技能.蕾格烈芙_BPA 1 '(階段1)
+    AI技能.阿奇波爾多_致命槍擊 1 '(階段1)
     AI技能.阿奇波爾多_劫影攻擊 '(階段1)
-    AI技能.洛洛妮_砲擊壓制 '(階段1)
-    AI技能.洛洛妮_貪婪之刃與嗜血之槍  '(階段1)
+    AI技能.洛洛妮_砲擊壓制 1 '(階段1)
+    AI技能.洛洛妮_貪婪之刃與嗜血之槍 1 '(階段1)
     AI技能.艾蕾可_聖王威光  '(階段1)
-    AI技能.露緹亞_腐朽之靈  '(階段1)
-    AI技能.露緹亞_渦騎劍閃 (0) '(階段1)
-    AI技能.梅莉_夢幻魔杖 '(階段1)
-    AI技能.梅莉_夢境搖籃 '(階段1)
-    AI技能.貝琳達_裂地冰牙 '(階段1)
-    AI技能.貝琳達_溶魂之雨 '(階段1)
-    AI技能.蕾_EX_終曲_無盡輪迴的終結 '(階段1)
-    AI技能.克頓_隱蔽射擊 '(階段1)
-    AI技能.尤莉卡_奸佞的鐵鎚 '(階段1)
-    AI技能.羅莎琳_EX_染血之刃 '(階段1)
+    AI技能.露緹亞_腐朽之靈 1 '(階段1)
+    AI技能.露緹亞_渦騎劍閃 1 '(階段1)
+    AI技能.梅莉_夢幻魔杖 1 '(階段1)
+    AI技能.梅莉_夢境搖籃 1 '(階段1)
+    AI技能.貝琳達_裂地冰牙 1 '(階段1)
+    AI技能.貝琳達_溶魂之雨 1 '(階段1)
+    AI技能.蕾_EX_終曲_無盡輪迴的終結 1 '(階段1)
+    AI技能.克頓_隱蔽射擊 1 '(階段1)
+    AI技能.尤莉卡_奸佞的鐵鎚 1 '(階段1)
+    AI技能.羅莎琳_EX_染血之刃 1 '(階段1)
+    AI技能.雪莉_自殺傾向 3 '(階段3)
+    AI技能.音音夢_愉快抽血 1 '(階段1)
 ElseIf turnatk = 3 And 階段狀態數 = 3 Then
     AI技能.雪莉_巨大黑犬 '(階段2)
     AI技能.南瓜王_超再生 '(階段1)
@@ -15478,47 +15414,47 @@ ElseIf turnatk = 1 And 階段狀態數 = 3 Then
     AI技能.妖精王妃_煉獄之翼 '(階段1)
     AI技能.吸血姬蕾米雅_消失 '(階段1)
     AI技能.艾依查庫_不屈之心 '(階段1)
-    AI技能.音音夢_溫柔注射 '(階段1)
+    AI技能.音音夢_溫柔注射 1 '(階段1)
     AI技能.梅倫_Jackpot '(階段1)
     AI技能.艾茵_兩個身體 '(階段1)
-    AI技能.瑪格莉特_恍惚 '(階段1)
-    AI技能.庫勒尼西_黑暗漩渦 '(階段1)
+    AI技能.瑪格莉特_恍惚 1 '(階段1)
+    AI技能.庫勒尼西_黑暗漩渦 1 '(階段1)
     AI技能.蕾格烈芙_LAR '(階段1)
     AI技能.蕾_協奏曲_加百烈的守護 '(階段1)
     AI技能.史塔夏_時間種子 '(階段1)
-    AI技能.艾茵_九個靈魂 '(階段1)
-    AI技能.CC_原子之心 '(階段1)
-    AI技能.阿奇波爾多_防護射擊 '(階段1)
+    AI技能.艾茵_九個靈魂 1 '(階段1)
+    AI技能.CC_原子之心 1 '(階段1)
+    AI技能.阿奇波爾多_防護射擊 1 '(階段1)
     AI技能.蕾_EX_協奏曲_加百烈的守護 '(階段1)
     AI技能.羅莎琳_咀咒的刻印  '(階段1)
     AI技能.伊芙琳_慟哭之歌  '(階段1)
-    AI技能.古魯瓦爾多_血之恩賜  '(階段1)
+    AI技能.古魯瓦爾多_血之恩賜 1 '(階段1)
     AI技能.蕾_EX_安魂曲_死神的鎮魂歌 '(階段1)
-    AI技能.梅倫_High_hand '(階段1)
-    AI技能.艾伯李斯特_茨林 '(階段1)
+    AI技能.梅倫_High_hand 1 '(階段1)
+    AI技能.艾伯李斯特_茨林 1 '(階段1)
     AI技能.布勞_時間追獵 '(階段1)
     AI技能.利恩_反擊的狼煙 '(階段1)
-    AI技能.泰瑞爾_Von_541 '(階段1)
-    AI技能.庫勒尼西_瘋狂眼窩 '(階段1)
+    AI技能.泰瑞爾_Von_541 1 '(階段1)
+    AI技能.庫勒尼西_瘋狂眼窩 1 '(階段1)
     AI技能.多妮妲_異質者 '(階段2)
-    AI技能.洛洛妮_風暴感知 '(階段1)
+    AI技能.洛洛妮_風暴感知 1 '(階段1)
     AI技能.夏洛特_大聖堂 '(階段1)
-    AI技能.艾蕾可_王座之炎 '(階段1/2)
+    AI技能.艾蕾可_王座之炎 1 '(階段1)
     AI技能.艾蕾可_白百合 '(階段1)
-    AI技能.露緹亞_朦朧之暗 '(階段1)
-    AI技能.露緹亞_暗影之翼 '(階段1)
-    AI技能.梅莉_徬徨夢羽  '(階段1)
+    AI技能.露緹亞_朦朧之暗 1 '(階段1)
+    AI技能.露緹亞_暗影之翼 1 '(階段1)
+    AI技能.梅莉_徬徨夢羽 1 '(階段1)
     AI技能.音音夢_秘密苦藥  '(階段1)
     AI技能.傑多_因果之輪 '(階段1)
     AI技能.傑多_因果之刻 '(階段1)
-    AI技能.貝琳達_水晶幻鏡 '(階段1)
+    AI技能.貝琳達_水晶幻鏡 1 '(階段1)
     AI技能.蕾_安魂曲_死神的鎮魂歌 '(階段1)
-    AI技能.羅莎琳_黑霧幻影 '(階段1)
-    AI技能.羅莎琳_EX_黑霧幻影 '(階段1)
+    AI技能.羅莎琳_黑霧幻影 1 '(階段1)
+    AI技能.羅莎琳_EX_黑霧幻影 1 '(階段1)
     AI技能.克頓_竊取資料 '(階段1)
     AI技能.克頓_逃亡計畫 '(階段1)
-    AI技能.尤莉卡_不善的信仰 '(階段1)
-    AI技能.尤莉卡_曲惡的安寧 '(階段1)
+    AI技能.尤莉卡_不善的信仰 1 '(階段1)
+    AI技能.尤莉卡_曲惡的安寧 1 '(階段1)
 End If
 '==================
 End Sub
@@ -15532,64 +15468,67 @@ atkingck(79, 1) = 1
 atkingck(101, 1) = 1
 '============以下是技能檢查
 If turnatk = 1 And 階段狀態數 = 1 Then
-   技能.雪莉_飛刃雨 '(階段1/2)
-   技能.雪莉_VBE_飛刃雨 '(階段1/2)
-   技能.古魯瓦爾多_猛擊 '(階段1)
-   技能.帕茉_慈悲的藍眼 '(階段1)
+   技能.雪莉_飛刃雨 1 '(階段1)
+   技能.雪莉_VBE_飛刃雨 1 '(階段1)
+   技能.古魯瓦爾多_猛擊 1 '(階段1)
+   技能.帕茉_慈悲的藍眼 1 '(階段1)
    技能.帕茉_靜謐之背 '(階段1)
-   技能.蕾_輪旋曲_琉璃色的微風 '(階段1)
-   技能.蕾_EX_輪旋曲_琉璃色的微風 '(階段1)
-   技能.蕾_終曲_無盡輪迴的終結 '(階段1)
-   技能.艾茵_十三隻眼 '(階段1)
+   技能.蕾_輪旋曲_琉璃色的微風 1 '(階段1)
+   技能.蕾_EX_輪旋曲_琉璃色的微風 1 '(階段1)
+   技能.蕾_終曲_無盡輪迴的終結 1 '(階段1)
+   技能.艾茵_十三隻眼 1 '(階段1)
    技能.帕茉_戰慄的狼牙 '(階段1)
-   技能.史塔夏_愚者之手 '(階段1)
+   技能.史塔夏_愚者之手 1 '(階段1)
    技能.史塔夏_命運的鐵門 '(階段1)
-   技能.CC_白銀戰機 '(階段1)
-   技能.CC_高頻電磁手術刀 '(階段1)
-   技能.羅莎琳_染血之刃 '(階段1)
-   技能.羅莎琳_黑霧的纏繞 '(階段1)
-   技能.伊芙琳_紅蓮車輪 '(階段1)
+   技能.CC_白銀戰機 1 '(階段1)
+   技能.CC_高頻電磁手術刀 1 '(階段1)
+   技能.羅莎琳_染血之刃 1 '(階段1)
+   技能.羅莎琳_黑霧的纏繞 1 '(階段1)
+   技能.伊芙琳_紅蓮車輪 1 '(階段1)
    技能.梅倫_Lowball '(階段1)
    技能.梅倫_Gamble '(階段1)
-   技能.艾伯李斯特_精密射擊 '(階段1)
-   技能.艾伯李斯特_雷擊 '(階段1)
-   技能.艾依查庫_連射 '(階段1)
-   技能.艾依查庫_神速之劍 (0) '(階段1)
-   技能.艾依查庫_憤怒一擊 '(階段1)
-   技能.布勞_時間爆彈 '(階段1)
-   技能.阿貝爾_霸王閃擊 '(階段1)
-   技能.阿貝爾_閃電旋風刺  '(階段1)
-   技能.阿貝爾_幻影劍舞  '(階段1)
+   技能.艾伯李斯特_精密射擊 1 '(階段1)
+   技能.艾伯李斯特_雷擊 1 '(階段1)
+   技能.艾依查庫_連射 1 '(階段1)
+   技能.艾依查庫_神速之劍 1 '(階段1)
+   技能.艾依查庫_憤怒一擊 1 '(階段1)
+   技能.布勞_時間爆彈 1 '(階段1)
+   技能.阿貝爾_霸王閃擊 1 '(階段1)
+   技能.阿貝爾_閃電旋風刺 1 '(階段1)
+   技能.阿貝爾_幻影劍舞 1 '(階段1)
    技能.利恩_劫影攻擊  '(階段1)
-   技能.利恩_毒牙  '(階段1)
-   技能.利恩_背刺  '(階段1)
-   技能.夏洛特_冬之夢  '(階段1)
-   技能.泰瑞爾_Rud_913  '(階段1)
-   技能.泰瑞爾_Chr_799  '(階段1)
+   技能.利恩_毒牙 1 '(階段1)
+   技能.利恩_背刺 1 '(階段1)
+   技能.夏洛特_冬之夢 1 '(階段1)
+   技能.泰瑞爾_Rud_913 1 '(階段1)
+   技能.泰瑞爾_Chr_799 1 '(階段1)
    技能.泰瑞爾_Wil_846  '(階段1)
-   技能.瑪格莉特_月光  '(階段1)
+   技能.瑪格莉特_月光 1 '(階段1)
    技能.瑪格莉特_地獄獵心獸  '(階段1)
    技能.庫勒尼西_深淵  '(階段1)
-   技能.蕾格烈芙_CTL  '(階段1)
-   技能.蕾格烈芙_BPA  '(階段1)
+   技能.蕾格烈芙_CTL 1 '(階段1)
+   技能.蕾格烈芙_BPA 1 '(階段1)
    技能.多妮妲_殘虐傾向  '(階段1)
-   技能.多妮妲_律死擊 '(階段1)
-   技能.傑多_因果之幻 '(階段1)
-   技能.阿奇波爾多_致命槍擊 '(階段1)
+   技能.多妮妲_律死擊 1 '(階段1)
+   技能.傑多_因果之幻 1 '(階段1)
+   技能.阿奇波爾多_致命槍擊 1 '(階段1)
    技能.阿奇波爾多_劫影攻擊 '(階段1)
-   技能.洛洛妮_砲擊壓制 '(階段1)
-   技能.洛洛妮_貪婪之刃與嗜血之槍 '(階段1)
-   技能.克頓_隱蔽射擊 '(階段1)
-   技能.露緹亞_腐朽之靈  '(階段1)
-   技能.露緹亞_渦騎劍閃 (0) '(階段1)
+   技能.洛洛妮_砲擊壓制 1 '(階段1)
+   技能.洛洛妮_貪婪之刃與嗜血之槍 1 '(階段1)
+   技能.克頓_隱蔽射擊 1 '(階段1)
+   技能.露緹亞_腐朽之靈 1 '(階段1)
+   技能.露緹亞_渦騎劍閃 1 '(階段1)
    技能.艾蕾可_聖王威光  '(階段1)
-   技能.梅莉_夢幻魔杖  '(階段1)
-   技能.梅莉_夢境搖籃  '(階段1)
-   技能.貝琳達_裂地冰牙 '(階段1)
-   技能.貝琳達_溶魂之雨 '(階段1)
-   技能.蕾_EX_終曲_無盡輪迴的終結 '(階段1)
-   技能.尤莉卡_奸佞的鐵鎚 '(階段1)
-   技能.羅莎琳_EX_染血之刃 '(階段1)
+   技能.梅莉_夢幻魔杖 1 '(階段1)
+   技能.梅莉_夢境搖籃 1 '(階段1)
+   技能.貝琳達_裂地冰牙 1 '(階段1)
+   技能.貝琳達_溶魂之雨 1 '(階段1)
+   技能.蕾_EX_終曲_無盡輪迴的終結 1 '(階段1)
+   技能.尤莉卡_奸佞的鐵鎚 1 '(階段1)
+   技能.羅莎琳_EX_染血之刃 1 '(階段1)
+   技能.雪莉_自殺傾向 1 '(階段1)
+   技能.雪莉_VBE_自殺傾向 1 '(階段1)
+   技能.音音夢_愉快抽血 1 '(階段1)
 ElseIf turnatk = 3 And 階段狀態數 = 1 Then
    技能.雪莉_巨大黑犬 '(階段1)
    技能.雪莉_VBE_巨大黑犬 '(階段1)
@@ -15626,44 +15565,44 @@ ElseIf turnatk = 2 And 階段狀態數 = 1 Then
    技能.蕾_安魂曲_死神的鎮魂歌 '(階段1)
    技能.蕾_EX_安魂曲_死神的鎮魂歌 '(階段1)
    技能.史塔夏_時間種子 '(階段1)
-   技能.艾茵_九個靈魂 '(階段1)
+   技能.艾茵_九個靈魂 1 '(階段1)
    技能.艾茵_兩個身體 '(階段1)
-   技能.CC_原子之心 '(階段1)
+   技能.CC_原子之心 1 '(階段1)
    技能.蕾_EX_協奏曲_加百烈的守護 '(階段1)
    技能.羅莎琳_咀咒的刻印 '(階段1)
-   技能.羅莎琳_黑霧幻影 '(階段1)
-   技能.羅莎琳_EX_黑霧幻影 '(階段1)
+   技能.羅莎琳_黑霧幻影 1 '(階段1)
+   技能.羅莎琳_EX_黑霧幻影 1 '(階段1)
    技能.伊芙琳_慟哭之歌 '(階段1)
-   技能.古魯瓦爾多_血之恩賜 '(階段1)
-   技能.梅倫_High_hand '(階段1)
+   技能.古魯瓦爾多_血之恩賜 1 '(階段1)
+   技能.梅倫_High_hand 1 '(階段1)
    技能.梅倫_Jackpot '(階段1)
-   技能.音音夢_溫柔注射 '(階段1)
+   技能.音音夢_溫柔注射 1 '(階段1)
    技能.音音夢_秘密苦藥 '(階段1)
-   技能.艾伯李斯特_茨林 '(階段1)
+   技能.艾伯李斯特_茨林 1 '(階段1)
    技能.艾依查庫_不屈之心 '(階段1)
    技能.布勞_時間追獵 '(階段1)
    技能.利恩_反擊的狼煙  '(階段1)
    技能.夏洛特_大聖堂  '(階段1)
-   技能.泰瑞爾_Von_541  '(階段1)
-   技能.瑪格莉特_恍惚  '(階段1)
-   技能.庫勒尼西_瘋狂眼窩 '(階段1)
-   技能.庫勒尼西_黑暗漩渦 '(階段1)
+   技能.泰瑞爾_Von_541 1 '(階段1)
+   技能.瑪格莉特_恍惚 1 '(階段1)
+   技能.庫勒尼西_瘋狂眼窩 1 '(階段1)
+   技能.庫勒尼西_黑暗漩渦 1 '(階段1)
    技能.蕾格烈芙_LAR '(階段1)
    技能.多妮妲_異質者 '(階段1)
    技能.傑多_因果之輪 '(階段1)
    技能.傑多_因果之刻 '(階段1)
-   技能.阿奇波爾多_防護射擊 '(階段1)
-   技能.洛洛妮_風暴感知 '(階段1)
+   技能.阿奇波爾多_防護射擊 1 '(階段1)
+   技能.洛洛妮_風暴感知 1 '(階段1)
    技能.克頓_竊取資料 '(階段1)
    技能.克頓_逃亡計畫 '(階段1)
-   技能.露緹亞_朦朧之暗 '(階段1)
-   技能.露緹亞_暗影之翼 '(階段1)
-   技能.艾蕾可_王座之炎 '(階段1/2)
+   技能.露緹亞_朦朧之暗 1 '(階段1)
+   技能.露緹亞_暗影之翼 1 '(階段1)
+   技能.艾蕾可_王座之炎 1 '(階段1)
    技能.艾蕾可_白百合  '(階段1)
-   技能.梅莉_徬徨夢羽  '(階段1)
-   技能.貝琳達_水晶幻鏡  '(階段1)
-   技能.尤莉卡_不善的信仰 '(階段1)
-   技能.尤莉卡_曲惡的安寧 '(階段1)
+   技能.梅莉_徬徨夢羽 1 '(階段1)
+   技能.貝琳達_水晶幻鏡 1 '(階段1)
+   技能.尤莉卡_不善的信仰 1 '(階段1)
+   技能.尤莉卡_曲惡的安寧 1 '(階段1)
 End If
 '==================
 
@@ -16001,14 +15940,14 @@ If atkingpagetot(1, 1) = 0 And turnatk = 1 And movecp = 1 And goicheck(1) = 1 An
    攻擊防禦骰子總數(1) = 攻擊防禦骰子總數(1) - atkus(角色人物對戰人數(1, 2))
    攻擊防禦骰子總數(3) = 攻擊防禦骰子總數(3) - atkus(角色人物對戰人數(1, 2))
    '========================
-   戰鬥系統類.異常狀態骰數減低檢查_ATK 1
+'   戰鬥系統類.異常狀態骰數減低檢查_ATK 1
 End If
 If atkingpagetot(1, 5) = 0 And turnatk = 1 And movecp > 1 And goicheck(1) = 1 And 階段狀態數 = 1 Then
    goicheck(1) = 0
    攻擊防禦骰子總數(1) = 攻擊防禦骰子總數(1) - atkus(角色人物對戰人數(1, 2))
    攻擊防禦骰子總數(3) = 攻擊防禦骰子總數(3) - atkus(角色人物對戰人數(1, 2))
   '========================
-   戰鬥系統類.異常狀態骰數減低檢查_ATK 1
+'   戰鬥系統類.異常狀態骰數減低檢查_ATK 1
 End If
 If turnatk = 1 And movecp = 1 Then
  戰鬥系統類.chkus1
@@ -16016,37 +15955,9 @@ ElseIf turnatk = 1 And movecp > 1 Then
  戰鬥系統類.chkus2
 End If
 '=========以下是技能檢查及發動
-If atkingck(9, 2) = 1 And turnatk = 1 And 階段狀態數 = 1 Then
-   atkingck(9, 1) = 2
-   技能.帕茉_慈悲的藍眼 '(階段2)
-ElseIf atkingck(9, 2) = 0 And turnatk = 1 And atking_帕茉_慈悲的藍眼_tot(2) = 1 And 階段狀態數 = 1 Then
-   atkingck(9, 1) = 3
-   技能.帕茉_慈悲的藍眼 '(階段3)
-End If
-If atkingckai(37, 2) = 1 And turnatk = 2 And 階段狀態數 = 1 Then
-   atkingckai(37, 1) = 5
-   AI技能.艾茵_十三隻眼 '(階段5)
-End If
-If atkingck(16, 2) = 1 And turnatk = 1 And 階段狀態數 = 1 Then
-   atkingck(16, 1) = 2
-   技能.艾茵_十三隻眼 '(階段2)
-ElseIf atkingck(16, 2) = 0 And turnatk = 1 And atking_艾茵_十三隻眼_tot(2) = 1 And 階段狀態數 = 1 Then
-   atkingck(16, 1) = 3
-   技能.艾茵_十三隻眼 '(階段3)
-End If
-If uspi1(角色人物對戰人數(1, 2)).Caption = "史塔夏" Then
-    If atking_史塔夏_殺戮模式狀態數(2) = 1 And turnatk = 1 And 階段狀態數 = 1 And 攻擊防禦骰子總數(1) > 0 Then
-       atking_史塔夏_殺戮模式狀態數(1) = 1
-       戰鬥系統類.特殊_史塔夏_殺戮狀態_使用者 '(階段1)
-    ElseIf atking_史塔夏_殺戮模式狀態數(2) = 1 And turnatk = 1 And 階段狀態數 = 1 And 攻擊防禦骰子總數(1) = 0 Then
-       atking_史塔夏_殺戮模式狀態數(1) = 2
-       戰鬥系統類.特殊_史塔夏_殺戮狀態_使用者 '(階段2)
-    End If
-End If
 If uspi1(角色人物對戰人數(1, 2)).Caption = "音音夢" Then
     If atking_音音夢_成長模式狀態數(2) = 1 And turnatk = 1 And 階段狀態數 = 1 And 攻擊防禦骰子總數(1) = 0 Then
-       atking_音音夢_成長模式狀態數(1) = 1
-       戰鬥系統類.特殊_音音夢_成長狀態_使用者 '(階段1)
+       戰鬥系統類.特殊_音音夢_成長狀態_使用者 1 '(階段1)
     End If
 End If
 '======
@@ -16096,14 +16007,14 @@ If atkingpagetot(2, 1) = 0 And turnatk = 2 And movecp = 1 And goicheck(2) = 1 An
    攻擊防禦骰子總數(2) = 攻擊防禦骰子總數(2) - atkcom(角色人物對戰人數(2, 2))
    攻擊防禦骰子總數(4) = 攻擊防禦骰子總數(4) - atkcom(角色人物對戰人數(2, 2))
    '=========
-   戰鬥系統類.異常狀態骰數減低檢查_ATK 2
+'   戰鬥系統類.異常狀態骰數減低檢查_ATK 2
 End If
 If atkingpagetot(2, 5) = 0 And turnatk = 2 And movecp > 1 And goicheck(2) = 1 And 階段狀態數 = 3 Then
    goicheck(2) = 0
    攻擊防禦骰子總數(2) = 攻擊防禦骰子總數(2) - atkcom(角色人物對戰人數(2, 2))
    攻擊防禦骰子總數(4) = 攻擊防禦骰子總數(4) - atkcom(角色人物對戰人數(2, 2))
    '=========
-   戰鬥系統類.異常狀態骰數減低檢查_ATK 2
+'   戰鬥系統類.異常狀態骰數減低檢查_ATK 2
 End If
 If turnatk = 2 Then
  戰鬥系統類.chkcom
@@ -16118,33 +16029,6 @@ If atkingckai(15, 2) = 0 And turnatk = 1 And 階段狀態數 = 3 Then
    AI技能.羊角獸2012_致命格擋 '(階段1)
 End If
 '================
-If turnatk = 1 And atkingck(19, 2) = 1 And 階段狀態數 = 3 Then
-    atkingck(19, 1) = 4
-    技能.蕾_EX_輪旋曲_琉璃色的微風  '(階段4)
-End If
-If turnatk = 1 And atkingck(13, 2) = 1 And 階段狀態數 = 3 Then
-    atkingck(13, 1) = 4
-    技能.蕾_輪旋曲_琉璃色的微風  '(階段4)
-End If
-'================
-If atkingckai(35, 2) = 1 And turnatk = 2 And 階段狀態數 = 3 Then
-   atkingckai(35, 1) = 2
-   AI技能.帕茉_慈悲的藍眼 '(階段2)
-ElseIf atkingckai(35, 2) = 0 And turnatk = 2 And atking_AI_帕茉_慈悲的藍眼_tot(2) = 1 And 階段狀態數 = 3 Then
-   atkingckai(35, 1) = 3
-   AI技能.帕茉_慈悲的藍眼 '(階段3)
-End If
-If atkingck(16, 2) = 1 And turnatk = 1 And 階段狀態數 = 3 Then
-   atkingck(16, 1) = 5
-   技能.艾茵_十三隻眼 '(階段5)
-End If
-If atkingckai(37, 2) = 1 And turnatk = 2 And 階段狀態數 = 3 Then
-   atkingckai(37, 1) = 2
-   AI技能.艾茵_十三隻眼 '(階段2)
-ElseIf atkingckai(37, 2) = 0 And turnatk = 2 And atking_AI_艾茵_十三隻眼_tot(2) = 1 And 階段狀態數 = 3 Then
-   atkingckai(37, 1) = 3
-   AI技能.艾茵_十三隻眼 '(階段3)
-End If
 If compi1(角色人物對戰人數(2, 2)).Caption = "史塔夏" Then
     If atking_AI_史塔夏_殺戮模式狀態數(2) = 1 And turnatk = 2 And 階段狀態數 = 3 And 攻擊防禦骰子總數(2) > 0 Then
        atking_AI_史塔夏_殺戮模式狀態數(1) = 1
@@ -16444,24 +16328,20 @@ tr電腦牌_翻牌.Enabled = False
       技能.伊芙琳_赤紅石榴 '(階段5)
    End If
    If atkingck(72, 2) = 1 Then
-      atkingck(72, 1) = 6
-      技能.艾伯李斯特_雷擊 '(階段6)
+      技能.艾伯李斯特_雷擊 6 '(階段6)
    End If
    If atkingck(122, 2) = 1 Then
-      atkingck(122, 1) = 4
-      技能.瑪格莉特_月光 '(階段4)
+      技能.瑪格莉特_月光 4 '(階段4)
    End If
    If atkingck(129, 2) = 1 Then
-      atkingck(129, 1) = 6
-      技能.庫勒尼西_瘋狂眼窩 '(階段6)
+      技能.庫勒尼西_瘋狂眼窩 6 '(階段6)
    End If
    If atkingck(144, 2) = 1 Then
       atkingck(144, 1) = 4
       技能.傑多_因果之線 '(階段4)
    End If
    If atkingck(156, 2) = 1 Then
-      atkingck(156, 1) = 4
-      技能.洛洛妮_貪婪之刃與嗜血之槍 '(階段4)
+      技能.洛洛妮_貪婪之刃與嗜血之槍 4 '(階段4)
    End If
    '=======================以下是事件卡檢查及啟動
    If 事件卡記錄暫時數(1, 5) = 2 And 事件卡記錄暫時數(1, 6) = 1 Then
@@ -16699,24 +16579,20 @@ Select Case Val(atkingno(tt, 2))
                技能.古魯瓦爾多_必殺架勢  '(階段3)
            End If
            If turnatk = 2 And atkingck(60, 2) = 1 And Val(atkingno(tt, 7)) = 60 Then
-               atkingck(60, 1) = 3
-               技能.古魯瓦爾多_血之恩賜  '(階段3)
+               技能.古魯瓦爾多_血之恩賜 3 '(階段3)
            End If
            If turnatk = 3 And atkingck(61, 2) = 1 And Val(atkingno(tt, 7)) = 61 Then
                atkingck(61, 1) = 3
                技能.古魯瓦爾多_精神力吸收  '(階段3)
            End If
            If turnatk = 2 And atkingck(26, 2) = 1 And Val(atkingno(tt, 7)) = 26 Then
-               atkingck(26, 1) = 3
-               技能.艾茵_九個靈魂  '(階段3)
+               技能.艾茵_九個靈魂 3  '(階段3)
            End If
            If turnatk = 1 And atkingck(1, 2) = 1 And Val(atkingno(tt, 7)) = 1 Then
-               atkingck(1, 1) = 4
-               技能.雪莉_自殺傾向 (0)  '(階段4)
+               技能.雪莉_自殺傾向 4 '(階段4)
            End If
            If turnatk = 1 And atkingck(42, 2) = 1 And Val(atkingno(tt, 7)) = 42 Then
-               atkingck(42, 1) = 4
-               技能.雪莉_VBE_自殺傾向 (0)  '(階段4)
+               技能.雪莉_VBE_自殺傾向 4 '(階段4)
            End If
            If turnatk = 3 And atkingck(4, 2) = 1 And Val(atkingno(tt, 7)) = 4 Then
                atkingck(4, 1) = 3
@@ -16751,12 +16627,10 @@ Select Case Val(atkingno(tt, 2))
                技能.音音夢_美味牛奶 '(階段3)
            End If
            If turnatk = 2 And atkingck(68, 2) = 1 And Val(atkingno(tt, 7)) = 68 Then
-               atkingck(68, 1) = 3
-               技能.音音夢_溫柔注射 '(階段3)
+               技能.音音夢_溫柔注射 3 '(階段3)
            End If
            If turnatk = 1 And atkingck(69, 2) = 1 And Val(atkingno(tt, 7)) = 69 Then
-               atkingck(69, 1) = 4
-               技能.音音夢_愉快抽血 (0)  '(階段4)
+               技能.音音夢_愉快抽血 4 '(階段4)
            End If
            If turnatk = 2 And atkingck(70, 2) = 1 And Val(atkingno(tt, 7)) = 70 Then
                atkingck(70, 1) = 3
@@ -16779,12 +16653,10 @@ Select Case Val(atkingno(tt, 2))
               技能.史塔夏_時間種子  '(階段3)
            End If
            If turnatk = 2 And atkingck(54, 2) = 1 And Val(atkingno(tt, 7)) = 54 Then
-              atkingck(54, 1) = 3
-              技能.羅莎琳_黑霧幻影  '(階段3)
+              技能.羅莎琳_黑霧幻影 3 '(階段3)
            End If
            If turnatk = 2 And atkingck(55, 2) = 1 And Val(atkingno(tt, 7)) = 55 Then
-              atkingck(55, 1) = 3
-              技能.羅莎琳_EX_黑霧幻影  '(階段3)
+              技能.羅莎琳_EX_黑霧幻影 3 '(階段3)
            End If
            If turnatk = 2 And atkingck(57, 2) = 1 And Val(atkingno(tt, 7)) = 57 Then
               atkingck(57, 1) = 3
@@ -16799,40 +16671,33 @@ Select Case Val(atkingno(tt, 2))
               技能.帕茉_戰慄的狼牙 '(階段3)
            End If
            If turnatk = 1 And atkingck(9, 2) = 1 And Val(atkingno(tt, 7)) = 9 Then
-               atkingck(9, 1) = 5
-              技能.帕茉_慈悲的藍眼 '(階段5)
+              技能.帕茉_慈悲的藍眼 5 '(階段5)
            End If
            If turnatk = 1 And atkingck(51, 2) = 1 And Val(atkingno(tt, 7)) = 51 Then
-               atkingck(51, 1) = 3
-              技能.羅莎琳_染血之刃 '(階段3)
+              技能.羅莎琳_染血之刃 3 '(階段3)
            End If
            If turnatk = 1 And atkingck(50, 2) = 1 And Val(atkingno(tt, 7)) = 50 Then
-               atkingck(50, 1) = 3
-              技能.羅莎琳_EX_染血之刃 '(階段3)
+              技能.羅莎琳_EX_染血之刃 3 '(階段3)
            End If
            If turnatk = 1 And atkingck(58, 2) = 1 And Val(atkingno(tt, 7)) = 58 Then
-               atkingck(58, 1) = 3
-              技能.伊芙琳_紅蓮車輪 '(階段3)
+              技能.伊芙琳_紅蓮車輪 3 '(階段3)
            End If
            If turnatk = 5 And atkingck(33, 2) = 1 And Val(atkingno(tt, 7)) = 33 Then
                atkingck(33, 1) = 4
               技能.CC_滅菌空間 '(階段4)
            End If
            If turnatk = 5 And atkingck(34, 2) = 1 And Val(atkingno(tt, 7)) = 34 Then
-               atkingck(34, 1) = 4
-              技能.CC_白銀戰機 '(階段4)
+              技能.CC_白銀戰機 4 '(階段4)
            End If
            If turnatk = 2 And atkingck(36, 2) = 1 And Val(atkingno(tt, 7)) = 36 Then
-               atkingck(36, 1) = 4
-              技能.CC_原子之心 '(階段4)
+              技能.CC_原子之心 4 '(階段4)
            End If
            If turnatk = 2 And atkingck(64, 2) = 1 And Val(atkingno(tt, 7)) = 64 Then
                atkingck(64, 1) = 5
               技能.梅倫_Jackpot '(階段5)
            End If
            If turnatk = 2 And atkingck(73, 2) = 1 And Val(atkingno(tt, 7)) = 73 Then
-               atkingck(73, 1) = 3
-               技能.艾伯李斯特_茨林  '(階段3)
+               技能.艾伯李斯特_茨林 3 '(階段3)
            End If
            If turnatk = 3 And atkingck(74, 2) = 1 And Val(atkingno(tt, 7)) = 74 Then
                atkingck(74, 1) = 3
@@ -16843,24 +16708,21 @@ Select Case Val(atkingno(tt, 2))
                技能.布勞_發條機構  '(階段3)
            End If
            If turnatk = 1 And atkingck(84, 2) = 1 And Val(atkingno(tt, 7)) = 84 Then
-               atkingck(84, 1) = 3
-               技能.布勞_時間爆彈  '(階段3)
+               技能.布勞_時間爆彈 3  '(階段3)
            End If
            If turnatk = 3 And atkingck(85, 2) = 1 And Val(atkingno(tt, 7)) = 85 Then
                atkingck(85, 1) = 3
                技能.布勞_夜幕時分  '(階段3)
            End If
            If turnatk = 1 And atkingck(87, 2) = 1 And Val(atkingno(tt, 7)) = 87 Then
-               atkingck(87, 1) = 3
-               技能.阿貝爾_閃電旋風刺  '(階段3)
+               技能.阿貝爾_閃電旋風刺 3  '(階段3)
            End If
            If turnatk = 3 And atkingck(89, 2) = 1 And Val(atkingno(tt, 7)) = 89 Then
                atkingck(89, 1) = 3
                技能.阿貝爾_抽刀斷水計  '(階段3)
            End If
            If turnatk = 1 And atkingck(95, 2) = 1 And Val(atkingno(tt, 7)) = 95 Then
-               atkingck(95, 1) = 3
-               技能.夏洛特_冬之夢  '(階段3)
+               技能.夏洛特_冬之夢 3 '(階段3)
            End If
            If turnatk = 3 And atkingck(96, 2) = 1 And Val(atkingno(tt, 7)) = 96 Then
                atkingck(96, 1) = 3
@@ -16871,20 +16733,17 @@ Select Case Val(atkingno(tt, 2))
                技能.夏洛特_幸福的理由  '(階段3)
            End If
            If turnatk = 1 And atkingck(116, 2) = 1 And Val(atkingno(tt, 7)) = 116 Then
-               atkingck(116, 1) = 3
-               技能.泰瑞爾_Rud_913  '(階段3)
+               技能.泰瑞爾_Rud_913 3 '(階段3)
            End If
            If turnatk = 1 And atkingck(118, 2) = 1 And Val(atkingno(tt, 7)) = 118 Then
-               atkingck(118, 1) = 3
-               技能.泰瑞爾_Chr_799  '(階段3)
+               技能.泰瑞爾_Chr_799 3 '(階段3)
            End If
            If turnatk = 1 And atkingck(119, 2) = 1 And Val(atkingno(tt, 7)) = 119 Then
                atkingck(119, 1) = 3
                技能.泰瑞爾_Wil_846  '(階段3)
            End If
            If turnatk = 1 And atkingck(122, 2) = 1 And Val(atkingno(tt, 7)) = 122 Then
-               atkingck(122, 1) = 3
-               技能.瑪格莉特_月光  '(階段3)
+               技能.瑪格莉特_月光 3 '(階段3)
            End If
            If turnatk = 3 And atkingck(124, 2) = 1 And Val(atkingno(tt, 7)) = 124 Then
                atkingck(124, 1) = 3
@@ -16899,12 +16758,10 @@ Select Case Val(atkingno(tt, 2))
                技能.庫勒尼西_深淵  '(階段3)
            End If
            If turnatk = 2 And atkingck(131, 2) = 1 And Val(atkingno(tt, 7)) = 131 Then
-               atkingck(131, 1) = 3
-               技能.庫勒尼西_黑暗漩渦  '(階段3)
+               技能.庫勒尼西_黑暗漩渦 3 '(階段3)
            End If
            If turnatk = 1 And atkingck(136, 2) = 1 And Val(atkingno(tt, 7)) = 136 Then
-               atkingck(136, 1) = 3
-               技能.蕾格烈芙_BPA  '(階段3)
+               技能.蕾格烈芙_BPA 3 '(階段3)
            End If
            If turnatk = 2 And atkingck(137, 2) = 1 And Val(atkingno(tt, 7)) = 137 Then
                atkingck(137, 1) = 3
@@ -16943,8 +16800,7 @@ Select Case Val(atkingno(tt, 2))
                技能.洛洛妮_逆轉戰局的槍響  '(階段4)
            End If
            If turnatk = 1 And atkingck(156, 2) = 1 And Val(atkingno(tt, 7)) = 156 Then
-               atkingck(156, 1) = 3
-               技能.洛洛妮_貪婪之刃與嗜血之槍  '(階段3)
+               技能.洛洛妮_貪婪之刃與嗜血之槍 3 '(階段3)
            End If
            If turnatk = 2 And atkingck(157, 2) = 1 And Val(atkingno(tt, 7)) = 157 Then
                atkingck(157, 1) = 3
@@ -16955,12 +16811,10 @@ Select Case Val(atkingno(tt, 2))
                技能.克頓_惡意情報  '(階段4)
            End If
            If turnatk = 2 And atkingck(99, 2) = 1 And Val(atkingno(tt, 7)) = 99 Then
-               atkingck(99, 1) = 3
-               技能.露緹亞_朦朧之暗  '(階段3)
+               技能.露緹亞_朦朧之暗 3 '(階段3)
            End If
            If turnatk = 2 And atkingck(100, 2) = 1 And Val(atkingno(tt, 7)) = 100 Then
-               atkingck(100, 1) = 4
-               技能.露緹亞_暗影之翼  '(階段4)
+               技能.露緹亞_暗影之翼 4 '(階段4)
            End If
            If turnatk = 1 And atkingck(104, 2) = 1 And Val(atkingno(tt, 7)) = 104 Then
                atkingck(104, 1) = 3
@@ -16971,36 +16825,30 @@ Select Case Val(atkingno(tt, 2))
                技能.艾蕾可_救濟天使  '(階段3)
            End If
            If turnatk = 1 And atkingck(106, 2) = 1 And Val(atkingno(tt, 7)) = 106 Then
-               atkingck(106, 1) = 3
-               技能.梅莉_夢幻魔杖  '(階段3)
+               技能.梅莉_夢幻魔杖 3 '(階段3)
            End If
            If turnatk = 2 And atkingck(107, 2) = 1 And Val(atkingno(tt, 7)) = 107 Then
-               atkingck(107, 1) = 3
-               技能.梅莉_徬徨夢羽  '(階段3)
+               技能.梅莉_徬徨夢羽 3 '(階段3)
            End If
            If turnatk = 3 And atkingck(108, 2) = 1 And Val(atkingno(tt, 7)) = 108 Then
                atkingck(108, 1) = 4
                技能.梅莉_綿羊幻夢  '(階段4)
            End If
            If turnatk = 1 And atkingck(109, 2) = 1 And Val(atkingno(tt, 7)) = 109 Then
-               atkingck(109, 1) = 3
-               技能.梅莉_夢境搖籃  '(階段3)
+               技能.梅莉_夢境搖籃 3 '(階段3)
            End If
            If turnatk = 3 And atkingck(110, 2) = 1 And Val(atkingno(tt, 7)) = 110 Then
                atkingck(110, 1) = 4
                技能.貝琳達_雪光  '(階段4)
            End If
            If turnatk = 2 And atkingck(111, 2) = 1 And Val(atkingno(tt, 7)) = 111 Then
-               atkingck(111, 1) = 5
-               技能.貝琳達_水晶幻鏡  '(階段5)
+               技能.貝琳達_水晶幻鏡 5 '(階段5)
            End If
            If turnatk = 1 And atkingck(46, 2) = 1 And Val(atkingno(tt, 7)) = 46 Then
-               atkingck(46, 1) = 3
-               技能.尤莉卡_奸佞的鐵鎚  '(階段3)
+               技能.尤莉卡_奸佞的鐵鎚 3 '(階段3)
            End If
            If turnatk = 2 And atkingck(48, 2) = 1 And Val(atkingno(tt, 7)) = 48 Then
-               atkingck(48, 1) = 3
-               技能.尤莉卡_曲惡的安寧  '(階段3)
+               技能.尤莉卡_曲惡的安寧 3 '(階段3)
            End If
            If turnatk = 3 And atkingck(49, 2) = 1 And Val(atkingno(tt, 7)) = 49 Then
                atkingck(49, 1) = 3
@@ -17012,8 +16860,7 @@ Select Case Val(atkingno(tt, 2))
         If Val(atkingno(tt, 8)) = 1 Then
            '============以下是技能檢查及啟動
            If turnatk = 2 And atkingckai(1, 2) = 1 And Val(atkingno(tt, 7)) = 1 Then
-               atkingckai(1, 1) = 5
-               AI技能.雪莉_自殺傾向 (0) '(階段5)
+               AI技能.雪莉_自殺傾向 5 '(階段5)
            End If
            If turnatk = 3 And atkingckai(2, 2) = 1 And Val(atkingno(tt, 7)) = 2 Then
                atkingckai(2, 1) = 4
@@ -17044,12 +16891,10 @@ Select Case Val(atkingno(tt, 2))
               AI技能.史塔夏_命運的鐵門  '(階段3)
            End If
            If turnatk = 1 And atkingckai(28, 2) = 1 And Val(atkingno(tt, 7)) = 28 Then
-              atkingckai(28, 1) = 3
-              AI技能.音音夢_溫柔注射  '(階段3)
+              AI技能.音音夢_溫柔注射 3 '(階段3)
            End If
            If turnatk = 2 And atkingckai(24, 2) = 1 And Val(atkingno(tt, 7)) = 24 Then
-              atkingckai(24, 1) = 3
-              AI技能.布勞_時間爆彈  '(階段3)
+              AI技能.布勞_時間爆彈 3 '(階段3)
            End If
            If turnatk = 3 And atkingckai(29, 2) = 1 And Val(atkingno(tt, 7)) = 29 Then
                atkingckai(29, 1) = 3
@@ -17060,36 +16905,29 @@ Select Case Val(atkingno(tt, 2))
               AI技能.梅倫_Jackpot '(階段5)
            End If
            If turnatk = 2 And atkingckai(32, 2) = 1 And Val(atkingno(tt, 7)) = 32 Then
-               atkingckai(32, 1) = 3
-               AI技能.羅莎琳_染血之刃 '(階段3)
+               AI技能.羅莎琳_染血之刃 3 '(階段3)
            End If
            If turnatk = 2 And atkingckai(140, 2) = 1 And Val(atkingno(tt, 7)) = 140 Then
-               atkingckai(140, 1) = 3
-               AI技能.羅莎琳_EX_染血之刃 '(階段3)
+               AI技能.羅莎琳_EX_染血之刃 3 '(階段3)
            End If
            If turnatk = 5 And atkingckai(33, 2) = 1 And Val(atkingno(tt, 7)) = 33 Then
-               atkingckai(33, 1) = 4
-              AI技能.CC_白銀戰機 '(階段4)
+              AI技能.CC_白銀戰機 4 '(階段4)
            End If
            If turnatk = 2 And atkingckai(34, 2) = 1 And Val(atkingno(tt, 7)) = 34 Then
                atkingckai(34, 1) = 3
                AI技能.帕茉_戰慄的狼牙 '(階段3)
            End If
            If turnatk = 2 And atkingckai(35, 2) = 1 And Val(atkingno(tt, 7)) = 35 Then
-               atkingckai(35, 1) = 5
-               AI技能.帕茉_慈悲的藍眼 '(階段5)
+               AI技能.帕茉_慈悲的藍眼 5 '(階段5)
            End If
            If turnatk = 2 And atkingckai(39, 2) = 1 And Val(atkingno(tt, 7)) = 39 Then
-               atkingckai(39, 1) = 3
-               AI技能.夏洛特_冬之夢 '(階段3)
+               AI技能.夏洛特_冬之夢 3 '(階段3)
            End If
            If turnatk = 2 And atkingckai(40, 2) = 1 And Val(atkingno(tt, 7)) = 40 Then
-               atkingckai(40, 1) = 3
-               AI技能.泰瑞爾_Rud_913 '(階段3)
+               AI技能.泰瑞爾_Rud_913 3 '(階段3)
            End If
            If turnatk = 2 And atkingckai(77, 2) = 1 And Val(atkingno(tt, 7)) = 77 Then
-               atkingckai(77, 1) = 3
-               AI技能.泰瑞爾_Chr_799 '(階段3)
+               AI技能.泰瑞爾_Chr_799 3 '(階段3)
            End If
            If turnatk = 2 And atkingckai(41, 2) = 1 And Val(atkingno(tt, 7)) = 41 Then
                atkingckai(41, 1) = 3
@@ -17100,64 +16938,54 @@ Select Case Val(atkingno(tt, 2))
                AI技能.瑪格莉特_地獄獵心獸 '(階段3)
            End If
            If turnatk = 1 And atkingckai(46, 2) = 1 And Val(atkingno(tt, 7)) = 46 Then
-               atkingckai(46, 1) = 3
-               AI技能.庫勒尼西_黑暗漩渦 '(階段3)
+               AI技能.庫勒尼西_黑暗漩渦 3 '(階段3)
            End If
            If turnatk = 1 And atkingckai(47, 2) = 1 And Val(atkingno(tt, 7)) = 47 Then
                atkingckai(47, 1) = 3
                AI技能.蕾格烈芙_LAR '(階段3)
            End If
            If turnatk = 2 And atkingckai(51, 2) = 1 And Val(atkingno(tt, 7)) = 51 Then
-               atkingckai(51, 1) = 3
-              AI技能.伊芙琳_紅蓮車輪 '(階段3)
+              AI技能.伊芙琳_紅蓮車輪 3 '(階段3)
            End If
            If turnatk = 1 And atkingckai(55, 2) = 1 And Val(atkingno(tt, 7)) = 55 Then
                atkingckai(55, 1) = 3
               AI技能.史塔夏_時間種子 '(階段3)
            End If
            If turnatk = 1 And atkingckai(56, 2) = 1 And Val(atkingno(tt, 7)) = 56 Then
-               atkingckai(56, 1) = 3
-              AI技能.艾茵_九個靈魂 '(階段3)
+              AI技能.艾茵_九個靈魂 3 '(階段3)
            End If
            If turnatk = 1 And atkingckai(57, 2) = 1 And Val(atkingno(tt, 7)) = 57 Then
-               atkingckai(57, 1) = 4
-              AI技能.CC_原子之心 '(階段4)
+              AI技能.CC_原子之心 4 '(階段4)
            End If
            If turnatk = 1 And atkingckai(61, 2) = 1 And Val(atkingno(tt, 7)) = 61 Then
                atkingckai(61, 1) = 3
               AI技能.伊芙琳_慟哭之歌 '(階段3)
            End If
            If turnatk = 1 And atkingckai(62, 2) = 1 And Val(atkingno(tt, 7)) = 62 Then
-               atkingckai(62, 1) = 3
-              AI技能.古魯瓦爾多_血之恩賜 '(階段3)
+              AI技能.古魯瓦爾多_血之恩賜 3 '(階段3)
            End If
            If turnatk = 1 And atkingckai(67, 2) = 1 And Val(atkingno(tt, 7)) = 67 Then
-               atkingckai(67, 1) = 3
-              AI技能.艾伯李斯特_茨林 '(階段3)
+              AI技能.艾伯李斯特_茨林 3 '(階段3)
            End If
            If turnatk = 2 And atkingckai(71, 2) = 1 And Val(atkingno(tt, 7)) = 71 Then
-               atkingckai(71, 1) = 3
-              AI技能.阿貝爾_閃電旋風刺 '(階段3)
+              AI技能.阿貝爾_閃電旋風刺 3 '(階段3)
            End If
            If turnatk = 2 And atkingckai(72, 2) = 1 And Val(atkingno(tt, 7)) = 72 Then
                atkingckai(72, 1) = 3
               AI技能.利恩_劫影攻擊 '(階段3)
            End If
            If turnatk = 2 And atkingckai(78, 2) = 1 And Val(atkingno(tt, 7)) = 78 Then
-               atkingckai(78, 1) = 3
-              AI技能.瑪格莉特_月光 '(階段3)
+              AI技能.瑪格莉特_月光 3 '(階段3)
            End If
            If turnatk = 2 And atkingckai(81, 2) = 1 And Val(atkingno(tt, 7)) = 81 Then
-               atkingckai(81, 1) = 3
-              AI技能.蕾格烈芙_BPA '(階段3)
+              AI技能.蕾格烈芙_BPA 3 '(階段3)
            End If
 '           If turnatk = 1 And atkingckai(82, 2) = 1 And Val(atkingno(tt, 7)) = 82 Then
 '               atkingckai(82, 1) = 4
 '               AI技能.多妮妲_異質者  '(階段4)
 '           End If
            If turnatk = 2 And atkingckai(87, 2) = 1 And Val(atkingno(tt, 7)) = 87 Then
-               atkingckai(87, 1) = 3
-               AI技能.洛洛妮_貪婪之刃與嗜血之槍  '(階段3)
+               AI技能.洛洛妮_貪婪之刃與嗜血之槍 3 '(階段3)
            End If
            If turnatk = 3 And atkingckai(88, 2) = 1 And Val(atkingno(tt, 7)) = 88 Then
                atkingckai(88, 1) = 3
@@ -17184,32 +17012,27 @@ Select Case Val(atkingno(tt, 2))
                AI技能.艾蕾可_救濟天使   '(階段3)
            End If
            If turnatk = 1 And atkingckai(96, 2) = 1 And Val(atkingno(tt, 7)) = 96 Then
-               atkingckai(96, 1) = 3
-               AI技能.露緹亞_朦朧之暗   '(階段3)
+               AI技能.露緹亞_朦朧之暗 3 '(階段3)
            End If
            If turnatk = 1 And atkingckai(97, 2) = 1 And Val(atkingno(tt, 7)) = 97 Then
-               atkingckai(97, 1) = 4
-               AI技能.露緹亞_暗影之翼   '(階段4)
+               AI技能.露緹亞_暗影之翼 4 '(階段4)
            End If
            If turnatk = 5 And atkingckai(103, 2) = 1 And Val(atkingno(tt, 7)) = 103 Then
                atkingckai(103, 1) = 4
               AI技能.CC_滅菌空間 '(階段4)
            End If
            If turnatk = 2 And atkingckai(99, 2) = 1 And Val(atkingno(tt, 7)) = 99 Then
-               atkingckai(99, 1) = 3
-               AI技能.梅莉_夢幻魔杖  '(階段3)
+               AI技能.梅莉_夢幻魔杖 3 '(階段3)
            End If
            If turnatk = 1 And atkingckai(100, 2) = 1 And Val(atkingno(tt, 7)) = 100 Then
-               atkingckai(100, 1) = 3
-               AI技能.梅莉_徬徨夢羽  '(階段3)
+               AI技能.梅莉_徬徨夢羽 3 '(階段3)
            End If
            If turnatk = 3 And atkingckai(101, 2) = 1 And Val(atkingno(tt, 7)) = 101 Then
                atkingckai(101, 1) = 4
                AI技能.梅莉_綿羊幻夢  '(階段4)
            End If
            If turnatk = 2 And atkingckai(102, 2) = 1 And Val(atkingno(tt, 7)) = 102 Then
-               atkingckai(102, 1) = 3
-               AI技能.梅莉_夢境搖籃  '(階段3)
+               AI技能.梅莉_夢境搖籃 3 '(階段3)
            End If
            If turnatk = 3 And atkingckai(104, 2) = 1 And Val(atkingno(tt, 7)) = 104 Then
                atkingckai(104, 1) = 3
@@ -17240,8 +17063,7 @@ Select Case Val(atkingno(tt, 2))
                AI技能.布勞_夜幕時分  '(階段3)
            End If
            If turnatk = 2 And atkingckai(111, 2) = 1 And Val(atkingno(tt, 7)) = 111 Then
-               atkingckai(111, 1) = 4
-               AI技能.音音夢_愉快抽血 (0)  '(階段4)
+               AI技能.音音夢_愉快抽血 4 '(階段4)
            End If
            If turnatk = 1 And atkingckai(112, 2) = 1 And Val(atkingno(tt, 7)) = 112 Then
                atkingckai(112, 1) = 3
@@ -17288,16 +17110,13 @@ Select Case Val(atkingno(tt, 2))
                AI技能.貝琳達_雪光  '(階段4)
            End If
            If turnatk = 1 And atkingckai(123, 2) = 1 And Val(atkingno(tt, 7)) = 123 Then
-               atkingckai(123, 1) = 5
-               AI技能.貝琳達_水晶幻鏡  '(階段5)
+               AI技能.貝琳達_水晶幻鏡 5 '(階段5)
            End If
            If turnatk = 1 And atkingckai(128, 2) = 1 And Val(atkingno(tt, 7)) = 128 Then
-               atkingckai(128, 1) = 3
-               AI技能.羅莎琳_黑霧幻影  '(階段3)
+               AI技能.羅莎琳_黑霧幻影 3 '(階段3)
            End If
            If turnatk = 1 And atkingckai(129, 2) = 1 And Val(atkingno(tt, 7)) = 129 Then
-               atkingckai(129, 1) = 3
-               AI技能.羅莎琳_EX_黑霧幻影  '(階段3)
+               AI技能.羅莎琳_EX_黑霧幻影 3 '(階段3)
            End If
            If turnatk = 3 And atkingckai(130, 2) = 1 And Val(atkingno(tt, 7)) = 130 Then
                atkingckai(130, 1) = 4
@@ -17316,12 +17135,10 @@ Select Case Val(atkingno(tt, 2))
                AI技能.艾茵_一顆心  '(階段3)
            End If
            If turnatk = 2 And atkingckai(136, 2) = 1 And Val(atkingno(tt, 7)) = 136 Then
-               atkingckai(136, 1) = 3
-               AI技能.尤莉卡_奸佞的鐵鎚  '(階段3)
+               AI技能.尤莉卡_奸佞的鐵鎚 3 '(階段3)
            End If
            If turnatk = 1 And atkingckai(138, 2) = 1 And Val(atkingno(tt, 7)) = 138 Then
-               atkingckai(138, 1) = 3
-               AI技能.尤莉卡_曲惡的安寧  '(階段3)
+               AI技能.尤莉卡_曲惡的安寧 3 '(階段3)
            End If
            If turnatk = 3 And atkingckai(139, 2) = 1 And Val(atkingno(tt, 7)) = 139 Then
                atkingckai(139, 1) = 3
@@ -17427,8 +17244,7 @@ Dim p As Integer, i As Integer, j As Integer
 HP檢查變數 = False
 '===========以下是技能檢查及啟動(AI技能-C.C.-原子之心)
 If turnatk = 1 And atkingckai(57, 2) = 1 Then
-    atkingckai(57, 1) = 2
-    AI技能.CC_原子之心  '(階段2)
+    AI技能.CC_原子之心 2 '(階段2)
 End If
 '===============以下是技能檢查及啟動(AI-傑多-因果之輪)
 If turnatk = 1 And atkingckai(120, 2) = 1 And atkingckai(120, 1) = 1 Then
@@ -17448,32 +17264,28 @@ ElseIf turnatk = 1 And atkingckai(131, 2) = 1 And atkingckai(131, 1) = 4 Then
 End If
 '===============以下是技能檢查及啟動(梅莉-夢幻魔杖)
 If turnatk = 1 And atkingck(106, 2) = 1 And atkingck(106, 1) = 1 Then
-   atkingck(106, 1) = 2
-   技能.梅莉_夢幻魔杖 '(階段2)
+   技能.梅莉_夢幻魔杖 2 '(階段2)
    Exit Sub
 ElseIf turnatk = 1 And atkingck(106, 2) = 1 And atkingck(106, 1) = 4 Then
-   技能.梅莉_夢幻魔杖 '(階段4)
+   技能.梅莉_夢幻魔杖 4 '(階段4)
 End If
 '===============以下是技能檢查及啟動(AI-梅莉-徬徨夢羽)
 If turnatk = 1 And atkingckai(100, 2) = 1 And atkingckai(100, 1) = 1 Then
-   atkingckai(100, 1) = 2
-   AI技能.梅莉_徬徨夢羽 '(階段2)
+   AI技能.梅莉_徬徨夢羽 2 '(階段2)
    Exit Sub
 ElseIf turnatk = 1 And atkingckai(100, 2) = 1 And atkingckai(100, 1) = 4 Then
-   AI技能.梅莉_徬徨夢羽 '(階段4)
+   AI技能.梅莉_徬徨夢羽 4 '(階段4)
 End If
 '=====================
 技能動畫顯示階段數 = 1
 戰鬥系統類.技能啟動數量檢查
     '=================以下是技能檢查及啟動(AI技能-C.C.-原子之心)
     If turnatk = 1 And atkingckai(57, 2) = 1 Then
-        atkingckai(57, 1) = 3
-        AI技能.CC_原子之心  '(階段3)
+        AI技能.CC_原子之心 3 '(階段3)
     End If
    '============以下是技能檢查及啟動
     If turnatk = 1 And atkingckai(28, 2) = 1 Then
-       atkingckai(28, 1) = 2
-       AI技能.音音夢_溫柔注射  '(階段2)
+       AI技能.音音夢_溫柔注射 2 '(階段2)
     End If
     If turnatk = 1 And atkingckai(58, 2) = 1 Then
        atkingckai(58, 1) = 2
@@ -17481,28 +17293,22 @@ End If
     End If
    '==========================
     If turnatk = 1 And atkingck(1, 2) = 1 Then
-       atkingck(1, 1) = 3
-       技能.雪莉_自殺傾向 0  '(階段3)
+       技能.雪莉_自殺傾向 3 '(階段3)
     End If
     If turnatk = 1 And atkingck(42, 2) = 1 Then
-       atkingck(42, 1) = 3
-       技能.雪莉_VBE_自殺傾向 0  '(階段3)
+       技能.雪莉_VBE_自殺傾向 3 '(階段3)
     End If
     If turnatk = 1 And atkingck(3, 2) = 1 Then
-       atkingck(3, 1) = 3
-       技能.雪莉_飛刃雨 '(階段3)
+       技能.雪莉_飛刃雨 3 '(階段3)
     End If
     If turnatk = 1 And atkingck(45, 2) = 1 Then
-       atkingck(45, 1) = 3
-       技能.雪莉_VBE_飛刃雨  '(階段3)
+       技能.雪莉_VBE_飛刃雨 3  '(階段3)
     End If
     If turnatk = 1 And atkingck(6, 2) = 1 Then
-       atkingck(6, 1) = 2
-       技能.古魯瓦爾多_猛擊  '(階段2)
+       技能.古魯瓦爾多_猛擊 2  '(階段2)
     End If
     If turnatk = 1 And atkingck(9, 2) = 1 Then
-       atkingck(9, 1) = 4
-       技能.帕茉_慈悲的藍眼 '(階段4)
+       技能.帕茉_慈悲的藍眼 4 '(階段4)
     End If
     If turnatk = 1 And atkingck(18, 2) = 1 Then
        atkingck(18, 1) = 2
@@ -17513,36 +17319,29 @@ End If
        技能.帕茉_靜謐之背 '(階段2)
     End If
     If turnatk = 1 And atkingck(15, 2) = 1 Then
-       atkingck(15, 1) = 2
-       技能.蕾_終曲_無盡輪迴的終結  '(階段2)
+       技能.蕾_終曲_無盡輪迴的終結 2  '(階段2)
     End If
     If turnatk = 1 And atkingck(23, 2) = 1 Then
-       atkingck(23, 1) = 2
-       技能.史塔夏_愚者之手  '(階段2)
+       技能.史塔夏_愚者之手 2  '(階段2)
     End If
     If turnatk = 1 And atkingck(25, 2) = 1 Then
        atkingck(25, 1) = 2
        技能.史塔夏_命運的鐵門  '(階段2)
     End If
     If turnatk = 1 And atkingck(35, 2) = 1 Then
-       atkingck(35, 1) = 2
-       技能.CC_高頻電磁手術刀  '(階段2)
+       技能.CC_高頻電磁手術刀 2  '(階段2)
     End If
     If turnatk = 1 And atkingck(51, 2) = 1 Then
-       atkingck(51, 1) = 2
-       技能.羅莎琳_染血之刃  '(階段2)
+       技能.羅莎琳_染血之刃 2  '(階段2)
     End If
     If turnatk = 1 And atkingck(50, 2) = 1 Then
-       atkingck(50, 1) = 2
-       技能.羅莎琳_EX_染血之刃  '(階段2)
+       技能.羅莎琳_EX_染血之刃 2 '(階段2)
     End If
     If turnatk = 1 And atkingck(52, 2) = 1 Then
-       atkingck(52, 1) = 2
-       技能.羅莎琳_黑霧的纏繞  '(階段2)
+       技能.羅莎琳_黑霧的纏繞 2  '(階段2)
     End If
     If turnatk = 1 And atkingck(58, 2) = 1 Then
-       atkingck(58, 1) = 2
-       技能.伊芙琳_紅蓮車輪  '(階段2)
+       技能.伊芙琳_紅蓮車輪 2  '(階段2)
     End If
     If turnatk = 1 And atkingck(65, 2) = 1 Then
        atkingck(65, 1) = 2
@@ -17553,76 +17352,60 @@ End If
        技能.梅倫_Gamble  '(階段2)
     End If
     If turnatk = 1 And atkingck(69, 2) = 1 Then
-       atkingck(69, 1) = 3
-       技能.音音夢_愉快抽血 0  '(階段3)
+       技能.音音夢_愉快抽血 3 '(階段3)
     End If
     If turnatk = 1 And atkingck(71, 2) = 1 Then
-       atkingck(71, 1) = 2
-       技能.艾伯李斯特_精密射擊  '(階段2)
+       技能.艾伯李斯特_精密射擊 2  '(階段2)
     End If
     If turnatk = 1 And atkingck(72, 2) = 1 Then
-       atkingck(72, 1) = 2
-       技能.艾伯李斯特_雷擊  '(階段2)
+       技能.艾伯李斯特_雷擊 2  '(階段2)
     End If
     If turnatk = 1 And atkingck(78, 2) = 1 Then
-       atkingck(78, 1) = 2
-       技能.艾依查庫_連射  '(階段2)
+       技能.艾依查庫_連射 2  '(階段2)
     End If
     If turnatk = 1 And atkingck(79, 2) = 1 Then
-       atkingck(79, 1) = 4
-       技能.艾依查庫_神速之劍 (0) '(階段4)
+       技能.艾依查庫_神速之劍 4 '(階段4)
     End If
     If turnatk = 1 And atkingck(80, 2) = 1 Then
-       atkingck(80, 1) = 2
-       技能.艾依查庫_憤怒一擊  '(階段2)
+       技能.艾依查庫_憤怒一擊 2  '(階段2)
     End If
     If turnatk = 1 And atkingck(84, 2) = 1 Then
-       atkingck(84, 1) = 2
-       技能.布勞_時間爆彈  '(階段2)
+       技能.布勞_時間爆彈 2  '(階段2)
     End If
     If turnatk = 1 And atkingck(86, 2) = 1 Then
-       atkingck(86, 1) = 2
-       技能.阿貝爾_霸王閃擊  '(階段2)
+       技能.阿貝爾_霸王閃擊 2  '(階段2)
     End If
     If turnatk = 1 And atkingck(87, 2) = 1 Then
-       atkingck(87, 1) = 2
-       技能.阿貝爾_閃電旋風刺  '(階段2)
+       技能.阿貝爾_閃電旋風刺 2  '(階段2)
     End If
     If turnatk = 1 And atkingck(88, 2) = 1 Then
-       atkingck(88, 1) = 2
-       技能.阿貝爾_幻影劍舞  '(階段2)
+       技能.阿貝爾_幻影劍舞 2 '(階段2)
     End If
     If turnatk = 1 And atkingck(90, 2) = 1 Then
        atkingck(90, 1) = 2
        技能.利恩_劫影攻擊  '(階段2)
     End If
     If turnatk = 1 And atkingck(91, 2) = 1 Then
-       atkingck(91, 1) = 2
-       技能.利恩_毒牙  '(階段2)
+       技能.利恩_毒牙 2 '(階段2)
     End If
     If turnatk = 1 And atkingck(93, 2) = 1 Then
-       atkingck(93, 1) = 2
-       技能.利恩_背刺  '(階段2)
+       技能.利恩_背刺 2 '(階段2)
     End If
     If turnatk = 1 And atkingck(95, 2) = 1 Then
-       atkingck(95, 1) = 2
-       技能.夏洛特_冬之夢  '(階段2)
+       技能.夏洛特_冬之夢 2 '(階段2)
     End If
     If turnatk = 1 And atkingck(116, 2) = 1 Then
-       atkingck(116, 1) = 2
-       技能.泰瑞爾_Rud_913  '(階段2)
+       技能.泰瑞爾_Rud_913 2 '(階段2)
     End If
     If turnatk = 1 And atkingck(118, 2) = 1 Then
-       atkingck(118, 1) = 2
-       技能.泰瑞爾_Chr_799  '(階段2)
+       技能.泰瑞爾_Chr_799 2 '(階段2)
     End If
     If turnatk = 1 And atkingck(119, 2) = 1 Then
        atkingck(119, 1) = 2
        技能.泰瑞爾_Wil_846  '(階段2)
     End If
     If turnatk = 1 And atkingck(122, 2) = 1 Then
-       atkingck(122, 1) = 2
-       技能.瑪格莉特_月光  '(階段2)
+       技能.瑪格莉特_月光 2 '(階段2)
     End If
     If turnatk = 1 And atkingck(125, 2) = 1 Then
        atkingck(125, 1) = 2
@@ -17633,72 +17416,58 @@ End If
        技能.庫勒尼西_深淵  '(階段2)
     End If
     If turnatk = 1 And atkingck(135, 2) = 1 Then
-       atkingck(135, 1) = 2
-       技能.蕾格烈芙_CTL  '(階段2)
+       技能.蕾格烈芙_CTL 2 '(階段2)
     End If
     If turnatk = 1 And atkingck(136, 2) = 1 Then
-       atkingck(136, 1) = 2
-       技能.蕾格烈芙_BPA  '(階段2)
+       技能.蕾格烈芙_BPA 2 '(階段2)
     End If
     If turnatk = 1 And atkingck(140, 2) = 1 Then
        atkingck(140, 1) = 2
        技能.多妮妲_殘虐傾向  '(階段2)
     End If
     If turnatk = 1 And atkingck(143, 2) = 1 Then
-       atkingck(143, 1) = 2
-       技能.多妮妲_律死擊  '(階段2)
+       技能.多妮妲_律死擊 2 '(階段2)
     End If
     If turnatk = 1 And atkingck(150, 2) = 1 Then
-       atkingck(150, 1) = 2
-       技能.阿奇波爾多_致命槍擊  '(階段2)
+       技能.阿奇波爾多_致命槍擊 2 '(階段2)
     End If
     If turnatk = 1 And atkingck(151, 2) = 1 Then
        atkingck(151, 1) = 2
        技能.阿奇波爾多_劫影攻擊  '(階段2)
     End If
     If turnatk = 1 And atkingck(155, 2) = 1 Then
-       atkingck(155, 1) = 2
-       技能.洛洛妮_砲擊壓制  '(階段2)
+       技能.洛洛妮_砲擊壓制 2 '(階段2)
     End If
     If turnatk = 1 And atkingck(156, 2) = 1 Then
-       atkingck(156, 1) = 2
-       技能.洛洛妮_貪婪之刃與嗜血之槍  '(階段2)
+       技能.洛洛妮_貪婪之刃與嗜血之槍 2 '(階段2)
     End If
     If turnatk = 1 And atkingck(159, 2) = 1 Then
-       atkingck(159, 1) = 2
-       技能.克頓_隱蔽射擊  '(階段2)
+       技能.克頓_隱蔽射擊 2 '(階段2)
     End If
     If turnatk = 1 And atkingck(98, 2) = 1 Then
-       atkingck(98, 1) = 2
-       技能.露緹亞_腐朽之靈  '(階段2)
+       技能.露緹亞_腐朽之靈 2 '(階段2)
     End If
     If turnatk = 1 And atkingck(101, 2) = 1 Then
-       atkingck(101, 1) = 4
-       技能.露緹亞_渦騎劍閃 (0)  '(階段4)
+       技能.露緹亞_渦騎劍閃 4 '(階段4)
     End If
     If turnatk = 1 And atkingck(104, 2) = 1 Then
        atkingck(104, 1) = 2
        技能.艾蕾可_聖王威光  '(階段2)
     End If
     If turnatk = 1 And atkingck(109, 2) = 1 Then
-       atkingck(109, 1) = 2
-       技能.梅莉_夢境搖籃  '(階段2)
+       技能.梅莉_夢境搖籃 2 '(階段2)
     End If
     If turnatk = 1 And atkingck(112, 2) = 1 Then
-       atkingck(112, 1) = 2
-       技能.貝琳達_裂地冰牙  '(階段2)
+       技能.貝琳達_裂地冰牙 2 '(階段2)
     End If
     If turnatk = 1 And atkingck(113, 2) = 1 Then
-       atkingck(113, 1) = 2
-       技能.貝琳達_溶魂之雨  '(階段2)
+       技能.貝琳達_溶魂之雨 2 '(階段2)
     End If
     If turnatk = 1 And atkingck(161, 2) = 1 Then
-       atkingck(161, 1) = 2
-       技能.蕾_EX_終曲_無盡輪迴的終結  '(階段2)
+       技能.蕾_EX_終曲_無盡輪迴的終結 2 '(階段2)
     End If
     If turnatk = 1 And atkingck(46, 2) = 1 Then
-       atkingck(46, 1) = 2
-       技能.尤莉卡_奸佞的鐵鎚  '(階段2)
+       技能.尤莉卡_奸佞的鐵鎚 2 '(階段2)
     End If
     '=================================================
     If turnatk = 1 And atkingckai(9, 2) = 1 Then
@@ -17722,16 +17491,14 @@ End If
        AI技能.艾茵_兩個身體  '(階段2)
     End If
     If turnatk = 1 And atkingckai(42, 2) = 1 Then
-       atkingckai(42, 1) = 2
-       AI技能.瑪格莉特_恍惚  '(階段2)
+       AI技能.瑪格莉特_恍惚 2 '(階段2)
     End If
     If turnatk = 1 And atkingckai(44, 2) = 1 Then
        atkingckai(44, 1) = 2
        AI技能.庫勒尼西_沙漠中的海市蜃樓  '(階段2)
     End If
     If turnatk = 1 And atkingckai(46, 2) = 1 Then
-       atkingckai(46, 1) = 2
-       AI技能.庫勒尼西_黑暗漩渦  '(階段2)
+       AI技能.庫勒尼西_黑暗漩渦 2 '(階段2)
     End If
     If turnatk = 1 And atkingckai(47, 2) = 1 Then
        atkingckai(47, 1) = 2
@@ -17746,12 +17513,10 @@ End If
        AI技能.史塔夏_時間種子  '(階段2)
     End If
     If turnatk = 1 And atkingckai(56, 2) = 1 Then
-       atkingckai(56, 1) = 2
-       AI技能.艾茵_九個靈魂  '(階段2)
+       AI技能.艾茵_九個靈魂 2 '(階段2)
     End If
     If turnatk = 1 And atkingckai(49, 2) = 1 Then
-       atkingckai(49, 1) = 2
-       AI技能.阿奇波爾多_防護射擊  '(階段2)
+       AI技能.阿奇波爾多_防護射擊 2 '(階段2)
     End If
     If turnatk = 1 And atkingckai(60, 2) = 1 Then
        atkingckai(60, 1) = 2
@@ -17762,20 +17527,17 @@ End If
        AI技能.伊芙琳_慟哭之歌  '(階段2)
     End If
     If turnatk = 1 And atkingckai(62, 2) = 1 Then
-       atkingckai(62, 1) = 2
-       AI技能.古魯瓦爾多_血之恩賜  '(階段2)
+       AI技能.古魯瓦爾多_血之恩賜 2 '(階段2)
     End If
     If turnatk = 1 And atkingckai(63, 2) = 1 Then
        atkingckai(63, 1) = 2
        AI技能.蕾_EX_安魂曲_死神的鎮魂歌  '(階段2)
     End If
     If turnatk = 1 And atkingckai(64, 2) = 1 Then
-       atkingckai(64, 1) = 2
-       AI技能.梅倫_High_hand  '(階段2)
+       AI技能.梅倫_High_hand 2 '(階段2)
     End If
     If turnatk = 1 And atkingckai(67, 2) = 1 Then
-       atkingckai(67, 1) = 2
-       AI技能.艾伯李斯特_茨林  '(階段2)
+       AI技能.艾伯李斯特_茨林 2  '(階段2)
     End If
     If turnatk = 1 And atkingckai(70, 2) = 1 Then
        atkingckai(70, 1) = 2
@@ -17786,28 +17548,23 @@ End If
        AI技能.利恩_反擊的狼煙  '(階段2)
     End If
     If turnatk = 1 And atkingckai(76, 2) = 1 Then
-       atkingckai(76, 1) = 2
-       AI技能.泰瑞爾_Von_541  '(階段2)
+       AI技能.泰瑞爾_Von_541 2 '(階段2)
     End If
     If turnatk = 1 And atkingckai(79, 2) = 1 Then
-       atkingckai(79, 1) = 2
-       AI技能.庫勒尼西_瘋狂眼窩  '(階段2)
+       AI技能.庫勒尼西_瘋狂眼窩 2 '(階段2)
     End If
     If turnatk = 1 And atkingckai(85, 2) = 1 Then
-       atkingckai(85, 1) = 2
-       AI技能.洛洛妮_風暴感知  '(階段2)
+       AI技能.洛洛妮_風暴感知 2 '(階段2)
     End If
     If turnatk = 1 And atkingckai(91, 2) = 1 Then
-       atkingckai(91, 1) = 3
-       AI技能.艾蕾可_王座之炎  '(階段3)
+       AI技能.艾蕾可_王座之炎 3 '(階段3)
     End If
     If turnatk = 1 And atkingckai(92, 2) = 1 Then
        atkingckai(92, 1) = 2
        AI技能.艾蕾可_白百合  '(階段2)
     End If
     If turnatk = 1 And atkingckai(96, 2) = 1 Then
-       atkingckai(96, 1) = 2
-       AI技能.露緹亞_朦朧之暗  '(階段2)
+       AI技能.露緹亞_朦朧之暗 2 '(階段2)
     End If
     If turnatk = 1 And atkingckai(112, 2) = 1 Then
        atkingckai(112, 1) = 2
@@ -17818,28 +17575,24 @@ End If
        AI技能.傑多_因果之刻  '(階段2)
     End If
     If turnatk = 1 And atkingckai(123, 2) = 1 Then
-       atkingckai(123, 1) = 2
-       AI技能.貝琳達_水晶幻鏡  '(階段2)
+       AI技能.貝琳達_水晶幻鏡 2 '(階段2)
     End If
     If turnatk = 1 And atkingckai(126, 2) = 1 Then
        atkingckai(126, 1) = 2
        AI技能.蕾_安魂曲_死神的鎮魂歌  '(階段2)
     End If
     If turnatk = 1 And atkingckai(128, 2) = 1 Then
-       atkingckai(128, 1) = 2
-       AI技能.羅莎琳_黑霧幻影  '(階段2)
+       AI技能.羅莎琳_黑霧幻影 2 '(階段2)
     End If
     If turnatk = 1 And atkingckai(132, 2) = 1 Then
        atkingckai(132, 1) = 2
        AI技能.克頓_逃亡計畫  '(階段2)
     End If
     If turnatk = 1 And atkingckai(137, 2) = 1 Then
-       atkingckai(137, 1) = 2
-       AI技能.尤莉卡_不善的信仰  '(階段2)
+       AI技能.尤莉卡_不善的信仰 2 '(階段2)
     End If
     If turnatk = 1 And atkingckai(138, 2) = 1 Then
-       atkingckai(138, 1) = 2
-       AI技能.尤莉卡_曲惡的安寧  '(階段2)
+       AI技能.尤莉卡_曲惡的安寧 2 '(階段2)
     End If
     '==============(相同骰子類)
     If turnatk = 1 And atkingckai(15, 2) = 1 Then
@@ -17848,17 +17601,14 @@ End If
     End If
     '==============(減低對手防禦類)
     If turnatk = 1 And atkingck(13, 2) = 1 Then
-       atkingck(13, 1) = 3
-       技能.蕾_輪旋曲_琉璃色的微風  '(階段3)
+       技能.蕾_輪旋曲_琉璃色的微風 3  '(階段3)
     End If
     If turnatk = 1 And atkingck(19, 2) = 1 Then
-       atkingck(19, 1) = 3
-       技能.蕾_EX_輪旋曲_琉璃色的微風  '(階段3)
+       技能.蕾_EX_輪旋曲_琉璃色的微風 3  '(階段3)
     End If
     '===============================================
     If turnatk = 1 And atkingck(16, 2) = 1 Then
-       atkingck(16, 1) = 4
-       技能.艾茵_十三隻眼  '(階段4)
+       技能.艾茵_十三隻眼 4  '(階段4)
     End If
      '==================
     If turnatk = 1 And atkingckai(90, 2) = 1 Then
@@ -17866,8 +17616,7 @@ End If
        AI技能.夏洛特_大聖堂  '(階段2)
     End If
     If turnatk = 1 And atkingck(147, 2) = 1 Then
-       atkingck(147, 1) = 2
-       技能.傑多_因果之幻  '(階段2)
+       技能.傑多_因果之幻 2 '(階段2)
     End If
 '=================
 If Val(顯示列1.goi1) = 0 Then
@@ -17914,24 +17663,7 @@ End Sub
 Private Sub 攻擊階段_階段初始_Timer()
 戰鬥系統類.時間軸_重設
 trtimeline.Enabled = True
-'============以下是技能檢查及啟動
-    If turnatk = 1 And atkingck(13, 2) = 1 Then
-       atkingck(13, 1) = 2
-       技能.蕾_輪旋曲_琉璃色的微風  '(階段2)
-    End If
-    If turnatk = 1 And atkingck(19, 2) = 1 Then
-       atkingck(19, 1) = 2
-       技能.蕾_EX_輪旋曲_琉璃色的微風  '(階段2)
-    End If
-    If atkingck(16, 2) = 1 And turnatk = 1 Then
-        atkingck(16, 1) = 5
-        技能.艾茵_十三隻眼 '(階段5)
-        trgoi2_Timer
-    End If
 '=====================
-'=====================
-'--------以下為防回牌程式碼
-'cn22.Visible = False
 攻擊階段_階段初始.Enabled = False
 攻擊階段_階段1.Enabled = True
 End Sub
@@ -17945,8 +17677,7 @@ Dim p As Integer, i As Integer, j As Integer, q As Integer
 HP檢查變數 = False
 '===========以下是技能檢查及啟動(技能-C.C.-原子之心)
 If turnatk = 2 And atkingck(36, 2) = 1 Then
-    atkingck(36, 1) = 2
-    技能.CC_原子之心  '(階段2)
+    技能.CC_原子之心 2  '(階段2)
 End If
 '===============以下是技能檢查及啟動(傑多-因果之輪)
 If turnatk = 2 And atkingck(145, 2) = 1 And atkingck(145, 1) = 1 Then
@@ -17966,27 +17697,24 @@ ElseIf turnatk = 2 And atkingck(157, 2) = 1 And atkingck(157, 1) = 4 Then
 End If
 '===============以下是技能檢查及啟動(AI-梅莉-夢幻魔杖)
 If turnatk = 2 And atkingckai(99, 2) = 1 And atkingckai(99, 1) = 1 Then
-   atkingckai(99, 1) = 2
-   AI技能.梅莉_夢幻魔杖 '(階段2)
+   AI技能.梅莉_夢幻魔杖 2 '(階段2)
    Exit Sub
 ElseIf turnatk = 2 And atkingckai(99, 2) = 1 And atkingckai(99, 1) = 4 Then
-   AI技能.梅莉_夢幻魔杖 '(階段4)
+   AI技能.梅莉_夢幻魔杖 4 '(階段4)
 End If
 '===============以下是技能檢查及啟動(梅莉-徬徨夢羽)
 If turnatk = 2 And atkingck(107, 2) = 1 And atkingck(107, 1) = 1 Then
-   atkingck(107, 1) = 2
-   技能.梅莉_徬徨夢羽 '(階段2)
+   技能.梅莉_徬徨夢羽 2 '(階段2)
    Exit Sub
 ElseIf turnatk = 2 And atkingck(107, 2) = 1 And atkingck(107, 1) = 4 Then
-   技能.梅莉_徬徨夢羽 '(階段4)
+   技能.梅莉_徬徨夢羽 4 '(階段4)
 End If
 '========================
 技能動畫顯示階段數 = 1
 戰鬥系統類.技能啟動數量檢查
     '=================以下是技能檢查及啟動(技能-C.C.-原子之心)
     If turnatk = 2 And atkingck(36, 2) = 1 Then
-        atkingck(36, 1) = 3
-        技能.CC_原子之心  '(階段3)
+        技能.CC_原子之心 3 '(階段3)
     End If
    '============以下是技能檢查及啟動
    If turnatk = 2 And atkingck(38, 2) = 1 Then
@@ -17994,25 +17722,20 @@ End If
        技能.蕾_EX_協奏曲_加百烈的守護  '(階段2)
     End If
     If turnatk = 2 And atkingck(68, 2) = 1 Then
-       atkingck(68, 1) = 2
-       技能.音音夢_溫柔注射  '(階段2)
+       技能.音音夢_溫柔注射 2 '(階段2)
     End If
     '----------------------
     If turnatk = 2 And atkingckai(1, 2) = 1 Then
-       atkingckai(1, 1) = 4
-       AI技能.雪莉_自殺傾向 (0)  '(階段4)
+       AI技能.雪莉_自殺傾向 4 '(階段4)
     End If
     If turnatk = 2 And atkingckai(5, 2) = 1 Then
-       atkingckai(5, 1) = 5
-       AI技能.雪莉_飛刃雨   '(階段5)
+       AI技能.雪莉_飛刃雨 5 '(階段5)
     End If
     If turnatk = 2 And atkingckai(3, 2) = 1 Then
-       atkingckai(3, 1) = 2
-       AI技能.古魯瓦爾多_猛擊  '(階段2)
+       AI技能.古魯瓦爾多_猛擊 2 '(階段2)
     End If
     If turnatk = 2 And atkingckai(11, 2) = 1 Then
-       atkingckai(11, 1) = 3
-       AI技能.蕾_終曲_無盡輪迴的終結   '(階段3)
+       AI技能.蕾_終曲_無盡輪迴的終結 3 '(階段3)
     End If
     If turnatk = 2 And atkingckai(7, 2) = 1 Then
        atkingckai(7, 1) = 2
@@ -18023,56 +17746,46 @@ End If
        AI技能.妖精王妃_冰結之翼  '(階段2)
     End If
     If turnatk = 2 And atkingckai(16, 2) = 1 Then
-       atkingckai(16, 1) = 2
-       AI技能.吸血姬蕾米雅_吸血   '(階段2)
+       AI技能.吸血姬蕾米雅_吸血 2 '(階段2)
     End If
     If turnatk = 2 And atkingckai(17, 2) = 1 Then
        atkingckai(17, 1) = 2
        AI技能.吸血姬蕾米雅_高貴的晚餐   '(階段2)
     End If
     If turnatk = 2 And atkingckai(19, 2) = 1 Then
-       atkingckai(19, 1) = 2
-       AI技能.艾伯李斯特_精密射擊  '(階段2)
+       AI技能.艾伯李斯特_精密射擊 2 '(階段2)
     End If
     If turnatk = 2 And atkingckai(20, 2) = 1 Then
-       atkingckai(20, 1) = 2
-       AI技能.史塔夏_愚者之手  '(階段2)
+       AI技能.史塔夏_愚者之手 2 '(階段2)
     End If
     If turnatk = 2 And atkingckai(21, 2) = 1 Then
        atkingckai(21, 1) = 2
        AI技能.史塔夏_命運的鐵門  '(階段2)
     End If
     If turnatk = 2 And atkingckai(22, 2) = 1 Then
-       atkingckai(22, 1) = 2
-       AI技能.阿貝爾_霸王閃擊  '(階段2)
+       AI技能.阿貝爾_霸王閃擊 2 '(階段2)
     End If
     If turnatk = 2 And atkingckai(23, 2) = 1 Then
-       atkingckai(23, 1) = 2
-       AI技能.阿貝爾_幻影劍舞  '(階段2)
+       AI技能.阿貝爾_幻影劍舞 2 '(階段2)
     End If
     If turnatk = 2 And atkingckai(24, 2) = 1 Then
-       atkingckai(24, 1) = 2
-       AI技能.布勞_時間爆彈  '(階段2)
+       AI技能.布勞_時間爆彈 2 '(階段2)
     End If
     If turnatk = 2 And atkingckai(25, 2) = 1 Then
-       atkingckai(25, 1) = 2
-       AI技能.艾依查庫_連射  '(階段2)
+       AI技能.艾依查庫_連射 2 '(階段2)
     End If
     If turnatk = 2 And atkingckai(26, 2) = 1 Then
-       atkingckai(26, 1) = 4
-       AI技能.艾依查庫_神速之劍 (0) '(階段4)
+       AI技能.艾依查庫_神速之劍 4 '(階段4)
     End If
     If turnatk = 2 And atkingckai(30, 2) = 1 Then
        atkingckai(30, 1) = 2
        AI技能.梅倫_Gamble  '(階段2)
     End If
     If turnatk = 2 And atkingckai(32, 2) = 1 Then
-       atkingckai(32, 1) = 2
-       AI技能.羅莎琳_染血之刃  '(階段2)
+       AI技能.羅莎琳_染血之刃 2 '(階段2)
     End If
     If turnatk = 2 And atkingckai(140, 2) = 1 Then
-       atkingckai(140, 1) = 2
-       AI技能.羅莎琳_EX_染血之刃  '(階段2)
+       AI技能.羅莎琳_EX_染血之刃 2 '(階段2)
     End If
     If turnatk = 2 And atkingckai(34, 2) = 1 Then
        atkingckai(34, 1) = 2
@@ -18083,20 +17796,16 @@ End If
        AI技能.帕茉_靜謐之背  '(階段2)
     End If
     If turnatk = 2 And atkingckai(35, 2) = 1 Then
-       atkingckai(35, 1) = 4
-       AI技能.帕茉_慈悲的藍眼   '(階段4)
+       AI技能.帕茉_慈悲的藍眼 4 '(階段4)
     End If
     If turnatk = 2 And atkingckai(39, 2) = 1 Then
-       atkingckai(39, 1) = 2
-       AI技能.夏洛特_冬之夢  '(階段2)
+       AI技能.夏洛特_冬之夢 2 '(階段2)
     End If
     If turnatk = 2 And atkingckai(40, 2) = 1 Then
-       atkingckai(40, 1) = 2
-       AI技能.泰瑞爾_Rud_913  '(階段2)
+       AI技能.泰瑞爾_Rud_913 2 '(階段2)
     End If
     If turnatk = 2 And atkingckai(77, 2) = 1 Then
-       atkingckai(77, 1) = 2
-       AI技能.泰瑞爾_Chr_799  '(階段2)
+       AI技能.泰瑞爾_Chr_799 2 '(階段2)
     End If
     If turnatk = 2 And atkingckai(41, 2) = 1 Then
        atkingckai(41, 1) = 2
@@ -18107,124 +17816,101 @@ End If
        AI技能.瑪格莉特_地獄獵心獸  '(階段2)
     End If
     If turnatk = 2 And atkingckai(50, 2) = 1 Then
-       atkingckai(50, 1) = 2
-       AI技能.CC_高頻電磁手術刀  '(階段2)
+       AI技能.CC_高頻電磁手術刀 2 '(階段2)
     End If
     If turnatk = 2 And atkingckai(51, 2) = 1 Then
-       atkingckai(51, 1) = 2
-       AI技能.伊芙琳_紅蓮車輪  '(階段2)
+       AI技能.伊芙琳_紅蓮車輪 2 '(階段2)
     End If
     If turnatk = 2 And atkingckai(53, 2) = 1 Then
        atkingckai(53, 1) = 2
        AI技能.多妮妲_殘虐傾向  '(階段2)
     End If
     If turnatk = 2 And atkingckai(52, 2) = 1 Then
-       atkingckai(52, 1) = 2
-       AI技能.多妮妲_律死擊  '(階段2)
+       AI技能.多妮妲_律死擊 2 '(階段2)
     End If
     If turnatk = 2 And atkingckai(45, 2) = 1 Then
        atkingckai(45, 1) = 2
        AI技能.庫勒尼西_深淵  '(階段2)
     End If
     If turnatk = 2 And atkingckai(59, 2) = 1 Then
-       atkingckai(59, 1) = 2
-       AI技能.羅莎琳_黑霧的纏繞  '(階段2)
+       AI技能.羅莎琳_黑霧的纏繞 2 '(階段2)
     End If
     If turnatk = 2 And atkingckai(65, 2) = 1 Then
        atkingckai(65, 1) = 2
        AI技能.梅倫_Lowball  '(階段2)
     End If
     If turnatk = 2 And atkingckai(66, 2) = 1 Then
-       atkingckai(66, 1) = 2
-       AI技能.艾伯李斯特_雷擊  '(階段2)
+       AI技能.艾伯李斯特_雷擊 2 '(階段2)
     End If
     If turnatk = 2 And atkingckai(69, 2) = 1 Then
-       atkingckai(69, 1) = 2
-       AI技能.艾依查庫_憤怒一擊  '(階段2)
+       AI技能.艾依查庫_憤怒一擊 2 '(階段2)
     End If
     If turnatk = 2 And atkingckai(71, 2) = 1 Then
-       atkingckai(71, 1) = 2
-       AI技能.阿貝爾_閃電旋風刺  '(階段2)
+       AI技能.阿貝爾_閃電旋風刺 2 '(階段2)
     End If
     If turnatk = 2 And atkingckai(72, 2) = 1 Then
        atkingckai(72, 1) = 2
        AI技能.利恩_劫影攻擊  '(階段2)
     End If
     If turnatk = 2 And atkingckai(73, 2) = 1 Then
-       atkingckai(73, 1) = 2
-       AI技能.利恩_毒牙  '(階段2)
+       AI技能.利恩_毒牙 2 '(階段2)
     End If
     If turnatk = 2 And atkingckai(75, 2) = 1 Then
-       atkingckai(75, 1) = 2
-       AI技能.利恩_背刺  '(階段2)
+       AI技能.利恩_背刺 2 '(階段2)
     End If
     If turnatk = 2 And atkingckai(78, 2) = 1 Then
-       atkingckai(78, 1) = 2
-       AI技能.瑪格莉特_月光  '(階段2)
+       AI技能.瑪格莉特_月光 2 '(階段2)
     End If
     If turnatk = 2 And atkingckai(80, 2) = 1 Then
        atkingckai(80, 1) = 2
-       AI技能.蕾格烈芙_CTL  '(階段2)
+       AI技能.蕾格烈芙_CTL 2 '(階段2)
     End If
     If turnatk = 2 And atkingckai(81, 2) = 1 Then
-       atkingckai(81, 1) = 2
-       AI技能.蕾格烈芙_BPA  '(階段2)
+       AI技能.蕾格烈芙_BPA 2 '(階段2)
     End If
     If turnatk = 2 And atkingckai(83, 2) = 1 Then
-       atkingckai(83, 1) = 2
-       AI技能.阿奇波爾多_致命槍擊  '(階段2)
+       AI技能.阿奇波爾多_致命槍擊 2 '(階段2)
     End If
     If turnatk = 2 And atkingckai(84, 2) = 1 Then
        atkingckai(84, 1) = 2
        AI技能.阿奇波爾多_劫影攻擊  '(階段2)
     End If
     If turnatk = 2 And atkingckai(86, 2) = 1 Then
-       atkingckai(86, 1) = 2
-       AI技能.洛洛妮_砲擊壓制  '(階段2)
+       AI技能.洛洛妮_砲擊壓制 2 '(階段2)
     End If
     If turnatk = 2 And atkingckai(87, 2) = 1 Then
-       atkingckai(87, 1) = 2
-       AI技能.洛洛妮_貪婪之刃與嗜血之槍  '(階段2)
+       AI技能.洛洛妮_貪婪之刃與嗜血之槍 2 '(階段2)
     End If
     If turnatk = 2 And atkingckai(93, 2) = 1 Then
        atkingckai(93, 1) = 2
        AI技能.艾蕾可_聖王威光  '(階段2)
     End If
     If turnatk = 2 And atkingckai(95, 2) = 1 Then
-       atkingckai(95, 1) = 2
-       AI技能.露緹亞_腐朽之靈  '(階段2)
+       AI技能.露緹亞_腐朽之靈 2 '(階段2)
     End If
     If turnatk = 2 And atkingckai(98, 2) = 1 Then
-       atkingckai(98, 1) = 4
-       AI技能.露緹亞_渦騎劍閃 (0) '(階段4)
+       AI技能.露緹亞_渦騎劍閃 4 '(階段4)
     End If
     If turnatk = 2 And atkingckai(102, 2) = 1 Then
-       atkingckai(102, 1) = 2
-       AI技能.梅莉_夢境搖籃  '(階段2)
+       AI技能.梅莉_夢境搖籃 2 '(階段2)
     End If
     If turnatk = 2 And atkingckai(111, 2) = 1 Then
-       atkingckai(111, 1) = 3
-       AI技能.音音夢_愉快抽血 (0) '(階段3)
+       AI技能.音音夢_愉快抽血 3 '(階段3)
     End If
     If turnatk = 2 And atkingckai(124, 2) = 1 Then
-       atkingckai(124, 1) = 2
-       AI技能.貝琳達_裂地冰牙  '(階段2)
+       AI技能.貝琳達_裂地冰牙 2 '(階段2)
     End If
     If turnatk = 2 And atkingckai(125, 2) = 1 Then
-       atkingckai(125, 1) = 2
-       AI技能.貝琳達_溶魂之雨  '(階段2)
+       AI技能.貝琳達_溶魂之雨 2 '(階段2)
     End If
     If turnatk = 2 And atkingckai(127, 2) = 1 Then
-       atkingckai(127, 1) = 2
-       AI技能.蕾_EX_終曲_無盡輪迴的終結  '(階段2)
+       AI技能.蕾_EX_終曲_無盡輪迴的終結 2 '(階段2)
     End If
     If turnatk = 2 And atkingckai(133, 2) = 1 Then
-       atkingckai(133, 1) = 2
-       AI技能.克頓_隱蔽射擊  '(階段2)
+       AI技能.克頓_隱蔽射擊 2 '(階段2)
     End If
     If turnatk = 2 And atkingckai(136, 2) = 1 Then
-       atkingckai(136, 1) = 2
-       AI技能.尤莉卡_奸佞的鐵鎚  '(階段2)
+       AI技能.尤莉卡_奸佞的鐵鎚 2 '(階段2)
     End If
     '========================================
     If turnatk = 2 And atkingck(32, 2) = 1 Then
@@ -18232,8 +17918,7 @@ End If
        技能.艾茵_兩個身體  '(階段2)
     End If
    If turnatk = 2 And atkingck(26, 2) = 1 Then
-       atkingck(26, 1) = 2
-       技能.艾茵_九個靈魂  '(階段2)
+       技能.艾茵_九個靈魂 2  '(階段2)
     End If
     If turnatk = 2 And atkingck(11, 2) = 1 Then
        atkingck(11, 1) = 2
@@ -18252,20 +17937,16 @@ End If
        技能.史塔夏_時間種子  '(階段2)
     End If
     If turnatk = 2 And atkingck(54, 2) = 1 Then
-       atkingck(54, 1) = 2
-       技能.羅莎琳_黑霧幻影  '(階段2)
+       技能.羅莎琳_黑霧幻影 2 '(階段2)
     End If
     If turnatk = 2 And atkingck(55, 2) = 1 Then
-       atkingck(55, 1) = 2
-       技能.羅莎琳_EX_黑霧幻影  '(階段2)
+       技能.羅莎琳_EX_黑霧幻影 2 '(階段2)
     End If
     If turnatk = 2 And atkingck(60, 2) = 1 Then
-       atkingck(60, 1) = 2
-       技能.古魯瓦爾多_血之恩賜  '(階段2)
+       技能.古魯瓦爾多_血之恩賜 2 '(階段2)
     End If
     If turnatk = 2 And atkingck(63, 2) = 1 Then
-       atkingck(63, 1) = 2
-       技能.梅倫_High_hand  '(階段2)
+       技能.梅倫_High_hand 2 '(階段2)
     End If
     If turnatk = 2 And atkingck(64, 2) = 1 Then
        atkingck(64, 1) = 2
@@ -18276,8 +17957,7 @@ End If
        技能.音音夢_秘密苦藥  '(階段2)
     End If
     If turnatk = 2 And atkingck(73, 2) = 1 Then
-       atkingck(73, 1) = 2
-       技能.艾伯李斯特_茨林  '(階段2)
+       技能.艾伯李斯特_茨林 2 '(階段2)
     End If
     If turnatk = 2 And atkingck(81, 2) = 1 Then
        atkingck(81, 1) = 2
@@ -18288,24 +17968,20 @@ End If
        技能.利恩_反擊的狼煙  '(階段2)
     End If
     If turnatk = 2 And atkingck(117, 2) = 1 Then
-       atkingck(117, 1) = 2
-       技能.泰瑞爾_Von_541  '(階段2)
+       技能.泰瑞爾_Von_541 2 '(階段2)
     End If
     If turnatk = 2 And atkingck(123, 2) = 1 Then
-       atkingck(123, 1) = 2
-       技能.瑪格莉特_恍惚  '(階段2)
+       技能.瑪格莉特_恍惚 2 '(階段2)
     End If
     If turnatk = 2 And atkingck(128, 2) = 1 Then
        atkingck(128, 1) = 2
        技能.庫勒尼西_沙漠中的海市蜃樓  '(階段2)
     End If
     If turnatk = 2 And atkingck(129, 2) = 1 Then
-       atkingck(129, 1) = 2
-       技能.庫勒尼西_瘋狂眼窩  '(階段2)
+       技能.庫勒尼西_瘋狂眼窩 2 '(階段2)
     End If
     If turnatk = 2 And atkingck(131, 2) = 1 Then
-       atkingck(131, 1) = 2
-       技能.庫勒尼西_黑暗漩渦  '(階段2)
+       技能.庫勒尼西_黑暗漩渦 2 '(階段2)
     End If
     If turnatk = 2 And atkingck(137, 2) = 1 Then
        atkingck(137, 1) = 2
@@ -18316,44 +17992,36 @@ End If
        技能.傑多_因果之刻  '(階段2)
     End If
     If turnatk = 2 And atkingck(152, 2) = 1 Then
-       atkingck(152, 1) = 2
-       技能.阿奇波爾多_防護射擊  '(階段2)
+       技能.阿奇波爾多_防護射擊 2 '(階段2)
     End If
     If turnatk = 2 And atkingck(154, 2) = 1 Then
-       atkingck(154, 1) = 2
-       技能.洛洛妮_風暴感知   '(階段2)
+       技能.洛洛妮_風暴感知 2 '(階段2)
     End If
     If turnatk = 2 And atkingck(158, 2) = 1 Then
        atkingck(158, 1) = 2
        技能.克頓_逃亡計畫   '(階段2)
     End If
     If turnatk = 2 And atkingck(99, 2) = 1 Then
-       atkingck(99, 1) = 2
-       技能.露緹亞_朦朧之暗  '(階段2)
+       技能.露緹亞_朦朧之暗 2 '(階段2)
     End If
     If turnatk = 2 And atkingck(100, 2) = 1 Then
-       atkingck(100, 1) = 2
-       技能.露緹亞_暗影之翼  '(階段2)
+       技能.露緹亞_暗影之翼 2 '(階段2)
     End If
     If turnatk = 2 And atkingck(102, 2) = 1 Then
-       atkingck(102, 1) = 3
-       技能.艾蕾可_王座之炎  '(階段3)
+       技能.艾蕾可_王座之炎 3 '(階段3)
     End If
     If turnatk = 2 And atkingck(103, 2) = 1 Then
        atkingck(103, 1) = 2
        技能.艾蕾可_白百合  '(階段2)
     End If
     If turnatk = 2 And atkingck(111, 2) = 1 Then
-       atkingck(111, 1) = 2
-       技能.貝琳達_水晶幻鏡  '(階段2)
+       技能.貝琳達_水晶幻鏡 2 '(階段2)
     End If
     If turnatk = 2 And atkingck(47, 2) = 1 Then
-       atkingck(47, 1) = 2
-       技能.尤莉卡_不善的信仰  '(階段2)
+       技能.尤莉卡_不善的信仰 2 '(階段2)
     End If
     If turnatk = 2 And atkingck(48, 2) = 1 Then
-       atkingck(48, 1) = 2
-       技能.尤莉卡_曲惡的安寧  '(階段2)
+       技能.尤莉卡_曲惡的安寧 2 '(階段2)
     End If
     '====================
     If turnatk = 2 And atkingckai(14, 2) = 1 Then
@@ -18362,12 +18030,10 @@ End If
     End If
     '====================
     If turnatk = 2 And atkingckai(4, 2) = 1 Then
-       atkingckai(4, 1) = 2
-       AI技能.蕾_輪旋曲_琉璃色的微風  '(階段2)
+       AI技能.蕾_輪旋曲_琉璃色的微風 2 '(階段2)
     End If
     If turnatk = 2 And atkingckai(13, 2) = 1 Then
-       atkingckai(13, 1) = 2
-       AI技能.蕾_EX_輪旋曲_琉璃色的微風  '(階段2)
+       AI技能.蕾_EX_輪旋曲_琉璃色的微風 2 '(階段2)
     End If
     If turnatk = 2 And atkingck(53, 2) = 1 Then
        atkingck(53, 1) = 2
@@ -18383,8 +18049,7 @@ End If
     End If
     '==============================================
     If turnatk = 2 And atkingckai(37, 2) = 1 Then
-       atkingckai(37, 1) = 4
-       AI技能.艾茵_十三隻眼  '(階段4)
+       AI技能.艾茵_十三隻眼 4 '(階段4)
     End If
     '======================
     If turnatk = 2 And atkingck(94, 2) = 1 Then
@@ -18392,8 +18057,7 @@ End If
        技能.夏洛特_大聖堂  '(階段2)
     End If
     If turnatk = 2 And atkingckai(48, 2) = 1 Then
-       atkingckai(48, 1) = 2
-       AI技能.傑多_因果之幻  '(階段2)
+       AI技能.傑多_因果之幻 2 '(階段2)
     End If
 '=================
 If Val(顯示列1.goi2) = 0 Then
@@ -18533,26 +18197,22 @@ If 目前數(4) >= 900 Then
             事件卡.詛咒術_電腦 0, 0
        Case 4
             If atkingckai(66, 2) = 1 Then
-               atkingckai(66, 1) = 4
-               AI技能.艾伯李斯特_雷擊  '(階段4)
+               AI技能.艾伯李斯特_雷擊 4 '(階段4)
                Exit Sub
             End If
        Case 5
             If atkingckai(78, 2) = 1 Then
-               atkingckai(78, 1) = 4
-               AI技能.瑪格莉特_月光  '(階段4)
+               AI技能.瑪格莉特_月光 4 '(階段4)
                Exit Sub
             End If
        Case 6
             If atkingckai(79, 2) = 1 Then
-               atkingckai(79, 1) = 4
-               AI技能.庫勒尼西_瘋狂眼窩  '(階段4)
+               AI技能.庫勒尼西_瘋狂眼窩 4 '(階段4)
                Exit Sub
             End If
         Case 7
             If atkingckai(87, 2) = 1 Then
-               atkingckai(87, 1) = 3
-               AI技能.洛洛妮_貪婪之刃與嗜血之槍  '(階段3)
+               AI技能.洛洛妮_貪婪之刃與嗜血之槍 3 '(階段3)
                Exit Sub
             End If
         Case 8
@@ -19188,13 +18848,11 @@ If Abs(牌移動暫時變數(1) - card(牌移動暫時變數(3)).Left) <= 50 Or Abs(牌移動暫時
            使用者出牌_手牌對齊.Enabled = True
         Case 21
            If turnatk = 2 And atkingck(54, 2) = 1 Then
-               atkingck(54, 1) = 4
-               技能.羅莎琳_黑霧幻影  '(階段4)
+               技能.羅莎琳_黑霧幻影 4 '(階段4)
                Exit Sub
           End If
           If turnatk = 2 And atkingck(55, 2) = 1 Then
-               atkingck(55, 1) = 4
-               技能.羅莎琳_EX_黑霧幻影  '(階段4)
+               技能.羅莎琳_EX_黑霧幻影 4 '(階段4)
                Exit Sub
           End If
         Case 22
@@ -19274,8 +18932,7 @@ If Abs(牌移動暫時變數(1) - card(牌移動暫時變數(3)).Left) <= 50 Or Abs(牌移動暫時
           End If
         Case 32
            If turnatk = 2 And atkingck(111, 2) = 1 Then
-               atkingck(111, 1) = 5
-               技能.貝琳達_水晶幻鏡  '(階段5)
+               技能.貝琳達_水晶幻鏡 5 '(階段5)
                Exit Sub
           End If
         Case 33
@@ -19308,19 +18965,16 @@ If Abs(牌移動暫時變數(1) - card(牌移動暫時變數(3)).Left) <= 50 Or Abs(牌移動暫時
           End If
         Case 37
            If turnatk = 1 And atkingckai(123, 2) = 1 Then
-               atkingckai(123, 1) = 5
-               AI技能.貝琳達_水晶幻鏡  '(階段5)
+               AI技能.貝琳達_水晶幻鏡 5 '(階段5)
                Exit Sub
           End If
         Case 38
            If turnatk = 1 And atkingckai(128, 2) = 1 Then
-               atkingckai(128, 1) = 4
-               AI技能.羅莎琳_黑霧幻影  '(階段4)
+               AI技能.羅莎琳_黑霧幻影 4 '(階段4)
                Exit Sub
           End If
           If turnatk = 1 And atkingckai(129, 2) = 1 Then
-               atkingckai(129, 1) = 4
-               AI技能.羅莎琳_EX_黑霧幻影  '(階段4)
+               AI技能.羅莎琳_EX_黑霧幻影 4 '(階段4)
                Exit Sub
           End If
        Case 39
@@ -19572,23 +19226,19 @@ Select Case 目前數(14)
                FormMainMode.骰子執行完啟動.Enabled = True
             Case 23
                If atkingck(122, 2) = 1 Then
-                    atkingck(122, 1) = 6
-                    技能.瑪格莉特_月光 '(階段6)
+                    技能.瑪格莉特_月光 6 '(階段6)
                 End If
             Case 24
                If atkingck(122, 2) = 1 Then
-                    atkingck(122, 1) = 7
-                    技能.瑪格莉特_月光 '(階段7)
+                    技能.瑪格莉特_月光 7 '(階段7)
                 End If
             Case 25
                If atkingckai(78, 2) = 1 Then
-                    atkingckai(78, 1) = 5
-                    AI技能.瑪格莉特_月光 '(階段5)
+                    AI技能.瑪格莉特_月光 5 '(階段5)
                 End If
             Case 26
                If atkingckai(78, 2) = 1 Then
-                    atkingckai(78, 1) = 6
-                    AI技能.瑪格莉特_月光 '(階段6)
+                    AI技能.瑪格莉特_月光 6 '(階段6)
                 End If
             Case 27
                 If atkingck(153, 2) = 1 Then
@@ -19597,13 +19247,11 @@ Select Case 目前數(14)
                 End If
             Case 28
                 If atkingck(156, 2) = 1 Then
-                    atkingck(156, 1) = 5
-                    技能.洛洛妮_貪婪之刃與嗜血之槍 '(階段5)
+                    技能.洛洛妮_貪婪之刃與嗜血之槍 5 '(階段5)
                 End If
             Case 29
                 If atkingckai(87, 2) = 1 Then
-                    atkingckai(87, 1) = 4
-                    AI技能.洛洛妮_貪婪之刃與嗜血之槍 '(階段4)
+                    AI技能.洛洛妮_貪婪之刃與嗜血之槍 4 '(階段4)
                 End If
             Case 30
                 If 電腦出牌_亮牌.Enabled = False Then
@@ -19794,8 +19442,7 @@ Select Case 目前數(14)
                 等待時間.Enabled = True
             Case 23
                 If atkingck(122, 2) = 1 Then
-                    atkingck(122, 1) = 6
-                    技能.瑪格莉特_月光 '(階段6)
+                    技能.瑪格莉特_月光 6 '(階段6)
                 End If
             Case 24
                 If atkingck(146, 2) = 1 Then
@@ -19804,25 +19451,21 @@ Select Case 目前數(14)
                 End If
             Case 25
                 If atkingckai(78, 2) = 1 Then
-                    atkingckai(78, 1) = 5
-                    AI技能.瑪格莉特_月光 '(階段5)
+                    AI技能.瑪格莉特_月光 5 '(階段5)
                 End If
             Case 26
                 移動階段_階段初始.Enabled = True
             Case 27
                 If atkingck(156, 2) = 1 Then
-                    atkingck(156, 1) = 5
-                    技能.洛洛妮_貪婪之刃與嗜血之槍 '(階段5)
+                    技能.洛洛妮_貪婪之刃與嗜血之槍 5 '(階段5)
                 End If
             Case 28
                 If atkingckai(87, 2) = 1 Then
-                    atkingckai(87, 1) = 4
-                    AI技能.洛洛妮_貪婪之刃與嗜血之槍 '(階段4)
+                    AI技能.洛洛妮_貪婪之刃與嗜血之槍 4 '(階段4)
                 End If
             Case 29
                 If atkingck(111, 2) = 1 Then
-                    atkingck(111, 1) = 5
-                    技能.貝琳達_水晶幻鏡 '(階段5)
+                    技能.貝琳達_水晶幻鏡 5 '(階段5)
                 End If
             Case 30
                 電腦出牌.Enabled = True
@@ -19854,8 +19497,7 @@ Select Case 目前數(14)
                 End If
             Case 35
                 If atkingckai(123, 2) = 1 Then
-                    atkingckai(123, 1) = 5
-                    AI技能.貝琳達_水晶幻鏡 '(階段5)
+                    AI技能.貝琳達_水晶幻鏡 5 '(階段5)
                 End If
             Case 36
                 FormMainMode.trend.Enabled = True
@@ -20065,26 +19707,22 @@ If 目前數(8) >= 240 Then
             事件卡.詛咒術_使用者 0, 0
         Case 7
             If turnatk = 1 And atkingck(72, 2) = 1 Then
-               atkingck(72, 1) = 4
-               技能.艾伯李斯特_雷擊  '(階段4)
+               技能.艾伯李斯特_雷擊 4  '(階段4)
                Exit Sub
             End If
         Case 8
             If turnatk = 1 And atkingck(122, 2) = 1 Then
-               atkingck(122, 1) = 5
-               技能.瑪格莉特_月光  '(階段5)
+               技能.瑪格莉特_月光 5 '(階段5)
                Exit Sub
             End If
         Case 9
             If turnatk = 2 And atkingck(129, 2) = 1 Then
-               atkingck(129, 1) = 4
-               技能.庫勒尼西_瘋狂眼窩  '(階段4)
+               技能.庫勒尼西_瘋狂眼窩 4 '(階段4)
                Exit Sub
             End If
         Case 10
             If atkingck(156, 2) = 1 Then
-                atkingck(156, 1) = 3
-                技能.洛洛妮_貪婪之刃與嗜血之槍 '(階段3)
+                技能.洛洛妮_貪婪之刃與嗜血之槍 3 '(階段3)
             End If
         Case 11
             If atkingck(160, 2) = 1 Then
@@ -20197,23 +19835,23 @@ Private Sub 骰子執行完啟動_Timer()
 骰子執行完啟動.Enabled = False
 '===========結束技能跳回執行點
    If turnatk = 2 And atkingck(54, 2) = 1 And atkingck(54, 1) = 6 Then
-       技能.羅莎琳_黑霧幻影  '(階段6)
+       技能.羅莎琳_黑霧幻影 6 '(階段6)
        GoTo 技能_羅莎琳_黑霧幻影_跳入點
    End If
    If turnatk = 2 And atkingck(55, 2) = 1 And atkingck(55, 1) = 6 Then
-       技能.羅莎琳_EX_黑霧幻影  '(階段6)
+       技能.羅莎琳_EX_黑霧幻影 6 '(階段6)
        GoTo 技能_羅莎琳_黑霧幻影_跳入點
    End If
    If turnatk = 1 And atkingckai(128, 2) = 1 And atkingckai(128, 1) = 6 Then
-       AI技能.羅莎琳_黑霧幻影  '(階段6)
+       AI技能.羅莎琳_黑霧幻影 6 '(階段6)
        GoTo AI技能_羅莎琳_黑霧幻影_跳入點
    End If
    If turnatk = 1 And atkingckai(129, 2) = 1 And atkingckai(129, 1) = 6 Then
-       AI技能.羅莎琳_EX_黑霧幻影  '(階段6)
+       AI技能.羅莎琳_EX_黑霧幻影 6  '(階段6)
        GoTo AI技能_羅莎琳_黑霧幻影_跳入點
    End If
    If turnatk = 1 And atkingck(72, 2) = 1 And atkingck(72, 1) = 5 Then
-       技能.艾伯李斯特_雷擊  '(階段5)
+       技能.艾伯李斯特_雷擊 5  '(階段5)
        GoTo 技能_艾伯李斯特_雷擊_跳入點
    End If
    If turnatk = 2 And atkingck(92, 2) = 1 And atkingck(92, 1) = 4 Then
@@ -20225,15 +19863,15 @@ Private Sub 骰子執行完啟動_Timer()
        GoTo 技能_利恩_反擊的狼煙_跳入點
    End If
    If turnatk = 2 And atkingck(129, 2) = 1 And atkingck(129, 1) = 5 Then
-       技能.庫勒尼西_瘋狂眼窩  '(階段5)
+       技能.庫勒尼西_瘋狂眼窩 5 '(階段5)
        GoTo 技能_庫勒尼西_瘋狂眼窩_跳入點
    End If
    If turnatk = 1 And atkingckai(79, 2) = 1 And atkingckai(79, 1) = 5 Then
-       AI技能.庫勒尼西_瘋狂眼窩  '(階段5)
+       AI技能.庫勒尼西_瘋狂眼窩 5 '(階段5)
        GoTo 技能_庫勒尼西_瘋狂眼窩_跳入點
    End If
    If turnatk = 2 And atkingckai(66, 2) = 1 And atkingckai(66, 1) = 5 Then
-       AI技能.艾伯李斯特_雷擊  '(階段5)
+       AI技能.艾伯李斯特_雷擊 5 '(階段5)
        GoTo 技能_艾伯李斯特_雷擊_跳入點
    End If
 '========================完成HP檢查
@@ -20254,28 +19892,28 @@ Private Sub 骰子執行完啟動_Timer()
        AI技能.夏洛特_大聖堂  '(階段4)
     End If
     If turnatk = 1 And atkingck(147, 2) = 1 And atkingck(147, 1) = 3 Then
-       技能.傑多_因果之幻  '(階段3)
+       技能.傑多_因果之幻 3 '(階段3)
        Exit Sub
     ElseIf turnatk = 1 And atkingck(147, 2) = 1 And atkingck(147, 1) = 4 Then
-       技能.傑多_因果之幻  '(階段4)
+       技能.傑多_因果之幻 4 '(階段4)
     End If
     If turnatk = 2 And atkingckai(48, 2) = 1 And atkingckai(48, 1) = 3 Then
-       AI技能.傑多_因果之幻  '(階段3)
+       AI技能.傑多_因果之幻 3 '(階段3)
        Exit Sub
     ElseIf turnatk = 2 And atkingckai(48, 2) = 1 And atkingckai(48, 1) = 4 Then
-       AI技能.傑多_因果之幻  '(階段4)
+       AI技能.傑多_因果之幻 4 '(階段4)
     End If
     If turnatk = 1 And atkingck(159, 2) = 1 And atkingck(159, 1) = 3 Then
-       技能.克頓_隱蔽射擊  '(階段3)
+       技能.克頓_隱蔽射擊 3 '(階段3)
        Exit Sub
     ElseIf turnatk = 1 And atkingck(159, 2) = 1 And atkingck(159, 1) = 4 Then
-       技能.克頓_隱蔽射擊  '(階段4)
+       技能.克頓_隱蔽射擊 4 '(階段4)
     End If
     If turnatk = 2 And atkingckai(133, 2) = 1 And atkingckai(133, 1) = 3 Then
-       AI技能.克頓_隱蔽射擊  '(階段3)
+       AI技能.克頓_隱蔽射擊 3 '(階段3)
        Exit Sub
     ElseIf turnatk = 2 And atkingckai(133, 2) = 1 And atkingckai(133, 1) = 4 Then
-       AI技能.克頓_隱蔽射擊  '(階段4)
+       AI技能.克頓_隱蔽射擊 4 '(階段4)
     End If
 '============以下是技能檢查及啟動
     '=============================(梅倫-Lowball/Gamble)
@@ -20301,38 +19939,32 @@ Private Sub 骰子執行完啟動_Timer()
        技能.史塔夏_命運的鐵門  '(階段4)
     End If
     If turnatk = 1 And atkingck(23, 2) = 1 Then
-        技能.史塔夏_愚者之手 '(階段3)
+        技能.史塔夏_愚者之手 3 '(階段3)
     End If
     If turnatk = 1 And atkingck(35, 2) = 1 Then
-       atkingck(35, 1) = 3
-       技能.CC_高頻電磁手術刀  '(階段3)
+       技能.CC_高頻電磁手術刀 3 '(階段3)
     End If
     If turnatk = 2 And atkingckai(50, 2) = 1 Then
-       atkingckai(50, 1) = 3
-       AI技能.CC_高頻電磁手術刀  '(階段3)
+       AI技能.CC_高頻電磁手術刀 3 '(階段3)
     End If
     If turnatk = 1 And atkingck(58, 2) = 1 Then
-       atkingck(58, 1) = 4
-       技能.伊芙琳_紅蓮車輪  '(階段4)
+       技能.伊芙琳_紅蓮車輪 4  '(階段4)
     End If
     If turnatk = 2 And atkingckai(51, 2) = 1 Then
-       atkingckai(51, 1) = 4
-       AI技能.伊芙琳_紅蓮車輪  '(階段4)
+       AI技能.伊芙琳_紅蓮車輪 4 '(階段4)
     End If
     If turnatk = 2 And atkingckai(20, 2) = 1 Then
-        AI技能.史塔夏_愚者之手 '(階段3)
+        AI技能.史塔夏_愚者之手 3 '(階段3)
     End If
     If turnatk = 2 And atkingckai(21, 2) = 1 Then
        atkingckai(21, 1) = 4
        AI技能.史塔夏_命運的鐵門  '(階段4)
     End If
     If turnatk = 1 And atkingck(98, 2) = 1 Then
-       atkingck(98, 1) = 3
-       技能.露緹亞_腐朽之靈  '(階段3)
+       技能.露緹亞_腐朽之靈 3 '(階段3)
     End If
     If turnatk = 2 And atkingckai(95, 2) = 1 Then
-       atkingckai(95, 1) = 3
-       AI技能.露緹亞_腐朽之靈  '(階段3)
+       AI技能.露緹亞_腐朽之靈 3 '(階段3)
     End If
     '=======================(追加攻擊骰數類)
     If turnatk = 1 And atkingck(17, 2) = 1 Then
@@ -20355,12 +19987,10 @@ Private Sub 骰子執行完啟動_Timer()
         AI技能.蕾_EX_協奏曲_加百烈的守護  '(階段4)
     End If
     If turnatk = 2 And atkingck(102, 2) = 1 Then
-       atkingck(102, 1) = 4
-       技能.艾蕾可_王座之炎  '(階段4)
+       技能.艾蕾可_王座之炎 4 '(階段4)
     End If
     If turnatk = 1 And atkingckai(91, 2) = 1 Then
-       atkingckai(91, 1) = 4
-       AI技能.艾蕾可_王座之炎  '(階段4)
+       AI技能.艾蕾可_王座之炎 4 '(階段4)
     End If
     '===============(骰數其他類)
     If turnatk = 2 And atkingck(137, 2) = 1 Then
@@ -20372,12 +20002,10 @@ Private Sub 骰子執行完啟動_Timer()
        AI技能.蕾格烈芙_LAR  '(階段4)
     End If
     If turnatk = 2 And atkingck(117, 2) = 1 Then
-       atkingck(117, 1) = 3
-       技能.泰瑞爾_Von_541  '(階段3)
+       技能.泰瑞爾_Von_541 3 '(階段3)
     End If
     If turnatk = 1 And atkingckai(76, 2) = 1 Then
-       atkingckai(76, 1) = 3
-       AI技能.泰瑞爾_Von_541  '(階段3)
+       AI技能.泰瑞爾_Von_541 3 '(階段3)
     End If
     If turnatk = 2 And atkingck(103, 2) = 1 Then
        atkingck(103, 1) = 3
@@ -20396,48 +20024,39 @@ Private Sub 骰子執行完啟動_Timer()
        AI技能.艾蕾可_聖王威光  '(階段4)
     End If
     If turnatk = 1 And atkingck(106, 2) = 1 Then
-       atkingck(106, 1) = 5
-       技能.梅莉_夢幻魔杖  '(階段5)
+       技能.梅莉_夢幻魔杖 5  '(階段5)
     End If
     If turnatk = 2 And atkingckai(99, 2) = 1 Then
-       atkingckai(99, 1) = 5
-       AI技能.梅莉_夢幻魔杖  '(階段5)
+       AI技能.梅莉_夢幻魔杖 5 '(階段5)
     End If
     '=================(防禦成功類)
     If turnatk = 2 And atkingck(123, 2) = 1 Then
-       atkingck(123, 1) = 3
-       技能.瑪格莉特_恍惚 '(階段3)
+       技能.瑪格莉特_恍惚 3 '(階段3)
     End If
     If turnatk = 1 And atkingckai(42, 2) = 1 Then
-       atkingckai(42, 1) = 3
-       AI技能.瑪格莉特_恍惚 '(階段3)
+       AI技能.瑪格莉特_恍惚 3 '(階段3)
     End If
     If turnatk = 2 And atkingck(47, 2) = 1 Then
-       atkingck(47, 1) = 3
-       技能.尤莉卡_不善的信仰  '(階段3)
+       技能.尤莉卡_不善的信仰 3 '(階段3)
     End If
     If turnatk = 1 And atkingckai(137, 2) = 1 Then
-       atkingckai(137, 1) = 3
-       AI技能.尤莉卡_不善的信仰  '(階段3)
+       AI技能.尤莉卡_不善的信仰 3 '(階段3)
     End If
     If turnatk = 2 And atkingck(54, 2) = 1 Then
-       atkingck(54, 1) = 4
-       技能.羅莎琳_黑霧幻影  '(階段4)
+       技能.羅莎琳_黑霧幻影 4 '(階段4)
        Exit Sub
     End If
     If turnatk = 2 And atkingck(55, 2) = 1 Then
-       atkingck(55, 1) = 4
-       技能.羅莎琳_EX_黑霧幻影  '(階段4)
+       技能.羅莎琳_EX_黑霧幻影 4 '(階段4)
        Exit Sub
     End If
     If turnatk = 1 And atkingckai(128, 2) = 1 Then
        atkingckai(128, 1) = 4
-       AI技能.羅莎琳_黑霧幻影 '(階段4)
+       AI技能.羅莎琳_黑霧幻影 4 '(階段4)
        Exit Sub
     End If
     If turnatk = 1 And atkingckai(129, 2) = 1 Then
-       atkingckai(129, 1) = 4
-       AI技能.羅莎琳_EX_黑霧幻影 '(階段4)
+       AI技能.羅莎琳_EX_黑霧幻影 4 '(階段4)
        Exit Sub
     End If
     '=====================
@@ -20448,95 +20067,79 @@ AI技能_羅莎琳_黑霧幻影_跳入點: '技能-AI-羅莎琳-(普、Ex)-黑霧幻影 結束執行繼續點
        AI技能.南瓜王_重壓  '(階段3)
     End If
     If turnatk = 2 And atkingckai(16, 2) = 1 Then
-       AI技能.吸血姬蕾米雅_吸血  '(階段3)
+       AI技能.吸血姬蕾米雅_吸血 3 '(階段3)
     End If
     If turnatk = 1 And atkingck(51, 2) = 1 Then
-       atkingck(51, 1) = 4
-       技能.羅莎琳_染血之刃  '(階段4)
+       技能.羅莎琳_染血之刃 4  '(階段4)
     End If
     If turnatk = 1 And atkingck(50, 2) = 1 Then
-       atkingck(50, 1) = 4
-       技能.羅莎琳_EX_染血之刃  '(階段4)
+       技能.羅莎琳_EX_染血之刃 4 '(階段4)
     End If
     If turnatk = 1 And atkingck(52, 2) = 1 Then
-       atkingck(52, 1) = 3
-       技能.羅莎琳_黑霧的纏繞  '(階段3)
+       技能.羅莎琳_黑霧的纏繞 3  '(階段3)
     End If
     If turnatk = 1 And atkingck(90, 2) = 1 Then
        atkingck(90, 1) = 3
        技能.利恩_劫影攻擊  '(階段3)
     End If
     If turnatk = 1 And atkingck(91, 2) = 1 Then
-       atkingck(91, 1) = 3
-       技能.利恩_毒牙  '(階段3)
+       技能.利恩_毒牙 3 '(階段3)
     End If
     If turnatk = 2 And atkingckai(72, 2) = 1 Then
        atkingckai(72, 1) = 3
        AI技能.利恩_劫影攻擊  '(階段3)
     End If
     If turnatk = 2 And atkingckai(73, 2) = 1 Then
-       atkingckai(73, 1) = 3
-       AI技能.利恩_毒牙  '(階段3)
+       AI技能.利恩_毒牙 3 '(階段3)
     End If
     If turnatk = 1 And atkingck(140, 2) = 1 Then
        atkingck(140, 1) = 3
        技能.多妮妲_殘虐傾向  '(階段3)
     End If
     If turnatk = 1 And atkingck(143, 2) = 1 Then
-       atkingck(143, 1) = 3
-       技能.多妮妲_律死擊  '(階段3)
+       技能.多妮妲_律死擊 3 '(階段3)
     End If
     If turnatk = 1 And atkingck(151, 2) = 1 Then
        atkingck(151, 1) = 3
        技能.阿奇波爾多_劫影攻擊  '(階段3)
     End If
     If turnatk = 1 And atkingck(155, 2) = 1 Then
-       atkingck(155, 1) = 3
-       技能.洛洛妮_砲擊壓制  '(階段3)
+       技能.洛洛妮_砲擊壓制 3 '(階段3)
     End If
     If turnatk = 1 And atkingck(112, 2) = 1 Then
-       atkingck(112, 1) = 3
-       技能.貝琳達_裂地冰牙  '(階段3)
+       技能.貝琳達_裂地冰牙 3 '(階段3)
     End If
     If turnatk = 2 And atkingckai(124, 2) = 1 Then
-       atkingckai(124, 1) = 3
-       AI技能.貝琳達_裂地冰牙  '(階段3)
+       AI技能.貝琳達_裂地冰牙 3 '(階段3)
     End If
     If turnatk = 2 And atkingckai(86, 2) = 1 Then
-       atkingckai(86, 1) = 3
-       AI技能.洛洛妮_砲擊壓制  '(階段3)
+       AI技能.洛洛妮_砲擊壓制 3 '(階段3)
     End If
     If turnatk = 2 And atkingckai(53, 2) = 1 Then
        atkingckai(53, 1) = 3
        AI技能.多妮妲_殘虐傾向  '(階段3)
     End If
     If turnatk = 2 And atkingckai(52, 2) = 1 Then
-       atkingckai(52, 1) = 3
-       AI技能.多妮妲_律死擊  '(階段3)
+       AI技能.多妮妲_律死擊 3 '(階段3)
     End If
     If turnatk = 2 And atkingckai(59, 2) = 1 Then
-       atkingckai(59, 1) = 3
-       AI技能.羅莎琳_黑霧的纏繞  '(階段3)
+       AI技能.羅莎琳_黑霧的纏繞 3 '(階段3)
     End If
     If turnatk = 2 And atkingckai(32, 2) = 1 Then
-       atkingckai(32, 1) = 4
-       AI技能.羅莎琳_染血之刃  '(階段4)
+       AI技能.羅莎琳_染血之刃 4 '(階段4)
     End If
     If turnatk = 2 And atkingckai(140, 2) = 1 Then
-       atkingckai(140, 1) = 4
-       AI技能.羅莎琳_EX_染血之刃  '(階段4)
+       AI技能.羅莎琳_EX_染血之刃 4 '(階段4)
     End If
     If turnatk = 2 And atkingckai(84, 2) = 1 Then
        atkingckai(84, 1) = 3
        AI技能.阿奇波爾多_劫影攻擊  '(階段3)
     End If
     If turnatk = 1 And atkingck(46, 2) = 1 Then
-       atkingck(46, 1) = 4
-       技能.尤莉卡_奸佞的鐵鎚  '(階段4)
+       技能.尤莉卡_奸佞的鐵鎚 4 '(階段4)
     End If
     If turnatk = 2 And atkingckai(136, 2) = 1 Then
-       atkingckai(136, 1) = 4
-       AI技能.尤莉卡_奸佞的鐵鎚  '(階段4)
+       AI技能.尤莉卡_奸佞的鐵鎚 4 '(階段4)
     End If
     '====================以下是異常狀態檢查及啟動(狂戰士、恐怖)
     異常狀態檢查數(27, 1) = 1
@@ -20552,20 +20155,16 @@ AI技能_羅莎琳_黑霧幻影_跳入點: '技能-AI-羅莎琳-(普、Ex)-黑霧幻影 結束執行繼續點
     異常狀態.恐怖_電腦   '(階段1)
     '=======================(防禦骰數相關類)
     If turnatk = 2 And atkingck(60, 2) = 1 Then
-       atkingck(60, 1) = 4
-       技能.古魯瓦爾多_血之恩賜  '(階段4)
+       技能.古魯瓦爾多_血之恩賜 4 '(階段4)
     End If
     If turnatk = 1 And atkingckai(62, 2) = 1 Then
-       atkingckai(62, 1) = 4
-       AI技能.古魯瓦爾多_血之恩賜  '(階段4)
+       AI技能.古魯瓦爾多_血之恩賜 4 '(階段4)
     End If
     If turnatk = 2 And atkingck(73, 2) = 1 Then
-       atkingck(73, 1) = 4
-       技能.艾伯李斯特_茨林  '(階段4)
+       技能.艾伯李斯特_茨林 4 '(階段4)
     End If
     If turnatk = 1 And atkingckai(67, 2) = 1 Then
-       atkingckai(67, 1) = 4
-       AI技能.艾伯李斯特_茨林  '(階段4)
+       AI技能.艾伯李斯特_茨林 4 '(階段4)
     End If
     If turnatk = 2 And atkingck(10, 2) = 1 Then
        atkingck(10, 1) = 3
@@ -20622,41 +20221,33 @@ AI技能_羅莎琳_黑霧幻影_跳入點: '技能-AI-羅莎琳-(普、Ex)-黑霧幻影 結束執行繼續點
     End If
     '========================(丟棄牌類)
     If turnatk = 1 And atkingck(72, 2) = 1 Then
-       atkingck(72, 1) = 3
-       技能.艾伯李斯特_雷擊  '(階段3)
+       技能.艾伯李斯特_雷擊 3  '(階段3)
        Exit Sub
     End If
     If turnatk = 2 And atkingckai(66, 2) = 1 Then
-       atkingckai(66, 1) = 3
-       AI技能.艾伯李斯特_雷擊  '(階段3)
+       AI技能.艾伯李斯特_雷擊 3 '(階段3)
        Exit Sub
     End If
     If turnatk = 2 And atkingck(129, 2) = 1 Then
-       atkingck(129, 1) = 3
-       技能.庫勒尼西_瘋狂眼窩  '(階段3)
+       技能.庫勒尼西_瘋狂眼窩 3 '(階段3)
        Exit Sub
     End If
     If turnatk = 1 And atkingckai(79, 2) = 1 Then
-       atkingckai(79, 1) = 3
-       AI技能.庫勒尼西_瘋狂眼窩  '(階段3)
+       AI技能.庫勒尼西_瘋狂眼窩 3 '(階段3)
        Exit Sub
     End If
 '=============================(傷害骰數轉移類)
     If turnatk = 2 And atkingckai(11, 2) = 1 Then
-       atkingckai(11, 1) = 4
-       AI技能.蕾_終曲_無盡輪迴的終結  '(階段4)
+       AI技能.蕾_終曲_無盡輪迴的終結 4 '(階段4)
     End If
     If turnatk = 1 And atkingck(15, 2) = 1 Then
-       atkingck(15, 1) = 3
-       技能.蕾_終曲_無盡輪迴的終結  '(階段3)
+       技能.蕾_終曲_無盡輪迴的終結 3  '(階段3)
     End If
     If turnatk = 1 And atkingck(161, 2) = 1 Then
-       atkingck(161, 1) = 3
-       技能.蕾_EX_終曲_無盡輪迴的終結  '(階段3)
+       技能.蕾_EX_終曲_無盡輪迴的終結 3 '(階段3)
     End If
     If turnatk = 2 And atkingckai(127, 2) = 1 Then
-       atkingckai(127, 1) = 3
-       AI技能.蕾_EX_終曲_無盡輪迴的終結  '(階段3)
+       AI技能.蕾_EX_終曲_無盡輪迴的終結 3 '(階段3)
     End If
     If turnatk = 2 And atkingck(32, 2) = 1 Then
        atkingck(32, 1) = 3
