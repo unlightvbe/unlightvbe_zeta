@@ -13,6 +13,7 @@ Begin VB.Form FormAbout
    MinButton       =   0   'False
    ScaleHeight     =   5055
    ScaleWidth      =   8400
+   StartUpPosition =   1  '所屬視窗中央
    Begin VB.PictureBox Picture1 
       Appearance      =   0  '平面
       BackColor       =   &H00000000&
@@ -132,7 +133,7 @@ Begin VB.Form FormAbout
       Width           =   3615
    End
    Begin VB.Label aboutvn 
-      Caption         =   "Bulid 2964 (ULVBE-1.10.2964)"
+      Caption         =   "Bulid 3056 (ULVBE-1.10.3056)"
       BeginProperty Font 
          Name            =   "微軟正黑體"
          Size            =   12
