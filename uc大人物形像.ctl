@@ -11,15 +11,16 @@ Begin VB.UserControl 大人物形像
    ScaleHeight     =   9405
    ScaleWidth      =   9675
    Windowless      =   -1  'True
-   Begin ImageX.aicAlphaImage image1 
-      Height          =   9135
+   Begin ImageX.aicAlphaImage aicimage1 
+      Height          =   6180
       Left            =   0
       Top             =   0
-      Width           =   8895
-      _ExtentX        =   15690
-      _ExtentY        =   16113
+      Width           =   4545
+      _ExtentX        =   8017
+      _ExtentY        =   10901
       Image           =   "uc大人物形像.ctx":0000
       Scaler          =   3
+      Props           =   13
    End
 End
 Attribute VB_Name = "大人物形像"
@@ -44,14 +45,14 @@ Public Property Let 大人物圖片(ByVal New_大人物圖片 As String)
    m_smallimage = New_大人物圖片
    PropertyChanged "大人物圖片"
    If Me.大人物圖片 <> "" Then
-       Image1.AutoSize = True
-       Image1.AutoRedraw = True
-       Image1.LoadImage_FromFile Me.大人物圖片
-       Image1.Top = 0
-       Image1.Left = 0
+'       aicimage1.AutoSize = True
+'       aicimage1.AutoRedraw = True
+       aicimage1.LoadImage_FromFile Me.大人物圖片
+       aicimage1.Top = 0
+       aicimage1.Left = 0
     End If
-    Me.大人物圖片height = Image1.Height
-    Me.大人物圖片width = Image1.Width
+    Me.大人物圖片height = aicimage1.Height
+    Me.大人物圖片width = aicimage1.Width
 End Property
 Public Property Let 大人物圖片height(ByVal New_大人物圖片height As Integer)
    m_bighei = New_大人物圖片height

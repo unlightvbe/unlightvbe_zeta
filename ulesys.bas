@@ -10,7 +10,6 @@ Public 第一次啟動讀入程序標記 As Boolean '第一次啟動程式讀入程序標記數
 Public 接續讀入表單串 As String 'PEStartForm接續讀入表單暫時紀錄數
 Public 音樂檢查播放目標數 As Integer '音樂檢查播放計數器目標數
 Public 通知表單是否已出現 As Boolean '布勞通知表單是否已經出現暫時變數
-
 Sub 判斷字型_formchangeperson()
 Dim a, i As Integer
 a = 14
@@ -268,9 +267,6 @@ End Select
     FormMainMode.wmp.Controls.play
     一般系統類.檢查音樂播放 0
     FormMainMode.wmpse1.Controls.stop
-'=================================================
-' FormDice.jpgus.大人物圖片 = VBEPerson(1, 1, 1, 5, 3)
-' FormDice.jpgcom.大人物圖片 = VBEPerson(2, 1, 1, 5, 3)
 '=======================================事件卡設定
 一般系統類.自由戰鬥模式設定表單各式設定讀入程序
 戰鬥系統類.事件卡處理_計算張數
@@ -1191,7 +1187,7 @@ FormMainMode.顯示列1.使用者方小人物圖片 = VBEPerson(1, 1, 1, 5, 4)
 FormMainMode.顯示列1.使用者方小人物圖片left = -FormMainMode.顯示列1.使用者方小人物圖片width
 FormMainMode.personusminijpg.小人物影子Left = Val(VBEPerson(1, 1, 2, 1, 5))
 FormMainMode.personusminijpg.小人物影子top差 = Val(VBEPerson(1, 1, 2, 1, 6))
-'戰鬥系統類.人物交換_使用者_指定交換 1
+戰鬥系統類.擲骰表單人物立繪紀錄數(1) = VBEPerson(1, 角色人物對戰人數(1, 2), 1, 5, 3)
 '=======以下為角色人物設定(電腦)
 角色人物對戰人數(2, 2) = 1
 For w = 1 To 角色人物對戰人數(2, 1)
@@ -1221,6 +1217,7 @@ FormMainMode.顯示列1.電腦方小人物圖片 = VBEPerson(2, 1, 1, 5, 4)
 FormMainMode.顯示列1.電腦方小人物圖片left = FormMainMode.ScaleWidth
 FormMainMode.personcomminijpg.小人物影子Left = Val(VBEPerson(2, 1, 2, 1, 5))
 FormMainMode.personcomminijpg.小人物影子top差 = Val(VBEPerson(2, 1, 2, 1, 6))
+戰鬥系統類.擲骰表單人物立繪紀錄數(2) = VBEPerson(2, 角色人物對戰人數(2, 2), 1, 5, 3)
 '==================執行小人物立繪指定及距離指定
 戰鬥系統類.人物交換_使用者_指定交換 1
 '================仿對戰模式設定
@@ -1494,7 +1491,6 @@ Erase 擲骰表單溝通暫時變數 'Form6表單值溝通暫時變數(1.一回合中先後判斷(1.前/2.後
 Erase 公用牌各牌類型紀錄數 '各場景公用牌牌類型紀錄暫時變數(0.(1)目前已發牌總數量/(2)目前場景牌總數量,1~31.(1)目前已使用之牌數/(2)該牌型能使用之總數量)
 '===================
 Erase 事件卡記錄暫時數 '事件卡使用紀錄暫時變數(0.(1)總共給予回合數,1.使用者/2.電腦,1.總共數值/2.目前處理數值/3.目前階段/4.事件卡牌編號/5.事件分類/6.是否啟動)
-Erase 異常狀態_混沌紀錄數 '異常狀態-混沌-骰量紀錄暫時變數(1.紀錄數值(原始)/2.紀錄數值(變更後)/3.數值紀錄是否啟動/4.攻擊防禦模式階段數)
 '===================
 Erase atking_史塔夏_殺戮模式狀態數 '史塔夏殺戮模式狀態檢查數(1.狀態執行階段/2.狀態啟動檢查值/3.紀錄數值(原始)/4.紀錄數值(變更後)/5.數值紀錄是否啟動)
 Erase atking_音音夢_成長模式狀態數 '音音夢成長模式狀態檢查數(1.狀態執行階段/2.狀態啟動檢查值)
@@ -1526,6 +1522,7 @@ Erase atking_貝琳達_水晶幻鏡紀錄狀態數   '技能-貝琳達-水晶幻鏡紀錄對手出牌編號數
 atking_蕾_終曲_無盡輪迴的終結紀錄數 = 0 '技能-蕾-Ex-終曲-無盡輪迴的終結紀錄對手之防禦牌值暫時數
 '================
 Erase 夏洛特_階段處理記錄數 '智慧型AI-夏洛特-戰略判斷紀錄數(1.當前階段實行/2.目標結束之回合數)
+Erase 擲骰表單人物立繪紀錄數 'FormDice人物立繪圖片路徑紀錄(1.使用者方/2.電腦方)
 End Sub
 Sub 清除戰鬥系統開始表單設定值()
 Dim i As Integer, j As Integer

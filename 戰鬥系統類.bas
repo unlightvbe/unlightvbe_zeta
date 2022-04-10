@@ -76,6 +76,8 @@ Public ¤½¥ÎµP¦UµPÃþ«¬¬ö¿ý¼Æ(0 To 31, 1 To 2) As Integer '¦U³õ´º¤½¥ÎµPµPÃþ«¬¬ö¿ý¼
 Public ¥d¤ù¤Hª«¸ê°TÀÉ®×Åª¨ú¥¢±Ñ¬ö¿ý¦ê As String '¥d¤ù¤Hª«¸ê°TÀÉ®×Åª¨ú¥¢±Ñ®ÉÀÉ®×¦W¬ö¿ý¼È®ÉÅÜ¼Æ
 Public atkingckdice(1 To 2, 1 To 2, 1 To 4) As String '¤Hª«§Þ¯à»ë¤l¼vÅT¬ö¿ý¼È®ÉÅÜ¼Æ(1.¨Ï¥ÎªÌ/2.¹q¸£,1.¹ï¨Ï¥ÎªÌ/2.¹ï¹q¸£,1.¥D°Ê§Þ/2.³Q°Ê§Þ/3.²§±`ª¬ºA/4.¤Hª«¹ê»Úª¬ºA,¹ïÁ`»ë¼Æ¤§¼vÅT¶qÅÜ¤Æ¦ê)
 Public Åã¥Ü¦CÂù¤è¼Æ­ÈÂê©w¬ö¿ý¼Æ(1 To 2) As Boolean '¾Ô°«¨t²ÎÅã¥Ü¦CÂù¤è¼Æ­ÈÂê©wªí¥Ü¬ö¿ýÅÜ¼Æ(1.¨Ï¥ÎªÌ¤è/2.¹q¸£¤è)
+Public EventPersonAbilityDiceChangeNum(1 To 2, 1 To 2) As Integer '»ë¶q§ó·sÅã¥Ü-¨¤¦â¯à¤O¹ï»ë¼ÆÅÜ¤Æ¶q±±¨î¼È®ÉÅÜ¼Æ(1.¨Ï¥ÎªÌ¤è/2.¹q¸£¤è,1.ÅÜ¤Æ¶q/2.¬O§_¬°«ü©w)
+Public ÂY»ëªí³æ¤Hª«¥ßÃ¸¬ö¿ý¼Æ(1 To 2) As String 'FormDice¤Hª«¥ßÃ¸¹Ï¤ù¸ô®|¬ö¿ý(1.¨Ï¥ÎªÌ¤è/2.¹q¸£¤è)
 
 Sub ¤Hª«§Þ¯àÄæ¿O¶}Ãö(ByVal k As Boolean, ByVal n As Integer)
 Select Case n
@@ -804,7 +806,7 @@ Select Case stagenum
             FormMainMode.personusminijpg.¤p¤Hª«¼v¤l¹Ï¤ù = app_path & "gif\¥v¶ð®L\¤@¯ë\Staciaminidown1.png"
             FormMainMode.personusminijpg.¤p¤Hª«¼v¤lLeft = 10
             FormMainMode.personusminijpg.¤p¤Hª«¼v¤ltop®t = -50
-            FormDice.jpgus.¤j¤Hª«¹Ï¤ù = app_path & "gif\¥v¶ð®L\¤@¯ë\Staciaperson1.png"
+            ¾Ô°«¨t²ÎÃþ.ÂY»ëªí³æ¤Hª«¥ßÃ¸¬ö¿ý¼Æ(1) = app_path & "gif\¥v¶ð®L\¤@¯ë\Staciaperson1.png"
             FormMainMode.Åã¥Ü¦C1.¨Ï¥ÎªÌ¤è¤p¤Hª«¹Ï¤ù = app_path & "gif\¥v¶ð®L\¤@¯ë\Staciaf1.png"
             atking_¥v¶ð®L_±þ¼®¼Ò¦¡ª¬ºA¼Æ(2) = 0
             atking_¥v¶ð®L_±þ¼®¼Ò¦¡ª¬ºA¼Æ(3) = 0
@@ -818,36 +820,27 @@ Select Case stagenum
             FormMainMode.personusminijpg.¤p¤Hª«¼v¤l¹Ï¤ù = app_path & "gif\¥v¶ð®L\±þ¼®\Staciaminidown1.png"
             FormMainMode.personusminijpg.¤p¤Hª«¼v¤lLeft = -90
             FormMainMode.personusminijpg.¤p¤Hª«¼v¤ltop®t = -60
-            FormDice.jpgus.¤j¤Hª«¹Ï¤ù = app_path & "gif\¥v¶ð®L\±þ¼®\Staciaperson1.png"
+            ¾Ô°«¨t²ÎÃþ.ÂY»ëªí³æ¤Hª«¥ßÃ¸¬ö¿ý¼Æ(1) = app_path & "gif\¥v¶ð®L\±þ¼®\Staciaperson1.png"
             FormMainMode.Åã¥Ü¦C1.¨Ï¥ÎªÌ¤è¤p¤Hª«¹Ï¤ù = app_path & "gif\¥v¶ð®L\±þ¼®\Staciaf1.png"
             ¾Ô°«¨t²ÎÃþ.°õ¦æ°Ê§@_¶ZÂ÷ÅÜ§ó movecp
             FormMainMode.personusminijpg.Visible = True
 End Select
 End Sub
-Sub ¯S®í_¥v¶ð®L_±þ¼®ª¬ºA_¹q¸£()
-Select Case atking_AI_¥v¶ð®L_±þ¼®¼Ò¦¡ª¬ºA¼Æ(1)
-   Case 1
-            If atking_AI_¥v¶ð®L_±þ¼®¼Ò¦¡ª¬ºA¼Æ(5) = 0 Then
-                atking_AI_¥v¶ð®L_±þ¼®¼Ò¦¡ª¬ºA¼Æ(3) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2)
-                atking_AI_¥v¶ð®L_±þ¼®¼Ò¦¡ª¬ºA¼Æ(4) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) * 2
-                atking_AI_¥v¶ð®L_±þ¼®¼Ò¦¡ª¬ºA¼Æ(5) = 1
-                §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) * 2
-            ElseIf atking_AI_¥v¶ð®L_±þ¼®¼Ò¦¡ª¬ºA¼Æ(5) = 1 Then
-                atking_AI_¥v¶ð®L_±þ¼®¼Ò¦¡ª¬ºA¼Æ(3) = atking_AI_¥v¶ð®L_±þ¼®¼Ò¦¡ª¬ºA¼Æ(3) + (§ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) - atking_AI_¥v¶ð®L_±þ¼®¼Ò¦¡ª¬ºA¼Æ(4))
-                §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) = atking_AI_¥v¶ð®L_±þ¼®¼Ò¦¡ª¬ºA¼Æ(3) * 2
-                atking_AI_¥v¶ð®L_±þ¼®¼Ò¦¡ª¬ºA¼Æ(4) = atking_AI_¥v¶ð®L_±þ¼®¼Ò¦¡ª¬ºA¼Æ(3) * 2
-            End If
+Sub ¯S®í_¥v¶ð®L_±þ¼®ª¬ºA_¹q¸£(ByVal stagenum As Integer)
+Select Case stagenum
+    Case 1
+            atkingckdice(2, 2, 4) = atkingckdice(2, 2, 4) & "*" & 2 & "="
     Case 2
-           atking_AI_¥v¶ð®L_±þ¼®¼Ò¦¡ª¬ºA¼Æ(3) = 0
-           atking_AI_¥v¶ð®L_±þ¼®¼Ò¦¡ª¬ºA¼Æ(4) = 0
-           atking_AI_¥v¶ð®L_±þ¼®¼Ò¦¡ª¬ºA¼Æ(5) = 0
+            atking_AI_¥v¶ð®L_±þ¼®¼Ò¦¡ª¬ºA¼Æ(3) = 0
+            atking_AI_¥v¶ð®L_±þ¼®¼Ò¦¡ª¬ºA¼Æ(4) = 0
+            atking_AI_¥v¶ð®L_±þ¼®¼Ò¦¡ª¬ºA¼Æ(5) = 0
     Case 3
             FormMainMode.personcomminijpg.Visible = False
             FormMainMode.personcomminijpg.¤p¤Hª«¹Ï¤ù = app_path & "gif\¥v¶ð®L\¤@¯ë\Staciamini2.png"
             FormMainMode.personcomminijpg.¤p¤Hª«¼v¤l¹Ï¤ù = app_path & "gif\¥v¶ð®L\¤@¯ë\Staciaminidown2.png"
             FormMainMode.personcomminijpg.¤p¤Hª«¼v¤lLeft = 10
             FormMainMode.personcomminijpg.¤p¤Hª«¼v¤ltop®t = -50
-            FormDice.jpgcom.¤j¤Hª«¹Ï¤ù = app_path & "gif\¥v¶ð®L\¤@¯ë\Staciaperson2.png"
+            ¾Ô°«¨t²ÎÃþ.ÂY»ëªí³æ¤Hª«¥ßÃ¸¬ö¿ý¼Æ(2) = app_path & "gif\¥v¶ð®L\¤@¯ë\Staciaperson2.png"
             FormMainMode.Åã¥Ü¦C1.¹q¸£¤è¤p¤Hª«¹Ï¤ù = app_path & "gif\¥v¶ð®L\¤@¯ë\Staciaf2.png"
             atking_AI_¥v¶ð®L_±þ¼®¼Ò¦¡ª¬ºA¼Æ(2) = 0
             atking_AI_¥v¶ð®L_±þ¼®¼Ò¦¡ª¬ºA¼Æ(3) = 0
@@ -861,7 +854,7 @@ Select Case atking_AI_¥v¶ð®L_±þ¼®¼Ò¦¡ª¬ºA¼Æ(1)
             FormMainMode.personcomminijpg.¤p¤Hª«¼v¤l¹Ï¤ù = app_path & "gif\¥v¶ð®L\±þ¼®\Staciaminidown2.png"
             FormMainMode.personcomminijpg.¤p¤Hª«¼v¤lLeft = 90
             FormMainMode.personcomminijpg.¤p¤Hª«¼v¤ltop®t = -60
-            FormDice.jpgcom.¤j¤Hª«¹Ï¤ù = app_path & "gif\¥v¶ð®L\±þ¼®\Staciaperson2.png"
+            ¾Ô°«¨t²ÎÃþ.ÂY»ëªí³æ¤Hª«¥ßÃ¸¬ö¿ý¼Æ(2) = app_path & "gif\¥v¶ð®L\±þ¼®\Staciaperson2.png"
             FormMainMode.Åã¥Ü¦C1.¹q¸£¤è¤p¤Hª«¹Ï¤ù = app_path & "gif\¥v¶ð®L\±þ¼®\Staciaf2.png"
             ¾Ô°«¨t²ÎÃþ.°õ¦æ°Ê§@_¶ZÂ÷ÅÜ§ó movecp
             FormMainMode.personcomminijpg.Visible = True
@@ -871,17 +864,14 @@ End Sub
 Sub ¯S®í_­µ­µ¹Ú_¦¨ªøª¬ºA_¨Ï¥ÎªÌ(ByVal stagenum As Integer)
 Select Case stagenum
     Case 1
-            §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) = 10
-    Case 2
-            §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) = 10
-            ¾Ô°«¨t²ÎÃþ.ª½±µ¼g¤JÅã¥Ü¦C¼Æ­È 1, 10
+            atkingckdice(1, 1, 4) = atkingckdice(1, 1, 4) & "+" & 10 & "="
     Case 3
             FormMainMode.personusminijpg.Visible = False
             FormMainMode.personusminijpg.¤p¤Hª«¹Ï¤ù = app_path & "gif\­µ­µ¹Ú\¤@¯ë\Nenemmini1.png"
             FormMainMode.personusminijpg.¤p¤Hª«¼v¤l¹Ï¤ù = app_path & "gif\­µ­µ¹Ú\¤@¯ë\Nenemminidown1.png"
             FormMainMode.personusminijpg.¤p¤Hª«¼v¤lLeft = 10
             FormMainMode.personusminijpg.¤p¤Hª«¼v¤ltop®t = -20
-            FormDice.jpgus.¤j¤Hª«¹Ï¤ù = app_path & "gif\­µ­µ¹Ú\¤@¯ë\Nenemperson1.png"
+            ¾Ô°«¨t²ÎÃþ.ÂY»ëªí³æ¤Hª«¥ßÃ¸¬ö¿ý¼Æ(1) = app_path & "gif\­µ­µ¹Ú\¤@¯ë\Nenemperson1.png"
             FormMainMode.Åã¥Ü¦C1.¨Ï¥ÎªÌ¤è¤p¤Hª«¹Ï¤ù = app_path & "gif\­µ­µ¹Ú\¤@¯ë\Nenemf1.png"
             atking_­µ­µ¹Ú_¦¨ªø¼Ò¦¡ª¬ºA¼Æ(2) = 0
             ¾Ô°«¨t²ÎÃþ.°õ¦æ°Ê§@_¶ZÂ÷ÅÜ§ó movecp
@@ -892,26 +882,23 @@ Select Case stagenum
             FormMainMode.personusminijpg.¤p¤Hª«¼v¤l¹Ï¤ù = app_path & "gif\­µ­µ¹Ú\¦¨ªø\Nenemminidown1.png"
             FormMainMode.personusminijpg.¤p¤Hª«¼v¤lLeft = 20
             FormMainMode.personusminijpg.¤p¤Hª«¼v¤ltop®t = -90
-            FormDice.jpgus.¤j¤Hª«¹Ï¤ù = app_path & "gif\­µ­µ¹Ú\¦¨ªø\Nenemperson1.png"
+            ¾Ô°«¨t²ÎÃþ.ÂY»ëªí³æ¤Hª«¥ßÃ¸¬ö¿ý¼Æ(1) = app_path & "gif\­µ­µ¹Ú\¦¨ªø\Nenemperson1.png"
             FormMainMode.Åã¥Ü¦C1.¨Ï¥ÎªÌ¤è¤p¤Hª«¹Ï¤ù = app_path & "gif\­µ­µ¹Ú\¦¨ªø\Nenemf1.png"
             ¾Ô°«¨t²ÎÃþ.°õ¦æ°Ê§@_¶ZÂ÷ÅÜ§ó movecp
             FormMainMode.personusminijpg.Visible = True
 End Select
 End Sub
-Sub ¯S®í_­µ­µ¹Ú_¦¨ªøª¬ºA_¹q¸£()
-Select Case atking_AI_­µ­µ¹Ú_¦¨ªø¼Ò¦¡ª¬ºA¼Æ(1)
-   Case 1
-            §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) = 10
-    Case 2
-           §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) = 10
-           ¾Ô°«¨t²ÎÃþ.ª½±µ¼g¤JÅã¥Ü¦C¼Æ­È 2, 10
+Sub ¯S®í_­µ­µ¹Ú_¦¨ªøª¬ºA_¹q¸£(ByVal stagenum As Integer)
+Select Case stagenum
+    Case 1
+            atkingckdice(2, 2, 4) = atkingckdice(2, 2, 4) & "+" & 10 & "="
     Case 3
             FormMainMode.personcomminijpg.Visible = False
             FormMainMode.personcomminijpg.¤p¤Hª«¹Ï¤ù = app_path & "gif\­µ­µ¹Ú\¤@¯ë\Nenemmini2.png"
             FormMainMode.personcomminijpg.¤p¤Hª«¼v¤l¹Ï¤ù = app_path & "gif\­µ­µ¹Ú\¤@¯ë\Nenemminidown2.png"
             FormMainMode.personcomminijpg.¤p¤Hª«¼v¤lLeft = 10
             FormMainMode.personcomminijpg.¤p¤Hª«¼v¤ltop®t = -20
-            FormDice.jpgcom.¤j¤Hª«¹Ï¤ù = app_path & "gif\­µ­µ¹Ú\¤@¯ë\Nenemperson2.png"
+            ¾Ô°«¨t²ÎÃþ.ÂY»ëªí³æ¤Hª«¥ßÃ¸¬ö¿ý¼Æ(2) = app_path & "gif\­µ­µ¹Ú\¤@¯ë\Nenemperson2.png"
             FormMainMode.Åã¥Ü¦C1.¹q¸£¤è¤p¤Hª«¹Ï¤ù = app_path & "gif\­µ­µ¹Ú\¤@¯ë\Nenemf2.png"
             atking_AI_­µ­µ¹Ú_¦¨ªø¼Ò¦¡ª¬ºA¼Æ(2) = 0
             ¾Ô°«¨t²ÎÃþ.°õ¦æ°Ê§@_¶ZÂ÷ÅÜ§ó movecp
@@ -922,8 +909,8 @@ Select Case atking_AI_­µ­µ¹Ú_¦¨ªø¼Ò¦¡ª¬ºA¼Æ(1)
             FormMainMode.personcomminijpg.¤p¤Hª«¼v¤l¹Ï¤ù = app_path & "gif\­µ­µ¹Ú\¦¨ªø\Nenemminidown2.png"
             FormMainMode.personcomminijpg.¤p¤Hª«¼v¤lLeft = 20
             FormMainMode.personcomminijpg.¤p¤Hª«¼v¤ltop®t = -90
-            FormDice.jpgus.¤j¤Hª«¹Ï¤ù = app_path & "gif\­µ­µ¹Ú\¦¨ªø\Nenemperson2.png"
-            FormMainMode.Åã¥Ü¦C1.¨Ï¥ÎªÌ¤è¤p¤Hª«¹Ï¤ù = app_path & "gif\­µ­µ¹Ú\¦¨ªø\Nenemf2.png"
+            ¾Ô°«¨t²ÎÃþ.ÂY»ëªí³æ¤Hª«¥ßÃ¸¬ö¿ý¼Æ(2) = app_path & "gif\­µ­µ¹Ú\¦¨ªø\Nenemperson2.png"
+            FormMainMode.Åã¥Ü¦C1.¹q¸£¤è¤p¤Hª«¹Ï¤ù = app_path & "gif\­µ­µ¹Ú\¦¨ªø\Nenemf2.png"
             ¾Ô°«¨t²ÎÃþ.°õ¦æ°Ê§@_¶ZÂ÷ÅÜ§ó movecp
             FormMainMode.personcomminijpg.Visible = True
 End Select
@@ -935,11 +922,11 @@ Randomize
 m = Int(Rnd() * 3) + 1
 Select Case m
     Case 1
-       FormDice.jpgus.¤j¤Hª«¹Ï¤ù = app_path & "gif\¥¬³Ò\Blauperson1-1.png"
+       ¾Ô°«¨t²ÎÃþ.ÂY»ëªí³æ¤Hª«¥ßÃ¸¬ö¿ý¼Æ(1) = app_path & "gif\¥¬³Ò\Blauperson1-1.png"
     Case 2
-       FormDice.jpgus.¤j¤Hª«¹Ï¤ù = app_path & "gif\¥¬³Ò\Blauperson1-2.png"
+       ¾Ô°«¨t²ÎÃþ.ÂY»ëªí³æ¤Hª«¥ßÃ¸¬ö¿ý¼Æ(1) = app_path & "gif\¥¬³Ò\Blauperson1-2.png"
     Case 3
-       FormDice.jpgus.¤j¤Hª«¹Ï¤ù = app_path & "gif\¥¬³Ò\Blauperson1-3.png"
+       ¾Ô°«¨t²ÎÃþ.ÂY»ëªí³æ¤Hª«¥ßÃ¸¬ö¿ý¼Æ(1) = app_path & "gif\¥¬³Ò\Blauperson1-3.png"
 End Select
 End Sub
 Sub ¯S®í_¥¬³Ò_¤@¯ë¥ßÃ¸§ó´«_¹q¸£()
@@ -948,11 +935,11 @@ Randomize
 m = Int(Rnd() * 3) + 1
 Select Case m
     Case 1
-       FormDice.jpgcom.¤j¤Hª«¹Ï¤ù = app_path & "gif\¥¬³Ò\Blauperson2-1.png"
+       ¾Ô°«¨t²ÎÃþ.ÂY»ëªí³æ¤Hª«¥ßÃ¸¬ö¿ý¼Æ(2) = app_path & "gif\¥¬³Ò\Blauperson2-1.png"
     Case 2
-       FormDice.jpgcom.¤j¤Hª«¹Ï¤ù = app_path & "gif\¥¬³Ò\Blauperson2-2.png"
+       ¾Ô°«¨t²ÎÃþ.ÂY»ëªí³æ¤Hª«¥ßÃ¸¬ö¿ý¼Æ(2) = app_path & "gif\¥¬³Ò\Blauperson2-2.png"
     Case 3
-       FormDice.jpgcom.¤j¤Hª«¹Ï¤ù = app_path & "gif\¥¬³Ò\Blauperson2-3.png"
+       ¾Ô°«¨t²ÎÃþ.ÂY»ëªí³æ¤Hª«¥ßÃ¸¬ö¿ý¼Æ(2) = app_path & "gif\¥¬³Ò\Blauperson2-3.png"
 End Select
 End Sub
 Function ¯S®í_¤×²ú¥d_ÀË¬d¶W¸ü¬O§_±Ò°Ê_¨Ï¥ÎªÌ() As Boolean
@@ -1102,9 +1089,11 @@ Sub ª½±µ¼g¤JÅã¥Ü¦C¼Æ­È(ByVal n As Integer, ByVal num As Integer)
 If num < 0 Then num = 0
 Select Case n
     Case 1
-        FormMainMode.Åã¥Ü¦C1.goi1 = num
+        §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) = num
+        FormMainMode.trgoi1_Timer
     Case 2
-        FormMainMode.Åã¥Ü¦C1.goi2 = num
+        §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) = num
+        FormMainMode.trgoi2_Timer
 End Select
 End Sub
 Sub ¤p¤Hª«ÀY¹³°õ¦æ§¹§PÂ__¨Ï¥ÎªÌ()
@@ -1463,35 +1452,44 @@ Else
 End Sub
 Sub ¹q¸£µP_¼ÒÀÀ«öµP(ByVal Index As Integer)
 If pagecardnum(Index, 6) = 1 And pagecardnum(Index, 5) = 2 Then
-   pagecardnum(Index, 6) = 2
-   If pagecardnum(Index, 1) = a1a Then
-      atkingpagetot(2, 1) = Val(atkingpagetot(2, 1)) + Val(pagecardnum(Index, 2))
-      If turnatk = 2 And movecp = 1 Then
+    pagecardnum(Index, 6) = 2
+    If pagecardnum(Index, 1) = a1a Then
+       atkingpagetot(2, 1) = Val(atkingpagetot(2, 1)) + Val(pagecardnum(Index, 2))
+       If turnatk = 2 And movecp = 1 And §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) = 0 Then
+           §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) + atkcom(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(2, 2))
+       End If
+       If turnatk = 2 And movecp = 1 Then
+           §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) + Val(pagecardnum(Index, 2))
+           §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) + Val(pagecardnum(Index, 2))
+       End If
+    End If
+    If pagecardnum(Index, 1) = a5a Then
+       atkingpagetot(2, 5) = Val(atkingpagetot(2, 5)) + Val(pagecardnum(Index, 2))
+       If turnatk = 2 And movecp > 1 And §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) = 0 Then
+           §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) + atkcom(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(2, 2))
+       End If
+       If turnatk = 2 And movecp > 1 Then
+           §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) + Val(pagecardnum(Index, 2))
+           §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) + Val(pagecardnum(Index, 2))
+       End If
+    End If
+    If pagecardnum(Index, 1) = a2a Then
+       atkingpagetot(2, 2) = Val(atkingpagetot(2, 2)) + Val(pagecardnum(Index, 2))
+       If turnatk = 1 And §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) = 0 Then
+           §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) + defcom(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(2, 2))
+       End If
+       If turnatk = 1 Then
           §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) + Val(pagecardnum(Index, 2))
           §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) + Val(pagecardnum(Index, 2))
-      End If
-   End If
-   If pagecardnum(Index, 1) = a5a Then
-      atkingpagetot(2, 5) = Val(atkingpagetot(2, 5)) + Val(pagecardnum(Index, 2))
-      If turnatk = 2 And movecp > 1 Then
-          §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) + Val(pagecardnum(Index, 2))
-          §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) + Val(pagecardnum(Index, 2))
-      End If
-   End If
-   If pagecardnum(Index, 1) = a2a Then
-      atkingpagetot(2, 2) = Val(atkingpagetot(2, 2)) + Val(pagecardnum(Index, 2))
-      If turnatk = 1 Then
-         §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) + Val(pagecardnum(Index, 2))
-         §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) + Val(pagecardnum(Index, 2))
-      End If
-   End If
-   If pagecardnum(Index, 1) = a3a Then
-      atkingpagetot(2, 3) = Val(atkingpagetot(2, 3)) + Val(pagecardnum(Index, 2))
-   End If
-   If pagecardnum(Index, 1) = a4a Then
-      atkingpagetot(2, 4) = Val(atkingpagetot(2, 4)) + Val(pagecardnum(Index, 2))
-   End If
-   '===================
+       End If
+    End If
+    If pagecardnum(Index, 1) = a3a Then
+       atkingpagetot(2, 3) = Val(atkingpagetot(2, 3)) + Val(pagecardnum(Index, 2))
+    End If
+    If pagecardnum(Index, 1) = a4a Then
+       atkingpagetot(2, 4) = Val(atkingpagetot(2, 4)) + Val(pagecardnum(Index, 2))
+    End If
+    '===================
     ¥Ø«e¼Æ(9) = pagecardnum(Index, 7)
     pagecardnum(Index, 7) = Val(pagecomleadmax(1)) + 1
     pagecomleadmax(1) = Val(pagecomleadmax(1)) + 1
@@ -1514,64 +1512,72 @@ If pagecardnum(Index, 6) = 1 And pagecardnum(Index, 5) = 2 Then
     FormMainMode.wmpse1.Controls.stop
     FormMainMode.wmpse1.Controls.play
     ¤@¯ë¨t²ÎÃþ.ÀË¬d­µ¼Ö¼½©ñ 1
-   '================¥H¤U¬O¤âµP¹ï»ô
-   ¥Ø«e¼Æ(8) = 0
-   ¥Ø«e¼Æ(17) = 1
-   '===================¥H¤U¬O¨Æ¥ó¥dÀË¬d¤Î±Ò°Ê
-   If pagecardnum(Index, 1) = a6a Then
-       ¨Æ¥ó¥d°O¿ý¼È®É¼Æ(2, 3) = 1
-       ¨Æ¥ó¥d.¾÷·|_¹q¸£ Index, pagecardnum(Index, 2)
-   End If
-   If turnatk = 1 Or turnatk = 2 Then
-        If pagecardnum(Index, 1) = a7a Then
-            ¨Æ¥ó¥d°O¿ý¼È®É¼Æ(2, 3) = 1
-            ¨Æ¥ó¥d.¶A©G³N_¹q¸£ Index, pagecardnum(Index, 2)
-        End If
-   End If
-   If pagecardnum(Index, 1) = a8a Then
-       ¨Æ¥ó¥d°O¿ý¼È®É¼Æ(2, 3) = 1
-       ¨Æ¥ó¥d.HP¦^´__¹q¸£ Index, pagecardnum(Index, 2)
-   End If
-   If pagecardnum(Index, 1) = a9a Then
-       ¨Æ¥ó¥d°O¿ý¼È®É¼Æ(2, 3) = 1
-       ¨Æ¥ó¥d.¸t¤ô_¹q¸£ Index, pagecardnum(Index, 2)
-   End If
-   '===================
+    '================¥H¤U¬O¤âµP¹ï»ô
+    ¥Ø«e¼Æ(8) = 0
+    ¥Ø«e¼Æ(17) = 1
+    '===================¥H¤U¬O¨Æ¥ó¥dÀË¬d¤Î±Ò°Ê
+    If pagecardnum(Index, 1) = a6a Then
+        ¨Æ¥ó¥d°O¿ý¼È®É¼Æ(2, 3) = 1
+        ¨Æ¥ó¥d.¾÷·|_¹q¸£ Index, pagecardnum(Index, 2)
+    End If
+    If turnatk = 1 Or turnatk = 2 Then
+         If pagecardnum(Index, 1) = a7a Then
+             ¨Æ¥ó¥d°O¿ý¼È®É¼Æ(2, 3) = 1
+             ¨Æ¥ó¥d.¶A©G³N_¹q¸£ Index, pagecardnum(Index, 2)
+         End If
+    End If
+    If pagecardnum(Index, 1) = a8a Then
+        ¨Æ¥ó¥d°O¿ý¼È®É¼Æ(2, 3) = 1
+        ¨Æ¥ó¥d.HP¦^´__¹q¸£ Index, pagecardnum(Index, 2)
+    End If
+    If pagecardnum(Index, 1) = a9a Then
+        ¨Æ¥ó¥d°O¿ý¼È®É¼Æ(2, 3) = 1
+        ¨Æ¥ó¥d.¸t¤ô_¹q¸£ Index, pagecardnum(Index, 2)
+    End If
+    '===================
+    Call FormMainMode.pagecomqleadChange
+    ¾Ô°«¨t²ÎÃþ.»ë¶q§ó·sÅã¥Ü
 End If
 
 End Sub
 Sub ¹q¸£µP_¼ÒÀÀ«öµP_¥~(ByVal Index As Integer)
 If pagecardnum(Index, 6) = 2 And pagecardnum(Index, 5) = 2 Then
-   pagecardnum(Index, 6) = 1
-   If pagecardnum(Index, 1) = a1a Then
-      atkingpagetot(2, 1) = Val(atkingpagetot(2, 1)) - Val(pagecardnum(Index, 2))
-      If turnatk = 2 And movecp = 1 Then
+    pagecardnum(Index, 6) = 1
+    If pagecardnum(Index, 1) = a1a Then
+       atkingpagetot(2, 1) = Val(atkingpagetot(2, 1)) - Val(pagecardnum(Index, 2))
+       If turnatk = 2 And movecp = 1 Then
+           §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) - Val(pagecardnum(Index, 2))
+           §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) - Val(pagecardnum(Index, 2))
+       End If
+       If §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) = atkcom(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(2, 2)) Then
+           §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) = 0
+       End If
+    End If
+    If pagecardnum(Index, 1) = a5a Then
+       atkingpagetot(2, 5) = Val(atkingpagetot(2, 5)) - Val(pagecardnum(Index, 2))
+       If turnatk = 2 And movecp > 1 Then
+           §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) - Val(pagecardnum(Index, 2))
+           §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) - Val(pagecardnum(Index, 2))
+       End If
+       If §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) = atkcom(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(2, 2)) Then
+           §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) = 0
+       End If
+    End If
+    If pagecardnum(Index, 1) = a2a Then
+       atkingpagetot(2, 2) = Val(atkingpagetot(2, 2)) - Val(pagecardnum(Index, 2))
+       If turnatk = 1 Then
           §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) - Val(pagecardnum(Index, 2))
           §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) - Val(pagecardnum(Index, 2))
-      End If
-   End If
-   If pagecardnum(Index, 1) = a5a Then
-      atkingpagetot(2, 5) = Val(atkingpagetot(2, 5)) - Val(pagecardnum(Index, 2))
-      If turnatk = 2 And movecp > 1 Then
-          §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) - Val(pagecardnum(Index, 2))
-          §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) - Val(pagecardnum(Index, 2))
-      End If
-   End If
-   If pagecardnum(Index, 1) = a2a Then
-      atkingpagetot(2, 2) = Val(atkingpagetot(2, 2)) - Val(pagecardnum(Index, 2))
-      If turnatk = 1 Then
-         §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) - Val(pagecardnum(Index, 2))
-         §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) - Val(pagecardnum(Index, 2))
-      End If
-   End If
-   If pagecardnum(Index, 1) = a3a Then
-      atkingpagetot(2, 3) = Val(atkingpagetot(2, 3)) - Val(pagecardnum(Index, 2))
-   End If
-   If pagecardnum(Index, 1) = a4a Then
-      atkingpagetot(2, 4) = Val(atkingpagetot(2, 4)) - Val(pagecardnum(Index, 2))
-   End If
-   '================
-   ¥Ø«e¼Æ(9) = pagecardnum(Index, 7)
+       End If
+    End If
+    If pagecardnum(Index, 1) = a3a Then
+       atkingpagetot(2, 3) = Val(atkingpagetot(2, 3)) - Val(pagecardnum(Index, 2))
+    End If
+    If pagecardnum(Index, 1) = a4a Then
+       atkingpagetot(2, 4) = Val(atkingpagetot(2, 4)) - Val(pagecardnum(Index, 2))
+    End If
+    '================
+    ¥Ø«e¼Æ(9) = pagecardnum(Index, 7)
     pagecardnum(Index, 7) = Val(pagecomleadmax(0)) + 1
     pagecomleadmax(0) = Val(pagecomleadmax(0)) + 1
     pageqlead(2) = Val(pageqlead(2)) - 1
@@ -1591,14 +1597,16 @@ If pagecardnum(Index, 6) = 2 And pagecardnum(Index, 5) = 2 Then
     FormMainMode.wmpse1.Controls.play
     ¤@¯ë¨t²ÎÃþ.ÀË¬d­µ¼Ö¼½©ñ 1
    '================¥H¤U¬O¥XµP¹ï»ô
-   ¥Ø«e¼Æ(7) = 0
-   ¾Ô°«¨t²ÎÃþ.¥XµP¶¶§Ç­pºâ_¹q¸£_¥XµP
-   FormMainMode.¹q¸£¥XµP_¥XµP¹ï»ô_¾a¥k.Enabled = True
-   '=====================¥H¤U¬O§Þ¯àÀË¬d¤Î±Ò°Ê(§J¹y-ÅÑ¨ú¸ê®Æ)
-   If turnatk = 2 And atkingck(157, 2) = 1 And atkingck(157, 1) = 5 Then
-        §Þ¯à.§J¹y_ÅÑ¨ú¸ê®Æ '(¶¥¬q5)
-   End If
+    ¥Ø«e¼Æ(7) = 0
+    ¾Ô°«¨t²ÎÃþ.¥XµP¶¶§Ç­pºâ_¹q¸£_¥XµP
+    FormMainMode.¹q¸£¥XµP_¥XµP¹ï»ô_¾a¥k.Enabled = True
+    '=====================¥H¤U¬O§Þ¯àÀË¬d¤Î±Ò°Ê(§J¹y-ÅÑ¨ú¸ê®Æ)
+    If turnatk = 2 And atkingck(157, 2) = 1 And atkingck(157, 1) = 5 Then
+         §Þ¯à.§J¹y_ÅÑ¨ú¸ê®Æ '(¶¥¬q5)
+    End If
     '====================
+    Call FormMainMode.pagecomqleadChange
+    ¾Ô°«¨t²ÎÃþ.»ë¶q§ó·sÅã¥Ü
 End If
 End Sub
 Sub ¹q¸£µP_¼ÒÀÀÂàµP_¥~(ByVal Index As Integer)
@@ -1619,10 +1627,12 @@ Else
    pageonin(Index) = 1
    FormMainMode.card(Index).Picture = LoadPicture(app_path & "card\" & pagecardnum(Index, 8) & "-" & pageonin(Index) & ".bmp")
 End If
-'goickus = 0
 
    If pagecardnum(Index, 1) = a1a Then
       atkingpagetot(2, 1) = Val(atkingpagetot(2, 1)) + pagecardnum(Index, 2)
+      If turnatk = 2 And movecp = 1 And §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) = 0 Then
+          §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) + atkcom(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(2, 2))
+      End If
       If turnatk = 2 And movecp = 1 Then
           §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) + Val(pagecardnum(Index, 2))
           §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) + Val(pagecardnum(Index, 2))
@@ -1630,6 +1640,9 @@ End If
    End If
    If pagecardnum(Index, 1) = a5a Then
       atkingpagetot(2, 5) = Val(atkingpagetot(2, 5)) + pagecardnum(Index, 2)
+      If turnatk = 2 And movecp > 1 And §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) = 0 Then
+          §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) + atkcom(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(2, 2))
+      End If
       If turnatk = 2 And movecp > 1 Then
           §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) + Val(pagecardnum(Index, 2))
           §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) + Val(pagecardnum(Index, 2))
@@ -1637,6 +1650,9 @@ End If
    End If
    If pagecardnum(Index, 1) = a2a Then
       atkingpagetot(2, 2) = Val(atkingpagetot(2, 2)) + pagecardnum(Index, 2)
+      If turnatk = 1 And §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) = 0 Then
+          §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) + defcom(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(2, 2))
+      End If
       If turnatk = 1 Then
          §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) + Val(pagecardnum(Index, 2))
          §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) + Val(pagecardnum(Index, 2))
@@ -1655,12 +1671,18 @@ End If
           §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) - Val(pagecardnum(Index, 4))
           §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) - Val(pagecardnum(Index, 4))
       End If
+      If §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) = atkcom(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(2, 2)) Then
+          §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) = 0
+      End If
    End If
    If pagecardnum(Index, 3) = a5a Then
       atkingpagetot(2, 5) = Val(atkingpagetot(2, 5)) - pagecardnum(Index, 4)
       If turnatk = 2 And movecp > 1 Then
           §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) - Val(pagecardnum(Index, 4))
           §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) - Val(pagecardnum(Index, 4))
+      End If
+      If §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) = atkcom(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(2, 2)) Then
+          §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) = 0
       End If
    End If
    If pagecardnum(Index, 3) = a2a Then
@@ -1679,7 +1701,9 @@ End If
     '=================
     atkingckai(1, 1) = 1
     atkingckai(111, 1) = 1
-    Call FormMainMode.pagecomqlead_Change
+    Call FormMainMode.pagecomqleadChange
+    '=================
+    ¾Ô°«¨t²ÎÃþ.»ë¶q§ó·sÅã¥Ü
 End Sub
 Sub »ë¼Æ¹s°õ¦æ§PÂ_()
 FormDice.outprocess
@@ -1816,9 +1840,6 @@ If goicheck(2) = 0 Then
     §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) + atkcom(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(2, 2))
     goicheck(2) = 1
   End If
-  If goicheck(2) = 1 Then
-'     ¾Ô°«¨t²ÎÃþ.²§±`ª¬ºA»ë¼Æ¼W¥[ÀË¬d_ATK 2
-  End If
 End If
 End Sub
 Sub chkdef()
@@ -1827,8 +1848,6 @@ If goidefus = 0 Then
  §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(3) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(3) + defus(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2))
  FormMainMode.Åã¥Ü¦C1.goi1 = Val(FormMainMode.Åã¥Ü¦C1.goi1) + defus(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2))
  goidefus = 1
- '==============
- ¾Ô°«¨t²ÎÃþ.²§±`ª¬ºA»ë¼Æ¼W¥[ÀË¬d_DEF 1
 End If
 End Sub
 Sub chkdefcom()
@@ -1837,8 +1856,6 @@ If chkcomck = 0 Then
  §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4) + defcom(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(2, 2))
  FormMainMode.Åã¥Ü¦C1.goi2 = Val(FormMainMode.Åã¥Ü¦C1.goi2) + defcom(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(2, 2))
  chkcomck = 1
- '==============
- ¾Ô°«¨t²ÎÃþ.²§±`ª¬ºA»ë¼Æ¼W¥[ÀË¬d_DEF 2
 End If
 End Sub
 Sub chkus1()
@@ -1847,7 +1864,6 @@ If goicheck(1) = 0 Then
    §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) + atkus(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2))
    §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(3) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(3) + atkus(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2))
    goicheck(1) = 1
-'   ¾Ô°«¨t²ÎÃþ.²§±`ª¬ºA»ë¼Æ¼W¥[ÀË¬d_ATK 1
   End If
 End If
 End Sub
@@ -1857,7 +1873,6 @@ If goicheck(1) = 0 Then
    §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) + atkus(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2))
    §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(3) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(3) + atkus(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2))
    goicheck(1) = 1
-'   ¾Ô°«¨t²ÎÃþ.²§±`ª¬ºA»ë¼Æ¼W¥[ÀË¬d_ATK 1
   End If
 End If
 End Sub
@@ -2058,7 +2073,7 @@ FormMainMode.personusminijpg.¤p¤Hª«¼v¤l¹Ï¤ù = VBEPerson(1, ¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2
 FormMainMode.Åã¥Ü¦C1.¨Ï¥ÎªÌ¤è¤p¤Hª«¹Ï¤ù = VBEPerson(1, ¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2), 1, 5, 4)
 FormMainMode.personusminijpg.¤p¤Hª«¼v¤lLeft = Val(VBEPerson(1, ¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2), 2, 1, 5))
 FormMainMode.personusminijpg.¤p¤Hª«¼v¤ltop®t = Val(VBEPerson(1, ¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2), 2, 1, 6))
-FormDice.jpgus.¤j¤Hª«¹Ï¤ù = VBEPerson(1, ¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2), 1, 5, 3)
+¾Ô°«¨t²ÎÃþ.ÂY»ëªí³æ¤Hª«¥ßÃ¸¬ö¿ý¼Æ(1) = VBEPerson(1, ¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2), 1, 5, 3)
 FormMainMode.Åã¥Ü¦C1.¨Ï¥ÎªÌ¤è¤p¤Hª«¹Ï¤ùleft = -(FormMainMode.Åã¥Ü¦C1.¨Ï¥ÎªÌ¤è¤p¤Hª«¹Ï¤ùwidth)
 FormMainMode.personusminijpg.Visible = True
 '--------------------------­pºâ·s¶ZÂ÷³æ¦ì(HP¦å±ø)
@@ -2086,8 +2101,7 @@ Next
 '=============================
 If FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)).Caption = "¤×²ú¥d" And atking_¤×²ú¥d_¶W¸ü¥Ø«e¶¥¬q¬ö¿ý¼Æ(3) > 0 Then
     atkingck(49, 2) = 1
-    atkingck(49, 1) = 7
-    §Þ¯à.¤×²ú¥d_¶W¸ü  '(¶¥¬q7)
+    §Þ¯à.¤×²ú¥d_¶W¸ü 7 '(¶¥¬q7)
 End If
 '==========
 End Sub
@@ -2122,7 +2136,7 @@ FormMainMode.Åã¥Ü¦C1.¹q¸£¤è¤p¤Hª«¹Ï¤ù = VBEPerson(2, ¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(2, 2), 1, 
 FormMainMode.personcomminijpg.¤p¤Hª«¼v¤lLeft = VBEPerson(2, ¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(2, 2), 2, 1, 5)
 FormMainMode.personcomminijpg.¤p¤Hª«¼v¤ltop®t = VBEPerson(2, ¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(2, 2), 2, 1, 6)
 FormMainMode.cardcom(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(2, 2)).Picture = LoadPicture(VBEPerson(2, ¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(2, 2), 1, 5, 5))
-FormDice.jpgcom.¤j¤Hª«¹Ï¤ù = VBEPerson(2, ¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(2, 2), 1, 5, 3)
+¾Ô°«¨t²ÎÃþ.ÂY»ëªí³æ¤Hª«¥ßÃ¸¬ö¿ý¼Æ(2) = VBEPerson(2, ¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(2, 2), 1, 5, 3)
 FormMainMode.Åã¥Ü¦C1.¹q¸£¤è¤p¤Hª«¹Ï¤ùleft = FormMainMode.ScaleWidth
 FormMainMode.personcomminijpg.Left = personminixy(2, ¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(2, 2), movecp, 1)
 FormMainMode.personcomminijpg.Top = personminixy(2, ¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(2, 2), movecp, 2)
@@ -2146,8 +2160,7 @@ FormMainMode.bloodnumcom2.Caption = livecommax(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(2, 2))
 '=============================
 If FormMainMode.compi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(2, 2)).Caption = "¤×²ú¥d" And atking_AI_¤×²ú¥d_¶W¸ü¥Ø«e¶¥¬q¬ö¿ý¼Æ(3) > 0 Then
     atkingckai(139, 2) = 1
-    atkingckai(139, 1) = 7
-    AI§Þ¯à.¤×²ú¥d_¶W¸ü  '(¶¥¬q7)
+    AI§Þ¯à.¤×²ú¥d_¶W¸ü 7 '(¶¥¬q7)
 End If
 '==========
 End Sub
@@ -5130,6 +5143,9 @@ Select Case uscom
     ²§±`ª¬ºAÀË¬d¼Æ(39, 1) = 1
     ²§±`ª¬ºA.Á{¬É_¨Ï¥ÎªÌ  '(¶¥¬q1)
     '==============
+    ²§±`ª¬ºAÀË¬d¼Æ(31, 1) = 1
+    ²§±`ª¬ºA.²V¨P_¨Ï¥ÎªÌ '(¶¥¬q1)
+    '==============
  Case 2
     '=========¥H¤U¬O§Þ¯àÀË¬d¤Îµo°Ê
     ²§±`ª¬ºAÀË¬d¼Æ(1, 1) = 1
@@ -5146,6 +5162,9 @@ Select Case uscom
     '=======
     ²§±`ª¬ºAÀË¬d¼Æ(40, 1) = 1
     ²§±`ª¬ºA.Á{¬É_¹q¸£ '(¶¥¬q1)
+    '==============
+    ²§±`ª¬ºAÀË¬d¼Æ(32, 1) = 1
+    ²§±`ª¬ºA.²V¨P_¹q¸£ '(¶¥¬q1)
     '==============
 End Select
 
@@ -5169,6 +5188,9 @@ Select Case uscom
     ²§±`ª¬ºAÀË¬d¼Æ(39, 1) = 1
     ²§±`ª¬ºA.Á{¬É_¨Ï¥ÎªÌ '(¶¥¬q1)
     '==============
+    ²§±`ª¬ºAÀË¬d¼Æ(31, 1) = 1
+    ²§±`ª¬ºA.²V¨P_¨Ï¥ÎªÌ '(¶¥¬q1)
+    '==============
  Case 2
     '=========¥H¤U¬O§Þ¯àÀË¬d¤Îµo°Ê
     ²§±`ª¬ºAÀË¬d¼Æ(2, 1) = 1
@@ -5177,14 +5199,17 @@ Select Case uscom
     ²§±`ª¬ºAÀË¬d¼Æ(5, 1) = 1
     ²§±`ª¬ºA.DEF´î_¹q¸£ '(¶¥¬q1)
     '==============
-    ²§±`ª¬ºAÀË¬d¼Æ(26, 1) = 2
-    ²§±`ª¬ºA.¸t²ª_¹q¸£ '(¶¥¬q2)
+    ²§±`ª¬ºAÀË¬d¼Æ(26, 1) = 1
+    ²§±`ª¬ºA.¸t²ª_¹q¸£ '(¶¥¬q1)
     '==============
     ²§±`ª¬ºAÀË¬d¼Æ(25, 1) = 1
     ²§±`ª¬ºA.¯à¤O§C¤U_¹q¸£ '(¶¥¬q1)
     '==============
     ²§±`ª¬ºAÀË¬d¼Æ(40, 1) = 1
     ²§±`ª¬ºA.Á{¬É_¹q¸£ '(¶¥¬q1)
+    '==============
+    ²§±`ª¬ºAÀË¬d¼Æ(32, 1) = 1
+    ²§±`ª¬ºA.²V¨P_¹q¸£ '(¶¥¬q1)
     '==============
 End Select
 End Sub
@@ -5193,6 +5218,7 @@ Sub »ë¶q§ó·sÅã¥Ü()
 §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) = 0
 Erase Åã¥Ü¦CÂù¤è¼Æ­ÈÂê©w¬ö¿ý¼Æ
 Erase atkingckdice
+Erase EventPersonAbilityDiceChangeNum
 Dim uscom As Integer
 
 '(¶¥¬q45)
@@ -5247,6 +5273,7 @@ Select Case turnatk
     If atkingck(1, 2) = 1 Then §Þ¯à.³·²ú_¦Û±þ¶É¦V 45
     If atkingck(42, 2) = 1 Then §Þ¯à.³·²ú_VBE_¦Û±þ¶É¦V 45
     If atkingck(69, 2) = 1 Then §Þ¯à.­µ­µ¹Ú_´r§Ö©â¦å 45
+    If atkingck(49, 2) = 1 Then §Þ¯à.¤×²ú¥d_¶W¸ü 45
     '==================================
     If atkingckai(28, 2) = 1 Then AI§Þ¯à.­µ­µ¹Ú_·Å¬Xª`®g 45
     If atkingckai(42, 2) = 1 Then AI§Þ¯à.º¿®æ²ú¯S_«é±« 45
@@ -5269,11 +5296,14 @@ Select Case turnatk
     If atkingckai(129, 2) = 1 Then AI§Þ¯à.Ã¹²ïµY_EX_¶ÂÃú¤Û¼v 45
     If atkingckai(137, 2) = 1 Then AI§Þ¯à.¤×²ú¥d_¤£µ½ªº«H¥õ 45
     If atkingckai(138, 2) = 1 Then AI§Þ¯à.¤×²ú¥d_¦±´cªº¦w¹ç 45
+    If atkingckai(139, 2) = 1 Then AI§Þ¯à.¤×²ú¥d_¶W¸ü 45
+    If atkingckai(44, 2) = 1 Then AI§Þ¯à.®w°Ç¥§¦è_¨Fºz¤¤ªº®ü¥«¸Â¼Ó 45
     '==================================
     ¾Ô°«¨t²ÎÃþ.²§±`ª¬ºA»ë¼Æ¼W¥[ÀË¬d_ATK 1
     ¾Ô°«¨t²ÎÃþ.²§±`ª¬ºA»ë¼Æ¼W¥[ÀË¬d_DEF 2
     '==================================
-    If atking_¥v¶ð®L_±þ¼®¼Ò¦¡ª¬ºA¼Æ(2) = 1 Then ¾Ô°«¨t²ÎÃþ.¯S®í_¥v¶ð®L_±þ¼®ª¬ºA_¨Ï¥ÎªÌ 1 '(¶¥¬q1)
+    If FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)).Caption = "¥v¶ð®L" And atking_¥v¶ð®L_±þ¼®¼Ò¦¡ª¬ºA¼Æ(2) = 1 Then ¾Ô°«¨t²ÎÃþ.¯S®í_¥v¶ð®L_±þ¼®ª¬ºA_¨Ï¥ÎªÌ 1 '(¶¥¬q1)
+    If FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)).Caption = "­µ­µ¹Ú" And atking_­µ­µ¹Ú_¦¨ªø¼Ò¦¡ª¬ºA¼Æ(2) = 1 Then ¾Ô°«¨t²ÎÃþ.¯S®í_­µ­µ¹Ú_¦¨ªøª¬ºA_¨Ï¥ÎªÌ 1 '(¶¥¬q1)
  Case 2
     If atkingck(26, 2) = 1 Then §Þ¯à.¦ã¯ô_¤E­ÓÆF»î 45
     If atkingck(36, 2) = 1 Then §Þ¯à.CC_­ì¤l¤§¤ß 45
@@ -5296,6 +5326,8 @@ Select Case turnatk
     If atkingck(111, 2) = 1 Then §Þ¯à.¨©µY¹F_¤ô´¹¤ÛÃè 45
     If atkingck(47, 2) = 1 Then §Þ¯à.¤×²ú¥d_¤£µ½ªº«H¥õ 45
     If atkingck(48, 2) = 1 Then §Þ¯à.¤×²ú¥d_¦±´cªº¦w¹ç 45
+    If atkingck(49, 2) = 1 Then §Þ¯à.¤×²ú¥d_¶W¸ü 45
+    If atkingck(128, 2) = 1 Then §Þ¯à.®w°Ç¥§¦è_¨Fºz¤¤ªº®ü¥«¸Â¼Ó 45
     '==============================
     If atkingckai(5, 2) = 1 Then AI§Þ¯à.³·²ú_­¸¤b«B 45
     If atkingckai(11, 2) = 1 Then AI§Þ¯à.Á¢_²×¦±_µLºÉ½ü°jªº²×µ² 45
@@ -5345,9 +5377,13 @@ Select Case turnatk
     If atkingckai(140, 2) = 1 Then AI§Þ¯à.Ã¹²ïµY_EX_¬V¦å¤§¤b 45
     If atkingckai(1, 2) = 1 Then AI§Þ¯à.³·²ú_¦Û±þ¶É¦V 45
     If atkingckai(111, 2) = 1 Then AI§Þ¯à.­µ­µ¹Ú_´r§Ö©â¦å 45
+    If atkingckai(139, 2) = 1 Then AI§Þ¯à.¤×²ú¥d_¶W¸ü 45
     '==================================
     ¾Ô°«¨t²ÎÃþ.²§±`ª¬ºA»ë¼Æ¼W¥[ÀË¬d_ATK 2
     ¾Ô°«¨t²ÎÃþ.²§±`ª¬ºA»ë¼Æ¼W¥[ÀË¬d_DEF 1
+    '==================================
+    If FormMainMode.compi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(2, 2)).Caption = "¥v¶ð®L" And atking_AI_¥v¶ð®L_±þ¼®¼Ò¦¡ª¬ºA¼Æ(2) = 1 Then ¾Ô°«¨t²ÎÃþ.¯S®í_¥v¶ð®L_±þ¼®ª¬ºA_¹q¸£ 1 '(¶¥¬q1)
+    If FormMainMode.compi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(2, 2)).Caption = "­µ­µ¹Ú" And atking_AI_­µ­µ¹Ú_¦¨ªø¼Ò¦¡ª¬ºA¼Æ(2) = 1 Then ¾Ô°«¨t²ÎÃþ.¯S®í_­µ­µ¹Ú_¦¨ªøª¬ºA_¹q¸£ 1 '(¶¥¬q1)
 End Select
 
 For uscom = 1 To 2
@@ -5355,14 +5391,23 @@ For uscom = 1 To 2
         Case 1
             If turnatk = 1 Then
                 If atkingpagetot(1, 1) > 0 And movecp = 1 Then
-                    §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) + atkus(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2))
+                    If EventPersonAbilityDiceChangeNum(1, 2) = 0 Then
+                        §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) + atkus(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2))
+                    End If
+                    §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) + EventPersonAbilityDiceChangeNum(1, 1)
                     §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) + atkingpagetot(1, 1)
                 ElseIf atkingpagetot(1, 5) > 0 And movecp > 1 Then
-                    §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) + atkus(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2))
+                    If EventPersonAbilityDiceChangeNum(1, 2) = 0 Then
+                        §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) + atkus(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2))
+                    End If
+                    §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) + EventPersonAbilityDiceChangeNum(1, 1)
                     §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) + atkingpagetot(1, 5)
                 End If
             ElseIf turnatk = 2 Then
-                §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) + defus(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2))
+                If EventPersonAbilityDiceChangeNum(1, 2) = 0 Then
+                    §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) + defus(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2))
+                End If
+                §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) + EventPersonAbilityDiceChangeNum(1, 1)
                 §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) + atkingpagetot(1, 2)
             End If
             '=======¥D°Ê§Þ
@@ -5386,14 +5431,23 @@ For uscom = 1 To 2
         Case 2
             If turnatk = 2 Then
                 If atkingpagetot(2, 1) > 0 And movecp = 1 Then
-                    §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) + atkcom(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(2, 2))
+                    If EventPersonAbilityDiceChangeNum(2, 2) = 0 Then
+                        §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) + atkcom(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(2, 2))
+                    End If
+                    §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) + EventPersonAbilityDiceChangeNum(2, 1)
                     §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) + atkingpagetot(2, 1)
                 ElseIf atkingpagetot(2, 5) > 0 And movecp > 1 Then
-                    §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) + atkcom(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(2, 2))
+                    If EventPersonAbilityDiceChangeNum(2, 2) = 0 Then
+                        §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) + atkcom(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(2, 2))
+                    End If
+                    §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) + EventPersonAbilityDiceChangeNum(2, 1)
                     §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) + atkingpagetot(2, 5)
                 End If
             ElseIf turnatk = 1 Then
-                §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) + defcom(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(2, 2))
+                If EventPersonAbilityDiceChangeNum(2, 2) = 0 Then
+                    §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) + defcom(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(2, 2))
+                End If
+                §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) + EventPersonAbilityDiceChangeNum(2, 1)
                 §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) + atkingpagetot(2, 2)
             End If
             '=======¥D°Ê§Þ
@@ -5443,4 +5497,19 @@ If Åã¥Ü¦CÂù¤è¼Æ­ÈÂê©w¬ö¿ý¼Æ(uscom) = False Then
         End Select
     Next
 End If
+End Sub
+Sub ¸ÑªR¨¤¦â¯à¤O¹ï»ë¼ÆÅÜ¤Æ(ByVal uscom As Integer, ByVal typestr As String, ByVal num As Integer)
+Select Case typestr
+    Case "+"
+        If EventPersonAbilityDiceChangeNum(uscom, 2) = 0 Then
+           EventPersonAbilityDiceChangeNum(uscom, 1) = EventPersonAbilityDiceChangeNum(uscom, 1) + num
+        End If
+    Case "-"
+        If EventPersonAbilityDiceChangeNum(uscom, 2) = 0 Then
+           EventPersonAbilityDiceChangeNum(uscom, 1) = EventPersonAbilityDiceChangeNum(uscom, 1) - num
+        End If
+    Case "@"
+        EventPersonAbilityDiceChangeNum(uscom, 1) = num
+        EventPersonAbilityDiceChangeNum(uscom, 2) = 1
+End Select
 End Sub

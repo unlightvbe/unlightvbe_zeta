@@ -142,8 +142,8 @@ Else
 End If
 '-----以下為人物頭像調整
 '=====================
-FormDice.jpgus.大人物圖片 = VBEPerson(1, 角色人物對戰人數(1, 2), 1, 5, 3)
-FormDice.jpgcom.大人物圖片 = VBEPerson(2, 角色人物對戰人數(2, 2), 1, 5, 3)
+FormDice.jpgus.大人物圖片 = 戰鬥系統類.擲骰表單人物立繪紀錄數(1)
+FormDice.jpgcom.大人物圖片 = 戰鬥系統類.擲骰表單人物立繪紀錄數(2)
 jpgus.Height = jpgus.大人物圖片height
 jpgus.Width = jpgus.大人物圖片width
 jpgus.Top = FormDice.ScaleHeight - jpgus.大人物圖片height
@@ -291,14 +291,6 @@ Sub comatkus()
 擲骰表單溝通暫時變數(2) = tot
 擲骰後骰傷害數 = tot
 擲骰表單溝通暫時變數(3) = 1
-End Sub
-'Sub 異常狀態.不死_使用者_分支_階段一()
-'tot = 0
-'End Sub
-Sub 技能_蕾_終曲_無盡輪迴的終結_舊_分支_階段三()
-If tot < -7 Then
-   tot = livecom(角色人物對戰人數(2, 2))
-End If
 End Sub
 Function 技能_帕茉_靜謐之背_分支_階段三(turn As Integer)
 tot = tot + turn

@@ -60,7 +60,7 @@ Begin VB.Form FormMainMode
          Picture         =   "FormMainMode.frx":22BA9
          ScaleHeight     =   3585
          ScaleWidth      =   2505
-         TabIndex        =   427
+         TabIndex        =   426
          Top             =   6240
          Visible         =   0   'False
          Width           =   2535
@@ -68,7 +68,7 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   1
             Left            =   1040
-            TabIndex        =   428
+            TabIndex        =   427
             Top             =   600
             Width           =   290
             _ExtentX        =   503
@@ -78,7 +78,7 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   1
             Left            =   580
-            TabIndex        =   429
+            TabIndex        =   428
             Top             =   600
             Width           =   135
             _ExtentX        =   238
@@ -88,7 +88,7 @@ Begin VB.Form FormMainMode
             Height          =   135
             Index           =   1
             Left            =   100
-            TabIndex        =   430
+            TabIndex        =   429
             Top             =   630
             Width           =   495
             _ExtentX        =   873
@@ -98,7 +98,7 @@ Begin VB.Form FormMainMode
             Height          =   135
             Index           =   2
             Left            =   100
-            TabIndex        =   431
+            TabIndex        =   430
             Top             =   1080
             Width           =   495
             _ExtentX        =   873
@@ -108,7 +108,7 @@ Begin VB.Form FormMainMode
             Height          =   135
             Index           =   3
             Left            =   100
-            TabIndex        =   432
+            TabIndex        =   431
             Top             =   1530
             Width           =   495
             _ExtentX        =   873
@@ -118,7 +118,7 @@ Begin VB.Form FormMainMode
             Height          =   135
             Index           =   4
             Left            =   100
-            TabIndex        =   433
+            TabIndex        =   432
             Top             =   1960
             Width           =   495
             _ExtentX        =   873
@@ -128,7 +128,7 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   2
             Left            =   740
-            TabIndex        =   434
+            TabIndex        =   433
             Top             =   600
             Width           =   135
             _ExtentX        =   238
@@ -138,7 +138,7 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   3
             Left            =   880
-            TabIndex        =   435
+            TabIndex        =   434
             Top             =   600
             Width           =   135
             _ExtentX        =   238
@@ -148,6 +148,16 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   1
             Left            =   580
+            TabIndex        =   435
+            Top             =   1080
+            Width           =   135
+            _ExtentX        =   238
+            _ExtentY        =   450
+         End
+         Begin UnlightVBE.uc卡片背面 PEAFpersoncardback_range2 
+            Height          =   255
+            Index           =   2
+            Left            =   740
             TabIndex        =   436
             Top             =   1080
             Width           =   135
@@ -156,19 +166,9 @@ Begin VB.Form FormMainMode
          End
          Begin UnlightVBE.uc卡片背面 PEAFpersoncardback_range2 
             Height          =   255
-            Index           =   2
-            Left            =   740
-            TabIndex        =   437
-            Top             =   1080
-            Width           =   135
-            _ExtentX        =   238
-            _ExtentY        =   450
-         End
-         Begin UnlightVBE.uc卡片背面 PEAFpersoncardback_range2 
-            Height          =   255
             Index           =   3
             Left            =   880
-            TabIndex        =   438
+            TabIndex        =   437
             Top             =   1080
             Width           =   135
             _ExtentX        =   238
@@ -178,6 +178,16 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   1
             Left            =   580
+            TabIndex        =   438
+            Top             =   1520
+            Width           =   135
+            _ExtentX        =   238
+            _ExtentY        =   450
+         End
+         Begin UnlightVBE.uc卡片背面 PEAFpersoncardback_range3 
+            Height          =   255
+            Index           =   2
+            Left            =   740
             TabIndex        =   439
             Top             =   1520
             Width           =   135
@@ -186,19 +196,9 @@ Begin VB.Form FormMainMode
          End
          Begin UnlightVBE.uc卡片背面 PEAFpersoncardback_range3 
             Height          =   255
-            Index           =   2
-            Left            =   740
-            TabIndex        =   440
-            Top             =   1520
-            Width           =   135
-            _ExtentX        =   238
-            _ExtentY        =   450
-         End
-         Begin UnlightVBE.uc卡片背面 PEAFpersoncardback_range3 
-            Height          =   255
             Index           =   3
             Left            =   880
-            TabIndex        =   441
+            TabIndex        =   440
             Top             =   1520
             Width           =   135
             _ExtentX        =   238
@@ -208,7 +208,7 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   1
             Left            =   580
-            TabIndex        =   442
+            TabIndex        =   441
             Top             =   1950
             Width           =   135
             _ExtentX        =   238
@@ -218,7 +218,7 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   2
             Left            =   740
-            TabIndex        =   443
+            TabIndex        =   442
             Top             =   1950
             Width           =   135
             _ExtentX        =   238
@@ -228,7 +228,7 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   3
             Left            =   880
-            TabIndex        =   444
+            TabIndex        =   443
             Top             =   1950
             Width           =   135
             _ExtentX        =   238
@@ -238,6 +238,16 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   2
             Left            =   1340
+            TabIndex        =   444
+            Top             =   600
+            Width           =   290
+            _ExtentX        =   503
+            _ExtentY        =   450
+         End
+         Begin UnlightVBE.uc卡片背面 PEAFpersoncardback_num1 
+            Height          =   255
+            Index           =   3
+            Left            =   1630
             TabIndex        =   445
             Top             =   600
             Width           =   290
@@ -246,8 +256,8 @@ Begin VB.Form FormMainMode
          End
          Begin UnlightVBE.uc卡片背面 PEAFpersoncardback_num1 
             Height          =   255
-            Index           =   3
-            Left            =   1630
+            Index           =   4
+            Left            =   1930
             TabIndex        =   446
             Top             =   600
             Width           =   290
@@ -256,19 +266,9 @@ Begin VB.Form FormMainMode
          End
          Begin UnlightVBE.uc卡片背面 PEAFpersoncardback_num1 
             Height          =   255
-            Index           =   4
-            Left            =   1930
-            TabIndex        =   447
-            Top             =   600
-            Width           =   290
-            _ExtentX        =   503
-            _ExtentY        =   450
-         End
-         Begin UnlightVBE.uc卡片背面 PEAFpersoncardback_num1 
-            Height          =   255
             Index           =   5
             Left            =   2240
-            TabIndex        =   448
+            TabIndex        =   447
             Top             =   600
             Width           =   285
             _ExtentX        =   503
@@ -278,6 +278,16 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   1
             Left            =   1040
+            TabIndex        =   448
+            Top             =   1080
+            Width           =   285
+            _ExtentX        =   503
+            _ExtentY        =   450
+         End
+         Begin UnlightVBE.uc卡片背面 PEAFpersoncardback_num2 
+            Height          =   255
+            Index           =   2
+            Left            =   1340
             TabIndex        =   449
             Top             =   1080
             Width           =   285
@@ -286,19 +296,9 @@ Begin VB.Form FormMainMode
          End
          Begin UnlightVBE.uc卡片背面 PEAFpersoncardback_num2 
             Height          =   255
-            Index           =   2
-            Left            =   1340
-            TabIndex        =   450
-            Top             =   1080
-            Width           =   285
-            _ExtentX        =   503
-            _ExtentY        =   450
-         End
-         Begin UnlightVBE.uc卡片背面 PEAFpersoncardback_num2 
-            Height          =   255
             Index           =   3
             Left            =   1630
-            TabIndex        =   451
+            TabIndex        =   450
             Top             =   1080
             Width           =   285
             _ExtentX        =   503
@@ -308,7 +308,7 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   4
             Left            =   1930
-            TabIndex        =   452
+            TabIndex        =   451
             Top             =   1080
             Width           =   285
             _ExtentX        =   503
@@ -318,7 +318,7 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   5
             Left            =   2240
-            TabIndex        =   453
+            TabIndex        =   452
             Top             =   1080
             Width           =   285
             _ExtentX        =   503
@@ -328,7 +328,7 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   1
             Left            =   1040
-            TabIndex        =   454
+            TabIndex        =   453
             Top             =   1520
             Width           =   285
             _ExtentX        =   503
@@ -338,7 +338,7 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   2
             Left            =   1340
-            TabIndex        =   455
+            TabIndex        =   454
             Top             =   1520
             Width           =   285
             _ExtentX        =   503
@@ -348,7 +348,7 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   3
             Left            =   1630
-            TabIndex        =   456
+            TabIndex        =   455
             Top             =   1520
             Width           =   285
             _ExtentX        =   503
@@ -358,7 +358,7 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   4
             Left            =   1930
-            TabIndex        =   457
+            TabIndex        =   456
             Top             =   1520
             Width           =   285
             _ExtentX        =   503
@@ -368,7 +368,7 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   5
             Left            =   2240
-            TabIndex        =   458
+            TabIndex        =   457
             Top             =   1520
             Width           =   285
             _ExtentX        =   503
@@ -378,7 +378,7 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   1
             Left            =   1040
-            TabIndex        =   459
+            TabIndex        =   458
             Top             =   1950
             Width           =   285
             _ExtentX        =   503
@@ -388,7 +388,7 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   2
             Left            =   1340
-            TabIndex        =   460
+            TabIndex        =   459
             Top             =   1950
             Width           =   285
             _ExtentX        =   503
@@ -398,7 +398,7 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   3
             Left            =   1635
-            TabIndex        =   461
+            TabIndex        =   460
             Top             =   1950
             Width           =   285
             _ExtentX        =   503
@@ -408,7 +408,7 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   4
             Left            =   1930
-            TabIndex        =   462
+            TabIndex        =   461
             Top             =   1950
             Width           =   285
             _ExtentX        =   503
@@ -418,7 +418,7 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   5
             Left            =   2240
-            TabIndex        =   463
+            TabIndex        =   462
             Top             =   1950
             Width           =   285
             _ExtentX        =   503
@@ -440,7 +440,7 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   1
             Left            =   105
-            TabIndex        =   468
+            TabIndex        =   467
             Top             =   315
             Width           =   2295
          End
@@ -460,7 +460,7 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   2
             Left            =   120
-            TabIndex        =   467
+            TabIndex        =   466
             Top             =   780
             Width           =   2295
          End
@@ -480,7 +480,7 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   3
             Left            =   120
-            TabIndex        =   466
+            TabIndex        =   465
             Top             =   1245
             Width           =   2295
          End
@@ -500,7 +500,7 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   4
             Left            =   120
-            TabIndex        =   465
+            TabIndex        =   464
             Top             =   1680
             Width           =   2295
          End
@@ -520,7 +520,7 @@ Begin VB.Form FormMainMode
             Height          =   1215
             Index           =   1
             Left            =   120
-            TabIndex        =   464
+            TabIndex        =   463
             Top             =   2280
             Width           =   2295
          End
@@ -588,6 +588,16 @@ Begin VB.Form FormMainMode
          Top             =   1560
          Visible         =   0   'False
          Width           =   2535
+         Begin UnlightVBE.大人物形像 cardbackcom 
+            Height          =   3615
+            Index           =   3
+            Left            =   0
+            TabIndex        =   2
+            Top             =   0
+            Width           =   2535
+            _ExtentX        =   4471
+            _ExtentY        =   6376
+         End
          Begin ImageX.aicAlphaImage PEAFcardcombackclick 
             Height          =   795
             Index           =   3
@@ -803,16 +813,6 @@ Begin VB.Form FormMainMode
             _ExtentX        =   1720
             _ExtentY        =   661
          End
-         Begin UnlightVBE.大人物形像 cardbackcom 
-            Height          =   3615
-            Index           =   3
-            Left            =   0
-            TabIndex        =   2
-            Top             =   0
-            Width           =   2535
-            _ExtentX        =   4471
-            _ExtentY        =   6376
-         End
       End
       Begin VB.PictureBox cardcom 
          Appearance      =   0  '平面
@@ -827,6 +827,16 @@ Begin VB.Form FormMainMode
          Top             =   1560
          Visible         =   0   'False
          Width           =   2535
+         Begin UnlightVBE.大人物形像 cardbackcom 
+            Height          =   3615
+            Index           =   2
+            Left            =   0
+            TabIndex        =   21
+            Top             =   0
+            Width           =   2535
+            _ExtentX        =   4471
+            _ExtentY        =   6376
+         End
          Begin ImageX.aicAlphaImage PEAFcardcombackclick 
             Height          =   795
             Index           =   2
@@ -1042,16 +1052,6 @@ Begin VB.Form FormMainMode
             _ExtentX        =   1720
             _ExtentY        =   661
          End
-         Begin UnlightVBE.大人物形像 cardbackcom 
-            Height          =   3615
-            Index           =   2
-            Left            =   0
-            TabIndex        =   21
-            Top             =   0
-            Width           =   2535
-            _ExtentX        =   4471
-            _ExtentY        =   6376
-         End
       End
       Begin VB.PictureBox cardcom 
          Appearance      =   0  '平面
@@ -1066,6 +1066,16 @@ Begin VB.Form FormMainMode
          Top             =   1560
          Visible         =   0   'False
          Width           =   2535
+         Begin UnlightVBE.大人物形像 cardbackcom 
+            Height          =   3615
+            Index           =   1
+            Left            =   0
+            TabIndex        =   40
+            Top             =   0
+            Width           =   2535
+            _ExtentX        =   4471
+            _ExtentY        =   6376
+         End
          Begin ImageX.aicAlphaImage PEAFcardcombackclick 
             Height          =   795
             Index           =   1
@@ -1281,16 +1291,6 @@ Begin VB.Form FormMainMode
             _ExtentX        =   1720
             _ExtentY        =   661
          End
-         Begin UnlightVBE.大人物形像 cardbackcom 
-            Height          =   3615
-            Index           =   1
-            Left            =   0
-            TabIndex        =   40
-            Top             =   0
-            Width           =   2535
-            _ExtentX        =   4471
-            _ExtentY        =   6376
-         End
       End
       Begin VB.PictureBox PEAFcardback 
          Appearance      =   0  '平面
@@ -1302,7 +1302,7 @@ Begin VB.Form FormMainMode
          Picture         =   "FormMainMode.frx":2FED1
          ScaleHeight     =   3585
          ScaleWidth      =   2505
-         TabIndex        =   469
+         TabIndex        =   468
          Top             =   6240
          Visible         =   0   'False
          Width           =   2535
@@ -1310,7 +1310,7 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   6
             Left            =   1040
-            TabIndex        =   470
+            TabIndex        =   469
             Top             =   600
             Width           =   290
             _ExtentX        =   503
@@ -1320,7 +1320,7 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   4
             Left            =   580
-            TabIndex        =   471
+            TabIndex        =   470
             Top             =   600
             Width           =   135
             _ExtentX        =   238
@@ -1330,7 +1330,7 @@ Begin VB.Form FormMainMode
             Height          =   135
             Index           =   5
             Left            =   100
-            TabIndex        =   472
+            TabIndex        =   471
             Top             =   630
             Width           =   495
             _ExtentX        =   873
@@ -1340,7 +1340,7 @@ Begin VB.Form FormMainMode
             Height          =   135
             Index           =   6
             Left            =   100
-            TabIndex        =   473
+            TabIndex        =   472
             Top             =   1080
             Width           =   495
             _ExtentX        =   873
@@ -1350,7 +1350,7 @@ Begin VB.Form FormMainMode
             Height          =   135
             Index           =   7
             Left            =   100
-            TabIndex        =   474
+            TabIndex        =   473
             Top             =   1530
             Width           =   495
             _ExtentX        =   873
@@ -1360,7 +1360,7 @@ Begin VB.Form FormMainMode
             Height          =   135
             Index           =   8
             Left            =   100
-            TabIndex        =   475
+            TabIndex        =   474
             Top             =   1960
             Width           =   495
             _ExtentX        =   873
@@ -1370,7 +1370,7 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   5
             Left            =   740
-            TabIndex        =   476
+            TabIndex        =   475
             Top             =   600
             Width           =   135
             _ExtentX        =   238
@@ -1380,7 +1380,7 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   6
             Left            =   885
-            TabIndex        =   477
+            TabIndex        =   476
             Top             =   600
             Width           =   135
             _ExtentX        =   238
@@ -1390,7 +1390,7 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   4
             Left            =   580
-            TabIndex        =   478
+            TabIndex        =   477
             Top             =   1080
             Width           =   135
             _ExtentX        =   238
@@ -1400,7 +1400,7 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   5
             Left            =   740
-            TabIndex        =   479
+            TabIndex        =   478
             Top             =   1080
             Width           =   135
             _ExtentX        =   238
@@ -1410,7 +1410,7 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   6
             Left            =   885
-            TabIndex        =   480
+            TabIndex        =   479
             Top             =   1080
             Width           =   135
             _ExtentX        =   238
@@ -1420,6 +1420,16 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   4
             Left            =   580
+            TabIndex        =   480
+            Top             =   1520
+            Width           =   135
+            _ExtentX        =   238
+            _ExtentY        =   450
+         End
+         Begin UnlightVBE.uc卡片背面 PEAFpersoncardback_range3 
+            Height          =   255
+            Index           =   5
+            Left            =   740
             TabIndex        =   481
             Top             =   1520
             Width           =   135
@@ -1428,19 +1438,9 @@ Begin VB.Form FormMainMode
          End
          Begin UnlightVBE.uc卡片背面 PEAFpersoncardback_range3 
             Height          =   255
-            Index           =   5
-            Left            =   740
-            TabIndex        =   482
-            Top             =   1520
-            Width           =   135
-            _ExtentX        =   238
-            _ExtentY        =   450
-         End
-         Begin UnlightVBE.uc卡片背面 PEAFpersoncardback_range3 
-            Height          =   255
             Index           =   6
             Left            =   880
-            TabIndex        =   483
+            TabIndex        =   482
             Top             =   1520
             Width           =   135
             _ExtentX        =   238
@@ -1450,7 +1450,7 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   4
             Left            =   580
-            TabIndex        =   484
+            TabIndex        =   483
             Top             =   1950
             Width           =   135
             _ExtentX        =   238
@@ -1460,7 +1460,7 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   5
             Left            =   740
-            TabIndex        =   485
+            TabIndex        =   484
             Top             =   1950
             Width           =   135
             _ExtentX        =   238
@@ -1470,7 +1470,7 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   6
             Left            =   880
-            TabIndex        =   486
+            TabIndex        =   485
             Top             =   1950
             Width           =   135
             _ExtentX        =   238
@@ -1480,6 +1480,16 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   7
             Left            =   1340
+            TabIndex        =   486
+            Top             =   600
+            Width           =   290
+            _ExtentX        =   503
+            _ExtentY        =   450
+         End
+         Begin UnlightVBE.uc卡片背面 PEAFpersoncardback_num1 
+            Height          =   255
+            Index           =   8
+            Left            =   1630
             TabIndex        =   487
             Top             =   600
             Width           =   290
@@ -1488,8 +1498,8 @@ Begin VB.Form FormMainMode
          End
          Begin UnlightVBE.uc卡片背面 PEAFpersoncardback_num1 
             Height          =   255
-            Index           =   8
-            Left            =   1630
+            Index           =   9
+            Left            =   1930
             TabIndex        =   488
             Top             =   600
             Width           =   290
@@ -1498,19 +1508,9 @@ Begin VB.Form FormMainMode
          End
          Begin UnlightVBE.uc卡片背面 PEAFpersoncardback_num1 
             Height          =   255
-            Index           =   9
-            Left            =   1930
-            TabIndex        =   489
-            Top             =   600
-            Width           =   290
-            _ExtentX        =   503
-            _ExtentY        =   450
-         End
-         Begin UnlightVBE.uc卡片背面 PEAFpersoncardback_num1 
-            Height          =   255
             Index           =   10
             Left            =   2240
-            TabIndex        =   490
+            TabIndex        =   489
             Top             =   600
             Width           =   285
             _ExtentX        =   503
@@ -1520,6 +1520,16 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   6
             Left            =   1040
+            TabIndex        =   490
+            Top             =   1080
+            Width           =   285
+            _ExtentX        =   503
+            _ExtentY        =   450
+         End
+         Begin UnlightVBE.uc卡片背面 PEAFpersoncardback_num2 
+            Height          =   255
+            Index           =   7
+            Left            =   1340
             TabIndex        =   491
             Top             =   1080
             Width           =   285
@@ -1528,19 +1538,9 @@ Begin VB.Form FormMainMode
          End
          Begin UnlightVBE.uc卡片背面 PEAFpersoncardback_num2 
             Height          =   255
-            Index           =   7
-            Left            =   1340
-            TabIndex        =   492
-            Top             =   1080
-            Width           =   285
-            _ExtentX        =   503
-            _ExtentY        =   450
-         End
-         Begin UnlightVBE.uc卡片背面 PEAFpersoncardback_num2 
-            Height          =   255
             Index           =   8
             Left            =   1630
-            TabIndex        =   493
+            TabIndex        =   492
             Top             =   1080
             Width           =   285
             _ExtentX        =   503
@@ -1550,7 +1550,7 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   9
             Left            =   1930
-            TabIndex        =   494
+            TabIndex        =   493
             Top             =   1080
             Width           =   285
             _ExtentX        =   503
@@ -1560,7 +1560,7 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   10
             Left            =   2240
-            TabIndex        =   495
+            TabIndex        =   494
             Top             =   1080
             Width           =   285
             _ExtentX        =   503
@@ -1570,7 +1570,7 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   6
             Left            =   1040
-            TabIndex        =   496
+            TabIndex        =   495
             Top             =   1520
             Width           =   285
             _ExtentX        =   503
@@ -1580,7 +1580,7 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   7
             Left            =   1340
-            TabIndex        =   497
+            TabIndex        =   496
             Top             =   1520
             Width           =   285
             _ExtentX        =   503
@@ -1590,7 +1590,7 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   8
             Left            =   1630
-            TabIndex        =   498
+            TabIndex        =   497
             Top             =   1520
             Width           =   285
             _ExtentX        =   503
@@ -1600,7 +1600,7 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   9
             Left            =   1930
-            TabIndex        =   499
+            TabIndex        =   498
             Top             =   1520
             Width           =   285
             _ExtentX        =   503
@@ -1610,7 +1610,7 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   10
             Left            =   2240
-            TabIndex        =   500
+            TabIndex        =   499
             Top             =   1520
             Width           =   285
             _ExtentX        =   503
@@ -1620,7 +1620,7 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   6
             Left            =   1040
-            TabIndex        =   501
+            TabIndex        =   500
             Top             =   1950
             Width           =   285
             _ExtentX        =   503
@@ -1630,7 +1630,7 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   7
             Left            =   1340
-            TabIndex        =   502
+            TabIndex        =   501
             Top             =   1950
             Width           =   285
             _ExtentX        =   503
@@ -1640,7 +1640,7 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   8
             Left            =   1635
-            TabIndex        =   503
+            TabIndex        =   502
             Top             =   1950
             Width           =   285
             _ExtentX        =   503
@@ -1650,7 +1650,7 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   9
             Left            =   1930
-            TabIndex        =   504
+            TabIndex        =   503
             Top             =   1950
             Width           =   285
             _ExtentX        =   503
@@ -1660,7 +1660,7 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   10
             Left            =   2240
-            TabIndex        =   505
+            TabIndex        =   504
             Top             =   1950
             Width           =   285
             _ExtentX        =   503
@@ -1682,7 +1682,7 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   5
             Left            =   105
-            TabIndex        =   510
+            TabIndex        =   509
             Top             =   315
             Width           =   2295
          End
@@ -1702,7 +1702,7 @@ Begin VB.Form FormMainMode
             Height          =   315
             Index           =   6
             Left            =   120
-            TabIndex        =   509
+            TabIndex        =   508
             Top             =   780
             Width           =   2295
          End
@@ -1722,7 +1722,7 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   7
             Left            =   120
-            TabIndex        =   508
+            TabIndex        =   507
             Top             =   1245
             Width           =   2295
          End
@@ -1742,7 +1742,7 @@ Begin VB.Form FormMainMode
             Height          =   255
             Index           =   8
             Left            =   120
-            TabIndex        =   507
+            TabIndex        =   506
             Top             =   1680
             Width           =   2295
          End
@@ -1762,7 +1762,7 @@ Begin VB.Form FormMainMode
             Height          =   1215
             Index           =   2
             Left            =   120
-            TabIndex        =   506
+            TabIndex        =   505
             Top             =   2280
             Width           =   2295
          End
@@ -1833,6 +1833,16 @@ Begin VB.Form FormMainMode
          Top             =   6120
          Visible         =   0   'False
          Width           =   2535
+         Begin UnlightVBE.大人物形像 cardbackus 
+            Height          =   3615
+            Index           =   2
+            Left            =   0
+            TabIndex        =   78
+            Top             =   0
+            Width           =   2535
+            _ExtentX        =   4471
+            _ExtentY        =   6376
+         End
          Begin ImageX.aicAlphaImage PEAFcardusbackclick 
             Height          =   795
             Index           =   2
@@ -2048,16 +2058,6 @@ Begin VB.Form FormMainMode
             _ExtentX        =   1720
             _ExtentY        =   661
          End
-         Begin UnlightVBE.大人物形像 cardbackus 
-            Height          =   3615
-            Index           =   2
-            Left            =   0
-            TabIndex        =   78
-            Top             =   0
-            Width           =   2535
-            _ExtentX        =   4471
-            _ExtentY        =   6376
-         End
       End
       Begin VB.PictureBox cardus 
          Appearance      =   0  '平面
@@ -2081,6 +2081,16 @@ Begin VB.Form FormMainMode
          Top             =   6240
          Visible         =   0   'False
          Width           =   2535
+         Begin UnlightVBE.大人物形像 cardbackus 
+            Height          =   3615
+            Index           =   3
+            Left            =   0
+            TabIndex        =   59
+            Top             =   0
+            Width           =   2535
+            _ExtentX        =   4471
+            _ExtentY        =   6376
+         End
          Begin ImageX.aicAlphaImage PEAFcardusbackclick 
             Height          =   795
             Index           =   3
@@ -2295,16 +2305,6 @@ Begin VB.Form FormMainMode
             Width           =   975
             _ExtentX        =   1720
             _ExtentY        =   661
-         End
-         Begin UnlightVBE.大人物形像 cardbackus 
-            Height          =   3615
-            Index           =   3
-            Left            =   0
-            TabIndex        =   59
-            Top             =   0
-            Width           =   2535
-            _ExtentX        =   4471
-            _ExtentY        =   6376
          End
       End
       Begin VB.Timer tr牌組_回牌_電腦 
@@ -2688,6 +2688,16 @@ Begin VB.Form FormMainMode
          TabIndex        =   257
          Top             =   6240
          Width           =   2535
+         Begin UnlightVBE.大人物形像 cardbackus 
+            Height          =   3615
+            Index           =   1
+            Left            =   0
+            TabIndex        =   258
+            Top             =   0
+            Width           =   2535
+            _ExtentX        =   4471
+            _ExtentY        =   6376
+         End
          Begin ImageX.aicAlphaImage PEAFcardusbackclick 
             Height          =   795
             Index           =   1
@@ -2902,16 +2912,6 @@ Begin VB.Form FormMainMode
             Width           =   975
             _ExtentX        =   1720
             _ExtentY        =   661
-         End
-         Begin UnlightVBE.大人物形像 cardbackus 
-            Height          =   3615
-            Index           =   1
-            Left            =   0
-            TabIndex        =   258
-            Top             =   0
-            Width           =   2535
-            _ExtentX        =   4471
-            _ExtentY        =   6376
          End
       End
       Begin VB.ListBox messageus 
@@ -11536,11 +11536,11 @@ Begin VB.Form FormMainMode
       BorderStyle     =   0  '沒有框線
       ForeColor       =   &H80000008&
       Height          =   9915
-      Left            =   10920
+      Left            =   9840
       ScaleHeight     =   9915
       ScaleWidth      =   11340
       TabIndex        =   310
-      Top             =   1800
+      Top             =   960
       Visible         =   0   'False
       Width           =   11340
       Begin VB.PictureBox Picture3 
@@ -11794,15 +11794,6 @@ Begin VB.Form FormMainMode
             Top             =   720
             Value           =   -1  'True
             Width           =   855
-         End
-         Begin UnlightVBE.大人物形像 personfus 
-            Height          =   1215
-            Left            =   0
-            TabIndex        =   366
-            Top             =   0
-            Width           =   3135
-            _ExtentX        =   5530
-            _ExtentY        =   2143
          End
          Begin VB.Image PEGFbnstart 
             Height          =   510
@@ -12629,7 +12620,7 @@ Begin VB.Form FormMainMode
          ForeColor       =   &H00FFFFFF&
          Height          =   375
          Left            =   240
-         TabIndex        =   368
+         TabIndex        =   367
          Top             =   120
          Width           =   1455
       End
@@ -12648,7 +12639,7 @@ Begin VB.Form FormMainMode
          ForeColor       =   &H00FFFFFF&
          Height          =   255
          Left            =   1680
-         TabIndex        =   367
+         TabIndex        =   366
          Top             =   195
          Width           =   2535
       End
@@ -12670,7 +12661,7 @@ Begin VB.Form FormMainMode
       Picture         =   "FormMainMode.frx":2AF1FC
       ScaleHeight     =   9915
       ScaleWidth      =   11340
-      TabIndex        =   381
+      TabIndex        =   380
       Top             =   960
       Width           =   11340
       Begin VB.Timer PEASpke 
@@ -12700,7 +12691,7 @@ Begin VB.Form FormMainMode
          Left            =   6285
          ScaleHeight     =   3585
          ScaleWidth      =   2505
-         TabIndex        =   382
+         TabIndex        =   381
          Top             =   3240
          Visible         =   0   'False
          Width           =   2535
@@ -12721,7 +12712,7 @@ Begin VB.Form FormMainMode
             Height          =   495
             Index           =   1
             Left            =   480
-            TabIndex        =   385
+            TabIndex        =   384
             Top             =   3240
             Width           =   495
          End
@@ -12742,7 +12733,7 @@ Begin VB.Form FormMainMode
             Height          =   375
             Index           =   1
             Left            =   1200
-            TabIndex        =   384
+            TabIndex        =   383
             Top             =   3240
             Width           =   495
          End
@@ -12763,7 +12754,7 @@ Begin VB.Form FormMainMode
             Height          =   375
             Index           =   1
             Left            =   1920
-            TabIndex        =   383
+            TabIndex        =   382
             Top             =   3240
             Width           =   615
          End
@@ -12777,7 +12768,7 @@ Begin VB.Form FormMainMode
          Left            =   7485
          ScaleHeight     =   3585
          ScaleWidth      =   2505
-         TabIndex        =   412
+         TabIndex        =   411
          Top             =   3600
          Visible         =   0   'False
          Width           =   2535
@@ -12798,7 +12789,7 @@ Begin VB.Form FormMainMode
             Height          =   375
             Index           =   2
             Left            =   1920
-            TabIndex        =   415
+            TabIndex        =   414
             Top             =   3240
             Width           =   615
          End
@@ -12819,7 +12810,7 @@ Begin VB.Form FormMainMode
             Height          =   375
             Index           =   2
             Left            =   1200
-            TabIndex        =   414
+            TabIndex        =   413
             Top             =   3240
             Width           =   495
          End
@@ -12840,7 +12831,7 @@ Begin VB.Form FormMainMode
             Height          =   495
             Index           =   2
             Left            =   480
-            TabIndex        =   413
+            TabIndex        =   412
             Top             =   3240
             Width           =   495
          End
@@ -12863,7 +12854,7 @@ Begin VB.Form FormMainMode
          Left            =   2805
          ScaleHeight     =   3585
          ScaleWidth      =   2505
-         TabIndex        =   386
+         TabIndex        =   385
          Top             =   3240
          Visible         =   0   'False
          Width           =   2535
@@ -12884,7 +12875,7 @@ Begin VB.Form FormMainMode
             Height          =   375
             Index           =   1
             Left            =   550
-            TabIndex        =   389
+            TabIndex        =   388
             Top             =   3240
             Width           =   375
          End
@@ -12905,7 +12896,7 @@ Begin VB.Form FormMainMode
             Height          =   375
             Index           =   1
             Left            =   1200
-            TabIndex        =   388
+            TabIndex        =   387
             Top             =   3240
             Width           =   495
          End
@@ -12926,7 +12917,7 @@ Begin VB.Form FormMainMode
             Height          =   375
             Index           =   1
             Left            =   1920
-            TabIndex        =   387
+            TabIndex        =   386
             Top             =   3240
             Width           =   615
          End
@@ -12949,7 +12940,7 @@ Begin VB.Form FormMainMode
          Left            =   1485
          ScaleHeight     =   3585
          ScaleWidth      =   2505
-         TabIndex        =   404
+         TabIndex        =   403
          Top             =   3600
          Visible         =   0   'False
          Width           =   2535
@@ -12970,7 +12961,7 @@ Begin VB.Form FormMainMode
             Height          =   375
             Index           =   2
             Left            =   1920
-            TabIndex        =   407
+            TabIndex        =   406
             Top             =   3240
             Width           =   615
          End
@@ -12991,7 +12982,7 @@ Begin VB.Form FormMainMode
             Height          =   375
             Index           =   2
             Left            =   1200
-            TabIndex        =   406
+            TabIndex        =   405
             Top             =   3240
             Width           =   495
          End
@@ -13012,7 +13003,7 @@ Begin VB.Form FormMainMode
             Height          =   375
             Index           =   2
             Left            =   550
-            TabIndex        =   405
+            TabIndex        =   404
             Top             =   3240
             Width           =   375
          End
@@ -13026,7 +13017,7 @@ Begin VB.Form FormMainMode
          Left            =   8565
          ScaleHeight     =   3585
          ScaleWidth      =   2505
-         TabIndex        =   416
+         TabIndex        =   415
          Top             =   3960
          Visible         =   0   'False
          Width           =   2535
@@ -13047,7 +13038,7 @@ Begin VB.Form FormMainMode
             Height          =   375
             Index           =   3
             Left            =   1920
-            TabIndex        =   419
+            TabIndex        =   418
             Top             =   3240
             Width           =   615
          End
@@ -13068,7 +13059,7 @@ Begin VB.Form FormMainMode
             Height          =   375
             Index           =   3
             Left            =   1200
-            TabIndex        =   418
+            TabIndex        =   417
             Top             =   3240
             Width           =   495
          End
@@ -13089,7 +13080,7 @@ Begin VB.Form FormMainMode
             Height          =   495
             Index           =   3
             Left            =   480
-            TabIndex        =   417
+            TabIndex        =   416
             Top             =   3240
             Width           =   495
          End
@@ -13112,7 +13103,7 @@ Begin VB.Form FormMainMode
          Left            =   360
          ScaleHeight     =   3585
          ScaleWidth      =   2505
-         TabIndex        =   408
+         TabIndex        =   407
          Top             =   3960
          Visible         =   0   'False
          Width           =   2535
@@ -13133,7 +13124,7 @@ Begin VB.Form FormMainMode
             Height          =   375
             Index           =   3
             Left            =   1920
-            TabIndex        =   411
+            TabIndex        =   410
             Top             =   3240
             Width           =   615
          End
@@ -13154,7 +13145,7 @@ Begin VB.Form FormMainMode
             Height          =   375
             Index           =   3
             Left            =   1200
-            TabIndex        =   410
+            TabIndex        =   409
             Top             =   3240
             Width           =   495
          End
@@ -13175,7 +13166,7 @@ Begin VB.Form FormMainMode
             Height          =   375
             Index           =   3
             Left            =   550
-            TabIndex        =   409
+            TabIndex        =   408
             Top             =   3240
             Width           =   375
          End
@@ -13190,7 +13181,7 @@ Begin VB.Form FormMainMode
          Picture         =   "FormMainMode.frx":2DE0B0
          ScaleHeight     =   1455
          ScaleWidth      =   11415
-         TabIndex        =   391
+         TabIndex        =   390
          Top             =   8160
          Visible         =   0   'False
          Width           =   11415
@@ -13201,7 +13192,7 @@ Begin VB.Form FormMainMode
             Height          =   375
             Index           =   1
             Left            =   480
-            TabIndex        =   403
+            TabIndex        =   402
             Top             =   120
             Width           =   1935
          End
@@ -13212,7 +13203,7 @@ Begin VB.Form FormMainMode
             Height          =   375
             Index           =   1
             Left            =   6840
-            TabIndex        =   402
+            TabIndex        =   401
             Top             =   120
             Width           =   2055
          End
@@ -13224,41 +13215,41 @@ Begin VB.Form FormMainMode
             Height          =   375
             Index           =   1
             Left            =   1560
-            TabIndex        =   401
-            Top             =   120
-            Width           =   3135
-         End
-         Begin VB.Label cardcomspname 
-            Alignment       =   1  '靠右對齊
-            BackStyle       =   0  '透明
-            Caption         =   "稱號1"
-            ForeColor       =   &H00008080&
-            Height          =   375
-            Index           =   1
-            Left            =   7920
             TabIndex        =   400
             Top             =   120
             Width           =   3135
          End
+         Begin VB.Label cardcomspname 
+            Alignment       =   1  '靠右對齊
+            BackStyle       =   0  '透明
+            Caption         =   "稱號1"
+            ForeColor       =   &H00008080&
+            Height          =   375
+            Index           =   1
+            Left            =   7920
+            TabIndex        =   399
+            Top             =   120
+            Width           =   3135
+         End
          Begin VB.Label cardusname 
             BackStyle       =   0  '透明
             Caption         =   "人物2"
             ForeColor       =   &H00FFFFFF&
             Height          =   375
             Index           =   2
-            Left            =   480
-            TabIndex        =   399
-            Top             =   480
-            Width           =   1935
-         End
-         Begin VB.Label cardusname 
-            BackStyle       =   0  '透明
-            Caption         =   "人物3"
-            ForeColor       =   &H00FFFFFF&
-            Height          =   375
-            Index           =   3
             Left            =   480
             TabIndex        =   398
+            Top             =   480
+            Width           =   1935
+         End
+         Begin VB.Label cardusname 
+            BackStyle       =   0  '透明
+            Caption         =   "人物3"
+            ForeColor       =   &H00FFFFFF&
+            Height          =   375
+            Index           =   3
+            Left            =   480
+            TabIndex        =   397
             Top             =   840
             Width           =   1935
          End
@@ -13270,7 +13261,7 @@ Begin VB.Form FormMainMode
             Height          =   375
             Index           =   2
             Left            =   1560
-            TabIndex        =   397
+            TabIndex        =   396
             Top             =   480
             Width           =   3135
          End
@@ -13282,7 +13273,7 @@ Begin VB.Form FormMainMode
             Height          =   375
             Index           =   3
             Left            =   1560
-            TabIndex        =   396
+            TabIndex        =   395
             Top             =   840
             Width           =   3135
          End
@@ -13293,7 +13284,7 @@ Begin VB.Form FormMainMode
             Height          =   375
             Index           =   2
             Left            =   6840
-            TabIndex        =   395
+            TabIndex        =   394
             Top             =   480
             Width           =   2055
          End
@@ -13304,7 +13295,7 @@ Begin VB.Form FormMainMode
             Height          =   375
             Index           =   3
             Left            =   6840
-            TabIndex        =   394
+            TabIndex        =   393
             Top             =   840
             Width           =   2055
          End
@@ -13316,7 +13307,7 @@ Begin VB.Form FormMainMode
             Height          =   375
             Index           =   2
             Left            =   7920
-            TabIndex        =   393
+            TabIndex        =   392
             Top             =   480
             Width           =   3135
          End
@@ -13328,7 +13319,7 @@ Begin VB.Form FormMainMode
             Height          =   375
             Index           =   3
             Left            =   7920
-            TabIndex        =   392
+            TabIndex        =   391
             Top             =   840
             Width           =   3135
          End
@@ -13343,7 +13334,7 @@ Begin VB.Form FormMainMode
          Picture         =   "FormMainMode.frx":2E6A2C
          ScaleHeight     =   1905
          ScaleWidth      =   11415
-         TabIndex        =   390
+         TabIndex        =   389
          Top             =   0
          Visible         =   0   'False
          Width           =   11415
@@ -13384,20 +13375,10 @@ Begin VB.Form FormMainMode
          Left            =   9885
          Top             =   7560
       End
-      Begin UnlightVBE.uc對話 PEASpersontalk 
-         Height          =   1935
-         Left            =   0
-         TabIndex        =   426
-         Top             =   -120
-         Visible         =   0   'False
-         Width           =   5775
-         _ExtentX        =   10186
-         _ExtentY        =   3413
-      End
       Begin UnlightVBE.大人物形像 大人物形像_電腦 
          Height          =   10005
          Left            =   20040
-         TabIndex        =   420
+         TabIndex        =   419
          Top             =   -480
          Width           =   5895
          _ExtentX        =   10398
@@ -13406,7 +13387,7 @@ Begin VB.Form FormMainMode
       Begin UnlightVBE.大人物形像 大人物形像_使用者 
          Height          =   10005
          Left            =   -9960
-         TabIndex        =   421
+         TabIndex        =   420
          Top             =   -480
          Width           =   6015
          _ExtentX        =   10610
@@ -13415,11 +13396,21 @@ Begin VB.Form FormMainMode
       Begin UnlightVBE.大人物形像 upjpg_2 
          Height          =   1935
          Left            =   0
-         TabIndex        =   422
+         TabIndex        =   421
          Top             =   -480
          Visible         =   0   'False
          Width           =   11415
          _ExtentX        =   20135
+         _ExtentY        =   3413
+      End
+      Begin UnlightVBE.uc對話 PEASpersontalk 
+         Height          =   1935
+         Left            =   0
+         TabIndex        =   425
+         Top             =   -120
+         Visible         =   0   'False
+         Width           =   5775
+         _ExtentX        =   10186
          _ExtentY        =   3413
       End
    End
@@ -13432,7 +13423,7 @@ Begin VB.Form FormMainMode
       Left            =   2040
       ScaleHeight     =   7935
       ScaleWidth      =   9615
-      TabIndex        =   369
+      TabIndex        =   368
       Top             =   840
       Visible         =   0   'False
       Width           =   9615
@@ -13445,7 +13436,7 @@ Begin VB.Form FormMainMode
       Begin WMPLibCtl.WindowsMediaPlayer wmpse9 
          Height          =   915
          Left            =   6840
-         TabIndex        =   511
+         TabIndex        =   510
          Top             =   3120
          Width           =   2400
          URL             =   ""
@@ -13477,7 +13468,7 @@ Begin VB.Form FormMainMode
       Begin WMPLibCtl.WindowsMediaPlayer wmp 
          Height          =   795
          Left            =   840
-         TabIndex        =   378
+         TabIndex        =   377
          Top             =   480
          Width           =   2400
          URL             =   ""
@@ -13509,7 +13500,7 @@ Begin VB.Form FormMainMode
       Begin WMPLibCtl.WindowsMediaPlayer wmpse1 
          Height          =   915
          Left            =   3840
-         TabIndex        =   377
+         TabIndex        =   376
          Top             =   240
          Width           =   2520
          URL             =   ""
@@ -13541,7 +13532,7 @@ Begin VB.Form FormMainMode
       Begin WMPLibCtl.WindowsMediaPlayer wmpse2 
          Height          =   915
          Left            =   3840
-         TabIndex        =   376
+         TabIndex        =   375
          Top             =   1200
          Width           =   2400
          URL             =   ""
@@ -13573,7 +13564,7 @@ Begin VB.Form FormMainMode
       Begin WMPLibCtl.WindowsMediaPlayer wmpse3 
          Height          =   915
          Left            =   3840
-         TabIndex        =   375
+         TabIndex        =   374
          Top             =   2160
          Width           =   2400
          URL             =   ""
@@ -13605,7 +13596,7 @@ Begin VB.Form FormMainMode
       Begin WMPLibCtl.WindowsMediaPlayer wmpse4 
          Height          =   915
          Left            =   3840
-         TabIndex        =   374
+         TabIndex        =   373
          Top             =   2880
          Width           =   2400
          URL             =   ""
@@ -13637,7 +13628,7 @@ Begin VB.Form FormMainMode
       Begin WMPLibCtl.WindowsMediaPlayer wmpse5 
          Height          =   915
          Left            =   3840
-         TabIndex        =   373
+         TabIndex        =   372
          Top             =   3840
          Width           =   2400
          URL             =   ""
@@ -13669,7 +13660,7 @@ Begin VB.Form FormMainMode
       Begin WMPLibCtl.WindowsMediaPlayer wmpse6 
          Height          =   915
          Left            =   6840
-         TabIndex        =   372
+         TabIndex        =   371
          Top             =   360
          Width           =   2400
          URL             =   ""
@@ -13701,7 +13692,7 @@ Begin VB.Form FormMainMode
       Begin WMPLibCtl.WindowsMediaPlayer wmpse7 
          Height          =   915
          Left            =   6840
-         TabIndex        =   371
+         TabIndex        =   370
          Top             =   1200
          Width           =   2400
          URL             =   ""
@@ -13733,7 +13724,7 @@ Begin VB.Form FormMainMode
       Begin WMPLibCtl.WindowsMediaPlayer wmpse8 
          Height          =   915
          Left            =   6840
-         TabIndex        =   370
+         TabIndex        =   369
          Top             =   2160
          Width           =   2400
          URL             =   ""
@@ -13773,7 +13764,7 @@ Begin VB.Form FormMainMode
       Picture         =   "FormMainMode.frx":2F1F58
       ScaleHeight     =   9915
       ScaleWidth      =   11340
-      TabIndex        =   423
+      TabIndex        =   422
       Top             =   -1680
       Width           =   11340
       Begin VB.Timer PEAEtr1 
@@ -13789,7 +13780,7 @@ Begin VB.Form FormMainMode
          ForeColor       =   &H00FFFFFF&
          Height          =   375
          Left            =   9480
-         TabIndex        =   425
+         TabIndex        =   424
          Top             =   8760
          Visible         =   0   'False
          Width           =   1455
@@ -13801,7 +13792,7 @@ Begin VB.Form FormMainMode
          ForeColor       =   &H00FFFFFF&
          Height          =   375
          Left            =   7680
-         TabIndex        =   424
+         TabIndex        =   423
          Top             =   8760
          Visible         =   0   'False
          Width           =   1455
@@ -13832,7 +13823,7 @@ Begin VB.Form FormMainMode
       Left            =   -120
       ScaleHeight     =   9915
       ScaleWidth      =   11340
-      TabIndex        =   379
+      TabIndex        =   378
       Top             =   1080
       Visible         =   0   'False
       Width           =   11340
@@ -13858,7 +13849,7 @@ Begin VB.Form FormMainMode
          ForeColor       =   &H00FFFFFF&
          Height          =   615
          Left            =   8280
-         TabIndex        =   380
+         TabIndex        =   379
          Top             =   9120
          Visible         =   0   'False
          Width           =   2655
@@ -14128,6 +14119,9 @@ If pagecardnum(Index, 6) = 1 And (turnpageonin = 1 Or turnpageoninatking = 1) An
    pagecardnum(Index, 6) = 2
    If pagecardnum(Index, 1) = a1a Then
       atkingpagetot(1, 1) = Val(atkingpagetot(1, 1)) + Val(pagecardnum(Index, 2))
+      If turnatk = 1 And movecp = 1 And 攻擊防禦骰子總數(3) = 0 Then
+          攻擊防禦骰子總數(3) = 攻擊防禦骰子總數(3) + atkus(角色人物對戰人數(1, 2))
+      End If
       If turnatk = 1 And movecp = 1 Then
           攻擊防禦骰子總數(1) = 攻擊防禦骰子總數(1) + Val(pagecardnum(Index, 2))
           攻擊防禦骰子總數(3) = 攻擊防禦骰子總數(3) + Val(pagecardnum(Index, 2))
@@ -14135,6 +14129,9 @@ If pagecardnum(Index, 6) = 1 And (turnpageonin = 1 Or turnpageoninatking = 1) An
    End If
    If pagecardnum(Index, 1) = a5a Then
       atkingpagetot(1, 5) = Val(atkingpagetot(1, 5)) + Val(pagecardnum(Index, 2))
+      If turnatk = 1 And movecp > 1 And 攻擊防禦骰子總數(3) = 0 Then
+          攻擊防禦骰子總數(3) = 攻擊防禦骰子總數(3) + atkus(角色人物對戰人數(1, 2))
+      End If
       If turnatk = 1 And movecp > 1 Then
           攻擊防禦骰子總數(1) = 攻擊防禦骰子總數(1) + Val(pagecardnum(Index, 2))
           攻擊防禦骰子總數(3) = 攻擊防禦骰子總數(3) + Val(pagecardnum(Index, 2))
@@ -14142,6 +14139,9 @@ If pagecardnum(Index, 6) = 1 And (turnpageonin = 1 Or turnpageoninatking = 1) An
    End If
    If pagecardnum(Index, 1) = a2a Then
       atkingpagetot(1, 2) = Val(atkingpagetot(1, 2)) + Val(pagecardnum(Index, 2))
+      If turnatk = 2 And 攻擊防禦骰子總數(3) = 0 Then
+          攻擊防禦骰子總數(3) = 攻擊防禦骰子總數(3) + defus(角色人物對戰人數(1, 2))
+      End If
       If turnatk = 2 Then
          攻擊防禦骰子總數(1) = 攻擊防禦骰子總數(1) + Val(pagecardnum(Index, 2))
          攻擊防禦骰子總數(3) = 攻擊防禦骰子總數(3) + Val(pagecardnum(Index, 2))
@@ -14204,7 +14204,10 @@ If pagecardnum(Index, 6) = 1 And (turnpageonin = 1 Or turnpageoninatking = 1) An
        事件卡記錄暫時數(1, 3) = 1
        事件卡.聖水_使用者 Index, pagecardnum(Index, 2)
    End If
+   '======================
+    Call FormMainMode.pageusqleadChange
    '===================
+   戰鬥系統類.骰量更新顯示
    FormMainMode.trgoi1.Enabled = True
    Exit Sub
 End If
@@ -14218,12 +14221,18 @@ If pagecardnum(Index, 6) = 2 And (turnpageonin = 1 Or turnpageoninatking = 1) An
           攻擊防禦骰子總數(1) = 攻擊防禦骰子總數(1) - Val(pagecardnum(Index, 2))
           攻擊防禦骰子總數(3) = 攻擊防禦骰子總數(3) - Val(pagecardnum(Index, 2))
       End If
+      If 攻擊防禦骰子總數(3) = atkus(角色人物對戰人數(1, 2)) Then
+          攻擊防禦骰子總數(3) = 0
+      End If
    End If
    If pagecardnum(Index, 1) = a5a Then
       atkingpagetot(1, 5) = Val(atkingpagetot(1, 5)) - Val(pagecardnum(Index, 2))
       If turnatk = 1 And movecp > 1 Then
           攻擊防禦骰子總數(1) = 攻擊防禦骰子總數(1) - Val(pagecardnum(Index, 2))
           攻擊防禦骰子總數(3) = 攻擊防禦骰子總數(3) - Val(pagecardnum(Index, 2))
+      End If
+      If 攻擊防禦骰子總數(3) = atkus(角色人物對戰人數(1, 2)) Then
+          攻擊防禦骰子總數(3) = 0
       End If
    End If
    If pagecardnum(Index, 1) = a2a Then
@@ -14263,7 +14272,10 @@ If pagecardnum(Index, 6) = 2 And (turnpageonin = 1 Or turnpageoninatking = 1) An
    目前數(3) = 0
    戰鬥系統類.出牌順序計算_使用者_出牌
    使用者出牌_出牌對齊_靠右.Enabled = True
+   '======================
+    Call FormMainMode.pageusqleadChange
    '=====================
+   戰鬥系統類.骰量更新顯示
    FormMainMode.trgoi1.Enabled = True
    對齊完成檢查.Enabled = True
    '=====================以下是技能檢查及啟動(克頓-AI-竊取資料)
@@ -14713,6 +14725,9 @@ End If
 
    If pagecardnum(Index, 1) = a1a Then
       atkingpagetot(1, 1) = Val(atkingpagetot(1, 1)) + Val(pagecardnum(Index, 2))
+      If turnatk = 1 And movecp = 1 And 攻擊防禦骰子總數(3) = 0 Then
+          攻擊防禦骰子總數(3) = 攻擊防禦骰子總數(3) + atkus(角色人物對戰人數(1, 2))
+      End If
       If turnatk = 1 And movecp = 1 Then
           攻擊防禦骰子總數(1) = 攻擊防禦骰子總數(1) + Val(pagecardnum(Index, 2))
           攻擊防禦骰子總數(3) = 攻擊防禦骰子總數(3) + Val(pagecardnum(Index, 2))
@@ -14720,6 +14735,9 @@ End If
    End If
    If pagecardnum(Index, 1) = a5a Then
       atkingpagetot(1, 5) = Val(atkingpagetot(1, 5)) + Val(pagecardnum(Index, 2))
+      If turnatk = 1 And movecp > 1 And 攻擊防禦骰子總數(3) = 0 Then
+          攻擊防禦骰子總數(3) = 攻擊防禦骰子總數(3) + atkus(角色人物對戰人數(1, 2))
+      End If
       If turnatk = 1 And movecp > 1 Then
           攻擊防禦骰子總數(1) = 攻擊防禦骰子總數(1) + Val(pagecardnum(Index, 2))
           攻擊防禦骰子總數(3) = 攻擊防禦骰子總數(3) + Val(pagecardnum(Index, 2))
@@ -14727,6 +14745,9 @@ End If
    End If
    If pagecardnum(Index, 1) = a2a Then
       atkingpagetot(1, 2) = Val(atkingpagetot(1, 2)) + Val(pagecardnum(Index, 2))
+      If turnatk = 2 And 攻擊防禦骰子總數(3) = 0 Then
+          攻擊防禦骰子總數(3) = 攻擊防禦骰子總數(3) + defus(角色人物對戰人數(1, 2))
+      End If
       If turnatk = 2 Then
          攻擊防禦骰子總數(1) = 攻擊防禦骰子總數(1) + Val(pagecardnum(Index, 2))
          攻擊防禦骰子總數(3) = 攻擊防禦骰子總數(3) + Val(pagecardnum(Index, 2))
@@ -14745,12 +14766,18 @@ End If
           攻擊防禦骰子總數(1) = 攻擊防禦骰子總數(1) - Val(pagecardnum(Index, 4))
           攻擊防禦骰子總數(3) = 攻擊防禦骰子總數(3) - Val(pagecardnum(Index, 4))
       End If
+      If 攻擊防禦骰子總數(3) = atkus(角色人物對戰人數(1, 2)) Then
+          攻擊防禦骰子總數(3) = 0
+      End If
    End If
    If pagecardnum(Index, 3) = a5a Then
       atkingpagetot(1, 5) = Val(atkingpagetot(1, 5)) - Val(pagecardnum(Index, 4))
       If turnatk = 1 And movecp > 1 Then
           攻擊防禦骰子總數(1) = 攻擊防禦骰子總數(1) - Val(pagecardnum(Index, 4))
           攻擊防禦骰子總數(3) = 攻擊防禦骰子總數(3) - Val(pagecardnum(Index, 4))
+      End If
+      If 攻擊防禦骰子總數(3) = atkus(角色人物對戰人數(1, 2)) Then
+          攻擊防禦骰子總數(3) = 0
       End If
    End If
    If pagecardnum(Index, 3) = a2a Then
@@ -14767,9 +14794,10 @@ End If
       atkingpagetot(1, 4) = Val(atkingpagetot(1, 4)) - Val(pagecardnum(Index, 4))
    End If
     '======================
-    Call pageusqlead_Change
+    Call FormMainMode.pageusqleadChange
     '=====================
-   FormMainMode.trgoi1.Enabled = True
+    戰鬥系統類.骰量更新顯示
+    FormMainMode.trgoi1.Enabled = True
 End Sub
 
 
@@ -14843,30 +14871,13 @@ goicheck(2) = 0
 chkcomck = 0
 atkingtrn(1) = 0
 atkingtrn(2) = 0
-Erase 異常狀態_混沌紀錄數
-Erase 異常狀態_AI_混沌紀錄數
-'=====
-If atkingck(49, 2) = 1 And atking_尤莉卡_超載目前階段紀錄數(3) = 2 Then
-   atkingck(49, 1) = 5
-   技能.尤莉卡_超載 '(階段5)
-End If
-If atkingckai(139, 2) = 1 And atking_AI_尤莉卡_超載目前階段紀錄數(3) = 2 Then
-   atkingckai(139, 1) = 5
-   AI技能.尤莉卡_超載 '(階段5)
-End If
 '=====
 If turnatk = 1 Then
  戰鬥系統類.chkdefcom
 End If
 '==============以下是技能檢查及啟動
-If uspi1(角色人物對戰人數(1, 2)).Caption = "音音夢" Then
-    If atking_音音夢_成長模式狀態數(2) = 1 And turnatk = 1 Then
-       戰鬥系統類.特殊_音音夢_成長狀態_使用者 2 '(階段2)
-    End If
-End If
 If turnatk = 1 Then
-    atkingckai(44, 1) = 1
-    AI技能.庫勒尼西_沙漠中的海市蜃樓 '(階段1)
+    AI技能.庫勒尼西_沙漠中的海市蜃樓 1 '(階段1)
 End If
 '==============
 小人物頭像移動方向數(1) = 1
@@ -14879,6 +14890,10 @@ FormMainMode.wmpse6.Controls.play
 戰鬥系統類.時間軸_重設
 trtimeline.Enabled = True
 trgoi2.Enabled = True
+'==============
+戰鬥系統類.骰量更新顯示
+'FormMainMode.trgoi1_Timer
+FormMainMode.trgoi2_Timer
 '======================================
 If Formsetting.chkusenewaipersonauto.Value = 1 Then
     目前數(24) = 45
@@ -14924,18 +14939,6 @@ liveus(角色人物對戰人數(1, 2)) = Val(uspi4(角色人物對戰人數(1, 2)).Caption)
 攻擊防禦骰子總數(4) = 0
 骰數零檢查值(1) = False
 骰數零檢查值(2) = False
-Erase 異常狀態_混沌紀錄數
-Erase 異常狀態_AI_混沌紀錄數
-'=====
-If atkingck(49, 2) = 1 And atking_尤莉卡_超載目前階段紀錄數(3) = 2 Then
-   atkingck(49, 1) = 5
-   技能.尤莉卡_超載 '(階段5)
-End If
-If atkingckai(139, 2) = 1 And atking_AI_尤莉卡_超載目前階段紀錄數(3) = 2 Then
-   atkingckai(139, 1) = 5
-   AI技能.尤莉卡_超載 '(階段5)
-End If
-'=====
 目前數(6) = 0
 目前數(21) = 1
 '===============
@@ -14998,19 +15001,16 @@ End If
 '==============================
 智慧型AI出牌_執行階段結束:
 '==============================
-If compi1(角色人物對戰人數(2, 2)).Caption = "音音夢" Then
-    If atking_AI_音音夢_成長模式狀態數(2) = 1 And turnatk = 2 Then
-       atking_AI_音音夢_成長模式狀態數(1) = 2
-       戰鬥系統類.特殊_音音夢_成長狀態_電腦 '(階段2)
-    End If
-End If
 If atkingckai(5, 2) = 1 Then
     AI技能.雪莉_飛刃雨 2 '(階段2)
 End If
 If turnatk = 2 Then
-    atkingck(128, 1) = 1
-    技能.庫勒尼西_沙漠中的海市蜃樓 '(階段1)
+    技能.庫勒尼西_沙漠中的海市蜃樓 1 '(階段1)
 End If
+'==============
+戰鬥系統類.骰量更新顯示
+FormMainMode.trgoi1_Timer
+FormMainMode.trgoi2_Timer
 '=========
 電腦方事件卡先出制度_執行階段2:
 If 電腦方事件卡是否出完選擇數 = False Then
@@ -15221,8 +15221,7 @@ If uspi1(角色人物對戰人數(1, 2)).Caption = "史塔夏" Then
 End If
 If compi1(角色人物對戰人數(2, 2)).Caption = "史塔夏" Then
     If atking_AI_史塔夏_殺戮模式狀態數(2) = 1 Then
-       atking_AI_史塔夏_殺戮模式狀態數(1) = 3
-       戰鬥系統類.特殊_史塔夏_殺戮狀態_電腦 '(階段3)
+       戰鬥系統類.特殊_史塔夏_殺戮狀態_電腦 3 '(階段3)
     End If
 End If
 If uspi1(角色人物對戰人數(1, 2)).Caption = "音音夢" Then
@@ -15232,8 +15231,7 @@ If uspi1(角色人物對戰人數(1, 2)).Caption = "音音夢" Then
 End If
 If compi1(角色人物對戰人數(2, 2)).Caption = "音音夢" Then
     If atking_AI_音音夢_成長模式狀態數(2) = 1 Then
-       atking_AI_音音夢_成長模式狀態數(1) = 3
-       戰鬥系統類.特殊_音音夢_成長狀態_電腦 '(階段3)
+       戰鬥系統類.特殊_音音夢_成長狀態_電腦 3 '(階段3)
     End If
 End If
 If atkingck(38, 2) = 1 Then
@@ -15246,13 +15244,11 @@ If atkingckai(58, 2) = 1 Then
 End If
 If atking_尤莉卡_超載目前階段紀錄數(3) > 0 And uspi1(角色人物對戰人數(1, 2)).Caption = "尤莉卡" Then
     atkingck(49, 2) = 1
-    atkingck(49, 1) = 8
-    技能.尤莉卡_超載  '(階段8)
+    技能.尤莉卡_超載 8 '(階段8)
 End If
 If atking_AI_尤莉卡_超載目前階段紀錄數(3) > 0 And compi1(角色人物對戰人數(2, 2)).Caption = "尤莉卡" Then
     atkingckai(139, 2) = 1
-    atkingckai(139, 1) = 8
-    AI技能.尤莉卡_超載  '(階段8)
+    AI技能.尤莉卡_超載 8 '(階段8)
 End If
 '===========
 messageus.AddItem turn & "回合結束。"
@@ -15296,11 +15292,21 @@ If 使用者出牌_出牌對齊_靠左.Enabled = False And 使用者出牌_出牌對齊_靠右.Enabled
    turnpageonin = 0
    Select Case turnatk
        Case 1
-           攻擊階段_階段初始.Enabled = True
+            '==============================
+            戰鬥系統類.骰量更新顯示
+            FormMainMode.trgoi1_Timer
+            FormMainMode.trgoi2_Timer
+            '==============================
+            攻擊階段_階段初始.Enabled = True
        Case 2
-           防禦階段_階段初始.Enabled = True
+            '==============================
+            戰鬥系統類.骰量更新顯示
+            FormMainMode.trgoi1_Timer
+            FormMainMode.trgoi2_Timer
+            '==============================
+            防禦階段_階段初始.Enabled = True
        Case 3
-           移動階段_階段前啟動.Enabled = True
+            移動階段_階段前啟動.Enabled = True
    End Select
 End If
 End Sub
@@ -15309,7 +15315,7 @@ Private Sub pagecomglead_Change()
 pageglead(2) = Val(pagecomglead.Caption)
 End Sub
 
-Sub pagecomqlead_Change()
+Sub pagecomqleadChange()
 atkingckai(26, 1) = 1
 atkingckai(98, 1) = 1
 atkingckai(12, 1) = 2
@@ -15379,6 +15385,7 @@ If turnatk = 2 And 階段狀態數 = 3 Then
     AI技能.羅莎琳_EX_染血之刃 1 '(階段1)
     AI技能.雪莉_自殺傾向 3 '(階段3)
     AI技能.音音夢_愉快抽血 1 '(階段1)
+    AI技能.羊角獸2012_致命衝撞 1 '(階段1)
 ElseIf turnatk = 3 And 階段狀態數 = 3 Then
     AI技能.雪莉_巨大黑犬 '(階段2)
     AI技能.南瓜王_超再生 '(階段1)
@@ -15408,7 +15415,7 @@ ElseIf turnatk = 3 And 階段狀態數 = 3 Then
     AI技能.洛洛妮_逆轉戰局的槍響 '(階段1)
     AI技能.克頓_惡意情報 '(階段1)
     AI技能.艾茵_一顆心 '(階段1)
-    AI技能.尤莉卡_超載 '(階段1)
+    AI技能.尤莉卡_超載 1 '(階段1)
 ElseIf turnatk = 1 And 階段狀態數 = 3 Then
     AI技能.雪莉_異質者 '(階段2)
     AI技能.妖精王妃_煉獄之翼 '(階段1)
@@ -15455,6 +15462,8 @@ ElseIf turnatk = 1 And 階段狀態數 = 3 Then
     AI技能.克頓_逃亡計畫 '(階段1)
     AI技能.尤莉卡_不善的信仰 1 '(階段1)
     AI技能.尤莉卡_曲惡的安寧 1 '(階段1)
+    AI技能.羊角獸2012_致命格擋 1 '(階段1)
+    AI技能.庫勒尼西_沙漠中的海市蜃樓 1 '(階段1)
 End If
 '==================
 End Sub
@@ -15463,7 +15472,7 @@ Private Sub pageusglead_Change()
 pageglead(1) = Val(pageusglead.Caption)
 End Sub
 
-Private Sub pageusqlead_Change()
+Sub pageusqleadChange()
 atkingck(79, 1) = 1
 atkingck(101, 1) = 1
 '============以下是技能檢查
@@ -15557,7 +15566,7 @@ ElseIf turnatk = 3 And 階段狀態數 = 1 Then
    技能.艾蕾可_救濟天使 '(階段1)
    技能.梅莉_綿羊幻夢 '(階段1)
    技能.貝琳達_雪光 '(階段1)
-   技能.尤莉卡_超載 '(階段1)
+   技能.尤莉卡_超載 1 '(階段1)
 ElseIf turnatk = 2 And 階段狀態數 = 1 Then
    技能.雪莉_異質者 '(階段1)
    技能.雪莉_VBE_異質者 '(階段1)
@@ -15603,6 +15612,7 @@ ElseIf turnatk = 2 And 階段狀態數 = 1 Then
    技能.貝琳達_水晶幻鏡 1 '(階段1)
    技能.尤莉卡_不善的信仰 1 '(階段1)
    技能.尤莉卡_曲惡的安寧 1 '(階段1)
+   技能.庫勒尼西_沙漠中的海市蜃樓 1 '(階段1)
 End If
 '==================
 
@@ -15923,61 +15933,6 @@ End If
 End Sub
 
 Sub trgoi1_Timer()
-If Val(pageusqlead) = 0 And turnatk = 1 And 階段狀態數 = 1 Then
-    攻擊防禦骰子總數(1) = 0
-    攻擊防禦骰子總數(3) = 0
-    goicheck(1) = 0
-End If
-If Val(pageusqlead) = 0 And turnatk = 2 And 階段狀態數 = 1 Then
-    攻擊防禦骰子總數(1) = 0
-    攻擊防禦骰子總數(3) = 0
-    goidefus = 0
-    戰鬥系統類.chkdef
-End If
-
-If atkingpagetot(1, 1) = 0 And turnatk = 1 And movecp = 1 And goicheck(1) = 1 And 階段狀態數 = 1 Then
-   goicheck(1) = 0
-   攻擊防禦骰子總數(1) = 攻擊防禦骰子總數(1) - atkus(角色人物對戰人數(1, 2))
-   攻擊防禦骰子總數(3) = 攻擊防禦骰子總數(3) - atkus(角色人物對戰人數(1, 2))
-   '========================
-'   戰鬥系統類.異常狀態骰數減低檢查_ATK 1
-End If
-If atkingpagetot(1, 5) = 0 And turnatk = 1 And movecp > 1 And goicheck(1) = 1 And 階段狀態數 = 1 Then
-   goicheck(1) = 0
-   攻擊防禦骰子總數(1) = 攻擊防禦骰子總數(1) - atkus(角色人物對戰人數(1, 2))
-   攻擊防禦骰子總數(3) = 攻擊防禦骰子總數(3) - atkus(角色人物對戰人數(1, 2))
-  '========================
-'   戰鬥系統類.異常狀態骰數減低檢查_ATK 1
-End If
-If turnatk = 1 And movecp = 1 Then
- 戰鬥系統類.chkus1
-ElseIf turnatk = 1 And movecp > 1 Then
- 戰鬥系統類.chkus2
-End If
-'=========以下是技能檢查及發動
-If uspi1(角色人物對戰人數(1, 2)).Caption = "音音夢" Then
-    If atking_音音夢_成長模式狀態數(2) = 1 And turnatk = 1 And 階段狀態數 = 1 And 攻擊防禦骰子總數(1) = 0 Then
-       戰鬥系統類.特殊_音音夢_成長狀態_使用者 1 '(階段1)
-    End If
-End If
-'======
-If 異常狀態_混沌紀錄數(3) = 1 And turnatk = 1 And 階段狀態數 = 1 And 攻擊防禦骰子總數(1) = 0 Then
-    異常狀態檢查數(31, 1) = 3
-    異常狀態.混沌_使用者 '(階段3)
-Else
-    異常狀態檢查數(31, 1) = 1
-    異常狀態.混沌_使用者 '(階段1)
-End If
-'======
-If atking_尤莉卡_超載目前階段紀錄數(3) = 2 And atkingck(49, 2) = 1 Then
-    If atking_尤莉卡_超載目前階段紀錄數(4) = 1 And turnatk = 1 And 階段狀態數 = 1 And 攻擊防禦骰子總數(1) = 0 Then
-        atkingck(49, 1) = 5
-        技能.尤莉卡_超載 '(階段5)
-    Else
-        atkingck(49, 1) = 4
-        技能.尤莉卡_超載 '(階段4)
-    End If
-End If
 '=========更新骰子總數量表示
 If 攻擊防禦骰子總數(1) < 0 Then
    顯示列1.goi1 = 0
@@ -15989,69 +15944,6 @@ FormMainMode.trgoi1.Enabled = False
 End Sub
 
 Sub trgoi2_Timer()
-If Val(pagecomqlead) = 0 And turnatk = 2 And 階段狀態數 = 3 Then
- 攻擊防禦骰子總數(2) = 0
- 攻擊防禦骰子總數(4) = 0
- goicheck(2) = 0
-End If
-
-If Val(pagecomqlead) = 0 And turnatk = 1 And 階段狀態數 = 3 Then
-    攻擊防禦骰子總數(2) = 0
-    攻擊防禦骰子總數(4) = 0
-    chkcomck = 0
-    戰鬥系統類.chkdefcom
-End If
-'================
-If atkingpagetot(2, 1) = 0 And turnatk = 2 And movecp = 1 And goicheck(2) = 1 And 階段狀態數 = 3 Then
-   goicheck(2) = 0
-   攻擊防禦骰子總數(2) = 攻擊防禦骰子總數(2) - atkcom(角色人物對戰人數(2, 2))
-   攻擊防禦骰子總數(4) = 攻擊防禦骰子總數(4) - atkcom(角色人物對戰人數(2, 2))
-   '=========
-'   戰鬥系統類.異常狀態骰數減低檢查_ATK 2
-End If
-If atkingpagetot(2, 5) = 0 And turnatk = 2 And movecp > 1 And goicheck(2) = 1 And 階段狀態數 = 3 Then
-   goicheck(2) = 0
-   攻擊防禦骰子總數(2) = 攻擊防禦骰子總數(2) - atkcom(角色人物對戰人數(2, 2))
-   攻擊防禦骰子總數(4) = 攻擊防禦骰子總數(4) - atkcom(角色人物對戰人數(2, 2))
-   '=========
-'   戰鬥系統類.異常狀態骰數減低檢查_ATK 2
-End If
-If turnatk = 2 Then
- 戰鬥系統類.chkcom
-End If
-'=========以下是技能檢查及發動
-If atkingckai(14, 2) = 0 And turnatk = 2 And 階段狀態數 = 3 Then
-   atkingckai(14, 1) = 1
-   AI技能.羊角獸2012_致命衝撞 '(階段1)
-End If
-If atkingckai(15, 2) = 0 And turnatk = 1 And 階段狀態數 = 3 Then
-   atkingckai(15, 1) = 1
-   AI技能.羊角獸2012_致命格擋 '(階段1)
-End If
-'================
-If compi1(角色人物對戰人數(2, 2)).Caption = "史塔夏" Then
-    If atking_AI_史塔夏_殺戮模式狀態數(2) = 1 And turnatk = 2 And 階段狀態數 = 3 And 攻擊防禦骰子總數(2) > 0 Then
-       atking_AI_史塔夏_殺戮模式狀態數(1) = 1
-       戰鬥系統類.特殊_史塔夏_殺戮狀態_電腦 '(階段1)
-    ElseIf atking_AI_史塔夏_殺戮模式狀態數(2) = 1 And turnatk = 2 And 階段狀態數 = 3 And 攻擊防禦骰子總數(2) = 0 Then
-       atking_AI_史塔夏_殺戮模式狀態數(1) = 2
-       戰鬥系統類.特殊_史塔夏_殺戮狀態_電腦 '(階段2)
-    End If
-End If
-If compi1(角色人物對戰人數(2, 2)).Caption = "音音夢" Then
-    If atking_AI_音音夢_成長模式狀態數(2) = 1 And turnatk = 2 And 階段狀態數 = 3 And 攻擊防禦骰子總數(2) = 0 Then
-       atking_AI_音音夢_成長模式狀態數(1) = 1
-       戰鬥系統類.特殊_音音夢_成長狀態_電腦 '(階段1)
-    End If
-End If
-'=============
-異常狀態檢查數(32, 1) = 1
-異常狀態.混沌_電腦  '(階段1)
-'=============
-If atking_AI_尤莉卡_超載目前階段紀錄數(3) = 2 And atkingckai(139, 2) = 1 Then
-    atkingckai(139, 1) = 4
-    AI技能.尤莉卡_超載 '(階段4)
-End If
 '=========更新骰子總數量表示
 If 攻擊防禦骰子總數(2) < 0 Then
    顯示列1.goi2 = 0
@@ -16851,8 +16743,7 @@ Select Case Val(atkingno(tt, 2))
                技能.尤莉卡_曲惡的安寧 3 '(階段3)
            End If
            If turnatk = 3 And atkingck(49, 2) = 1 And Val(atkingno(tt, 7)) = 49 Then
-               atkingck(49, 1) = 3
-               技能.尤莉卡_超載  '(階段3)
+               技能.尤莉卡_超載 3 '(階段3)
            End If
            '==========================
         End If
@@ -17141,8 +17032,7 @@ Select Case Val(atkingno(tt, 2))
                AI技能.尤莉卡_曲惡的安寧 3 '(階段3)
            End If
            If turnatk = 3 And atkingckai(139, 2) = 1 And Val(atkingno(tt, 7)) = 139 Then
-               atkingckai(139, 1) = 3
-               AI技能.尤莉卡_超載  '(階段3)
+               AI技能.尤莉卡_超載 3 '(階段3)
            End If
            '==========================
         End If
@@ -17494,8 +17384,7 @@ End If
        AI技能.瑪格莉特_恍惚 2 '(階段2)
     End If
     If turnatk = 1 And atkingckai(44, 2) = 1 Then
-       atkingckai(44, 1) = 2
-       AI技能.庫勒尼西_沙漠中的海市蜃樓  '(階段2)
+       AI技能.庫勒尼西_沙漠中的海市蜃樓 2 '(階段2)
     End If
     If turnatk = 1 And atkingckai(46, 2) = 1 Then
        AI技能.庫勒尼西_黑暗漩渦 2 '(階段2)
@@ -17596,8 +17485,7 @@ End If
     End If
     '==============(相同骰子類)
     If turnatk = 1 And atkingckai(15, 2) = 1 Then
-        atkingckai(15, 1) = 2
-       AI技能.羊角獸2012_致命格擋  '(階段2)
+       AI技能.羊角獸2012_致命格擋 2  '(階段2)
     End If
     '==============(減低對手防禦類)
     If turnatk = 1 And atkingck(13, 2) = 1 Then
@@ -17619,25 +17507,25 @@ End If
        技能.傑多_因果之幻 2 '(階段2)
     End If
 '=================
-If Val(顯示列1.goi1) = 0 Then
+If 攻擊防禦骰子總數(1) = 0 Then
   messageus.AddItem "沒有攻擊。"
   messageus.AddItem "您取消了攻擊。"
   戰鬥系統類.自動捲軸捲動
   骰數零檢查值(1) = True
 Else
-  messageus.AddItem "決定攻擊力" & Val(顯示列1.goi1) & "點。"
+  messageus.AddItem "決定攻擊力" & 攻擊防禦骰子總數(1) & "點。"
   戰鬥系統類.自動捲軸捲動
 End If
-If Val(顯示列1.goi2) = 0 Then
+If 攻擊防禦骰子總數(2) = 0 Then
    骰數零檢查值(2) = True
 End If
 '========================================
-  For p = 1 To Val(顯示列1.goi1)
+  For p = 1 To 攻擊防禦骰子總數(1)
      Randomize
      i = Int(Rnd() * 6) + 1
      If i = 1 Or i = 6 Then 擲骰表單溝通暫時變數(2) = Val(擲骰表單溝通暫時變數(2)) + 1
   Next
-  For p = 1 To Val(顯示列1.goi2)
+  For p = 1 To 攻擊防禦骰子總數(2)
      Randomize
      j = Int(Rnd() * 6) + 1
      If j = 1 Or j = 6 Then 擲骰表單溝通暫時變數(3) = Val(擲骰表單溝通暫時變數(3)) + 1
@@ -17709,7 +17597,7 @@ If turnatk = 2 And atkingck(107, 2) = 1 And atkingck(107, 1) = 1 Then
 ElseIf turnatk = 2 And atkingck(107, 2) = 1 And atkingck(107, 1) = 4 Then
    技能.梅莉_徬徨夢羽 4 '(階段4)
 End If
-'========================
+'=======================
 技能動畫顯示階段數 = 1
 戰鬥系統類.技能啟動數量檢查
     '=================以下是技能檢查及啟動(技能-C.C.-原子之心)
@@ -17974,8 +17862,7 @@ End If
        技能.瑪格莉特_恍惚 2 '(階段2)
     End If
     If turnatk = 2 And atkingck(128, 2) = 1 Then
-       atkingck(128, 1) = 2
-       技能.庫勒尼西_沙漠中的海市蜃樓  '(階段2)
+       技能.庫勒尼西_沙漠中的海市蜃樓 2 '(階段2)
     End If
     If turnatk = 2 And atkingck(129, 2) = 1 Then
        技能.庫勒尼西_瘋狂眼窩 2 '(階段2)
@@ -18025,8 +17912,7 @@ End If
     End If
     '====================
     If turnatk = 2 And atkingckai(14, 2) = 1 Then
-       atkingckai(14, 1) = 2
-       AI技能.羊角獸2012_致命衝撞   '(階段2)
+       AI技能.羊角獸2012_致命衝撞 2  '(階段2)
     End If
     '====================
     If turnatk = 2 And atkingckai(4, 2) = 1 Then
@@ -18060,28 +17946,28 @@ End If
        AI技能.傑多_因果之幻 2 '(階段2)
     End If
 '=================
-If Val(顯示列1.goi2) = 0 Then
+If 攻擊防禦骰子總數(2) = 0 Then
   messageus.AddItem "沒有攻擊。"
   messageus.AddItem "您的對手取消了攻擊。"
   戰鬥系統類.自動捲軸捲動
   骰數零檢查值(2) = True
 Else
-  messageus.AddItem "決定攻擊力" & Val(顯示列1.goi2) & "點。"
+  messageus.AddItem "決定攻擊力" & 攻擊防禦骰子總數(2) & "點。"
   戰鬥系統類.自動捲軸捲動
 End If
-If Val(顯示列1.goi1) = 0 Then
+If 攻擊防禦骰子總數(1) = 0 Then
    骰數零檢查值(1) = True
 End If
 '======================
-  For p = 1 To Val(顯示列1.goi1)
-     Randomize
-     i = Int(Rnd() * 6) + 1
-     If i = 1 Or i = 6 Then 擲骰表單溝通暫時變數(2) = Val(擲骰表單溝通暫時變數(2)) + 1
-  Next
-  For q = 1 To Val(顯示列1.goi2)
+  For p = 1 To 攻擊防禦骰子總數(1)
     Randomize
-     j = Int(Rnd() * 6) + 1
-     If j = 1 Or j = 6 Then 擲骰表單溝通暫時變數(3) = Val(擲骰表單溝通暫時變數(3)) + 1
+    i = Int(Rnd() * 6) + 1
+    If i = 1 Or i = 6 Then 擲骰表單溝通暫時變數(2) = Val(擲骰表單溝通暫時變數(2)) + 1
+  Next
+  For q = 1 To 攻擊防禦骰子總數(2)
+    Randomize
+    j = Int(Rnd() * 6) + 1
+    If j = 1 Or j = 6 Then 擲骰表單溝通暫時變數(3) = Val(擲骰表單溝通暫時變數(3)) + 1
   Next
   '==================
   If turnatk = 2 And atkingck(10, 2) = 1 Then
@@ -18506,8 +18392,7 @@ HP檢查變數 = False
       技能.阿奇波爾多_大地崩壞 '(階段2)
    End If
    If turnatk = 3 And atkingck(49, 2) = 1 Then
-      atkingck(49, 1) = 2
-      技能.尤莉卡_超載 '(階段2)
+      技能.尤莉卡_超載 2 '(階段2)
    End If
    If turnatk = 3 And atkingckai(6, 2) = 1 Then
       atkingckai(6, 1) = 2
@@ -18586,8 +18471,7 @@ HP檢查變數 = False
       AI技能.艾茵_一顆心  '(階段2)
    End If
    If turnatk = 3 And atkingckai(139, 2) = 1 Then
-      atkingckai(139, 1) = 2
-      AI技能.尤莉卡_超載  '(階段2)
+      AI技能.尤莉卡_超載 2 '(階段2)
    End If
    '======================距離相關類(使用者)
    If turnatk = 3 And atkingck(56, 2) = 1 Then

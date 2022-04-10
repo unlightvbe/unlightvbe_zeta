@@ -1209,8 +1209,7 @@ If FormMainMode.personatk(2).Caption = "¨ó«µ¦±-¥[¦Ê¯Pªº¦uÅ@" And (°õ¦æ°Ê§@_ÀË¬d¬
                      ¤Hª«²§±`ª¬ºA¸ê®Æ®w(1, j, 1) = ¤Hª«²§±`ª¬ºA¸ê®Æ®w(1, j, 1) + 1
                      ¤Hª«²§±`ª¬ºA¸ê®Æ®w(1, j, 2) = 3
                      '========DEF+1¥ß§Y¥Í®Ä
-                         §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) + 1
-                         ¾Ô°«¨t²ÎÃþ.ª½±µ¼g¤JÅã¥Ü¦C¼Æ­È 1, §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1)
+                        ¾Ô°«¨t²ÎÃþ.ª½±µ¼g¤JÅã¥Ü¦C¼Æ­È 1, §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) + 1
                     '===============
                      Exit Do
                  End If
@@ -1221,8 +1220,7 @@ If FormMainMode.personatk(2).Caption = "¨ó«µ¦±-¥[¦Ê¯Pªº¦uÅ@" And (°õ¦æ°Ê§@_ÀË¬d¬
                  ²§±`ª¬ºAÀË¬d¼Æ(8, 1) = 1
                  ²§±`ª¬ºAÀË¬d¼Æ(8, 2) = 1
                   '========DEF+3¥ß§Y¥Í®Ä
-                         §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) + 3
-                         ¾Ô°«¨t²ÎÃþ.ª½±µ¼g¤JÅã¥Ü¦C¼Æ­È 1, §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1)
+                    ¾Ô°«¨t²ÎÃþ.ª½±µ¼g¤JÅã¥Ü¦C¼Æ­È 1, §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) + 3
                   '===============
                  Exit Do
              End If
@@ -1577,67 +1575,6 @@ If FormMainMode.personatk(4).Caption = "Ex²×¦±-µLºÉ½ü°jªº²×µ²" And (°õ¦æ°Ê§@_ÀË¬
 End If
 End Sub
 
-Sub Á¢_²×¦±_µLºÉ½ü°jªº²×µ²_ÂÂ()
-Dim rrr(1 To 3) As Integer, i As Integer '¼È®ÉÅÜ¼Æ
-If FormMainMode.personatk(4).Caption = "²×¦±-µLºÉ½ü°jªº²×µ²" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(15, 2) = 1) _
-   And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "Á¢" Then
-   Select Case atkingck(15, 1)
-        Case 1
-           If movecp < 3 Then
-             For i = 1 To 106
-                If pagecardnum(i, 1) = a4a And Val(pagecardnum(i, 2)) = 1 And Val(pagecardnum(i, 6)) = 2 And Val(pagecardnum(i, 5)) = 1 Then
-                   rrr(1) = rrr(1) + 1
-                End If
-                If pagecardnum(i, 1) = a3a And Val(pagecardnum(i, 2)) = 1 And Val(pagecardnum(i, 6)) = 2 And Val(pagecardnum(i, 5)) = 1 Then
-                   rrr(2) = rrr(2) + 1
-                End If
-                If pagecardnum(i, 1) = a2a And Val(pagecardnum(i, 2)) = 1 And Val(pagecardnum(i, 6)) = 2 And Val(pagecardnum(i, 5)) = 1 Then
-                   rrr(3) = rrr(3) + 1
-                End If
-             Next
-           End If
-          If rrr(1) >= 1 And rrr(2) >= 1 And rrr(3) >= 1 And atkingck(15, 2) = 0 Then
-          'If rrr(1) >= 1 And atkingck(15, 2) = 0 Then
-             atkingck(15, 2) = 1
-             ¾Ô°«¨t²ÎÃþ.¤Hª«§Þ¯àÄæ¿O¶}Ãö True, 4
-             atkingtrn(1) = Val(atkingtrn(1)) + 1
-             §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) + 10
-          End If
-          If (rrr(1) < 1 Or rrr(2) < 1 Or rrr(3) < 1) And atkingck(15, 2) = 1 Then
-          'If rrr(1) < 1 And atkingck(15, 2) = 1 Then
-             ¾Ô°«¨t²ÎÃþ.¤Hª«§Þ¯àÄæ¿O¶}Ãö False, 4
-             atkingck(15, 2) = 0
-             atkingtrn(1) = Val(atkingtrn(1)) - 1
-             §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) - 10
-           End If
-        Case 2
-             ¾Ô°«¨t²ÎÃþ.¤Hª«§Þ¯àÄæ¿O¶}Ãö False, 4
-             atkingck(15, 1) = 3
-             ¾Ô°«¨t²ÎÃþ.¦Û°Ê±²¶b±²°Ê
-             For i = ¤Hª«§Þ¯à¼Æ¦r«ü¥Ü To 1 Step -1
-               If atkingno(i, 1) = "" Then
-                   atkingno(i, 1) = app_path & "gif\Á¢\Á¢-²×¦±-µLºÉ½ü°jªº²×µ².jpg"
-                   atkingno(i, 2) = 1
-                   atkingno(i, 3) = 0
-                   atkingno(i, 4) = 0
-                   atkingno(i, 5) = 8655
-                   atkingno(i, 6) = 0
-                   atkingno(i, 7) = 0
-                   atkingno(i, 8) = 0
-                   atkingno(i, 9) = 0
-                   atkingno(i, 10) = 0
-                   atkingno(i, 11) = 0
-                   Exit For
-                 End If
-             Next
-        Case 3
-             If atkingck(15, 2) = 1 Then
-                 atkingck(15, 2) = 0
-                 FormDice.§Þ¯à_Á¢_²×¦±_µLºÉ½ü°jªº²×µ²_ÂÂ_¤À¤ä_¶¥¬q¤T
-             End If
-   End Select
-End If
-End Sub
 Sub ¥ìªÜµY_«å´kªº¹Óªí()
 Dim cardp(1 To 106) As Boolean '¬ö¿ý¼È®ÉÅÜ¼Æ
 Dim cardpn As Integer, i As Integer '¬ö¿ýµPÁ`¼Æ¼È®ÉÅÜ¼Æ
@@ -1801,8 +1738,7 @@ If FormMainMode.personatk(2).Caption = "ºE­ú¤§ºq" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
                  End If
              Next
              '===============
-             ¾Ô°«¨t²ÎÃþ.ª½±µ¼g¤JÅã¥Ü¦C¼Æ­È 2, Val(FormMainMode.Åã¥Ü¦C1.goi2) \ 2
-'             §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) = FormMainMode.Åã¥Ü¦C1.goi2
+             ¾Ô°«¨t²ÎÃþ.ª½±µ¼g¤JÅã¥Ü¦C¼Æ­È 2, §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) \ 2
         Case 3
             atkingck(57, 2) = 0
             Do
@@ -1889,7 +1825,7 @@ If FormMainMode.personatk(3).Caption = "¬õ½¬¨®½ü" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
                Next
             Loop
         Case 4
-            bloodtot = Val(FormMainMode.Åã¥Ü¦C1.goi1) \ 10
+            bloodtot = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) \ 10
             num(2) = 999
             For i = 1 To 3
                If livecom(¨¤¦â«Ý¾÷¤Hª«¬ö¿ý¼Æ(2, i)) < num(2) And livecom(¨¤¦â«Ý¾÷¤Hª«¬ö¿ý¼Æ(2, i)) > 0 Then
@@ -2636,12 +2572,14 @@ If FormMainMode.personatk(3).Caption = "­ì¤l¤§¤ß" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
                    Exit For
                  End If
              Next
-              '=================§ó§ï¼Æ­È¬°­ì»ë¼Æ­È
-              FormMainMode.Åã¥Ü¦C1.goi1 = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(3) + 2
-              FormMainMode.Åã¥Ü¦C1.goi2 = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(4)
-              '===============
-              Erase atking_AI_­µ­µ¹Ú_¦¨ªø¼Ò¦¡ª¬ºA¼Æ
-              atking_AI_Á¢_¦uÅ@¼Ò¦¡ª¬ºA±Ò°Ê­È = False
+            '===============
+            Erase atking_AI_­µ­µ¹Ú_¦¨ªø¼Ò¦¡ª¬ºA¼Æ
+            Erase atking_AI_¥v¶ð®L_±þ¼®¼Ò¦¡ª¬ºA¼Æ
+            atking_AI_Á¢_¦uÅ@¼Ò¦¡ª¬ºA±Ò°Ê­È = False
+            '===============
+            ¾Ô°«¨t²ÎÃþ.»ë¶q§ó·sÅã¥Ü
+            FormMainMode.trgoi1_Timer
+            FormMainMode.trgoi2_Timer
         Case 4
             FormMainMode.personcomminijpg.Visible = False
             FormMainMode.personcomminijpg.¤p¤Hª«¹Ï¤ù = VBEPerson(2, ¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(2, 2), 1, 5, 1)
@@ -2651,7 +2589,7 @@ If FormMainMode.personatk(3).Caption = "­ì¤l¤§¤ß" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
             FormMainMode.personcomminijpg.¤p¤Hª«¼v¤lLeft = Val(VBEPerson(2, ¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(2, 2), 2, 1, 5))
             FormMainMode.personcomminijpg.¤p¤Hª«¼v¤ltop®t = Val(VBEPerson(2, ¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(2, 2), 2, 1, 6))
             FormMainMode.personcomminijpg.Visible = True
-            FormDice.jpgcom.¤j¤Hª«¹Ï¤ù = VBEPerson(2, ¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(2, 2), 1, 5, 3)
+            ¾Ô°«¨t²ÎÃþ.ÂY»ëªí³æ¤Hª«¥ßÃ¸¬ö¿ý¼Æ(2) = VBEPerson(2, ¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(2, 2), 1, 5, 3)
             ¾Ô°«¨t²ÎÃþ.°õ¦æ°Ê§@_¶ZÂ÷ÅÜ§ó movecp
             atkingck(36, 2) = 0
    End Select
@@ -2877,7 +2815,7 @@ If FormMainMode.personatk(3).Caption = "·O´dªºÂÅ²´" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w
               End If
             End If
         Case 45
-            atkingckdice(1, 1, 1) = atkingckdice(1, 1, 1) & "=" & 0 & "="
+            atkingckdice(1, 1, 1) = atkingckdice(1, 1, 1) & "@" & 0 & "="
         Case 4
             ¾Ô°«¨t²ÎÃþ.¤Hª«§Þ¯àÄæ¿O¶}Ãö False, 3
             ¾Ô°«¨t²ÎÃþ.¦Û°Ê±²¶b±²°Ê
@@ -3022,7 +2960,7 @@ If FormMainMode.personatk(1).Caption = "±þ¼®¾¹©x" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
             FormMainMode.personusminijpg.¤p¤Hª«¼v¤l¹Ï¤ù = app_path & "gif\¥v¶ð®L\±þ¼®\Staciaminidown1.png"
             FormMainMode.personusminijpg.¤p¤Hª«¼v¤lLeft = -90
             FormMainMode.personusminijpg.¤p¤Hª«¼v¤ltop®t = -60
-            FormDice.jpgus.¤j¤Hª«¹Ï¤ù = app_path & "gif\¥v¶ð®L\±þ¼®\Staciaperson1.png"
+            ¾Ô°«¨t²ÎÃþ.ÂY»ëªí³æ¤Hª«¥ßÃ¸¬ö¿ý¼Æ(1) = app_path & "gif\¥v¶ð®L\±þ¼®\Staciaperson1.png"
             FormMainMode.Åã¥Ü¦C1.¨Ï¥ÎªÌ¤è¤p¤Hª«¹Ï¤ù = app_path & "gif\¥v¶ð®L\±þ¼®\Staciaf1.png"
             atking_¥v¶ð®L_±þ¼®¼Ò¦¡ª¬ºA¼Æ(2) = 1
             atkingck(21, 2) = 0
@@ -3443,11 +3381,10 @@ If FormMainMode.personatk(3).Caption = "©C©Gªº¨è¦L" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w
              Next
              '===============
              If atkingpagetot(2, 4) >= 1 Then
-                 ¾Ô°«¨t²ÎÃþ.ª½±µ¼g¤JÅã¥Ü¦C¼Æ­È 2, Int(Val(FormMainMode.Åã¥Ü¦C1.goi2) / 3 + 0.9)
+                 ¾Ô°«¨t²ÎÃþ.ª½±µ¼g¤JÅã¥Ü¦C¼Æ­È 2, Int(§ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) / 3 + 0.9)
              Else
-                 ¾Ô°«¨t²ÎÃþ.ª½±µ¼g¤JÅã¥Ü¦C¼Æ­È 2, Int(Val(FormMainMode.Åã¥Ü¦C1.goi2) / 2 + 0.9)
+                 ¾Ô°«¨t²ÎÃþ.ª½±µ¼g¤JÅã¥Ü¦C¼Æ­È 2, Int(§ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) / 2 + 0.9)
              End If
-'             §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) = FormMainMode.Åã¥Ü¦C1.goi2
    End Select
 End If
 End Sub
@@ -3782,7 +3719,7 @@ If FormMainMode.personatk(1).Caption = "¬ü¨ý¤û¥¤" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
             FormMainMode.personusminijpg.¤p¤Hª«¼v¤l¹Ï¤ù = app_path & "gif\­µ­µ¹Ú\¦¨ªø\Nenemminidown1.png"
             FormMainMode.personusminijpg.¤p¤Hª«¼v¤lLeft = 20
             FormMainMode.personusminijpg.¤p¤Hª«¼v¤ltop®t = -90
-            FormDice.jpgus.¤j¤Hª«¹Ï¤ù = app_path & "gif\­µ­µ¹Ú\¦¨ªø\Nenemperson1.png"
+            ¾Ô°«¨t²ÎÃþ.ÂY»ëªí³æ¤Hª«¥ßÃ¸¬ö¿ý¼Æ(1) = app_path & "gif\­µ­µ¹Ú\¦¨ªø\Nenemperson1.png"
             FormMainMode.Åã¥Ü¦C1.¨Ï¥ÎªÌ¤è¤p¤Hª«¹Ï¤ù = app_path & "gif\­µ­µ¹Ú\¦¨ªø\Nenemf1.png"
             ¾Ô°«¨t²ÎÃþ.°õ¦æ°Ê§@_¶ZÂ÷ÅÜ§ó movecp
             FormMainMode.personusminijpg.Visible = True
@@ -4119,7 +4056,7 @@ If FormMainMode.personatk(3).Caption = "¯ýªL" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬
                  End If
              Next
         Case 3
-            If Val(FormMainMode.Åã¥Ü¦C1.goi2) <= 0 Then
+            If §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) <= 0 Then
                 atkingck(73, 2) = 0
             End If
         Case 4
@@ -4508,8 +4445,7 @@ If FormMainMode.personatk(2).Caption = "®É¶¡°lÂy" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
              Next
              '=====================
             atkingck(83, 2) = 0
-            §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) - Val(FormMainMode.turni)
-            ¾Ô°«¨t²ÎÃþ.ª½±µ¼g¤JÅã¥Ü¦C¼Æ­È 2, §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2)
+            ¾Ô°«¨t²ÎÃþ.ª½±µ¼g¤JÅã¥Ü¦C¼Æ­È 2, §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2) - Val(FormMainMode.turni)
    End Select
 End If
 End Sub
@@ -5051,8 +4987,7 @@ If FormMainMode.personatk(4).Caption = "­I¨ë" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬
              '=============================
              atkingck(93, 2) = 0
              If °õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(2, 17) = False Then
-                §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) - 12
-                ª½±µ¼g¤JÅã¥Ü¦C¼Æ­È 1, §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1)
+                ª½±µ¼g¤JÅã¥Ü¦C¼Æ­È 1, §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) - 12
              End If
    End Select
 End If
@@ -5152,12 +5087,12 @@ If FormMainMode.personatk(1).Caption = "¤j¸t°ó" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`
              ÂY»ëªí³æ·¾³q¼È®ÉÅÜ¼Æ(2) = 0
              ÂY»ëªí³æ·¾³q¼È®ÉÅÜ¼Æ(3) = 0
              '========================================
-                For p = 1 To Val(FormMainMode.Åã¥Ü¦C1.goi1)
+                For p = 1 To §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1)
                    Randomize Timer
                    i = Int(Rnd() * 6) + 1
                    If i = 1 Or i = 6 Then ÂY»ëªí³æ·¾³q¼È®ÉÅÜ¼Æ(2) = Val(ÂY»ëªí³æ·¾³q¼È®ÉÅÜ¼Æ(2)) + 1
                 Next
-                For p = 1 To Val(FormMainMode.Åã¥Ü¦C1.goi2)
+                For p = 1 To §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2)
                    Randomize Timer
                    j = Int(Rnd() * 6) + 1
                    If j = 1 Or j = 6 Then ÂY»ëªí³æ·¾³q¼È®ÉÅÜ¼Æ(3) = Val(ÂY»ëªí³æ·¾³q¼È®ÉÅÜ¼Æ(3)) + 1
@@ -5283,8 +5218,9 @@ If FormMainMode.personatk(4).Caption = "©¯ºÖªº²z¥Ñ" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w
                   pageeventnum(1, i, 2) = pageeventnum(1, i - 2, 2)
              Next
              For i = (turn + 1) To (turn + 3)
-                  pageeventnum(1, i, 1) = "¾÷·|5"
-                  pageeventnum(1, i, 2) = ¤@¯ë¨t²ÎÃþ.¨Æ¥ó¥d¸ê®Æ®w("¾÷·|5", 2)
+                If i > UBound(pageeventnum, 2) Then Exit For
+                pageeventnum(1, i, 1) = "¾÷·|5"
+                pageeventnum(1, i, 2) = ¤@¯ë¨t²ÎÃþ.¨Æ¥ó¥d¸ê®Æ®w("¾÷·|5", 2)
              Next
    End Select
 End If
@@ -5967,19 +5903,24 @@ If FormMainMode.personatk(4).Caption = "¦aº»Ây¤ßÃ~" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w
    End Select
 End If
 End Sub
-Sub ®w°Ç¥§¦è_¨Fºz¤¤ªº®ü¥«¸Â¼Ó()
+Sub ®w°Ç¥§¦è_¨Fºz¤¤ªº®ü¥«¸Â¼Ó(ByVal stagenum As Integer)
 Dim i As Integer
 If FormMainMode.personatk(1).Caption = "¨Fºz¤¤ªº®ü¥«¸Â¼Ó" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(128, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "®w°Ç¥§¦è" Then
-   Select Case atkingck(128, 1)
-      Case 1
-           If movecp = 3 Then
-                §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) + 2
+   Select Case stagenum
+        Case 1
+            If movecp = 3 And atkingck(128, 2) = 0 Then
                 atkingck(128, 2) = 1
                 ¾Ô°«¨t²ÎÃþ.¤Hª«§Þ¯àÄæ¿O¶}Ãö True, 1
                 atkingtrn(1) = Val(atkingtrn(1)) + 1
-          End If
-      Case 2
+            ElseIf movecp <> 3 And atkingck(128, 2) = 1 Then
+                atkingck(128, 2) = 0
+                ¾Ô°«¨t²ÎÃþ.¤Hª«§Þ¯àÄæ¿O¶}Ãö False, 1
+                atkingtrn(1) = Val(atkingtrn(1)) - 1
+            End If
+        Case 45
+            atkingckdice(1, 1, 1) = atkingckdice(1, 1, 1) & "+" & 2 & "="
+        Case 2
              ¾Ô°«¨t²ÎÃþ.¤Hª«§Þ¯àÄæ¿O¶}Ãö False, 1
              atkingck(128, 2) = 0
              ¾Ô°«¨t²ÎÃþ.¦Û°Ê±²¶b±²°Ê
@@ -6182,19 +6123,8 @@ If FormMainMode.personatk(1).Caption = "C.T.L" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª
                    atkingck(135, 2) = 1
                    ¾Ô°«¨t²ÎÃþ.¤Hª«§Þ¯àÄæ¿O¶}Ãö True, 1
                    atkingtrn(1) = Val(atkingtrn(1)) + 1
-                   For i = 1 To 106
-                       If Val(pagecardnum(i, 6)) = 1 And Val(pagecardnum(i, 5)) = 2 Then
-                          If pagecardnum(i, 1) = a4a Or pagecardnum(i, 3) = a4a Then
-                              ¥Ø«e¼Æ(27) = 1
-                              Exit For
-                          End If
-                       End If
-                   Next
                 End If
                 If (atkingpagetot(1, 5) < 4 Or atkingpagetot(1, 4) < 1) And atkingck(135, 2) = 1 Then
-                   If ¥Ø«e¼Æ(27) = 1 Then
-                       ¥Ø«e¼Æ(27) = 0
-                   End If
                    ¾Ô°«¨t²ÎÃþ.¤Hª«§Þ¯àÄæ¿O¶}Ãö False, 1
                    atkingck(135, 2) = 0
                    atkingtrn(1) = Val(atkingtrn(1)) - 1
@@ -6235,26 +6165,6 @@ If FormMainMode.personatk(1).Caption = "C.T.L" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª
                    Exit For
                  End If
              Next
-             If ¥Ø«e¼Æ(27) = 1 Then
-                 For i = 1 To 106
-                       If Val(pagecardnum(i, 6)) = 1 And Val(pagecardnum(i, 5)) = 2 Then
-                          If pagecardnum(i, 1) = a4a Or pagecardnum(i, 3) = a4a Then
-                              Exit For
-                          End If
-                       End If
-                  Next
-                  If i = 107 Then
-                      §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) - 6
-                      ª½±µ¼g¤JÅã¥Ü¦C¼Æ­È 1, §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1)
-                      For i = 14 * (¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2) - 1) + 1 To 14 * ¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)
-                          If ¤Hª«²§±`ª¬ºA¸ê®Æ®w(1, i, 3) = 31 Then
-                              §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) - 6
-                              ª½±µ¼g¤JÅã¥Ü¦C¼Æ­È 1, §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1)
-                          End If
-                      Next
-                  End If
-                  ¥Ø«e¼Æ(27) = 0
-             End If
    End Select
 End If
 End Sub
@@ -7018,12 +6928,12 @@ If FormMainMode.personatk(4).Caption = "¦]ªG¤§¤Û" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
              ÂY»ëªí³æ·¾³q¼È®ÉÅÜ¼Æ(2) = 0
              ÂY»ëªí³æ·¾³q¼È®ÉÅÜ¼Æ(3) = 0
              '========================================
-                For p = 1 To Val(FormMainMode.Åã¥Ü¦C1.goi1)
+                For p = 1 To §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1)
                    Randomize Timer
                    i = Int(Rnd() * 6) + 1
                    If i = 1 Or i = 6 Then ÂY»ëªí³æ·¾³q¼È®ÉÅÜ¼Æ(2) = Val(ÂY»ëªí³æ·¾³q¼È®ÉÅÜ¼Æ(2)) + 1
                 Next
-                For p = 1 To Val(FormMainMode.Åã¥Ü¦C1.goi2)
+                For p = 1 To §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2)
                    Randomize Timer
                    j = Int(Rnd() * 6) + 1
                    If j = 1 Or j = 6 Then ÂY»ëªí³æ·¾³q¼È®ÉÅÜ¼Æ(3) = Val(ÂY»ëªí³æ·¾³q¼È®ÉÅÜ¼Æ(3)) + 1
@@ -7720,12 +7630,12 @@ If FormMainMode.personatk(3).Caption = "Áô½ª®gÀ»" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
                     ÂY»ëªí³æ·¾³q¼È®ÉÅÜ¼Æ(2) = 0
                     ÂY»ëªí³æ·¾³q¼È®ÉÅÜ¼Æ(3) = 0
                     '========================================
-                       For p = 1 To Val(FormMainMode.Åã¥Ü¦C1.goi1)
+                       For p = 1 To §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1)
                           Randomize Timer
                           i = Int(Rnd() * 6) + 1
                           If i = 1 Or i = 6 Then ÂY»ëªí³æ·¾³q¼È®ÉÅÜ¼Æ(2) = Val(ÂY»ëªí³æ·¾³q¼È®ÉÅÜ¼Æ(2)) + 1
                        Next
-                       For p = 1 To Val(FormMainMode.Åã¥Ü¦C1.goi2)
+                       For p = 1 To §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2)
                           Randomize Timer
                           j = Int(Rnd() * 6) + 1
                           If j = 1 Or j = 6 Then ÂY»ëªí³æ·¾³q¼È®ÉÅÜ¼Æ(3) = Val(ÂY»ëªí³æ·¾³q¼È®ÉÅÜ¼Æ(3)) + 1
@@ -8196,7 +8106,7 @@ If FormMainMode.personatk(3).Caption = "¸t¤ý«Â¥ú" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§
                  End If
              Next
         Case 3
-             atking_¦ãÁ¢¥i_¸t¤ý«Â¥ú¬ö¿ý¼Æ(1) = Val(FormMainMode.Åã¥Ü¦C1.goi2)
+             atking_¦ãÁ¢¥i_¸t¤ý«Â¥ú¬ö¿ý¼Æ(1) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(2)
              atking_¦ãÁ¢¥i_¸t¤ý«Â¥ú¬ö¿ý¼Æ(2) = pageqlead(2)
         Case 4
             atkingck(104, 2) = 0
@@ -9001,8 +8911,7 @@ If FormMainMode.personatk(1).Caption = "¦l¦ðªºÅKÂñ" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w
             atkingck(46, 2) = 0
             '===============¶W¸ü§Þ¯à¨Ï¥Îµ²§ô
             If ¾Ô°«¨t²ÎÃþ.¯S®í_¤×²ú¥d_ÀË¬d¶W¸ü¬O§_±Ò°Ê_¨Ï¥ÎªÌ = True Then
-                atkingck(49, 1) = 6
-                §Þ¯à.¤×²ú¥d_¶W¸ü '(¶¥¬q6)
+                §Þ¯à.¤×²ú¥d_¶W¸ü 6 '(¶¥¬q6)
             End If
             '===============
    End Select
@@ -9086,8 +8995,7 @@ If FormMainMode.personatk(2).Caption = "¤£µ½ªº«H¥õ" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w
             atkingck(47, 2) = 0
             '===============¶W¸ü§Þ¯à¨Ï¥Îµ²§ô
             If ¾Ô°«¨t²ÎÃþ.¯S®í_¤×²ú¥d_ÀË¬d¶W¸ü¬O§_±Ò°Ê_¨Ï¥ÎªÌ = True Then
-                atkingck(49, 1) = 6
-                §Þ¯à.¤×²ú¥d_¶W¸ü '(¶¥¬q6)
+                §Þ¯à.¤×²ú¥d_¶W¸ü 6 '(¶¥¬q6)
             End If
             '===============
    End Select
@@ -9159,29 +9067,28 @@ If FormMainMode.personatk(3).Caption = "¦±´cªº¦w¹ç" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w
             atkingck(48, 2) = 0
             '===============¶W¸ü§Þ¯à¨Ï¥Îµ²§ô
             If ¾Ô°«¨t²ÎÃþ.¯S®í_¤×²ú¥d_ÀË¬d¶W¸ü¬O§_±Ò°Ê_¨Ï¥ÎªÌ = True Then
-                atkingck(49, 1) = 6
-                §Þ¯à.¤×²ú¥d_¶W¸ü '(¶¥¬q6)
+                §Þ¯à.¤×²ú¥d_¶W¸ü 6 '(¶¥¬q6)
             End If
             '===============
    End Select
 End If
 End Sub
-Sub ¤×²ú¥d_¶W¸ü()
+Sub ¤×²ú¥d_¶W¸ü(ByVal stagenum As Integer)
 Dim wert As Integer, i As Integer '¼È®ÉÅÜ¼Æ
 If FormMainMode.personatk(4).Caption = "¶W¸ü" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬ºA(1, 22) = False Or atkingck(49, 2) = 1) _
    And FormMainMode.uspi1(¨¤¦â¤Hª«¹ï¾Ô¤H¼Æ(1, 2)) = "¤×²ú¥d" Then
-   Select Case atkingck(49, 1)
+   Select Case stagenum
       Case 1
-                If atkingpagetot(1, 4) >= 1 And atkingck(49, 2) = 0 Then
-                   atkingck(49, 2) = 1
-                   ¾Ô°«¨t²ÎÃþ.¤Hª«§Þ¯àÄæ¿O¶}Ãö True, 4
-                   atkingtrn(1) = Val(atkingtrn(1)) + 1
-                End If
-                If atkingpagetot(1, 4) < 1 And atkingck(49, 2) = 1 Then
-                   ¾Ô°«¨t²ÎÃþ.¤Hª«§Þ¯àÄæ¿O¶}Ãö False, 4
-                   atkingck(49, 2) = 0
-                   atkingtrn(1) = Val(atkingtrn(1)) - 1
-                 End If
+            If atkingpagetot(1, 4) >= 1 And atkingck(49, 2) = 0 Then
+               atkingck(49, 2) = 1
+               ¾Ô°«¨t²ÎÃþ.¤Hª«§Þ¯àÄæ¿O¶}Ãö True, 4
+               atkingtrn(1) = Val(atkingtrn(1)) + 1
+            End If
+            If atkingpagetot(1, 4) < 1 And atkingck(49, 2) = 1 Then
+               ¾Ô°«¨t²ÎÃþ.¤Hª«§Þ¯àÄæ¿O¶}Ãö False, 4
+               atkingck(49, 2) = 0
+               atkingtrn(1) = Val(atkingtrn(1)) - 1
+            End If
       Case 2
              ¾Ô°«¨t²ÎÃþ.¤Hª«§Þ¯àÄæ¿O¶}Ãö False, 4
              ¾Ô°«¨t²ÎÃþ.¦Û°Ê±²¶b±²°Ê
@@ -9247,25 +9154,11 @@ If FormMainMode.personatk(4).Caption = "¶W¸ü" And (°õ¦æ°Ê§@_ÀË¬d¬O§_¦³«ü©w²§±`ª¬
                     Next
                Loop
             End If
-        Case 4
+        Case 45
             '========================¶W¸ü3®É§ð¨¾2­¿¶¥¬q-°õ¦æ
             If atking_¤×²ú¥d_¶W¸ü¥Ø«e¶¥¬q¬ö¿ý¼Æ(3) = 2 Then
-                If Val(atking_¤×²ú¥d_¶W¸ü¥Ø«e¶¥¬q¬ö¿ý¼Æ(4)) = 0 Then
-                    atking_¤×²ú¥d_¶W¸ü¥Ø«e¶¥¬q¬ö¿ý¼Æ(1) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1)
-                    atking_¤×²ú¥d_¶W¸ü¥Ø«e¶¥¬q¬ö¿ý¼Æ(2) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) * 2
-                    atking_¤×²ú¥d_¶W¸ü¥Ø«e¶¥¬q¬ö¿ý¼Æ(4) = 1
-                    §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) = §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) * 2
-                ElseIf Val(atking_¤×²ú¥d_¶W¸ü¥Ø«e¶¥¬q¬ö¿ý¼Æ(4)) = 1 Then
-                    atking_¤×²ú¥d_¶W¸ü¥Ø«e¶¥¬q¬ö¿ý¼Æ(1) = atking_¤×²ú¥d_¶W¸ü¥Ø«e¶¥¬q¬ö¿ý¼Æ(1) + (§ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) - atking_¤×²ú¥d_¶W¸ü¥Ø«e¶¥¬q¬ö¿ý¼Æ(2))
-                    §ðÀ»¨¾¿m»ë¤lÁ`¼Æ(1) = atking_¤×²ú¥d_¶W¸ü¥Ø«e¶¥¬q¬ö¿ý¼Æ(1) * 2
-                    atking_¤×²ú¥d_¶W¸ü¥Ø«e¶¥¬q¬ö¿ý¼Æ(2) = atking_¤×²ú¥d_¶W¸ü¥Ø«e¶¥¬q¬ö¿ý¼Æ(1) * 2
-                End If
+                atkingckdice(1, 1, 1) = atkingckdice(1, 1, 1) & "*" & 2 & "="
             End If
-        Case 5
-            '========================¶W¸ü3®É§ð¨¾2­¿¶¥¬q-¶}©l¶¥¬q®É²M°£¸ê®Æ
-            atking_¤×²ú¥d_¶W¸ü¥Ø«e¶¥¬q¬ö¿ý¼Æ(1) = 0
-            atking_¤×²ú¥d_¶W¸ü¥Ø«e¶¥¬q¬ö¿ý¼Æ(2) = 0
-            atking_¤×²ú¥d_¶W¸ü¥Ø«e¶¥¬q¬ö¿ý¼Æ(4) = 0
         Case 6
             '========================¶W¸ü§Þ¯àµ²§ô(´¶³q)
             ¾Ô°«¨t²ÎÃþ.¤Hª«§Þ¯àÄæ¿O¶}Ãö False, 4
